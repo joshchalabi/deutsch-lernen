@@ -11,15 +11,15 @@
  *   ilerlemesini JSON olarak indirip başka cihazda geri yükleyebilir.
  */
 
-import type { AppState, Level, Settings, StudySession } from './types'
+import type { AppState, Level, LessonStep, Settings, StudySession } from './types'
 
 const KEY = 'deutsch-lernen/state/v1'
-const STATE_VERSION = 1
+const STATE_VERSION = 2
 
 export const DEFAULT_SETTINGS: Settings = {
   uiLang: 'tr',
   transLang: 'tr',
-  newPerDay: 15,
+  newPerDay: 20,
   maxReviews: 150,
   requestRetention: 0.9,
   ttsFallback: false,
@@ -35,6 +35,9 @@ export function emptyState(): AppState {
     vocab: {},
     sessions: {},
     dictationDone: [],
+    units: {},
+    plan: null,
+    writings: {},
   }
 }
 
@@ -62,17 +65,24 @@ export function loadState(): AppState {
   try {
     const parsed = JSON.parse(raw) as AppState
     if (parsed.version !== STATE_VERSION) return migrate(parsed)
-    // Ayarlara sonradan eklenen alanlar eski kayıtlarda yok; varsayılanla doldur.
+    // Sonradan eklenen alanlar eski kayıtlarda yok; varsayılanla doldur.
     parsed.settings = { ...DEFAULT_SETTINGS, ...parsed.settings }
     parsed.dictationDone ??= []
+    parsed.units ??= {}
+    parsed.plan ??= null
+    parsed.writings ??= {}
     return parsed
   } catch {
     return emptyState()
   }
 }
 
+/**
+ * Eski kayıtları güncel şemaya taşır.
+ * v1 → v2: ders/plan/yazma alanları eklendi. Kelime ilerlemesi ve oturum
+ * geçmişi aynen korunur — kullanıcının biriktirdiği tek gerçek değer o.
+ */
 function migrate(old: Partial<AppState>): AppState {
-  // Şimdilik tek sürüm var; ileride burada alan dönüşümleri yapılacak.
   const fresh = emptyState()
   return {
     ...fresh,
@@ -81,8 +91,24 @@ function migrate(old: Partial<AppState>): AppState {
     vocab: old.vocab ?? {},
     sessions: old.sessions ?? {},
     dictationDone: old.dictationDone ?? [],
+    units: old.units ?? {},
+    plan: old.plan ?? null,
+    writings: old.writings ?? {},
   }
 }
+
+/** Bir ünitenin tamamlanma oranı (0..1) */
+export function unitProgress(
+  state: AppState,
+  unitId: string,
+  totalSteps: number,
+): number {
+  const done = state.units[unitId]?.steps.length ?? 0
+  return totalSteps ? Math.min(1, done / totalSteps) : 0
+}
+
+export const isStepDone = (state: AppState, unitId: string, step: LessonStep) =>
+  state.units[unitId]?.steps.includes(step) ?? false
 
 export function saveState(state: AppState): boolean {
   return safeSet(JSON.stringify(state))

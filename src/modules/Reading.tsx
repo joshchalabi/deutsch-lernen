@@ -14,7 +14,7 @@
  */
 
 import { useCallback, useMemo, useState } from 'react'
-import { coverage, coverageVerdict, loadSentences, loadVocabUpTo, lemmaKey, tokenize, translationOf } from '../lib/data'
+import { coverage, coverageVerdict, loadSentences, loadVocabUpTo, lemmaKey, tokenize, strictTranslation } from '../lib/data'
 import type { Lemma, Sentence } from '../lib/types'
 import { useStore, useStudyClock } from '../lib/store'
 import { t } from '../i18n/strings'
@@ -205,7 +205,7 @@ function WordPopover({
 }) {
   const { state, lang, addWord } = useStore()
   const inDeck = lemma ? !!state.vocab[lemmaKey(lemma)] : false
-  const tr = lemma ? translationOf(lemma, state.settings.transLang) : null
+  const tr = lemma ? strictTranslation(lemma, state.settings.transLang) : null
 
   const add = useCallback(() => {
     if (lemma) addWord(lemma)

@@ -1,0 +1,1627 @@
+{
+  "level": "A1",
+  "title": {
+    "tr": "A1 — Sıfırdan başlangıç",
+    "az": "A1 — Sıfırdan başlanğıc",
+    "ru": "A1 — С нуля",
+    "de": "A1 — Anfänger"
+  },
+  "description": {
+    "tr": "On ünite. Her ünite bir konu, bir dilbilgisi hedefi ve yaklaşık 25 kelime içerir. Sırayla ilerleyin: her ünite bir öncekinin üstüne kuruluyor.",
+    "az": "On bölmə. Hər bölmə bir mövzu, bir qrammatika hədəfi və təxminən 25 söz əhatə edir. Ardıcıl irəliləyin: hər bölmə əvvəlkinin üzərində qurulur.",
+    "ru": "Десять уроков. В каждом — одна тема, одна грамматическая цель и около 25 слов. Идите по порядку: каждый урок опирается на предыдущий.",
+    "de": "Zehn Einheiten. Jede Einheit hat ein Thema, ein Grammatikziel und etwa 25 Wörter. Gehen Sie der Reihe nach vor: Jede Einheit baut auf der vorherigen auf."
+  },
+  "units": [
+    {
+      "id": "a1-01",
+      "title": {
+        "tr": "Merhaba!",
+        "az": "Salam!",
+        "ru": "Здравствуйте!",
+        "de": "Hallo!"
+      },
+      "theme": {
+        "tr": "Selamlaşma ve kendini tanıtma",
+        "az": "Salamlaşma və özünü təqdim etmə",
+        "ru": "Приветствие и знакомство",
+        "de": "Begrüßung und Vorstellung"
+      },
+      "canDo": [
+        {
+          "tr": "Selam verebilir ve vedalaşabilirim",
+          "az": "Salam verə və vidalaşa bilərəm",
+          "ru": "Могу поздороваться и попрощаться",
+          "de": "Ich kann jemanden begrüßen und mich verabschieden"
+        },
+        {
+          "tr": "Adımı, nereli olduğumu ve nerede yaşadığımı söyleyebilirim",
+          "az": "Adımı, haradan olduğumu və harada yaşadığımı deyə bilərəm",
+          "ru": "Могу назвать своё имя, откуда я и где живу",
+          "de": "Ich kann sagen, wie ich heiße, woher ich komme und wo ich wohne"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "personalpronomen-sein",
+          "title": {
+            "tr": "Şahıs zamirleri ve «sein» fiili",
+            "az": "Şəxs əvəzlikləri və «sein» feili",
+            "ru": "Личные местоимения и глагол «sein»",
+            "de": "Personalpronomen und das Verb «sein»"
+          },
+          "explain": {
+            "tr": "Almanca'da fiil, öznesine göre değişir. «sein» (olmak) en sık kullanılan fiildir ve tamamen düzensizdir — ezberlenmesi gerekir. Türkçedeki «-im, -sin, -dir» eklerinin karşılığı burada ayrı bir kelimedir.\n\nDikkat: «sie» hem «o (kadın)» hem «onlar» demektir; hangisi olduğunu fiil biçiminden anlarsınız. Büyük harfle yazılan «Sie» ise nazik hitaptır ve «siz» demektir.",
+            "az": "Alman dilində feil öz mübtədasına görə dəyişir. «sein» (olmaq) ən çox işlənən feildir və tamamilə qaydasızdır — əzbərlənməlidir. Azərbaycan dilindəki «-am, -san, -dır» şəkilçilərinin qarşılığı burada ayrıca sözdür.\n\nDiqqət: «sie» həm «o (qadın)» həm «onlar» deməkdir; hansı olduğunu feilin formasından bilirsiniz. Böyük hərflə yazılan «Sie» isə nəzakətli müraciətdir və «Siz» deməkdir.",
+            "ru": "В немецком глагол изменяется по лицам. «sein» (быть) — самый частый глагол и полностью неправильный, его нужно выучить наизусть. В отличие от русского, где «есть» обычно опускается, в немецком глагол обязателен.\n\nВнимание: «sie» означает и «она», и «они» — различайте по форме глагола. «Sie» с большой буквы — вежливое «Вы».",
+            "de": "Im Deutschen richtet sich das Verb nach dem Subjekt. «sein» ist das häufigste Verb und völlig unregelmäßig — es muss auswendig gelernt werden.\n\nAchtung: «sie» bedeutet sowohl «sie (Singular, weiblich)» als auch «sie (Plural)». Groß geschrieben ist «Sie» die höfliche Anrede."
+          },
+          "table": {
+            "headers": [
+              "Zamir",
+              "sein",
+              "haben"
+            ],
+            "rows": [
+              [
+                "ich",
+                "bin",
+                "habe"
+              ],
+              [
+                "du",
+                "bist",
+                "hast"
+              ],
+              [
+                "er / sie / es",
+                "ist",
+                "hat"
+              ],
+              [
+                "wir",
+                "sind",
+                "haben"
+              ],
+              [
+                "ihr",
+                "seid",
+                "habt"
+              ],
+              [
+                "sie / Sie",
+                "sind",
+                "haben"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich bin Ali.",
+              "tr": "Ben Ali'yim.",
+              "az": "Mən Aliyəm.",
+              "ru": "Я Али."
+            },
+            {
+              "de": "Woher bist du?",
+              "tr": "Nerelisin?",
+              "az": "Haradansan?",
+              "ru": "Откуда ты?"
+            },
+            {
+              "de": "Sie ist Lehrerin.",
+              "tr": "O öğretmen.",
+              "az": "O müəllimədir.",
+              "ru": "Она учительница."
+            },
+            {
+              "de": "Wir sind aus Baku.",
+              "tr": "Biz Bakü'denız.",
+              "az": "Biz Bakıdanıq.",
+              "ru": "Мы из Баку."
+            }
+          ]
+        },
+        {
+          "id": "w-fragen",
+          "title": {
+            "tr": "Soru kelimeleri",
+            "az": "Sual sözləri",
+            "ru": "Вопросительные слова",
+            "de": "W-Fragen"
+          },
+          "explain": {
+            "tr": "Soru kelimesiyle başlayan sorularda fiil hemen ikinci sırada gelir. Bu kural Almanca'nın temel taşıdır: fiil her zaman ikinci pozisyonda.\n\nWie? (nasıl) · Wer? (kim) · Woher? (nereden) · Wo? (nerede) · Was? (ne)",
+            "az": "Sual sözü ilə başlayan suallarda feil dərhal ikinci yerdə gəlir. Bu qayda alman dilinin təməlidir: feil həmişə ikinci mövqedə.\n\nWie? (necə) · Wer? (kim) · Woher? (haradan) · Wo? (harada) · Was? (nə)",
+            "ru": "В вопросах с вопросительным словом глагол стоит на втором месте. Это фундамент немецкого порядка слов: глагол всегда второй.\n\nWie? (как) · Wer? (кто) · Woher? (откуда) · Wo? (где) · Was? (что)",
+            "de": "In W-Fragen steht das Verb an zweiter Stelle. Das ist die Grundregel der deutschen Satzstellung.\n\nWie? · Wer? · Woher? · Wo? · Was?"
+          },
+          "examples": [
+            {
+              "de": "Wie heißt du?",
+              "tr": "Adın ne?",
+              "az": "Adın nədir?",
+              "ru": "Как тебя зовут?"
+            },
+            {
+              "de": "Wo wohnst du?",
+              "tr": "Nerede oturuyorsun?",
+              "az": "Harada yaşayırsan?",
+              "ru": "Где ты живёшь?"
+            },
+            {
+              "de": "Was ist das?",
+              "tr": "Bu ne?",
+              "az": "Bu nədir?",
+              "ru": "Что это?"
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Hallo",
+        "Tag",
+        "Morgen",
+        "Abend",
+        "Nacht",
+        "Name",
+        "heißen",
+        "sein",
+        "kommen",
+        "wohnen",
+        "sprechen",
+        "Land",
+        "Stadt",
+        "Sprache",
+        "Frau",
+        "Mann",
+        "Herr",
+        "Freund",
+        "gut",
+        "danke",
+        "bitte",
+        "ja",
+        "nein",
+        "wie",
+        "wer",
+        "wo",
+        "was",
+        "und",
+        "auch",
+        "sehr"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Kendinizi tanıtın: adınız, nereli olduğunuz, nerede yaşadığınız. En az üç cümle.",
+            "az": "Özünüzü təqdim edin: adınız, haradan olduğunuz, harada yaşadığınız. Ən azı üç cümlə.",
+            "ru": "Представьтесь: имя, откуда вы, где живёте. Минимум три предложения.",
+            "de": "Stellen Sie sich vor: Name, Herkunft, Wohnort. Mindestens drei Sätze."
+          },
+          "mustUse": [
+            "heißen",
+            "kommen",
+            "wohnen"
+          ],
+          "model": "Ich heiße Leyla. Ich komme aus Aserbaidschan. Ich wohne in Berlin."
+        },
+        {
+          "prompt": {
+            "tr": "Yeni tanıştığınız birine üç soru sorun.",
+            "az": "Yeni tanış olduğunuz birinə üç sual verin.",
+            "ru": "Задайте три вопроса новому знакомому.",
+            "de": "Stellen Sie einer neuen Bekanntschaft drei Fragen."
+          },
+          "mustUse": [
+            "wie",
+            "woher",
+            "wo"
+          ],
+          "model": "Wie heißt du? Woher kommst du? Wo wohnst du?"
+        }
+      ],
+      "game": "artikel-rush"
+    },
+    {
+      "id": "a1-02",
+      "title": {
+        "tr": "Ailem",
+        "az": "Ailəm",
+        "ru": "Моя семья",
+        "de": "Meine Familie"
+      },
+      "theme": {
+        "tr": "Aile, akrabalar, iyelik",
+        "az": "Ailə, qohumlar, mənsubiyyət",
+        "ru": "Семья, родственники, принадлежность",
+        "de": "Familie, Verwandte, Besitz"
+      },
+      "canDo": [
+        {
+          "tr": "Ailemi tanıtabilirim",
+          "az": "Ailəmi təqdim edə bilərəm",
+          "ru": "Могу рассказать о своей семье",
+          "de": "Ich kann meine Familie vorstellen"
+        },
+        {
+          "tr": "Bir şeyin kime ait olduğunu söyleyebilirim",
+          "az": "Bir şeyin kimə aid olduğunu deyə bilərəm",
+          "ru": "Могу сказать, кому что принадлежит",
+          "de": "Ich kann sagen, wem etwas gehört"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "artikel-grundlagen",
+          "title": {
+            "tr": "Artikeller: der, die, das",
+            "az": "Artikllər: der, die, das",
+            "ru": "Артикли: der, die, das",
+            "de": "Die Artikel: der, die, das"
+          },
+          "explain": {
+            "tr": "Almanca'daki her ismin bir cinsiyeti vardır: eril (der), dişil (die), nötr (das). Bu cinsiyet çoğu zaman mantıkla bulunamaz — «das Mädchen» (kız çocuğu) nötrdür. Bu yüzden **kelimeyi asla tek başına, daima artikeliyle öğrenin**: «Haus» değil, «das Haus».\n\nÇoğulda artikel her zaman «die»dir, cinsiyet ne olursa olsun.\n\nBirkaç işe yarar ipucu:\n• -ung, -heit, -keit, -schaft, -ion ile bitenler → **die**\n• -chen, -lein ile bitenler → **das**\n• -er ile biten meslekler (eril kişi) → **der**",
+            "az": "Alman dilində hər ismin cinsi var: kişi (der), qadın (die), orta (das). Bu cins çox vaxt məntiqlə tapılmır — «das Mädchen» (qız uşağı) orta cinsdir. Ona görə **sözü heç vaxt tək öyrənməyin, həmişə artikli ilə**: «Haus» yox, «das Haus».\n\nCəmdə artikl cinsdən asılı olmayaraq həmişə «die»dir.\n\nBir neçə faydalı ipucu:\n• -ung, -heit, -keit, -schaft, -ion ilə bitənlər → **die**\n• -chen, -lein ilə bitənlər → **das**\n• -er ilə bitən peşələr (kişi) → **der**",
+            "ru": "У каждого немецкого существительного есть род: мужской (der), женский (die), средний (das). Род часто не совпадает с логикой — «das Mädchen» (девочка) среднего рода. Поэтому **никогда не учите слово отдельно, только с артиклем**: не «Haus», а «das Haus».\n\nВо множественном числе артикль всегда «die», независимо от рода.\n\nПолезные подсказки:\n• на -ung, -heit, -keit, -schaft, -ion → **die**\n• на -chen, -lein → **das**\n• профессии на -er (мужчина) → **der**",
+            "de": "Jedes Nomen hat ein Geschlecht: maskulin (der), feminin (die), neutral (das). Das Geschlecht folgt oft keiner Logik — «das Mädchen» ist neutral. Deshalb: **Lernen Sie ein Nomen nie allein, immer mit Artikel.**\n\nIm Plural ist der Artikel immer «die».\n\nHilfreiche Endungen:\n• -ung, -heit, -keit, -schaft, -ion → **die**\n• -chen, -lein → **das**\n• Berufe auf -er → **der**"
+          },
+          "table": {
+            "headers": [
+              "der",
+              "die",
+              "das"
+            ],
+            "rows": [
+              [
+                "der Vater",
+                "die Mutter",
+                "das Kind"
+              ],
+              [
+                "der Bruder",
+                "die Schwester",
+                "das Mädchen"
+              ],
+              [
+                "der Sohn",
+                "die Tochter",
+                "das Haus"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Das ist der Vater von Anna.",
+              "tr": "Bu Anna'nın babası.",
+              "az": "Bu Annanın atasıdır.",
+              "ru": "Это отец Анны."
+            },
+            {
+              "de": "Die Mutter ist Ärztin.",
+              "tr": "Anne doktor.",
+              "az": "Ana həkimdir.",
+              "ru": "Мать — врач."
+            }
+          ]
+        },
+        {
+          "id": "haben-possessiv",
+          "title": {
+            "tr": "«haben» ve iyelik sıfatları",
+            "az": "«haben» və mənsubiyyət sifətləri",
+            "ru": "«haben» и притяжательные местоимения",
+            "de": "«haben» und Possessivartikel"
+          },
+          "explain": {
+            "tr": "«haben» (sahip olmak) ikinci en sık fiildir. İyelik sıfatları (mein, dein…) artikelin yerini alır ve ardından gelen ismin cinsiyetine göre «-e» alır:\n\n• eril/nötr → mein Vater, mein Kind\n• dişil/çoğul → mein**e** Mutter, mein**e** Eltern",
+            "az": "«haben» (malik olmaq) ikinci ən çox işlənən feildir. Mənsubiyyət sifətləri (mein, dein…) artiklin yerini tutur və sonrakı ismin cinsinə görə «-e» alır:\n\n• kişi/orta → mein Vater, mein Kind\n• qadın/cəm → mein**e** Mutter, mein**e** Eltern",
+            "ru": "«haben» (иметь) — второй по частоте глагол. Притяжательные местоимения (mein, dein…) заменяют артикль и получают «-e» по роду следующего существительного:\n\n• муж./ср. → mein Vater, mein Kind\n• жен./мн. → mein**e** Mutter, mein**e** Eltern",
+            "de": "«haben» ist das zweithäufigste Verb. Possessivartikel ersetzen den Artikel und bekommen «-e» je nach Genus:\n\n• maskulin/neutral → mein Vater, mein Kind\n• feminin/Plural → mein**e** Mutter, mein**e** Eltern"
+          },
+          "table": {
+            "headers": [
+              "",
+              "haben",
+              "iyelik"
+            ],
+            "rows": [
+              [
+                "ich",
+                "habe",
+                "mein / meine"
+              ],
+              [
+                "du",
+                "hast",
+                "dein / deine"
+              ],
+              [
+                "er / es",
+                "hat",
+                "sein / seine"
+              ],
+              [
+                "sie",
+                "hat",
+                "ihr / ihre"
+              ],
+              [
+                "wir",
+                "haben",
+                "unser / unsere"
+              ],
+              [
+                "ihr",
+                "habt",
+                "euer / eure"
+              ],
+              [
+                "sie / Sie",
+                "haben",
+                "ihr / Ihr"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich habe einen Bruder.",
+              "tr": "Bir erkek kardeşim var.",
+              "az": "Bir qardaşım var.",
+              "ru": "У меня есть брат."
+            },
+            {
+              "de": "Meine Schwester heißt Nina.",
+              "tr": "Kız kardeşimin adı Nina.",
+              "az": "Bacımın adı Ninadır.",
+              "ru": "Мою сестру зовут Нина."
+            },
+            {
+              "de": "Hast du Kinder?",
+              "tr": "Çocuğun var mı?",
+              "az": "Uşağın var?",
+              "ru": "У тебя есть дети?"
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Familie",
+        "Vater",
+        "Mutter",
+        "Eltern",
+        "Kind",
+        "Sohn",
+        "Tochter",
+        "Bruder",
+        "Schwester",
+        "Mann",
+        "Frau",
+        "Großvater",
+        "Großmutter",
+        "haben",
+        "Jahr",
+        "alt",
+        "jung",
+        "klein",
+        "groß",
+        "leben",
+        "Beruf",
+        "Arbeit",
+        "Haus",
+        "Katze",
+        "Hund",
+        "lieben",
+        "kennen"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Ailenizi tanıtın: kaç kişisiniz, kim ne iş yapıyor, kaç yaşındalar.",
+            "az": "Ailənizi təqdim edin: neçə nəfərsiniz, kim nə işlə məşğuldur, neçə yaşındadırlar.",
+            "ru": "Расскажите о своей семье: сколько вас, кто чем занимается, сколько им лет.",
+            "de": "Stellen Sie Ihre Familie vor: wie viele Personen, wer macht was, wie alt."
+          },
+          "mustUse": [
+            "haben",
+            "Familie",
+            "sein"
+          ],
+          "model": "Meine Familie ist klein. Ich habe eine Schwester. Mein Vater ist Lehrer."
+        }
+      ],
+      "game": "artikel-rush"
+    },
+    {
+      "id": "a1-03",
+      "title": {
+        "tr": "Günlük düzen",
+        "az": "Gündəlik qayda",
+        "ru": "Распорядок дня",
+        "de": "Der Tagesablauf"
+      },
+      "theme": {
+        "tr": "Saatler, günler, düzenli fiiller",
+        "az": "Saatlar, günlər, qaydalı feillər",
+        "ru": "Время, дни недели, правильные глаголы",
+        "de": "Uhrzeit, Wochentage, regelmäßige Verben"
+      },
+      "canDo": [
+        {
+          "tr": "Saati sorabilir ve söyleyebilirim",
+          "az": "Saatı soruşa və deyə bilərəm",
+          "ru": "Могу спросить и назвать время",
+          "de": "Ich kann nach der Uhrzeit fragen und sie sagen"
+        },
+        {
+          "tr": "Günümü anlatabilirim",
+          "az": "Günümü danışa bilərəm",
+          "ru": "Могу рассказать о своём дне",
+          "de": "Ich kann meinen Tagesablauf beschreiben"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "praesens-regelmaessig",
+          "title": {
+            "tr": "Düzenli fiil çekimi (Präsens)",
+            "az": "Qaydalı feil təsrifi (Präsens)",
+            "ru": "Спряжение правильных глаголов (Präsens)",
+            "de": "Regelmäßige Verben im Präsens"
+          },
+          "explain": {
+            "tr": "Düzenli fiiller tahmin edilebilir: mastardan «-en» atılır, kalan gövdeye kişi eki eklenir. Bir kez öğrenince binlerce fiili çekebilirsiniz.\n\nwohnen → wohn- → ich wohn**e**, du wohn**st**, er wohn**t**…\n\nKüçük ses kuralları:\n• Gövde -t veya -d ile bitiyorsa araya «e» girer: arbeit**e**st, arbeit**e**t\n• Gövde -s, -ß, -z ile bitiyorsa du biçimi yalnız «-t» alır: du heiß**t**",
+            "az": "Qaydalı feillər proqnozlaşdırıla biləndir: məsdərdən «-en» atılır, qalan kökə şəxs şəkilçisi əlavə olunur. Bir dəfə öyrənəndən sonra minlərlə feili təsrif edə bilərsiniz.\n\nwohnen → wohn- → ich wohn**e**, du wohn**st**, er wohn**t**…\n\nKiçik səs qaydaları:\n• Kök -t və ya -d ilə bitirsə araya «e» girir: arbeit**e**st\n• Kök -s, -ß, -z ilə bitirsə du forması yalnız «-t» alır: du heiß**t**",
+            "ru": "Правильные глаголы предсказуемы: отбрасываем «-en», к основе добавляем личное окончание. Выучив это один раз, вы спрягаете тысячи глаголов.\n\nwohnen → wohn- → ich wohn**e**, du wohn**st**, er wohn**t**…\n\nФонетические правила:\n• Основа на -t или -d → вставляется «e»: arbeit**e**st\n• Основа на -s, -ß, -z → форма du только «-t»: du heiß**t**",
+            "de": "Regelmäßige Verben sind vorhersagbar: «-en» weg, Endung an den Stamm.\n\nwohnen → wohn- → ich wohn**e**, du wohn**st**, er wohn**t**…\n\nKleine Regeln:\n• Stamm auf -t/-d → Einschub «e»: arbeit**e**st\n• Stamm auf -s/-ß/-z → du-Form nur «-t»: du heiß**t**"
+          },
+          "table": {
+            "headers": [
+              "",
+              "wohnen",
+              "arbeiten"
+            ],
+            "rows": [
+              [
+                "ich",
+                "wohne",
+                "arbeite"
+              ],
+              [
+                "du",
+                "wohnst",
+                "arbeitest"
+              ],
+              [
+                "er / sie / es",
+                "wohnt",
+                "arbeitet"
+              ],
+              [
+                "wir",
+                "wohnen",
+                "arbeiten"
+              ],
+              [
+                "ihr",
+                "wohnt",
+                "arbeitet"
+              ],
+              [
+                "sie / Sie",
+                "wohnen",
+                "arbeiten"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich arbeite von neun bis fünf.",
+              "tr": "Dokuzdan beşe kadar çalışıyorum.",
+              "az": "Doqquzdan beşə qədər işləyirəm.",
+              "ru": "Я работаю с девяти до пяти."
+            },
+            {
+              "de": "Wann beginnt der Kurs?",
+              "tr": "Kurs ne zaman başlıyor?",
+              "az": "Kurs nə vaxt başlayır?",
+              "ru": "Когда начинается курс?"
+            }
+          ]
+        },
+        {
+          "id": "uhrzeit",
+          "title": {
+            "tr": "Saat",
+            "az": "Saat",
+            "ru": "Время",
+            "de": "Die Uhrzeit"
+          },
+          "explain": {
+            "tr": "Günlük konuşmada saat 12'lik sistemle ve «nach» (geçe) / «vor» (kala) ile söylenir. Resmî konuşmada (tren, randevu) 24'lük sistem kullanılır.\n\n• 8:10 → zehn **nach** acht\n• 8:50 → zehn **vor** neun\n• 8:15 → Viertel nach acht\n• 8:30 → **halb neun** ← dikkat: «dokuza yarım», yani sekiz buçuk!\n\n«halb» Almanca'da bir SONRAKİ saate göre söylenir. Bu, Türkçe ve Rusça konuşanların en sık yaptığı hatadır.",
+            "az": "Gündəlik danışıqda saat 12-lik sistemlə və «nach» (keçir) / «vor» (qalır) ilə deyilir. Rəsmi danışıqda 24-lük sistem işlənir.\n\n• 8:10 → zehn **nach** acht\n• 8:50 → zehn **vor** neun\n• 8:15 → Viertel nach acht\n• 8:30 → **halb neun** ← diqqət: «doqquzun yarısı», yəni səkkiz otuz!\n\n«halb» alman dilində NÖVBƏTİ saata görə deyilir. Bu, türk və rus dilində danışanların ən çox etdiyi səhvdir.",
+            "ru": "В разговорной речи используют 12-часовую систему с «nach» (после) и «vor» (до). В официальной — 24-часовую.\n\n• 8:10 → zehn **nach** acht\n• 8:50 → zehn **vor** neun\n• 8:15 → Viertel nach acht\n• 8:30 → **halb neun** ← внимание: «половина девятого», то есть 8:30!\n\nЗдесь немецкий совпадает с русским: «halb neun» = «половина девятого». А вот для турецкого это главная ловушка.",
+            "de": "Umgangssprachlich 12-Stunden-System mit «nach» und «vor». Offiziell 24 Stunden.\n\n• 8:10 → zehn nach acht\n• 8:50 → zehn vor neun\n• 8:15 → Viertel nach acht\n• 8:30 → halb neun (!)"
+          },
+          "examples": [
+            {
+              "de": "Wie spät ist es?",
+              "tr": "Saat kaç?",
+              "az": "Saat neçədir?",
+              "ru": "Который час?"
+            },
+            {
+              "de": "Es ist halb acht.",
+              "tr": "Saat yedi buçuk.",
+              "az": "Saat yeddi otuzdur.",
+              "ru": "Половина восьмого."
+            },
+            {
+              "de": "Der Zug fährt um 14:20 Uhr.",
+              "tr": "Tren 14:20'de kalkıyor.",
+              "az": "Qatar 14:20-də yola düşür.",
+              "ru": "Поезд отправляется в 14:20."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Zeit",
+        "Uhr",
+        "Stunde",
+        "Minute",
+        "Tag",
+        "Woche",
+        "Montag",
+        "Morgen",
+        "Mittag",
+        "Abend",
+        "heute",
+        "morgen",
+        "gestern",
+        "früh",
+        "spät",
+        "immer",
+        "oft",
+        "manchmal",
+        "nie",
+        "jetzt",
+        "arbeiten",
+        "beginnen",
+        "essen",
+        "trinken",
+        "schlafen",
+        "lernen",
+        "machen"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Bir gününüzü saatleriyle anlatın: ne zaman kalkıyor, ne zaman çalışıyor, ne zaman yatıyorsunuz?",
+            "az": "Bir gününüzü saatları ilə danışın: nə vaxt durursunuz, nə vaxt işləyirsiniz, nə vaxt yatırsınız?",
+            "ru": "Опишите свой день по часам: когда встаёте, работаете, ложитесь спать.",
+            "de": "Beschreiben Sie Ihren Tag mit Uhrzeiten: Wann stehen Sie auf, wann arbeiten Sie, wann schlafen Sie?"
+          },
+          "mustUse": [
+            "arbeiten",
+            "Uhr",
+            "schlafen"
+          ],
+          "model": "Um sieben Uhr beginne ich den Tag. Ich arbeite bis fünf. Um elf Uhr schlafe ich."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "a1-04",
+      "title": {
+        "tr": "Yemek ve içmek",
+        "az": "Yemək və içmək",
+        "ru": "Еда и напитки",
+        "de": "Essen und Trinken"
+      },
+      "theme": {
+        "tr": "Yiyecekler, lokanta, belirtme hâli",
+        "az": "Yeməklər, restoran, təsirlik hal",
+        "ru": "Продукты, ресторан, винительный падеж",
+        "de": "Lebensmittel, Restaurant, Akkusativ"
+      },
+      "canDo": [
+        {
+          "tr": "Lokantada sipariş verebilirim",
+          "az": "Restoranda sifariş verə bilərəm",
+          "ru": "Могу сделать заказ в ресторане",
+          "de": "Ich kann im Restaurant bestellen"
+        },
+        {
+          "tr": "Neyi sevip sevmediğimi söyleyebilirim",
+          "az": "Nəyi sevib-sevmədiyimi deyə bilərəm",
+          "ru": "Могу сказать, что люблю и что не люблю",
+          "de": "Ich kann sagen, was ich mag und was nicht"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "akkusativ",
+          "title": {
+            "tr": "Belirtme hâli (Akkusativ)",
+            "az": "Təsirlik hal (Akkusativ)",
+            "ru": "Винительный падеж (Akkusativ)",
+            "de": "Der Akkusativ"
+          },
+          "explain": {
+            "tr": "Fiilin doğrudan nesnesi belirtme hâline girer. İyi haber: **yalnızca eril artikel değişir.** Dişil, nötr ve çoğul aynı kalır.\n\nder → **den** · die → die · das → das · die (çoğul) → die\nein → **einen** · eine → eine · ein → ein\n\nYani «Ich sehe der Mann» değil, «Ich sehe **den** Mann». Bu tek değişikliği oturtmak, Almanca hâl sisteminin ilk ve en kârlı adımıdır.",
+            "az": "Feilin birbaşa tamamlığı təsirlik hala düşür. Yaxşı xəbər: **yalnız kişi cinsi artikl dəyişir.** Qadın, orta və cəm eyni qalır.\n\nder → **den** · die → die · das → das · die (cəm) → die\nein → **einen** · eine → eine · ein → ein\n\nYəni «Ich sehe der Mann» yox, «Ich sehe **den** Mann».",
+            "ru": "Прямое дополнение стоит в винительном падеже. Хорошая новость: **меняется только мужской род.** Женский, средний и множественное число остаются без изменений — это намного проще, чем в русском.\n\nder → **den** · die → die · das → das · die (мн.) → die\nein → **einen** · eine → eine · ein → ein",
+            "de": "Das direkte Objekt steht im Akkusativ. Nur der maskuline Artikel ändert sich.\n\nder → den · die → die · das → das\nein → einen · eine → eine · ein → ein"
+          },
+          "table": {
+            "headers": [
+              "",
+              "Nominativ",
+              "Akkusativ"
+            ],
+            "rows": [
+              [
+                "maskulin",
+                "der / ein Kaffee",
+                "den / einen Kaffee"
+              ],
+              [
+                "feminin",
+                "die / eine Suppe",
+                "die / eine Suppe"
+              ],
+              [
+                "neutral",
+                "das / ein Brot",
+                "das / ein Brot"
+              ],
+              [
+                "Plural",
+                "die Äpfel",
+                "die Äpfel"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich möchte einen Kaffee.",
+              "tr": "Bir kahve istiyorum.",
+              "az": "Bir qəhvə istəyirəm.",
+              "ru": "Я хотел бы кофе."
+            },
+            {
+              "de": "Er isst einen Apfel.",
+              "tr": "O bir elma yiyor.",
+              "az": "O bir alma yeyir.",
+              "ru": "Он ест яблоко."
+            },
+            {
+              "de": "Wir trinken die Milch.",
+              "tr": "Sütü içiyoruz.",
+              "az": "Südü içirik.",
+              "ru": "Мы пьём молоко."
+            }
+          ]
+        },
+        {
+          "id": "kein",
+          "title": {
+            "tr": "Olumsuzluk: «nicht» ve «kein»",
+            "az": "İnkar: «nicht» və «kein»",
+            "ru": "Отрицание: «nicht» и «kein»",
+            "de": "Verneinung: «nicht» und «kein»"
+          },
+          "explain": {
+            "tr": "Almanca'da iki ayrı olumsuzluk vardır ve karıştırmak çok yaygın bir hatadır:\n\n• **kein** → isimleri olumsuzlar (artikeli olan veya artikelsiz): Ich habe **kein** Geld.\n• **nicht** → fiilleri, sıfatları, geri kalan her şeyi olumsuzlar: Ich arbeite **nicht**.\n\nBasit kural: cümlede olumsuzladığınız şey bir isimse ve önünde «ein» varsa ya da artikel yoksa → **kein**. Diğer her durumda → **nicht**.",
+            "az": "Alman dilində iki ayrı inkar var və onları qarışdırmaq çox yayğın səhvdir:\n\n• **kein** → isimləri inkar edir: Ich habe **kein** Geld.\n• **nicht** → feilləri, sifətləri, qalan hər şeyi inkar edir: Ich arbeite **nicht**.\n\nSadə qayda: inkar etdiyiniz isimdirsə və qarşısında «ein» varsa ya da artikl yoxdursa → **kein**. Qalan hallarda → **nicht**.",
+            "ru": "В немецком два разных отрицания, и их путают чаще всего:\n\n• **kein** → отрицает существительное: Ich habe **kein** Geld.\n• **nicht** → отрицает глагол, прилагательное, всё остальное: Ich arbeite **nicht**.\n\nПравило: если отрицаете существительное с «ein» или без артикля → **kein**. Во всех остальных случаях → **nicht**.",
+            "de": "Zwei Verneinungen:\n\n• **kein** verneint Nomen: Ich habe kein Geld.\n• **nicht** verneint Verben und alles andere: Ich arbeite nicht."
+          },
+          "examples": [
+            {
+              "de": "Ich trinke keinen Kaffee.",
+              "tr": "Kahve içmiyorum.",
+              "az": "Qəhvə içmirəm.",
+              "ru": "Я не пью кофе."
+            },
+            {
+              "de": "Das Brot ist nicht frisch.",
+              "tr": "Ekmek taze değil.",
+              "az": "Çörək təzə deyil.",
+              "ru": "Хлеб не свежий."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Essen",
+        "Brot",
+        "Wasser",
+        "Kaffee",
+        "Tee",
+        "Milch",
+        "Fleisch",
+        "Fisch",
+        "Apfel",
+        "Käse",
+        "Salz",
+        "Zucker",
+        "Suppe",
+        "Restaurant",
+        "essen",
+        "trinken",
+        "kochen",
+        "bestellen",
+        "schmecken",
+        "mögen",
+        "hungrig",
+        "durstig",
+        "lecker",
+        "kalt",
+        "warm",
+        "möchten",
+        "kosten"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Lokantada bir sipariş yazın: ne istiyorsunuz, ne istemiyorsunuz.",
+            "az": "Restoranda sifariş yazın: nə istəyirsiniz, nə istəmirsiniz.",
+            "ru": "Напишите заказ в ресторане: что хотите, чего не хотите.",
+            "de": "Schreiben Sie eine Bestellung: Was möchten Sie, was nicht?"
+          },
+          "mustUse": [
+            "möchten",
+            "kein",
+            "trinken"
+          ],
+          "model": "Ich möchte einen Kaffee und eine Suppe. Ich trinke keinen Tee."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "a1-05",
+      "title": {
+        "tr": "Alışveriş",
+        "az": "Alış-veriş",
+        "ru": "Покупки",
+        "de": "Einkaufen"
+      },
+      "theme": {
+        "tr": "Mağaza, fiyatlar, çoğul",
+        "az": "Mağaza, qiymətlər, cəm",
+        "ru": "Магазин, цены, множественное число",
+        "de": "Geschäft, Preise, Plural"
+      },
+      "canDo": [
+        {
+          "tr": "Fiyat sorabilir ve alışveriş yapabilirim",
+          "az": "Qiymət soruşa və alış-veriş edə bilərəm",
+          "ru": "Могу спросить цену и сделать покупку",
+          "de": "Ich kann nach dem Preis fragen und einkaufen"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "plural",
+          "title": {
+            "tr": "Çoğul biçimler",
+            "az": "Cəm formaları",
+            "ru": "Множественное число",
+            "de": "Der Plural"
+          },
+          "explain": {
+            "tr": "Almanca'da çoğul tek bir ekle yapılmaz — beş farklı yol vardır. Bu yüzden çoğul da artikel gibi **kelimeyle birlikte ezberlenir**.\n\n• **-e** : der Tag → die Tage\n• **-e + Umlaut** : der Stuhl → die Stühle\n• **-er + Umlaut** : das Buch → die Bücher\n• **-(e)n** : die Frau → die Frauen *(dişillerin çoğu)*\n• **-s** : das Auto → die Autos *(yabancı kelimeler)*\n• **değişmez** : der Lehrer → die Lehrer\n\nİyi haber: çoğulda artikel her zaman **die**.",
+            "az": "Alman dilində cəm tək bir şəkilçi ilə düzəlmir — beş fərqli yol var. Ona görə cəm də artikl kimi **sözlə birlikdə əzbərlənir**.\n\n• **-e** : der Tag → die Tage\n• **-e + Umlaut** : der Stuhl → die Stühle\n• **-er + Umlaut** : das Buch → die Bücher\n• **-(e)n** : die Frau → die Frauen\n• **-s** : das Auto → die Autos\n• **dəyişmir** : der Lehrer → die Lehrer\n\nYaxşı xəbər: cəmdə artikl həmişə **die**.",
+            "ru": "Множественное число образуется пятью разными способами — единого окончания нет. Поэтому форму множественного числа учат вместе со словом, как и артикль.\n\n• **-e** : der Tag → die Tage\n• **-e + умлаут** : der Stuhl → die Stühle\n• **-er + умлаут** : das Buch → die Bücher\n• **-(e)n** : die Frau → die Frauen\n• **-s** : das Auto → die Autos\n• **без изменений** : der Lehrer → die Lehrer\n\nАртикль во множественном всегда **die**.",
+            "de": "Fünf Pluraltypen — es gibt keine einzige Endung. Lernen Sie den Plural mit dem Wort.\n\n-e · -e+Umlaut · -er+Umlaut · -(e)n · -s · unverändert\n\nArtikel im Plural immer: die"
+          },
+          "examples": [
+            {
+              "de": "Ich kaufe zwei Bücher.",
+              "tr": "İki kitap alıyorum.",
+              "az": "İki kitab alıram.",
+              "ru": "Я покупаю две книги."
+            },
+            {
+              "de": "Die Äpfel sind billig.",
+              "tr": "Elmalar ucuz.",
+              "az": "Almalar ucuzdur.",
+              "ru": "Яблоки дешёвые."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Geld",
+        "Euro",
+        "Preis",
+        "Geschäft",
+        "Markt",
+        "Kunde",
+        "Tasche",
+        "Buch",
+        "Kleid",
+        "Schuh",
+        "Hose",
+        "Hemd",
+        "billig",
+        "teuer",
+        "kaufen",
+        "verkaufen",
+        "bezahlen",
+        "brauchen",
+        "suchen",
+        "finden",
+        "nehmen",
+        "geben",
+        "neu",
+        "alt",
+        "schön",
+        "viel",
+        "wenig"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Bir alışveriş listesi yazın ve her ürünün neden gerektiğini bir cümleyle açıklayın.",
+            "az": "Alış-veriş siyahısı yazın və hər məhsulun niyə lazım olduğunu bir cümlə ilə izah edin.",
+            "ru": "Напишите список покупок и объясните одним предложением, зачем нужен каждый товар.",
+            "de": "Schreiben Sie eine Einkaufsliste und erklären Sie jeden Artikel in einem Satz."
+          },
+          "mustUse": [
+            "brauchen",
+            "kaufen",
+            "kosten"
+          ],
+          "model": "Ich brauche Brot und Milch. Ich kaufe zwei Äpfel. Das kostet drei Euro."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "a1-06",
+      "title": {
+        "tr": "Oturmak ve ev",
+        "az": "Yaşamaq və ev",
+        "ru": "Жильё и дом",
+        "de": "Wohnen"
+      },
+      "theme": {
+        "tr": "Ev, odalar, yer bildirme",
+        "az": "Ev, otaqlar, yer bildirmə",
+        "ru": "Дом, комнаты, местоположение",
+        "de": "Wohnung, Zimmer, Ortsangaben"
+      },
+      "canDo": [
+        {
+          "tr": "Evimi tarif edebilirim",
+          "az": "Evimi təsvir edə bilərəm",
+          "ru": "Могу описать своё жильё",
+          "de": "Ich kann meine Wohnung beschreiben"
+        },
+        {
+          "tr": "Bir şeyin nerede olduğunu söyleyebilirim",
+          "az": "Bir şeyin harada olduğunu deyə bilərəm",
+          "ru": "Могу сказать, где что находится",
+          "de": "Ich kann sagen, wo etwas ist"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "dativ-praepositionen",
+          "title": {
+            "tr": "Yer bildiren edatlar + Dativ",
+            "az": "Yer bildirən ön qoşmalar + Dativ",
+            "ru": "Предлоги места + Dativ",
+            "de": "Wechselpräpositionen mit Dativ"
+          },
+          "explain": {
+            "tr": "«Nerede?» (wo?) sorusuna cevap veren edatlar **Dativ** ister. Dativ'de artikeller şöyle olur:\n\nder → **dem** · die → **der** · das → **dem** · die (çoğul) → **den** + isme -n\n\nEdatlar: in, auf, unter, über, neben, vor, hinter, zwischen, an\n\nDikkat: bu edatlar «Nereye?» (wohin?) sorusunda Akkusativ ister. Şimdilik sadece «nerede» ile, yani Dativ ile çalışın — hareket anlamını A2'de ekleyeceğiz.",
+            "az": "«Harada?» (wo?) sualına cavab verən ön qoşmalar **Dativ** tələb edir. Dativdə artikllər belə olur:\n\nder → **dem** · die → **der** · das → **dem** · die (cəm) → **den** + ismə -n\n\nÖn qoşmalar: in, auf, unter, über, neben, vor, hinter, zwischen, an\n\nDiqqət: bu ön qoşmalar «Haraya?» (wohin?) sualında Akkusativ tələb edir. Hələlik yalnız «harada», yəni Dativ ilə işləyin.",
+            "ru": "Предлоги, отвечающие на вопрос «где?» (wo?), требуют **Dativ**. Артикли в дательном:\n\nder → **dem** · die → **der** · das → **dem** · die (мн.) → **den** + -n к существительному\n\nПредлоги: in, auf, unter, über, neben, vor, hinter, zwischen, an\n\nВнимание: те же предлоги с вопросом «куда?» (wohin?) требуют Akkusativ. Пока работайте только с «где» — направление разберём в A2.",
+            "de": "Präpositionen auf die Frage «wo?» stehen mit **Dativ**.\n\nder → dem · die → der · das → dem · Plural: den + -n\n\nin, auf, unter, über, neben, vor, hinter, zwischen, an"
+          },
+          "table": {
+            "headers": [
+              "",
+              "Nominativ",
+              "Dativ"
+            ],
+            "rows": [
+              [
+                "maskulin",
+                "der Tisch",
+                "auf dem Tisch"
+              ],
+              [
+                "feminin",
+                "die Küche",
+                "in der Küche"
+              ],
+              [
+                "neutral",
+                "das Zimmer",
+                "in dem (im) Zimmer"
+              ],
+              [
+                "Plural",
+                "die Zimmer",
+                "in den Zimmern"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Das Buch liegt auf dem Tisch.",
+              "tr": "Kitap masanın üzerinde.",
+              "az": "Kitab masanın üstündədir.",
+              "ru": "Книга лежит на столе."
+            },
+            {
+              "de": "Wir sind in der Küche.",
+              "tr": "Mutfaktayız.",
+              "az": "Mətbəxdəyik.",
+              "ru": "Мы на кухне."
+            },
+            {
+              "de": "Die Katze schläft unter dem Bett.",
+              "tr": "Kedi yatağın altında uyuyor.",
+              "az": "Pişik çarpayının altında yatır.",
+              "ru": "Кошка спит под кроватью."
+            }
+          ]
+        },
+        {
+          "id": "es-gibt",
+          "title": {
+            "tr": "«es gibt» — vardır",
+            "az": "«es gibt» — var",
+            "ru": "«es gibt» — есть, имеется",
+            "de": "«es gibt»"
+          },
+          "explain": {
+            "tr": "«es gibt» bir şeyin var olduğunu söyler ve **daima Akkusativ** ister. Kalıptır, değişmez.\n\nEs gibt **einen** Balkon. · Es gibt **eine** Küche. · Es gibt **ein** Bad.\n\nSoru: Gibt es …? — Olumsuz: Es gibt **kein**en Aufzug.",
+            "az": "«es gibt» bir şeyin mövcud olduğunu bildirir və **həmişə Akkusativ** tələb edir. Sabit ifadədir.\n\nEs gibt **einen** Balkon. · Es gibt **eine** Küche. · Es gibt **ein** Bad.\n\nSual: Gibt es …? — İnkar: Es gibt **kein**en Aufzug.",
+            "ru": "«es gibt» означает «есть/имеется» и **всегда требует Akkusativ**. Это устойчивая конструкция.\n\nEs gibt **einen** Balkon. · Es gibt **eine** Küche.\n\nВопрос: Gibt es …? — Отрицание: Es gibt **kein**en Aufzug.",
+            "de": "«es gibt» steht immer mit Akkusativ.\n\nEs gibt einen Balkon. Gibt es einen Aufzug? Es gibt keinen Aufzug."
+          },
+          "examples": [
+            {
+              "de": "Gibt es hier einen Supermarkt?",
+              "tr": "Burada süpermarket var mı?",
+              "az": "Burada supermarket var?",
+              "ru": "Здесь есть супермаркет?"
+            },
+            {
+              "de": "In der Wohnung gibt es drei Zimmer.",
+              "tr": "Dairede üç oda var.",
+              "az": "Mənzildə üç otaq var.",
+              "ru": "В квартире три комнаты."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Wohnung",
+        "Zimmer",
+        "Küche",
+        "Bad",
+        "Tür",
+        "Fenster",
+        "Tisch",
+        "Stuhl",
+        "Bett",
+        "Schrank",
+        "Boden",
+        "Wand",
+        "Garten",
+        "Balkon",
+        "wohnen",
+        "liegen",
+        "stehen",
+        "sitzen",
+        "hängen",
+        "suchen",
+        "hell",
+        "dunkel",
+        "ruhig",
+        "modern",
+        "groß",
+        "klein",
+        "teuer"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Evinizi tarif edin: kaç oda var, eşyalar nerede duruyor?",
+            "az": "Evinizi təsvir edin: neçə otaq var, əşyalar harada durur?",
+            "ru": "Опишите своё жильё: сколько комнат, где что стоит?",
+            "de": "Beschreiben Sie Ihre Wohnung: Wie viele Zimmer, wo steht was?"
+          },
+          "mustUse": [
+            "Zimmer",
+            "stehen",
+            "geben"
+          ],
+          "model": "Meine Wohnung hat zwei Zimmer. Es gibt eine Küche. Der Tisch steht am Fenster."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "a1-07",
+      "title": {
+        "tr": "Ayrılabilen fiiller ve modal fiiller",
+        "az": "Ayrılan feillər və modal feillər",
+        "ru": "Отделяемые приставки и модальные глаголы",
+        "de": "Trennbare Verben und Modalverben"
+      },
+      "theme": {
+        "tr": "Günlük eylemler, yetenek ve zorunluluk",
+        "az": "Gündəlik hərəkətlər, bacarıq və məcburiyyət",
+        "ru": "Повседневные действия, возможность и необходимость",
+        "de": "Alltag, Können und Müssen"
+      },
+      "canDo": [
+        {
+          "tr": "Ne yapabildiğimi ve ne yapmam gerektiğini söyleyebilirim",
+          "az": "Nə bacardığımı və nə etməli olduğumu deyə bilərəm",
+          "ru": "Могу сказать, что умею и что должен делать",
+          "de": "Ich kann sagen, was ich kann und was ich muss"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "trennbare-verben",
+          "title": {
+            "tr": "Ayrılabilen fiiller",
+            "az": "Ayrılan feillər",
+            "ru": "Глаголы с отделяемой приставкой",
+            "de": "Trennbare Verben"
+          },
+          "explain": {
+            "tr": "Bazı fiillerin başındaki ön ek, cümlede fiilden ayrılır ve **cümlenin sonuna** gider. Bu, Almanca'nın en şaşırtıcı özelliklerinden biridir: cümlenin anlamı son kelimede tamamlanır.\n\n**auf**stehen → Ich stehe um sieben Uhr **auf**.\n**ein**kaufen → Wir kaufen am Samstag **ein**.\n\nSık ayrılabilen ön ekler: auf-, aus-, an-, ein-, mit-, zu-, ab-, vor-, nach-\n\nAyrılmayanlar da var (be-, ver-, er-, ent-, ge-): ver**stehen** → Ich verstehe dich. Bunlar hiç ayrılmaz.",
+            "az": "Bəzi feillərin əvvəlindəki ön şəkilçi cümlədə feildən ayrılır və **cümlənin sonuna** gedir. Bu alman dilinin ən təəccüblü xüsusiyyətlərindən biridir: cümlənin mənası son sözdə tamamlanır.\n\n**auf**stehen → Ich stehe um sieben Uhr **auf**.\n**ein**kaufen → Wir kaufen am Samstag **ein**.\n\nTez-tez ayrılan ön şəkilçilər: auf-, aus-, an-, ein-, mit-, zu-, ab-, vor-, nach-\n\nAyrılmayanlar da var (be-, ver-, er-, ent-, ge-): Ich verstehe dich.",
+            "ru": "У некоторых глаголов приставка отделяется и уходит **в конец предложения**. Это одна из самых непривычных черт немецкого: смысл предложения завершается последним словом.\n\n**auf**stehen → Ich stehe um sieben Uhr **auf**.\n**ein**kaufen → Wir kaufen am Samstag **ein**.\n\nОтделяемые: auf-, aus-, an-, ein-, mit-, zu-, ab-, vor-, nach-\n\nНеотделяемые (be-, ver-, er-, ent-, ge-) не отделяются никогда: Ich verstehe dich.",
+            "de": "Bei trennbaren Verben geht das Präfix ans Satzende.\n\naufstehen → Ich stehe um sieben Uhr auf.\n\nTrennbar: auf-, aus-, an-, ein-, mit-, zu-, ab-\nNicht trennbar: be-, ver-, er-, ent-, ge-"
+          },
+          "examples": [
+            {
+              "de": "Ich stehe früh auf.",
+              "tr": "Erken kalkıyorum.",
+              "az": "Tez dururam.",
+              "ru": "Я встаю рано."
+            },
+            {
+              "de": "Wann fängt der Film an?",
+              "tr": "Film ne zaman başlıyor?",
+              "az": "Film nə vaxt başlayır?",
+              "ru": "Когда начинается фильм?"
+            }
+          ]
+        },
+        {
+          "id": "modalverben",
+          "title": {
+            "tr": "Modal fiiller",
+            "az": "Modal feillər",
+            "ru": "Модальные глаголы",
+            "de": "Modalverben"
+          },
+          "explain": {
+            "tr": "Modal fiiller (können, müssen, wollen, dürfen, sollen, mögen) tek başına kullanılmaz; asıl fiil **mastar hâlinde cümlenin sonuna** gider.\n\nIch **kann** gut Deutsch **sprechen**.\nWir **müssen** heute **arbeiten**.\n\nDikkat: modal fiiller «ich» ve «er/sie/es» biçimlerinde **aynıdır** ve ek almaz:\nich kann · er kann (× ich kanne, × er kannt)",
+            "az": "Modal feillər (können, müssen, wollen, dürfen, sollen, mögen) tək işlənmir; əsas feil **məsdər formasında cümlənin sonuna** gedir.\n\nIch **kann** gut Deutsch **sprechen**.\nWir **müssen** bu gün **arbeiten**.\n\nDiqqət: modal feillər «ich» və «er/sie/es» formalarında **eynidir** və şəkilçi qəbul etmir:\nich kann · er kann",
+            "ru": "Модальные глаголы (können, müssen, wollen, dürfen, sollen, mögen) не употребляются одни; смысловой глагол уходит **в конец в форме инфинитива**.\n\nIch **kann** gut Deutsch **sprechen**.\nWir **müssen** heute **arbeiten**.\n\nВнимание: в формах «ich» и «er/sie/es» модальные глаголы **совпадают** и не имеют окончания: ich kann · er kann.",
+            "de": "Modalverben stehen mit Infinitiv am Satzende.\n\nIch kann gut Deutsch sprechen.\n\nich und er/sie/es haben dieselbe Form: ich kann · er kann"
+          },
+          "table": {
+            "headers": [
+              "",
+              "können",
+              "müssen",
+              "wollen"
+            ],
+            "rows": [
+              [
+                "ich",
+                "kann",
+                "muss",
+                "will"
+              ],
+              [
+                "du",
+                "kannst",
+                "musst",
+                "willst"
+              ],
+              [
+                "er / sie / es",
+                "kann",
+                "muss",
+                "will"
+              ],
+              [
+                "wir",
+                "können",
+                "müssen",
+                "wollen"
+              ],
+              [
+                "ihr",
+                "könnt",
+                "müsst",
+                "wollt"
+              ],
+              [
+                "sie / Sie",
+                "können",
+                "müssen",
+                "wollen"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Bana yardım edebilir misin?",
+              "az": "Mənə kömək edə bilərsən?",
+              "ru": "Можешь мне помочь?"
+            },
+            {
+              "de": "Ich muss jetzt gehen.",
+              "tr": "Şimdi gitmem lazım.",
+              "az": "İndi getməliyəm.",
+              "ru": "Мне нужно идти."
+            },
+            {
+              "de": "Wir wollen nach Berlin fahren.",
+              "tr": "Berlin'e gitmek istiyoruz.",
+              "az": "Berlinə getmək istəyirik.",
+              "ru": "Мы хотим поехать в Берлин."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "aufstehen",
+        "anfangen",
+        "einkaufen",
+        "mitkommen",
+        "aussehen",
+        "können",
+        "müssen",
+        "wollen",
+        "dürfen",
+        "sollen",
+        "mögen",
+        "helfen",
+        "verstehen",
+        "sprechen",
+        "fahren",
+        "gehen",
+        "kommen",
+        "bleiben",
+        "warten",
+        "fragen",
+        "antworten",
+        "zeigen",
+        "bringen",
+        "heute",
+        "morgen",
+        "schnell",
+        "langsam"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Bugün ne yapmanız gerekiyor, ne yapmak istiyorsunuz? En az dört cümle.",
+            "az": "Bu gün nə etməlisiniz, nə etmək istəyirsiniz? Ən azı dörd cümlə.",
+            "ru": "Что вам нужно сделать сегодня и что вы хотите сделать? Минимум четыре предложения.",
+            "de": "Was müssen Sie heute tun, was wollen Sie tun? Mindestens vier Sätze."
+          },
+          "mustUse": [
+            "müssen",
+            "wollen",
+            "können"
+          ],
+          "model": "Heute muss ich arbeiten. Ich will danach einkaufen. Ich kann am Abend kochen."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "a1-08",
+      "title": {
+        "tr": "Boş zaman",
+        "az": "Boş vaxt",
+        "ru": "Свободное время",
+        "de": "Freizeit"
+      },
+      "theme": {
+        "tr": "Hobiler, hava durumu, mevsimler",
+        "az": "Hobbilər, hava, fəsillər",
+        "ru": "Хобби, погода, времена года",
+        "de": "Hobbys, Wetter, Jahreszeiten"
+      },
+      "canDo": [
+        {
+          "tr": "Hobilerimden bahsedebilirim",
+          "az": "Hobbilərimdən danışa bilərəm",
+          "ru": "Могу рассказать о своих увлечениях",
+          "de": "Ich kann über meine Hobbys sprechen"
+        },
+        {
+          "tr": "Hava durumunu tarif edebilirim",
+          "az": "Havanı təsvir edə bilərəm",
+          "ru": "Могу описать погоду",
+          "de": "Ich kann das Wetter beschreiben"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "wortstellung",
+          "title": {
+            "tr": "Cümlede kelime sırası",
+            "az": "Cümlədə söz sırası",
+            "ru": "Порядок слов",
+            "de": "Die Satzstellung"
+          },
+          "explain": {
+            "tr": "Almanca'nın en önemli kuralı: **çekimli fiil daima ikinci pozisyondadır.** «İkinci kelime» değil, «ikinci öğe».\n\nIch **spiele** am Sonntag Fußball.\nAm Sonntag **spiele** ich Fußball.\nFußball **spiele** ich am Sonntag.\n\nÜçünde de fiil ikinci sırada; başa ne gelirse gelsin özne fiilin arkasına geçer. Bu «inversiyon» kuralıdır ve Türkçe konuşanların en sık atladığı yerdir.\n\nBirden fazla tümleç varsa sıra: **zaman → sebep → biçim → yer** (TeKaMoLo).\nIch fahre *morgen* *mit dem Zug* *nach Köln*.",
+            "az": "Alman dilinin ən vacib qaydası: **təsriflənən feil həmişə ikinci mövqedədir.** «İkinci söz» yox, «ikinci üzv».\n\nIch **spiele** am Sonntag Fußball.\nAm Sonntag **spiele** ich Fußball.\n\nHər ikisində feil ikinci sıradadır; əvvəldə nə gəlirsə gəlsin mübtəda feilin arxasına keçir. Bu «inversiya» qaydasıdır.\n\nBir neçə tamamlıq varsa sıra: **zaman → səbəb → tərz → yer**.\nIch fahre *morgen* *mit dem Zug* *nach Köln*.",
+            "ru": "Главное правило немецкого: **спрягаемый глагол всегда на втором месте** — не второе слово, а второй член предложения.\n\nIch **spiele** am Sonntag Fußball.\nAm Sonntag **spiele** ich Fußball.\n\nЧто бы ни стояло в начале, подлежащее уходит за глагол. Это инверсия.\n\nПри нескольких обстоятельствах порядок: **время → причина → образ действия → место**.\nIch fahre *morgen* *mit dem Zug* *nach Köln*.",
+            "de": "Das wichtigste Prinzip: **Das konjugierte Verb steht an Position 2.**\n\nIch spiele am Sonntag Fußball.\nAm Sonntag spiele ich Fußball.\n\nReihenfolge der Angaben: temporal → kausal → modal → lokal (TeKaMoLo)."
+          },
+          "examples": [
+            {
+              "de": "Morgen gehe ich ins Kino.",
+              "tr": "Yarın sinemaya gidiyorum.",
+              "az": "Sabah kinoya gedirəm.",
+              "ru": "Завтра я иду в кино."
+            },
+            {
+              "de": "Im Sommer schwimmen wir viel.",
+              "tr": "Yazın çok yüzeriz.",
+              "az": "Yayda çox üzürük.",
+              "ru": "Летом мы много плаваем."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Freizeit",
+        "Sport",
+        "Musik",
+        "Film",
+        "Buch",
+        "Spiel",
+        "Reise",
+        "Wetter",
+        "Sonne",
+        "Regen",
+        "Schnee",
+        "Wind",
+        "Sommer",
+        "Winter",
+        "spielen",
+        "lesen",
+        "hören",
+        "sehen",
+        "schwimmen",
+        "laufen",
+        "tanzen",
+        "reisen",
+        "besuchen",
+        "treffen",
+        "gern",
+        "lieber",
+        "interessant"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Hafta sonunuzu anlatın. Cümlelerinizden en az ikisi zaman ifadesiyle başlasın (fiil ikinci sırada!).",
+            "az": "Həftə sonunuzu danışın. Cümlələrinizin ən azı ikisi zaman ifadəsi ilə başlasın (feil ikinci sırada!).",
+            "ru": "Расскажите о выходных. Минимум два предложения начните с обстоятельства времени (глагол — вторым!).",
+            "de": "Beschreiben Sie Ihr Wochenende. Mindestens zwei Sätze mit einer Zeitangabe am Anfang."
+          },
+          "mustUse": [
+            "spielen",
+            "gern",
+            "Wetter"
+          ],
+          "model": "Am Samstag spiele ich gern Fußball. Im Winter ist das Wetter kalt."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "a1-09",
+      "title": {
+        "tr": "Sağlık",
+        "az": "Sağlamlıq",
+        "ru": "Здоровье",
+        "de": "Gesundheit"
+      },
+      "theme": {
+        "tr": "Vücut, hastalık, doktor, emir kipi",
+        "az": "Bədən, xəstəlik, həkim, əmr forması",
+        "ru": "Тело, болезнь, врач, повелительное наклонение",
+        "de": "Körper, Krankheit, Arzt, Imperativ"
+      },
+      "canDo": [
+        {
+          "tr": "Nerem ağrıyor söyleyebilirim",
+          "az": "Haram ağrıyır deyə bilərəm",
+          "ru": "Могу сказать, что у меня болит",
+          "de": "Ich kann sagen, was mir wehtut"
+        },
+        {
+          "tr": "Tavsiye verebilirim",
+          "az": "Məsləhət verə bilərəm",
+          "ru": "Могу дать совет",
+          "de": "Ich kann einen Rat geben"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "imperativ",
+          "title": {
+            "tr": "Emir kipi",
+            "az": "Əmr forması",
+            "ru": "Повелительное наклонение",
+            "de": "Der Imperativ"
+          },
+          "explain": {
+            "tr": "Üç ayrı emir biçimi vardır:\n\n• **du** → fiil gövdesi, ek yok, zamir yok: Komm! Geh! Trink!\n• **ihr** → şimdiki zaman biçimiyle aynı, zamir yok: Kommt! Geht!\n• **Sie** → mastar + Sie: Kommen **Sie**! Gehen **Sie**!\n\nNazik hitapta «Sie» mutlaka yazılır; diğer ikisinde zamir yazılmaz.\n\n«bitte» eklemek emri ricaya çevirir: Kommen Sie **bitte**!",
+            "az": "Üç ayrı əmr forması var:\n\n• **du** → feilin kökü, şəkilçi yox, əvəzlik yox: Komm! Geh!\n• **ihr** → indiki zaman forması ilə eyni, əvəzlik yox: Kommt!\n• **Sie** → məsdər + Sie: Kommen **Sie**!\n\nNəzakətli müraciətdə «Sie» mütləq yazılır.\n\n«bitte» əlavə etmək əmri xahişə çevirir.",
+            "ru": "Три формы повелительного наклонения:\n\n• **du** → основа глагола, без окончания и без местоимения: Komm! Geh!\n• **ihr** → как в настоящем времени, без местоимения: Kommt!\n• **Sie** → инфинитив + Sie: Kommen **Sie**!\n\nВ вежливой форме «Sie» обязательно пишется.\n\n«bitte» превращает приказ в просьбу.",
+            "de": "Drei Imperativformen:\n\ndu → Komm! (Stamm, ohne Pronomen)\nihr → Kommt!\nSie → Kommen Sie!"
+          },
+          "examples": [
+            {
+              "de": "Trink viel Wasser!",
+              "tr": "Bol su iç!",
+              "az": "Çox su iç!",
+              "ru": "Пей много воды!"
+            },
+            {
+              "de": "Gehen Sie bitte zum Arzt!",
+              "tr": "Lütfen doktora gidin!",
+              "az": "Zəhmət olmasa həkimə gedin!",
+              "ru": "Пожалуйста, сходите к врачу!"
+            }
+          ]
+        },
+        {
+          "id": "dativ-person",
+          "title": {
+            "tr": "Kişi için Dativ: «mir tut … weh»",
+            "az": "Şəxs üçün Dativ: «mir tut … weh»",
+            "ru": "Дательный лица: «mir tut … weh»",
+            "de": "Dativ der Person"
+          },
+          "explain": {
+            "tr": "Almanca'da ağrıyı «bana ağrıyor» yapısıyla söylersiniz: acı çeken kişi **Dativ**'e girer.\n\nmir · dir · ihm / ihr · uns · euch · ihnen / Ihnen\n\n**Mir** tut der Kopf weh. = Başım ağrıyor.\nWie geht es **dir**? = Nasılsın?\n\nBu yapı ayrıca «gefallen» (hoşuna gitmek) ve «helfen» (yardım etmek) gibi fiillerde de geçer: Das Buch gefällt **mir**.",
+            "az": "Alman dilində ağrını «mənə ağrıyır» quruluşu ilə deyirsiniz: ağrı çəkən şəxs **Dativ**ə düşür.\n\nmir · dir · ihm / ihr · uns · euch · ihnen / Ihnen\n\n**Mir** tut der Kopf weh. = Başım ağrıyır.\nWie geht es **dir**? = Necəsən?\n\nBu quruluş «gefallen» və «helfen» kimi feillərdə də işlənir.",
+            "ru": "Боль выражается через дательный падеж лица:\n\nmir · dir · ihm / ihr · uns · euch · ihnen / Ihnen\n\n**Mir** tut der Kopf weh. = У меня болит голова.\nWie geht es **dir**? = Как дела?\n\nТа же конструкция с «gefallen» (нравиться) и «helfen» (помогать): Das Buch gefällt **mir**.",
+            "de": "Die betroffene Person steht im Dativ.\n\nMir tut der Kopf weh. Wie geht es dir? Das gefällt mir."
+          },
+          "examples": [
+            {
+              "de": "Mir tut der Bauch weh.",
+              "tr": "Karnım ağrıyor.",
+              "az": "Qarnım ağrıyır.",
+              "ru": "У меня болит живот."
+            },
+            {
+              "de": "Kannst du mir helfen?",
+              "tr": "Bana yardım edebilir misin?",
+              "az": "Mənə kömək edə bilərsən?",
+              "ru": "Можешь мне помочь?"
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Gesundheit",
+        "Körper",
+        "Kopf",
+        "Hand",
+        "Auge",
+        "Ohr",
+        "Bein",
+        "Arzt",
+        "Krankenhaus",
+        "Schmerz",
+        "Fieber",
+        "Medikament",
+        "krank",
+        "gesund",
+        "müde",
+        "wehtun",
+        "helfen",
+        "brauchen",
+        "nehmen",
+        "fühlen",
+        "besser",
+        "schlecht",
+        "Problem",
+        "Termin"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Doktora gidiyorsunuz. Şikâyetinizi anlatın ve doktorun size vereceği üç tavsiyeyi emir kipiyle yazın.",
+            "az": "Həkimə gedirsiniz. Şikayətinizi danışın və həkimin verəcəyi üç məsləhəti əmr forması ilə yazın.",
+            "ru": "Вы идёте к врачу. Опишите жалобу и напишите три совета врача в повелительном наклонении.",
+            "de": "Sie gehen zum Arzt. Beschreiben Sie Ihr Problem und schreiben Sie drei Ratschläge im Imperativ."
+          },
+          "mustUse": [
+            "wehtun",
+            "Arzt",
+            "trinken"
+          ],
+          "model": "Mir tut der Kopf weh. Der Arzt sagt: Trinken Sie viel Wasser! Schlafen Sie gut!"
+        }
+      ],
+      "game": "artikel-rush"
+    },
+    {
+      "id": "a1-10",
+      "title": {
+        "tr": "Geçmiş zaman: Perfekt",
+        "az": "Keçmiş zaman: Perfekt",
+        "ru": "Прошедшее время: Perfekt",
+        "de": "Die Vergangenheit: Perfekt"
+      },
+      "theme": {
+        "tr": "Seyahat ve olmuş bitmiş olaylar",
+        "az": "Səyahət və olub keçmiş hadisələr",
+        "ru": "Путешествия и прошедшие события",
+        "de": "Reisen und Vergangenes"
+      },
+      "canDo": [
+        {
+          "tr": "Dün ne yaptığımı anlatabilirim",
+          "az": "Dünən nə etdiyimi danışa bilərəm",
+          "ru": "Могу рассказать, что делал вчера",
+          "de": "Ich kann erzählen, was ich gestern gemacht habe"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "perfekt",
+          "title": {
+            "tr": "Perfekt — konuşulan geçmiş",
+            "az": "Perfekt — danışıq keçmişi",
+            "ru": "Perfekt — разговорное прошедшее",
+            "de": "Das Perfekt"
+          },
+          "explain": {
+            "tr": "Konuşma dilinde geçmiş zaman neredeyse her zaman Perfekt ile kurulur. İki parçası vardır:\n\n**yardımcı fiil (haben/sein) + Partizip II (cümle sonunda)**\n\nIch **habe** gestern Deutsch **gelernt**.\nWir **sind** nach Berlin **gefahren**.\n\n**Partizip II nasıl yapılır?**\n• Düzenli: ge- + gövde + -t → machen → **ge**mach**t**\n• Düzensiz: ge- + değişen gövde + -en → gehen → **ge**gang**en**\n• -ieren ile bitenlerde «ge-» YOK: studieren → studiert\n• Ayrılabilen fiillerde «ge-» araya girer: aufstehen → auf**ge**standen\n\n**haben mi sein mi?**\nÇoğu fiil «haben» alır. «sein» alanlar:\n• yer değiştirme: gehen, fahren, kommen, fliegen, laufen\n• durum değişimi: aufstehen, einschlafen, sterben, werden\n• ve: sein, bleiben",
+            "az": "Danışıq dilində keçmiş zaman demək olar həmişə Perfekt ilə qurulur. İki hissəsi var:\n\n**köməkçi feil (haben/sein) + Partizip II (cümlənin sonunda)**\n\nIch **habe** dünən alman dili **gelernt**.\nWir **sind** Berlinə **gefahren**.\n\n**Partizip II necə düzəlir?**\n• Qaydalı: ge- + kök + -t → machen → **ge**mach**t**\n• Qaydasız: ge- + dəyişən kök + -en → gehen → **ge**gang**en**\n• -ieren ilə bitənlərdə «ge-» YOXDUR: studieren → studiert\n• Ayrılan feillərdə «ge-» araya girir: aufstehen → auf**ge**standen\n\n**haben yoxsa sein?**\nÇox feil «haben» alır. «sein» alanlar:\n• yerdəyişmə: gehen, fahren, kommen, fliegen\n• vəziyyət dəyişməsi: aufstehen, einschlafen, werden\n• və: sein, bleiben",
+            "ru": "В разговорной речи прошедшее время почти всегда — Perfekt. Две части:\n\n**вспомогательный глагол (haben/sein) + Partizip II (в конце)**\n\nIch **habe** gestern Deutsch **gelernt**.\nWir **sind** nach Berlin **gefahren**.\n\n**Как образуется Partizip II?**\n• Правильные: ge- + основа + -t → machen → **ge**mach**t**\n• Неправильные: ge- + изменённая основа + -en → gehen → **ge**gang**en**\n• На -ieren без «ge-»: studieren → studiert\n• У отделяемых «ge-» встаёт внутрь: aufstehen → auf**ge**standen\n\n**haben или sein?**\nБольшинство — haben. С «sein»:\n• перемещение: gehen, fahren, kommen, fliegen\n• смена состояния: aufstehen, einschlafen, werden\n• и: sein, bleiben",
+            "de": "Perfekt = haben/sein + Partizip II am Satzende.\n\nIch habe gelernt. Wir sind gefahren.\n\nPartizip II: ge- + Stamm + -t (regelmäßig) / -en (unregelmäßig)\nOhne ge-: Verben auf -ieren\nMit sein: Bewegung, Zustandswechsel, sein, bleiben"
+          },
+          "table": {
+            "headers": [
+              "Infinitiv",
+              "Partizip II",
+              "Hilfsverb"
+            ],
+            "rows": [
+              [
+                "machen",
+                "gemacht",
+                "haben"
+              ],
+              [
+                "lernen",
+                "gelernt",
+                "haben"
+              ],
+              [
+                "essen",
+                "gegessen",
+                "haben"
+              ],
+              [
+                "gehen",
+                "gegangen",
+                "sein"
+              ],
+              [
+                "fahren",
+                "gefahren",
+                "sein"
+              ],
+              [
+                "bleiben",
+                "geblieben",
+                "sein"
+              ],
+              [
+                "studieren",
+                "studiert",
+                "haben"
+              ],
+              [
+                "aufstehen",
+                "aufgestanden",
+                "sein"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Was hast du am Wochenende gemacht?",
+              "tr": "Hafta sonu ne yaptın?",
+              "az": "Həftə sonu nə etdin?",
+              "ru": "Что ты делал на выходных?"
+            },
+            {
+              "de": "Ich bin nach Hause gegangen.",
+              "tr": "Eve gittim.",
+              "az": "Evə getdim.",
+              "ru": "Я пошёл домой."
+            },
+            {
+              "de": "Wir haben viel gegessen.",
+              "tr": "Çok yedik.",
+              "az": "Çox yedik.",
+              "ru": "Мы много ели."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Reise",
+        "Urlaub",
+        "Zug",
+        "Flugzeug",
+        "Bahnhof",
+        "Hotel",
+        "Koffer",
+        "Karte",
+        "Weg",
+        "Straße",
+        "fahren",
+        "fliegen",
+        "ankommen",
+        "abfahren",
+        "packen",
+        "mieten",
+        "besuchen",
+        "bleiben",
+        "vergessen",
+        "gestern",
+        "letzte",
+        "schon",
+        "noch",
+        "endlich",
+        "zusammen"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Son tatilinizi Perfekt ile anlatın: nereye gittiniz, ne yaptınız, ne yediniz? En az beş cümle.",
+            "az": "Son tətilinizi Perfekt ilə danışın: hara getdiniz, nə etdiniz, nə yediniz? Ən azı beş cümlə.",
+            "ru": "Расскажите о последнем отпуске в Perfekt: куда ездили, что делали, что ели? Минимум пять предложений.",
+            "de": "Erzählen Sie von Ihrem letzten Urlaub im Perfekt: Wohin sind Sie gefahren, was haben Sie gemacht? Mindestens fünf Sätze."
+          },
+          "mustUse": [
+            "fahren",
+            "machen",
+            "essen"
+          ],
+          "model": "Letztes Jahr bin ich nach Italien gefahren. Ich habe viele Fotos gemacht. Wir haben Pizza gegessen."
+        }
+      ],
+      "game": "perfekt-paare"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
  * C1 kelimelerini hiç indirmez.
  */
 
-import type { IndexEntry, Lemma, Level, Sentence, TransLang } from './types'
+import type { Curriculum, IndexEntry, Lemma, Level, Sentence, TransLang, Unit } from './types'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -49,6 +49,36 @@ export async function loadIndex(): Promise<IndexEntry[]> {
   return indexCache
 }
 
+let curriculumCache: Curriculum | null = null
+
+export async function loadCurriculum(): Promise<Curriculum> {
+  if (curriculumCache) return curriculumCache
+  curriculumCache = await getJson<Curriculum>('curriculum.json')
+  return curriculumCache
+}
+
+/** Üniteyi kimliğinden bulur ve hangi seviyeye ait olduğunu da döndürür */
+export function findUnit(cur: Curriculum, unitId: string): { unit: Unit; level: Level } | null {
+  for (const [level, data] of Object.entries(cur)) {
+    const unit = data?.units.find((u) => u.id === unitId)
+    if (unit) return { unit, level: level as Level }
+  }
+  return null
+}
+
+/**
+ * Bir ünitenin kelimelerini tam lemma kayıtlarına çevirir.
+ * Ünite kelimeleri farklı seviyelerden gelebildiği için (A1 ünitesinde B1
+ * kelimesi olabilir) gerekli tüm seviye paketleri yükleniyor.
+ */
+export async function loadUnitLemmas(unit: Unit): Promise<Lemma[]> {
+  const levels = [...new Set(unit.words.map((w) => w.c))]
+  const chunks = await Promise.all(levels.map(loadVocab))
+  const byKey = new Map<string, Lemma>()
+  for (const l of chunks.flat()) byKey.set(lemmaKey(l), l)
+  return unit.words.map((w) => byKey.get(w.k)).filter((l): l is Lemma => !!l)
+}
+
 /* ---------- kimlik ---------- */
 
 export const lemmaKey = (l: { w: string; p: string }) => `${l.w}|${l.p}`
@@ -59,15 +89,16 @@ export const lemmaKey = (l: { w: string; p: string }) => `${l.w}|${l.p}`
  * Tatoeba cümle sesi. Dosyalar repoya kopyalanmıyor: 12 bin dosya ~140 MB
  * eder ve deponun klonlanmasını yavaşlatır. Doğrudan kaynaktan akıtılıyor.
  *
- * NEDEN /audio/download/ VE audio.tatoeba.org DEĞİL?
- *   audio.tatoeba.org/sentences/deu/<id>.mp3 yolu yalnızca Tatoeba'nın kendi
- *   barındırdığı kayıtlar için çalışıyor; toplu içe aktarılmış kayıtlarda
- *   403/404 dönüyor (ölçtük: 12 örnekten 3'ü çalıştı). /audio/download/<id>
- *   uç noktası kaynağa göre yönlendirme yapıyor ve aynı 12 örnekte 12/12
- *   çalıştı. Yönlendirmeyi <audio> öğesi kendiliğinden takip ediyor.
+ * NEDEN /audio/download/ DEĞİL?
+ *   Bu uç nokta CÜMLE değil SES kimliği bekliyor. Cümle kimliğiyle çağrılınca
+ *   HTTP 200 ve geçerli bir mp3 döndürüyor — ama başka bir dilin kaydını.
+ *   Sessizce yanlış çalıştığı için hata gözden kaçmıştı: dinleme bölümünde
+ *   Almanca yerine İspanyolca/İngilizce kayıtlar çalıyordu.
+ *   audio.tatoeba.org/sentences/deu/<cümle_id>.mp3 yolu dilin kendisini
+ *   yolda taşıdığı için böyle bir karışıklığa yer bırakmıyor.
  */
 export const sentenceAudioUrl = (sentenceId: string) =>
-  `https://tatoeba.org/audio/download/${sentenceId}`
+  `https://audio.tatoeba.org/sentences/deu/${sentenceId}.mp3`
 
 /** Kelime telaffuzu — Wikimedia Commons kaydı (Lemma.a alanında tam URL) */
 export const wordAudioUrl = (lemma: Lemma) => lemma.a ?? null
@@ -88,26 +119,46 @@ export function displayForm(l: Lemma): string {
 export const articleOf = (l: Lemma): string | null =>
   l.p === 'noun' && l.g?.length ? (ARTICLE[l.g[0]] ?? null) : null
 
-/** Çeviriyi istenen dilde döndürür; yoksa yedek dile düşer. */
-export function translationOf(
+/**
+ * Çeviriyi YALNIZCA istenen dilde döndürür.
+ *
+ * Tek istisna, kullanıcının onayladığı Azerice köprüsü: doğrulanmış Azerice
+ * karşılık yoksa Türkçe gösterilir ve `bridged` ile işaretlenir (arayüz bunu
+ * "Türkçeden" rozetiyle belirtir).
+ *
+ * NEDEN BAŞKA DİLE DÜŞMÜYOR?
+ *   Önce Türkçe yoksa Rusçaya, o da yoksa Azericeye düşen bir yedekleme
+ *   zinciri vardı. Alıştırmalarda bu felaket oluyordu: doğru cevap Türkçe,
+ *   çeldiriciler Rusça ve Azerice çıkıyor, soru dil bilgisini değil hangi
+ *   şıkkın Türkçe göründüğünü ölçüyordu. Karşılık yoksa `null` dönmek ve
+ *   çağıranın tutarlı bir yedek (Almanca tanım) seçmesi doğrusu.
+ */
+export function strictTranslation(
   l: Lemma,
   lang: TransLang,
-  fallback: TransLang[] = ['tr', 'ru', 'az'],
-): { words: string[]; lang: TransLang; bridged: boolean } | null {
+): { words: string[]; bridged: boolean } | null {
   const primary = l.t[lang]
   if (primary?.length) {
-    return { words: primary, lang, bridged: lang === 'az' && l.azs === 'tr' }
+    return { words: primary, bridged: lang === 'az' && l.azs === 'tr' }
   }
-  // Azerice yoksa Türkçeye köprü: kullanıcı onaylı davranış, arayüzde etiketli.
   if (lang === 'az' && l.t.tr?.length) {
-    return { words: l.t.tr, lang: 'tr', bridged: true }
-  }
-  for (const f of fallback) {
-    if (f !== lang && l.t[f]?.length) {
-      return { words: l.t[f]!, lang: f, bridged: false }
-    }
+    return { words: l.t.tr, bridged: true }
   }
   return null
+}
+
+/**
+ * Gösterim için karşılık: istenen dil, yoksa Almanca tanım.
+ * Almanca tanıma düşmek dil karıştırmaz — hedef dilin kendisidir ve
+ * ileri seviyede zaten tercih edilen çalışma biçimi.
+ */
+export function glossOrTranslation(
+  l: Lemma,
+  lang: TransLang,
+): { text: string; isGerman: boolean; bridged: boolean } {
+  const t = strictTranslation(l, lang)
+  if (t) return { text: t.words.slice(0, 2).join(', '), isGerman: false, bridged: t.bridged }
+  return { text: l.s[0]?.g ?? l.w, isGerman: true, bridged: false }
 }
 
 /* ---------- metin çözümleme ---------- */

@@ -70,12 +70,21 @@ def load_opensubtitles(path):
 
 def load_tatoeba(path):
     """
-    Tatoeba'dan iki şey döner:
-      exact  — büyük-küçük harfi KORUNMUŞ biçim sayımı
-      case   — küçük harf biçim -> (büyük_harfli_sayım, küçük_harfli_sayım)
-               cümle başı atlanır, çünkü orada büyük harf zorunludur.
+    Tatoeba'dan üç şey döner:
+      exact    — cümle BAŞI OLMAYAN, büyük-küçük harfi korunmuş biçim sayımı
+      initial  — cümle başındaki tokenların küçük harfli sayımı
+      case     — küçük harf biçim -> (büyük_harfli, küçük_harfli) kanıt sayacı
+
+    CÜMLE BAŞI NEDEN AYRI?
+      Almanca cümle ilk harfini her zaman büyütür, yani "Ich bin 19." cümlesinde
+      "Ich"in büyük olması zamir mi isim mi olduğuna dair HİÇBİR kanıt taşımaz.
+      İlk sürümde bu tokenlar `exact` içine olduğu gibi yazılıyordu ve "das Ich"
+      ismi, on binlerce "Ich bin…" cümlesinin frekansını yutup 760. sıraya
+      çıkıyordu. Artık cümle başı tokenları ayrı tutuluyor ve tıpkı küçük harfe
+      indirgenmiş OpenSubtitles sayımları gibi harf kanıtına göre paylaştırılıyor.
     """
     exact = defaultdict(int)
+    initial = defaultdict(int)
     case = defaultdict(lambda: [0, 0])
     with open(path, encoding="utf-8") as fh:
         for line in fh:
@@ -85,25 +94,34 @@ def load_tatoeba(path):
             for sent in SENT_SPLIT.split(cols[2]):
                 toks = WORD_RE.findall(sent)
                 for idx, tok in enumerate(toks):
-                    exact[tok] += 1
                     if idx == 0:
-                        continue  # cümle başı: büyük harf kanıt değil
+                        initial[norm(tok)] += 1
+                        continue
+                    exact[tok] += 1
                     case[norm(tok)][0 if tok[:1].isupper() else 1] += 1
-    return exact, case
+    return exact, initial, case
 
 
 def case_weight(lower_form, pos, case_ev):
     """
     Bir yüzey biçiminin bu sözcük türüne ait olma olasılığı için ağırlık.
     Kanıt yoksa 1.0 (nötr) döner ve paylaşım eşit olur.
+
+    TABAN NEDEN KALDIRILIYOR?
+      Önce her ağırlık [0.02, 0.98] aralığına sıkıştırılıyordu ki hiçbir aday
+      tamamen sıfırlanmasın. Ama "ich" 841.000 frekanslı: bunun %2'si bile
+      17.000 eder ve "das Ich" ismini listenin 762. sırasına sokar. Kanıt güçlü
+      olduğunda (≥50 gözlem) tabanı kaldırmak gerekiyor — o noktada "%2 belki
+      isimdir" demek veriye değil, temkine dayanan bir varsayım.
     """
     cap, low = case_ev.get(lower_form, (0, 0))
     total = cap + low
-    if total < 3:
+    if total < 5:
         return 1.0  # kanıt zayıf, tarafsız kal
     p_cap = cap / total
-    # Laplace yumuşatması: hiçbir aday tamamen sıfırlanmasın
-    p_cap = min(max(p_cap, 0.02), 0.98)
+    if total < 50:
+        # Kanıt var ama az: yumuşat, kimseyi tamamen silme
+        p_cap = min(max(p_cap, 0.05), 0.95)
     return p_cap if pos == "noun" else (1.0 - p_cap)
 
 
@@ -117,9 +135,9 @@ def main():
 
     print("frekans kaynakları yükleniyor...", flush=True)
     subs = load_opensubtitles(subs_path)
-    exact, case_ev = load_tatoeba(tato_path)
+    exact, initial, case_ev = load_tatoeba(tato_path)
     subs_total = sum(subs.values())
-    tato_total = sum(exact.values())
+    tato_total = sum(exact.values()) + sum(initial.values())
     print(f"  OpenSubtitles: {len(subs):,} tip / {subs_total:,} token")
     print(f"  Tatoeba      : {len(exact):,} tip / {tato_total:,} token", flush=True)
 
@@ -142,17 +160,26 @@ def main():
     lemma_subs = defaultdict(float)
     lemma_tato = defaultdict(float)
     for lower, cands in by_lower.items():
+        weights = [case_weight(lower, key[1], case_ev) for _, key in cands]
+        wsum = sum(weights) or 1.0
+
+        # OpenSubtitles küçük harfe indirgenmiş: harf kanıtıyla paylaştır.
         s_total = subs.get(lower, 0)
         if s_total:
-            weights = [case_weight(lower, key[1], case_ev) for _, key in cands]
-            wsum = sum(weights) or 1.0
-            for (form, key), w in zip(cands, weights):
+            for (_, key), w in zip(cands, weights):
                 lemma_subs[key] += s_total * w / wsum
-        # Tatoeba tarafında harf bilgisi zaten var: doğrudan eşleştir.
+
+        # Tatoeba cümle başı tokenları da harf bilgisi taşımıyor: aynı şekilde.
+        i_total = initial.get(lower, 0)
+        if i_total:
+            for (_, key), w in zip(cands, weights):
+                lemma_tato[key] += i_total * w / wsum
+
+        # Cümle içi tokenlarda harf bilgisi gerçek: doğrudan eşleştir.
         for form, key in cands:
             c = exact.get(form, 0)
             if c:
-                same = sum(1 for f2, k2 in cands if f2 == form)
+                same = sum(1 for f2, _ in cands if f2 == form)
                 lemma_tato[key] += c / same
 
     print("lemmalar puanlanıyor...", flush=True)
@@ -161,11 +188,35 @@ def main():
     # HAYALET İSİM DÜZELTMESİ
     # Wiktionary "das Ich", "die Sie", "das Nein" gibi işlev sözcüklerinden
     # türemiş isimleri de içeriyor. Bunlar gerçek sözcükler ama A1 kelimesi
-    # değiller; sıklıkları tamamen homograf oldukları zamir/parçacıktan
-    # sızıyor. Böyle bir isim varsa ağır şekilde geri çekiliyor.
+    # değiller; sıklıkları tamamen homograf oldukları zamir/parçacıktan sızıyor.
+    #
+    # DİKKAT — ilk sürümde bu ceza "işlev sözcüğü homografı olan her isim"e
+    # uygulanıyordu ve masum kelimeleri öldürüyordu: Almanca'da "sommer" diye
+    # nadir bir ağız parçacığı var ve bu yüzden "Sommer" (yaz) listeden tamamen
+    # düşmüştü. Kör bir kara liste yerine artık HARF KANITI kullanılıyor:
+    # Almanca'da isimler büyük harfle başlar. Bir yüzey biçimi derlemde ezici
+    # çoğunlukla küçük harfle geçiyorsa, o frekans gerçekten küçük harfli işlev
+    # sözcüğüne aittir ve isim hayalettir. "ich" küçük harf ağırlıklı → "Ich"
+    # cezalandırılır; "Sommer" büyük harf ağırlıklı → dokunulmaz.
     function_words = {
         r["w"].lower() for r in all_recs if r["pos"] in FUNCTION_POS
     }
+
+    # Harf kanıtının ÇALIŞAMADIĞI tek durum: Almanca nazik zamirleri cümle
+    # ortasında da büyük harfle yazar ("Können Sie mir helfen?"). Bu yüzden
+    # "Sie/Ihr/Ihnen" biçimlerinde büyük harf, ismin değil zamirin kanıtıdır
+    # ve otomatik ayrım imkânsızdır. Küçük ve açık bir istisna listesi,
+    # veriye yalan söyleyen genel bir kuraldan dürüsttür.
+    POLITE_PRONOUN_FORMS = {"sie", "ihr", "ihnen", "ihre", "ihrem", "ihren"}
+
+    def ghost_noun_factor(word):
+        if norm(word) in POLITE_PRONOUN_FORMS:
+            return 0.01
+        cap, low = case_ev.get(norm(word), (0, 0))
+        total = cap + low
+        if total < 10:
+            return 1.0  # kanıt yetersiz, dokunma
+        return 0.05 if (cap / total) < 0.25 else 1.0
 
     scored = []
     for rec in all_recs:
@@ -180,7 +231,7 @@ def main():
             if not (rec.get("tr", {}).get("tr") or rec.get("tr", {}).get("ru")):
                 score *= 0.35
             if rec["pos"] == "noun" and rec["w"].lower() in function_words:
-                score *= 0.01
+                score *= ghost_noun_factor(rec["w"])
             scored.append((score, rec))
 
     scored.sort(key=lambda x: -x[0])

@@ -11,13 +11,22 @@ import Reading from './modules/Reading'
 import Grammar from './modules/Grammar'
 import Progress from './modules/Progress'
 import Settings from './modules/Settings'
+import Course from './modules/Course'
+import Lesson from './modules/Lesson'
+import DailyPlan from './modules/DailyPlan'
 
+/**
+ * Gezinme iki katmanlı: önce KURS (kitap gibi sıralı dersler) ve GÜNLÜK PLAN,
+ * sonra serbest çalışma bölümleri. Yeni başlayan biri ilk ikisini kullanır,
+ * ileri seviye kullanıcı doğrudan modüllere gider.
+ */
 const NAV = [
   { to: '/', key: 'home' },
+  { to: '/plan', key: 'todayPlan' },
+  { to: '/course', key: 'course' },
   { to: '/study', key: 'study' },
   { to: '/listening', key: 'listening' },
   { to: '/reading', key: 'reading' },
-  { to: '/grammar', key: 'grammar' },
   { to: '/dictionary', key: 'dictionary' },
   { to: '/progress', key: 'progress' },
 ] as const
@@ -73,6 +82,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/placement" element={<Placement />} />
+        <Route path="/plan" element={<DailyPlan />} />
+        <Route path="/course" element={<Course />} />
+        <Route path="/lesson/:unitId" element={<Lesson />} />
         <Route path="/study" element={<Study />} />
         <Route path="/listening" element={<Listening />} />
         <Route path="/reading" element={<Reading />} />

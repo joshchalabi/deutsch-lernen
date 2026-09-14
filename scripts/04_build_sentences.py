@@ -74,22 +74,42 @@ def load_links(path):
 def load_audio(path):
     """
     sentences_with_audio.csv kolonları:
-      audio_id, sentence_id, username, license, attribution_url
+      sentence_id, audio_id, username, license, attribution_url
+
+    DİKKAT — burada bir kez hata yapıldı, tekrarlanmasın:
+    İki kolon da aynı sayı aralığında kimlikler taşıyor, bu yüzden "hangi
+    kolon cümle kimliği?" sorusu Almanca kimliklerle kesişim sayarak
+    çözülemez. Kesişim kolon 2 için daha büyük çıkıyor (86.209 vs 32.937)
+    ama bu rastlantısal çakışma; doğrusu kolon 1 ve gerçek sayı 32.937.
+
+    Kesin doğrulama yolu: indirilen mp3'ün ID3 etiketine bakmak.
+    audio.tatoeba.org/sentences/deu/<cümle_id>.mp3 dosyasının TALB etiketi
+    "tatoeba.org - German Audio" diyor. Yanlış kimlikle İspanyolca kayıt
+    geliyordu ve HTTP 200 döndüğü için hata fark edilmiyordu.
     """
     out = {}
+    skipped_unlicensed = 0
     with open(path, encoding="utf-8", newline="") as fh:
         for row in csv.reader(fh, delimiter="\t", quoting=csv.QUOTE_NONE):
             if len(row) < 4:
                 continue
-            audio_id, sent_id, user, lic = row[0], row[1], row[2], row[3]
+            sent_id, audio_id, user, lic = row[0], row[1], row[2], row[3].strip()
+            # Lisansı beyan edilmemiş kayıtlar CDN'den 403 dönüyor: Tatoeba
+            # bunları indirtmiyor. Ölçüldü: boş lisanslı 4 örneğin 4'ü de 403,
+            # lisanslı 11 örneğin 11'i de 200. Bunları en baştan almıyoruz,
+            # yoksa dinleme bölümünde sessiz alıştırmalar çıkıyor.
+            if not lic or lic == "\\N":
+                skipped_unlicensed += 1
+                continue
             if sent_id in out:
-                continue  # ilk kayıt yeterli
+                continue  # bir cümlenin birden çok kaydı olabilir; ilki yeterli
             out[sent_id] = {
                 "aid": audio_id,
                 "by": user,
                 "lic": lic,
                 "free": lic in REDISTRIBUTABLE,
             }
+    print(f"  lisanssız (erişilemez) kayıt atlandı: {skipped_unlicensed:,}")
     return out
 
 

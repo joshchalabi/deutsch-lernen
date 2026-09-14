@@ -100,6 +100,103 @@ export interface Sentence {
   a?: SentenceAudio
 }
 
+/* ---------- müfredat ---------- */
+
+/** Dört dilde aynı metin. Eksik dil TypeScript hatası verir. */
+export type Localized = Record<UiLang, string>
+
+export interface GrammarTable {
+  headers: string[]
+  rows: string[][]
+}
+
+export interface GrammarExample {
+  de: string
+  tr: string
+  az: string
+  ru: string
+}
+
+export interface GrammarTopic {
+  id: string
+  title: Localized
+  /** Açıklama metni. **kalın** ve satır sonları desteklenir. */
+  explain: Localized
+  table?: GrammarTable
+  examples: GrammarExample[]
+}
+
+/** Müfredattaki kelime, aşama 6'da gerçek bir lemmaya bağlanmış hâliyle */
+export interface CurriculumWord {
+  /** "Haus|noun" — sözlükteki anahtar */
+  k: string
+  /** müfredatta yazıldığı hâli */
+  w: string
+  p: Pos
+  c: Level
+}
+
+export interface WritingTask {
+  prompt: Localized
+  /** Metinde geçmesi beklenen kelimeler */
+  mustUse: string[]
+  /** Örnek cevap — kullanıcı kendi metnini buna karşı değerlendirir */
+  model: string
+}
+
+export type GameId =
+  | 'artikel-rush' | 'wortsalat' | 'satzbau'
+  | 'perfekt-paare' | 'wo-wohin' | 'adjektiv-endung'
+
+export interface Unit {
+  id: string
+  title: Localized
+  theme: Localized
+  canDo: Localized[]
+  grammar: GrammarTopic[]
+  words: CurriculumWord[]
+  writing: WritingTask[]
+  game: GameId
+}
+
+export interface LevelCurriculum {
+  level: Level
+  title: Localized
+  description: Localized
+  units: Unit[]
+}
+
+export type Curriculum = Partial<Record<Level, LevelCurriculum>>
+
+/** Bir dersin adımları — sabit pedagojik sıra */
+export const LESSON_STEPS = [
+  'intro', 'vocab', 'grammar', 'drill', 'listening', 'writing', 'game', 'done',
+] as const
+export type LessonStep = (typeof LESSON_STEPS)[number]
+
+/* ---------- günlük plan ---------- */
+
+export type BlockKind = 'vocab' | 'listening' | 'grammar' | 'writing' | 'game' | 'review'
+
+export interface PlanBlock {
+  id: string
+  kind: BlockKind
+  minutes: number
+  /** kaç birim iş: kelime sayısı, dikte sayısı vb. */
+  target: number
+}
+
+export interface DailyPlan {
+  /** YYYY-MM-DD */
+  date: string
+  totalMinutes: number
+  /** çalışılan ünite; serbest çalışmada null */
+  unitId: string | null
+  blocks: PlanBlock[]
+  /** tamamlanan blok kimlikleri */
+  done: string[]
+}
+
 /* ---------- öğrenci durumu ---------- */
 
 /** Bir kelimenin öğrenilme durumu. Anahtar: "kelime|tür" */
@@ -155,4 +252,10 @@ export interface AppState {
   sessions: Record<string, StudySession>
   /** tamamlanan dinleme/dikte alıştırmaları: cümle kimlikleri */
   dictationDone: string[]
+  /** ünite kimliği -> tamamlanan adımlar */
+  units: Record<string, { steps: LessonStep[]; completedAt: number | null }>
+  /** bugünün planı; başka güne aitse yenisi üretilir */
+  plan: DailyPlan | null
+  /** yazma görevlerinin metinleri: "üniteId#index" -> metin */
+  writings: Record<string, string>
 }

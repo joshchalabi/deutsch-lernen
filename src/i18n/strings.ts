@@ -20,6 +20,30 @@ export const STRINGS = {
   progress: { tr: 'İlerleme', az: 'İrəliləyiş', ru: 'Прогресс', de: 'Fortschritt' },
   settings: { tr: 'Ayarlar', az: 'Tənzimləmələr', ru: 'Настройки', de: 'Einstellungen' },
   games: { tr: 'Oyunlar', az: 'Oyunlar', ru: 'Игры', de: 'Spiele' },
+  course: { tr: 'Kurs', az: 'Kurs', ru: 'Курс', de: 'Kurs' },
+  freePractice: { tr: 'Serbest çalışma', az: 'Sərbəst çalışma', ru: 'Свободная практика', de: 'Freies Üben' },
+
+  /* --- günlük plan --- */
+  todayPlan: { tr: 'Bugünün planı', az: 'Bu günün planı', ru: 'План на сегодня', de: 'Tagesplan' },
+  planIntro: {
+    tr: 'Bugün ne kadar çalışacaksınız? Süreyi seçin, gerisini plan halleder: kelime, dinleme, dilbilgisi, yazma ve kapanış oyunu dengeli şekilde bölünür.',
+    az: 'Bu gün nə qədər çalışacaqsınız? Vaxtı seçin, qalanını plan həll edir: söz, dinləmə, qrammatika, yazma və oyun balanslı şəkildə bölünür.',
+    ru: 'Сколько времени вы сегодня занимаетесь? Выберите длительность — план сам распределит слова, аудирование, грамматику, письмо и игру.',
+    de: 'Wie lange lernen Sie heute? Wählen Sie die Dauer — der Plan verteilt Wortschatz, Hören, Grammatik, Schreiben und Spiel.',
+  },
+  todayLesson: { tr: 'Bugünün dersi', az: 'Bu günün dərsi', ru: 'Урок на сегодня', de: 'Heutige Lektion' },
+  startDay: { tr: 'Güne başla', az: 'Günə başla', ru: 'Начать день', de: 'Tag beginnen' },
+  resetPlan: { tr: 'Planı sıfırla', az: 'Planı sıfırla', ru: 'Сбросить план', de: 'Plan zurücksetzen' },
+  dayComplete: {
+    tr: 'Günü tamamladınız!',
+    az: 'Günü tamamladınız!',
+    ru: 'День завершён!',
+    de: 'Tag geschafft!',
+  },
+  go: { tr: 'Git', az: 'Get', ru: 'Перейти', de: 'Los' },
+  markDone: { tr: 'Tamamlandı işaretle', az: 'Tamamlandı işarələ', ru: 'Отметить выполненным', de: 'Als erledigt markieren' },
+  openLesson: { tr: 'Dersi aç', az: 'Dərsi aç', ru: 'Открыть урок', de: 'Lektion öffnen' },
+  continueLesson: { tr: 'Derse devam et', az: 'Dərsə davam et', ru: 'Продолжить урок', de: 'Lektion fortsetzen' },
 
   loading: { tr: 'Yükleniyor…', az: 'Yüklənir…', ru: 'Загрузка…', de: 'Wird geladen…' },
   error: { tr: 'Hata', az: 'Xəta', ru: 'Ошибка', de: 'Fehler' },

@@ -1,0 +1,482 @@
+{
+  "level": "A2",
+  "title": {
+    "tr": "A2 — Temelleri sağlamlaştırma",
+    "az": "A2 — Təməlləri möhkəmləndirmə",
+    "ru": "A2 — Закрепление основ",
+    "de": "A2 — Grundlagen festigen"
+  },
+  "description": {
+    "tr": "A1'de tanıştığınız yapıları burada gerçekten kullanmaya başlıyorsunuz: geçmiş zaman anlatımı, yan cümleler, sıfat çekimi ve nezaket kalıpları.",
+    "az": "A1-də tanış olduğunuz quruluşları burada həqiqətən işlətməyə başlayırsınız: keçmiş zaman, budaq cümlələr, sifət təsrifi və nəzakət qəlibləri.",
+    "ru": "Здесь вы начинаете реально пользоваться тем, с чем познакомились в A1: рассказ о прошлом, придаточные предложения, склонение прилагательных и формы вежливости.",
+    "de": "Hier wenden Sie an, was Sie in A1 kennengelernt haben: über Vergangenes erzählen, Nebensätze, Adjektivdeklination und Höflichkeitsformen."
+  },
+  "units": [
+    {
+      "id": "a2-01",
+      "title": { "tr": "İnsanları tarif etmek", "az": "İnsanları təsvir etmək", "ru": "Описание людей", "de": "Menschen beschreiben" },
+      "theme": { "tr": "Görünüş, karakter, karşılaştırma", "az": "Görünüş, xarakter, müqayisə", "ru": "Внешность, характер, сравнение", "de": "Aussehen, Charakter, Vergleich" },
+      "canDo": [
+        { "tr": "Bir kişiyi ayrıntılı tarif edebilirim", "az": "Bir şəxsi ətraflı təsvir edə bilərəm", "ru": "Могу подробно описать человека", "de": "Ich kann eine Person genau beschreiben" },
+        { "tr": "İki şeyi karşılaştırabilirim", "az": "İki şeyi müqayisə edə bilərəm", "ru": "Могу сравнить две вещи", "de": "Ich kann zwei Dinge vergleichen" }
+      ],
+      "grammar": [
+        {
+          "id": "komparativ",
+          "title": { "tr": "Karşılaştırma dereceleri", "az": "Müqayisə dərəcələri", "ru": "Степени сравнения", "de": "Komparativ und Superlativ" },
+          "explain": {
+            "tr": "Sıfatlar üç derecede bulunur:\n\n**klein → kleiner → am kleinsten**\n\n• Karşılaştırma: sıfat + **-er**, ardından **als**\n  Berlin ist **größer als** Köln.\n• Eşitlik: **so … wie**\n  Anna ist **so groß wie** Tom.\n• Üstünlük: **am** + sıfat + **-sten**\n  Das ist **am besten**.\n\nKısa sıfatlarda çoğu zaman Umlaut gelir: alt → **ä**lter, groß → gr**ö**ßer, jung → j**ü**nger.\n\nEzberlenmesi gereken düzensizler:\ngut → besser → am besten\nviel → mehr → am meisten\ngern → lieber → am liebsten\nhoch → höher → am höchsten",
+            "az": "Sifətlərin üç dərəcəsi var:\n\n**klein → kleiner → am kleinsten**\n\n• Müqayisə: sifət + **-er**, sonra **als**\n  Berlin ist **größer als** Köln.\n• Bərabərlik: **so … wie**\n  Anna ist **so groß wie** Tom.\n• Üstünlük: **am** + sifət + **-sten**\n\nQısa sifətlərdə çox vaxt Umlaut gəlir: alt → älter, groß → größer, jung → jünger.\n\nƏzbərlənməli qaydasızlar:\ngut → besser → am besten\nviel → mehr → am meisten\ngern → lieber → am liebsten",
+            "ru": "Три степени сравнения:\n\n**klein → kleiner → am kleinsten**\n\n• Сравнительная: прилагательное + **-er**, затем **als**\n  Berlin ist **größer als** Köln.\n• Равенство: **so … wie**\n  Anna ist **so groß wie** Tom.\n• Превосходная: **am** + прилагательное + **-sten**\n\nУ коротких прилагательных часто появляется умлаут: alt → älter, groß → größer, jung → jünger.\n\nНеправильные (выучить):\ngut → besser → am besten\nviel → mehr → am meisten\ngern → lieber → am liebsten",
+            "de": "klein → kleiner → am kleinsten\n\nVergleich mit **als**, Gleichheit mit **so … wie**.\n\nUnregelmäßig: gut/besser/am besten · viel/mehr/am meisten · gern/lieber/am liebsten"
+          },
+          "table": {
+            "headers": ["Positiv", "Komparativ", "Superlativ"],
+            "rows": [
+              ["klein", "kleiner", "am kleinsten"],
+              ["groß", "größer", "am größten"],
+              ["alt", "älter", "am ältesten"],
+              ["gut", "besser", "am besten"],
+              ["viel", "mehr", "am meisten"],
+              ["gern", "lieber", "am liebsten"]
+            ]
+          },
+          "examples": [
+            { "de": "Mein Bruder ist älter als ich.", "tr": "Ağabeyim benden büyük.", "az": "Qardaşım məndən böyükdür.", "ru": "Мой брат старше меня." },
+            { "de": "Sie spricht besser Deutsch als ich.", "tr": "O benden iyi Almanca konuşuyor.", "az": "O məndən yaxşı alman dilində danışır.", "ru": "Она говорит по-немецки лучше меня." },
+            { "de": "Ich trinke am liebsten Tee.", "tr": "En çok çay içmeyi severim.", "az": "Ən çox çay içməyi sevirəm.", "ru": "Больше всего я люблю чай." }
+          ]
+        }
+      ],
+      "words": [
+        "Gesicht", "Haar", "Auge", "Nase", "Mund", "Charakter", "Person",
+        "freundlich", "nett", "ruhig", "lustig", "ernst", "klug", "dumm",
+        "stark", "schwach", "schlank", "dick", "hübsch", "blond",
+        "aussehen", "tragen", "wirken", "scheinen", "vergleichen", "besser"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Yakın bir arkadaşınızı tarif edin ve onu kendinizle karşılaştırın. En az iki karşılaştırma cümlesi kurun.", "az": "Yaxın dostunuzu təsvir edin və onu özünüzlə müqayisə edin. Ən azı iki müqayisə cümləsi qurun.", "ru": "Опишите близкого друга и сравните его с собой. Минимум два предложения со сравнением.", "de": "Beschreiben Sie einen Freund und vergleichen Sie ihn mit sich selbst. Mindestens zwei Vergleichssätze." },
+          "mustUse": ["aussehen", "als", "freundlich"],
+          "model": "Mein Freund sieht sportlich aus. Er ist größer als ich, aber ich bin älter."
+        }
+      ],
+      "game": "wortsalat"
+    },
+
+    {
+      "id": "a2-02",
+      "title": { "tr": "Nerede? Nereye?", "az": "Harada? Haraya?", "ru": "Где? Куда?", "de": "Wo? Wohin?" },
+      "theme": { "tr": "Değişken edatlar, ev ve eşyalar", "az": "Dəyişkən ön qoşmalar, ev və əşyalar", "ru": "Предлоги двойного управления, дом и вещи", "de": "Wechselpräpositionen, Wohnung und Möbel" },
+      "canDo": [
+        { "tr": "Bir şeyin nerede olduğunu ve nereye konduğunu ayırt edebilirim", "az": "Bir şeyin harada olduğunu və haraya qoyulduğunu ayırd edə bilərəm", "ru": "Могу различить, где что находится и куда что ставят", "de": "Ich kann Ort und Richtung unterscheiden" }
+      ],
+      "grammar": [
+        {
+          "id": "wechselpraepositionen",
+          "title": { "tr": "Değişken edatlar: Akkusativ mi Dativ mi?", "az": "Dəyişkən ön qoşmalar: Akkusativ yoxsa Dativ?", "ru": "Предлоги двойного управления: Akkusativ или Dativ?", "de": "Wechselpräpositionen" },
+          "explain": {
+            "tr": "Dokuz edat iki hâlle de kullanılır ve **anlamı hâl belirler**. Kural tek cümlede özetlenir:\n\n• **Wohin?** (nereye — hareket, yön) → **Akkusativ**\n• **Wo?** (nerede — konum, duruş) → **Dativ**\n\nIch stelle das Buch **auf den** Tisch. *(Wohin? → Akk.)*\nDas Buch liegt **auf dem** Tisch. *(Wo? → Dat.)*\n\nDokuz edat: **an, auf, hinter, in, neben, über, unter, vor, zwischen**\n\nFiil size ipucu verir — bunlar çiftler hâlinde öğrenilir:\n\n| hareket (Akk.) | konum (Dat.) |\n|---|---|\n| stellen (dikey koymak) | stehen (durmak) |\n| legen (yatay koymak) | liegen (yatmak) |\n| setzen (oturtmak) | sitzen (oturmak) |\n| hängen (asmak) | hängen (asılı olmak) |",
+            "az": "Doqquz ön qoşma hər iki halla işlənir və **mənanı hal müəyyən edir**:\n\n• **Wohin?** (haraya — hərəkət) → **Akkusativ**\n• **Wo?** (harada — yer) → **Dativ**\n\nIch stelle das Buch **auf den** Tisch. *(Wohin?)*\nDas Buch liegt **auf dem** Tisch. *(Wo?)*\n\nDoqquz ön qoşma: **an, auf, hinter, in, neben, über, unter, vor, zwischen**\n\nFeil sizə ipucu verir — bunlar cüt öyrənilir:\n\n| hərəkət (Akk.) | yer (Dat.) |\n|---|---|\n| stellen | stehen |\n| legen | liegen |\n| setzen | sitzen |\n| hängen | hängen |",
+            "ru": "Девять предлогов управляют двумя падежами, и **падеж определяет смысл**:\n\n• **Wohin?** (куда — движение) → **Akkusativ**\n• **Wo?** (где — местоположение) → **Dativ**\n\nIch stelle das Buch **auf den** Tisch. *(куда?)*\nDas Buch liegt **auf dem** Tisch. *(где?)*\n\nДевять предлогов: **an, auf, hinter, in, neben, über, unter, vor, zwischen**\n\nГлагол подсказывает падеж — учите парами:\n\n| движение (Akk.) | покой (Dat.) |\n|---|---|\n| stellen (ставить) | stehen (стоять) |\n| legen (класть) | liegen (лежать) |\n| setzen (сажать) | sitzen (сидеть) |\n| hängen (вешать) | hängen (висеть) |",
+            "de": "Wohin? → Akkusativ · Wo? → Dativ\n\nan, auf, hinter, in, neben, über, unter, vor, zwischen\n\nVerbpaare: stellen/stehen · legen/liegen · setzen/sitzen · hängen/hängen"
+          },
+          "table": {
+            "headers": ["Wohin? (Akkusativ)", "Wo? (Dativ)"],
+            "rows": [
+              ["in den Garten", "in dem (im) Garten"],
+              ["in die Küche", "in der Küche"],
+              ["in das (ins) Zimmer", "in dem (im) Zimmer"],
+              ["auf den Tisch stellen", "auf dem Tisch stehen"],
+              ["an die Wand hängen", "an der Wand hängen"]
+            ]
+          },
+          "examples": [
+            { "de": "Ich hänge das Bild an die Wand.", "tr": "Resmi duvara asıyorum.", "az": "Şəkli divara asıram.", "ru": "Я вешаю картину на стену." },
+            { "de": "Das Bild hängt an der Wand.", "tr": "Resim duvarda asılı.", "az": "Şəkil divardan asılıb.", "ru": "Картина висит на стене." },
+            { "de": "Setz dich bitte auf den Stuhl!", "tr": "Lütfen sandalyeye otur!", "az": "Zəhmət olmasa stula otur!", "ru": "Пожалуйста, сядь на стул!" }
+          ]
+        }
+      ],
+      "words": [
+        "Möbel", "Sofa", "Regal", "Teppich", "Lampe", "Spiegel", "Küche",
+        "Wand", "Ecke", "Keller", "Treppe", "Wohnzimmer", "Schlafzimmer",
+        "stellen", "legen", "setzen", "hängen", "stehen", "liegen", "sitzen",
+        "bringen", "räumen", "putzen", "zwischen", "neben", "hinter", "über"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Odanızı yeniden düzenliyorsunuz. Neyi nereye koyduğunuzu ve sonra neyin nerede durduğunu yazın — hem Akkusativ hem Dativ kullanın.", "az": "Otağınızı yenidən düzürsünüz. Nəyi haraya qoyduğunuzu və sonra nəyin harada durduğunu yazın — həm Akkusativ həm Dativ işlədin.", "ru": "Вы переставляете мебель. Напишите, что куда ставите, а потом где что стоит — используйте оба падежа.", "de": "Sie räumen Ihr Zimmer um. Schreiben Sie, was Sie wohin stellen und wo es danach steht." },
+          "mustUse": ["stellen", "stehen", "zwischen"],
+          "model": "Ich stelle das Regal an die Wand. Jetzt steht das Regal zwischen dem Bett und dem Fenster."
+        }
+      ],
+      "game": "wo-wohin"
+    },
+
+    {
+      "id": "a2-03",
+      "title": { "tr": "İş ve meslek", "az": "İş və peşə", "ru": "Работа и профессия", "de": "Arbeit und Beruf" },
+      "theme": { "tr": "Meslekler, sebep bildirme, yan cümle", "az": "Peşələr, səbəb bildirmə, budaq cümlə", "ru": "Профессии, причина, придаточное предложение", "de": "Berufe, Gründe, Nebensatz" },
+      "canDo": [
+        { "tr": "Bir kararımın sebebini açıklayabilirim", "az": "Bir qərarımın səbəbini izah edə bilərəm", "ru": "Могу объяснить причину своего решения", "de": "Ich kann einen Grund für eine Entscheidung angeben" }
+      ],
+      "grammar": [
+        {
+          "id": "nebensatz-weil",
+          "title": { "tr": "Yan cümle: «weil» ve fiilin sona gitmesi", "az": "Budaq cümlə: «weil» və feilin sona getməsi", "ru": "Придаточное с «weil»: глагол в конец", "de": "Nebensatz mit «weil»" },
+          "explain": {
+            "tr": "Almanca'nın ikinci büyük yapısal kuralı: **yan cümlede çekimli fiil en sona gider.**\n\nIch bleibe zu Hause, **weil** ich krank **bin**.\n                                            └─ fiil sonda\n\nBu, ana cümledeki «fiil ikinci sırada» kuralının tam tersidir. İkisini ayırt etmek A2'nin en önemli kazanımıdır.\n\n**weil / denn / deshalb — üçü de sebep bildirir ama sözdizimi farklı:**\n\n• **weil** + yan cümle (fiil sonda):\n  Ich lerne Deutsch, weil ich in Berlin **arbeite**.\n• **denn** + normal cümle (fiil ikinci sırada):\n  Ich lerne Deutsch, denn ich **arbeite** in Berlin.\n• **deshalb** (bu yüzden) sonucu bildirir ve kendisi birinci öğedir:\n  Ich arbeite in Berlin, deshalb **lerne** ich Deutsch.",
+            "az": "Alman dilinin ikinci böyük struktur qaydası: **budaq cümlədə təsriflənən feil ən sona gedir.**\n\nIch bleibe zu Hause, **weil** ich krank **bin**.\n\nBu, baş cümlədəki «feil ikinci sırada» qaydasının tam əksidir.\n\n**weil / denn / deshalb:**\n\n• **weil** + budaq cümlə (feil sonda):\n  Ich lerne Deutsch, weil ich in Berlin **arbeite**.\n• **denn** + adi cümlə (feil ikinci):\n  Ich lerne Deutsch, denn ich **arbeite** in Berlin.\n• **deshalb** nəticə bildirir və özü birinci üzvdür:\n  Ich arbeite in Berlin, deshalb **lerne** ich Deutsch.",
+            "ru": "Второе важнейшее правило немецкого синтаксиса: **в придаточном спрягаемый глагол уходит в самый конец.**\n\nIch bleibe zu Hause, **weil** ich krank **bin**.\n\nЭто прямо противоположно правилу главного предложения («глагол вторым»). Различать их — главное достижение уровня A2.\n\n**weil / denn / deshalb — все три о причине, но синтаксис разный:**\n\n• **weil** + придаточное (глагол в конце):\n  Ich lerne Deutsch, weil ich in Berlin **arbeite**.\n• **denn** + обычное предложение (глагол вторым):\n  Ich lerne Deutsch, denn ich **arbeite** in Berlin.\n• **deshalb** (поэтому) вводит следствие и сам занимает первое место:\n  Ich arbeite in Berlin, deshalb **lerne** ich Deutsch.",
+            "de": "Im Nebensatz steht das Verb am Ende.\n\nIch bleibe zu Hause, weil ich krank bin.\n\nweil → Nebensatz (Verb am Ende)\ndenn → Hauptsatz (Verb Position 2)\ndeshalb → Folge, steht auf Position 1"
+          },
+          "examples": [
+            { "de": "Ich lerne Deutsch, weil ich in Deutschland studieren will.", "tr": "Almanca öğreniyorum, çünkü Almanya'da okumak istiyorum.", "az": "Alman dili öyrənirəm, çünki Almaniyada oxumaq istəyirəm.", "ru": "Я учу немецкий, потому что хочу учиться в Германии." },
+            { "de": "Er kommt nicht, weil er arbeiten muss.", "tr": "Gelmiyor, çünkü çalışmak zorunda.", "az": "Gəlmir, çünki işləməlidir.", "ru": "Он не придёт, потому что должен работать." }
+          ]
+        }
+      ],
+      "words": [
+        "Beruf", "Arbeit", "Firma", "Büro", "Chef", "Kollege", "Lohn",
+        "Stelle", "Bewerbung", "Erfahrung", "Ausbildung", "Studium",
+        "Lehrer", "Arzt", "Ingenieur", "Verkäufer", "arbeiten", "verdienen",
+        "bewerben", "kündigen", "leiten", "organisieren", "weil", "deshalb", "denn"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Neden Almanca öğreniyorsunuz? En az üç sebep yazın — birinde «weil», birinde «deshalb» kullanın.", "az": "Niyə alman dili öyrənirsiniz? Ən azı üç səbəb yazın — birində «weil», birində «deshalb» işlədin.", "ru": "Почему вы учите немецкий? Напишите минимум три причины — с «weil» и с «deshalb».", "de": "Warum lernen Sie Deutsch? Mindestens drei Gründe — einmal mit «weil», einmal mit «deshalb»." },
+          "mustUse": ["weil", "deshalb", "arbeiten"],
+          "model": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte. Meine Firma hat ein Büro in Hamburg, deshalb brauche ich die Sprache."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "a2-04",
+      "title": { "tr": "Eskiden ve şimdi", "az": "Əvvəllər və indi", "ru": "Раньше и сейчас", "de": "Früher und heute" },
+      "theme": { "tr": "Präteritum, çocukluk, değişim", "az": "Präteritum, uşaqlıq, dəyişiklik", "ru": "Präteritum, детство, перемены", "de": "Präteritum, Kindheit, Veränderung" },
+      "canDo": [
+        { "tr": "Çocukluğumu anlatabilirim", "az": "Uşaqlığımı danışa bilərəm", "ru": "Могу рассказать о детстве", "de": "Ich kann über meine Kindheit erzählen" }
+      ],
+      "grammar": [
+        {
+          "id": "praeteritum",
+          "title": { "tr": "Präteritum — yazılı geçmiş", "az": "Präteritum — yazılı keçmiş", "ru": "Präteritum — письменное прошедшее", "de": "Das Präteritum" },
+          "explain": {
+            "tr": "Almanca'da iki geçmiş zaman vardır ve **ikisi de aynı anlama gelir** — fark kullanım alanındadır:\n\n• **Perfekt** → konuşma dili (A1'de öğrendiniz)\n• **Präteritum** → yazı dili, anlatı, haber\n\nAma bir istisna var ve çok önemlidir: **sein, haben ve modal fiiller konuşmada da Präteritum ile kullanılır.** Kimse «Ich habe müde gewesen» demez; «Ich **war** müde» der.\n\nBu yüzden A2'de önce şu üç grubu ezberleyin:\n\n**sein** → ich **war**, du warst, er war, wir waren, ihr wart, sie waren\n**haben** → ich **hatte**, du hattest, er hatte, wir hatten\n**modal** → ich **konnte**, **musste**, **wollte**, **durfte**, **sollte**\n\nDikkat: modal fiillerin Präteritum'unda Umlaut **düşer**: können → konnte (× könnte — o başka bir şey, Konjunktiv!).",
+            "az": "Alman dilində iki keçmiş zaman var və **ikisi də eyni mənanı verir** — fərq işlənmə sahəsindədir:\n\n• **Perfekt** → danışıq dili\n• **Präteritum** → yazı dili, nağıl, xəbər\n\nAmma çox vacib bir istisna var: **sein, haben və modal feillər danışıqda da Präteritum ilə işlənir.** Heç kim «Ich habe müde gewesen» demir; «Ich **war** müde» deyir.\n\nƏvvəlcə bu üç qrupu əzbərləyin:\n\n**sein** → ich **war**, du warst, er war, wir waren\n**haben** → ich **hatte**, du hattest, er hatte\n**modal** → ich **konnte**, **musste**, **wollte**\n\nDiqqət: modal feillərin Präteritumunda Umlaut **düşür**: können → konnte.",
+            "ru": "В немецком два прошедших времени, и **значат они одно и то же** — различие в сфере употребления:\n\n• **Perfekt** → разговорная речь\n• **Präteritum** → письменная речь, повествование, новости\n\nНо есть важное исключение: **sein, haben и модальные глаголы в разговоре тоже стоят в Präteritum.** Никто не скажет «Ich habe müde gewesen» — говорят «Ich **war** müde».\n\nСначала выучите эти три группы:\n\n**sein** → ich **war**, du warst, er war, wir waren\n**haben** → ich **hatte**, du hattest, er hatte\n**модальные** → ich **konnte**, **musste**, **wollte**\n\nВнимание: в Präteritum модальных глаголов умлаут **исчезает**: können → konnte (не «könnte» — это уже Konjunktiv!).",
+            "de": "Perfekt = gesprochen · Präteritum = geschrieben\n\nAber: sein, haben und Modalverben stehen auch mündlich im Präteritum.\n\nich war · ich hatte · ich konnte / musste / wollte\n\nAchtung: Modalverben verlieren im Präteritum den Umlaut."
+          },
+          "table": {
+            "headers": ["", "sein", "haben", "können"],
+            "rows": [
+              ["ich", "war", "hatte", "konnte"],
+              ["du", "warst", "hattest", "konntest"],
+              ["er / sie / es", "war", "hatte", "konnte"],
+              ["wir", "waren", "hatten", "konnten"],
+              ["ihr", "wart", "hattet", "konntet"],
+              ["sie / Sie", "waren", "hatten", "konnten"]
+            ]
+          },
+          "examples": [
+            { "de": "Als Kind war ich sehr schüchtern.", "tr": "Çocukken çok utangaçtım.", "az": "Uşaq olanda çox utancaq idim.", "ru": "В детстве я был очень застенчивым." },
+            { "de": "Wir hatten kein Auto.", "tr": "Arabamız yoktu.", "az": "Maşınımız yox idi.", "ru": "У нас не было машины." },
+            { "de": "Ich konnte schon mit fünf lesen.", "tr": "Beş yaşında okuyabiliyordum.", "az": "Beş yaşında oxuya bilirdim.", "ru": "Я умел читать уже в пять лет." }
+          ]
+        }
+      ],
+      "words": [
+        "Kindheit", "Jugend", "Schule", "Erinnerung", "Vergangenheit",
+        "damals", "früher", "später", "plötzlich", "oft", "niemals",
+        "wachsen", "ändern", "erinnern", "vergessen", "erzählen",
+        "spielen", "träumen", "glauben", "schwierig", "einfach",
+        "glücklich", "traurig", "wichtig", "Zeit"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Çocukluğunuzu anlatın: neredeydiniz, neyiniz vardı, ne yapabiliyordunuz? «war», «hatte» ve bir modal fiilin geçmişini kullanın.", "az": "Uşaqlığınızı danışın: harada idiniz, nəyiniz var idi, nə edə bilirdiniz? «war», «hatte» və bir modal feilin keçmişini işlədin.", "ru": "Расскажите о детстве: где вы жили, что у вас было, что вы умели? Используйте «war», «hatte» и модальный глагол в Präteritum.", "de": "Erzählen Sie von Ihrer Kindheit mit «war», «hatte» und einem Modalverb im Präteritum." },
+          "mustUse": ["war", "hatte", "konnte"],
+          "model": "Als Kind war ich oft bei meiner Großmutter. Wir hatten einen großen Garten. Ich konnte stundenlang draußen spielen."
+        }
+      ],
+      "game": "perfekt-paare"
+    },
+
+    {
+      "id": "a2-05",
+      "title": { "tr": "Günlük rutin ve dönüşlü fiiller", "az": "Gündəlik rejim və qayıdış feillər", "ru": "Распорядок и возвратные глаголы", "de": "Alltag und reflexive Verben" },
+      "theme": { "tr": "Sabah rutini, duygular", "az": "Səhər rejimi, hisslər", "ru": "Утренние дела, чувства", "de": "Morgenroutine, Gefühle" },
+      "canDo": [
+        { "tr": "Günlük rutinimi ayrıntılı anlatabilirim", "az": "Gündəlik rejimimi ətraflı danışa bilərəm", "ru": "Могу подробно описать свой распорядок", "de": "Ich kann meinen Alltag genau beschreiben" }
+      ],
+      "grammar": [
+        {
+          "id": "reflexive-verben",
+          "title": { "tr": "Dönüşlü fiiller", "az": "Qayıdış feillər", "ru": "Возвратные глаголы", "de": "Reflexive Verben" },
+          "explain": {
+            "tr": "Bazı fiiller **kendi öznesine döner** ve yanlarında bir dönüşlü zamir ister. Türkçede bu çoğu zaman «-in/-ın» ekiyle (yıkanmak), Rusçada «-ся» ile karşılanır.\n\nich **mich** · du **dich** · er/sie/es **sich** · wir **uns** · ihr **euch** · sie/Sie **sich**\n\nIch wasche **mich**. = Yıkanıyorum.\nSetz **dich**! = Otur!\n\n**Akkusativ mi Dativ mi?**\nCümlede başka bir nesne varsa dönüşlü zamir Dativ'e geçer:\n\nIch wasche **mich**. *(Akk. — başka nesne yok)*\nIch wasche **mir** die Hände. *(Dat. — «die Hände» nesne)*\n\nSık kullanılanlar: sich freuen (sevinmek), sich interessieren für (ilgilenmek), sich erinnern an (hatırlamak), sich treffen (buluşmak), sich fühlen (hissetmek), sich ärgern (kızmak)",
+            "az": "Bəzi feillər **öz mübtədasına qayıdır** və yanında qayıdış əvəzliyi tələb edir.\n\nich **mich** · du **dich** · er/sie/es **sich** · wir **uns** · ihr **euch** · sie/Sie **sich**\n\nIch wasche **mich**. = Yuyunuram.\nSetz **dich**! = Otur!\n\n**Akkusativ yoxsa Dativ?**\nCümlədə başqa tamamlıq varsa qayıdış əvəzliyi Dativə keçir:\n\nIch wasche **mich**. *(Akk.)*\nIch wasche **mir** die Hände. *(Dat.)*\n\nTez-tez işlənənlər: sich freuen, sich interessieren für, sich erinnern an, sich treffen, sich fühlen",
+            "ru": "Некоторые глаголы **возвращают действие на подлежащее** и требуют возвратного местоимения. В русском этому соответствует «-ся».\n\nich **mich** · du **dich** · er/sie/es **sich** · wir **uns** · ihr **euch** · sie/Sie **sich**\n\nIch wasche **mich**. = Я умываюсь.\nSetz **dich**! = Садись!\n\n**Akkusativ или Dativ?**\nЕсли в предложении есть другое дополнение, возвратное местоимение переходит в Dativ:\n\nIch wasche **mich**. *(Akk.)*\nIch wasche **mir** die Hände. *(Dat. — «руки» уже дополнение)*\n\nЧастотные: sich freuen, sich interessieren für, sich erinnern an, sich treffen, sich fühlen",
+            "de": "Reflexivpronomen: mich · dich · sich · uns · euch · sich\n\nIch wasche mich. (Akkusativ)\nIch wasche mir die Hände. (Dativ, weil ein Objekt folgt)\n\nHäufig: sich freuen, sich interessieren für, sich erinnern an, sich treffen"
+          },
+          "examples": [
+            { "de": "Ich freue mich auf das Wochenende.", "tr": "Hafta sonunu dört gözle bekliyorum.", "az": "Həftə sonunu səbirsizliklə gözləyirəm.", "ru": "Я жду выходных с нетерпением." },
+            { "de": "Wir treffen uns um acht.", "tr": "Sekizde buluşuyoruz.", "az": "Səkkizdə görüşürük.", "ru": "Мы встречаемся в восемь." },
+            { "de": "Wie fühlst du dich?", "tr": "Kendini nasıl hissediyorsun?", "az": "Özünü necə hiss edirsən?", "ru": "Как ты себя чувствуешь?" }
+          ]
+        }
+      ],
+      "words": [
+        "Alltag", "Morgen", "Dusche", "Zahn", "Kleidung", "Spiegel",
+        "aufwachen", "duschen", "anziehen", "ausziehen", "waschen",
+        "freuen", "interessieren", "erinnern", "treffen", "fühlen",
+        "ärgern", "entspannen", "beeilen", "vorbereiten", "gewöhnen",
+        "sich", "zuerst", "danach", "endlich"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Sabah rutininizi sırayla yazın. En az üç dönüşlü fiil kullanın ve sıralama kelimeleri ekleyin (zuerst, dann, danach).", "az": "Səhər rejiminizi ardıcıl yazın. Ən azı üç qayıdış feil işlədin və ardıcıllıq sözləri əlavə edin.", "ru": "Опишите утренний распорядок по порядку. Минимум три возвратных глагола и слова последовательности.", "de": "Beschreiben Sie Ihre Morgenroutine der Reihe nach. Mindestens drei reflexive Verben." },
+          "mustUse": ["sich", "duschen", "danach"],
+          "model": "Zuerst wasche ich mich. Dann ziehe ich mich an. Danach beeile ich mich zur Arbeit."
+        }
+      ],
+      "game": "wortsalat"
+    },
+
+    {
+      "id": "a2-06",
+      "title": { "tr": "Planlar ve koşullar", "az": "Planlar və şərtlər", "ru": "Планы и условия", "de": "Pläne und Bedingungen" },
+      "theme": { "tr": "Gelecek, «dass» ve «wenn» yan cümleleri", "az": "Gələcək, «dass» və «wenn» budaq cümlələri", "ru": "Будущее, придаточные с «dass» и «wenn»", "de": "Zukunft, Nebensätze mit «dass» und «wenn»" },
+      "canDo": [
+        { "tr": "Planlarımı ve koşullarımı ifade edebilirim", "az": "Planlarımı və şərtlərimi ifadə edə bilərəm", "ru": "Могу выразить планы и условия", "de": "Ich kann Pläne und Bedingungen ausdrücken" }
+      ],
+      "grammar": [
+        {
+          "id": "dass-wenn",
+          "title": { "tr": "«dass» ve «wenn» yan cümleleri", "az": "«dass» və «wenn» budaq cümlələri", "ru": "Придаточные с «dass» и «wenn»", "de": "Nebensätze mit «dass» und «wenn»" },
+          "explain": {
+            "tr": "Aynı kural: **bağlaç varsa fiil sona gider.**\n\n• **dass** (ki, -dığını) → düşünce, bilgi, his aktarır\n  Ich glaube, **dass** er recht **hat**.\n  Es ist gut, **dass** du **kommst**.\n\n• **wenn** (eğer / -dığında) → koşul veya tekrarlanan zaman\n  **Wenn** ich Zeit **habe**, lese ich.\n  *(Yan cümle başta gelirse ana cümle fiille başlar — «lese ich»)*\n\nDikkat: tek seferlik geçmiş bir olay için «wenn» değil **«als»** kullanılır:\n**Als** ich klein **war**, wohnten wir in Baku. *(bir kez, geçmişte)*\n**Wenn** ich klein **war**, spielten wir oft. *(tekrar eden)*",
+            "az": "Eyni qayda: **bağlayıcı varsa feil sona gedir.**\n\n• **dass** (ki) → fikir, bilgi, hiss ötürür\n  Ich glaube, **dass** er recht **hat**.\n\n• **wenn** (əgər / -anda) → şərt və ya təkrarlanan zaman\n  **Wenn** ich Zeit **habe**, lese ich.\n  *(Budaq cümlə əvvəldə gələrsə baş cümlə feillə başlayır)*\n\nDiqqət: keçmişdə bir dəfə olan hadisə üçün «wenn» yox **«als»** işlənir:\n**Als** ich klein **war**, wohnten wir in Baku.",
+            "ru": "То же правило: **после союза глагол уходит в конец.**\n\n• **dass** (что) → передаёт мысль, знание, чувство\n  Ich glaube, **dass** er recht **hat**.\n\n• **wenn** (если / когда) → условие или повторяющееся действие\n  **Wenn** ich Zeit **habe**, lese ich.\n  *(Если придаточное впереди, главное начинается с глагола)*\n\nВнимание: для однократного события в прошлом употребляется не «wenn», а **«als»**:\n**Als** ich klein **war**, wohnten wir in Baku. *(один раз, в прошлом)*\n**Wenn** ich klein **war**, spielten wir oft. *(повторялось)*",
+            "de": "Nach der Konjunktion steht das Verb am Ende.\n\ndass → Ich glaube, dass er recht hat.\nwenn → Wenn ich Zeit habe, lese ich.\n\nEinmalige Vergangenheit: als (nicht wenn)\nAls ich klein war, wohnten wir in Baku."
+          },
+          "examples": [
+            { "de": "Ich hoffe, dass wir uns bald sehen.", "tr": "Umarım yakında görüşürüz.", "az": "Ümid edirəm ki, tezliklə görüşərik.", "ru": "Надеюсь, что мы скоро увидимся." },
+            { "de": "Wenn es regnet, bleibe ich zu Hause.", "tr": "Yağmur yağarsa evde kalırım.", "az": "Yağış yağsa evdə qalıram.", "ru": "Если идёт дождь, я остаюсь дома." }
+          ]
+        },
+        {
+          "id": "futur",
+          "title": { "tr": "Gelecek zaman", "az": "Gələcək zaman", "ru": "Будущее время", "de": "Das Futur I" },
+          "explain": {
+            "tr": "Almanca'da gelecek çoğu zaman **şimdiki zamanla** anlatılır — zaman zarfı yeterlidir:\n\n**Morgen fahre ich** nach Köln. *(gelecek anlamında)*\n\n«werden + mastar» yapısı daha çok tahmin, söz verme ve vurgu için kullanılır:\n\nEs **wird** morgen **regnen**. *(tahmin)*\nIch **werde** dir **helfen**. *(söz)*\n\nBu yüzden «werden»i öğrenin ama günlük planlarda şimdiki zamanı tercih edin — daha doğal.",
+            "az": "Alman dilində gələcək çox vaxt **indiki zamanla** ifadə olunur — zaman zərfi kifayətdir:\n\n**Morgen fahre ich** Kölnə.\n\n«werden + məsdər» daha çox proqnoz, söz vermə və vurğu üçün işlənir:\n\nEs **wird** morgen **regnen**. *(proqnoz)*\nIch **werde** dir **helfen**. *(söz)*",
+            "ru": "Будущее в немецком обычно выражается **настоящим временем** — достаточно обстоятельства времени:\n\n**Morgen fahre ich** nach Köln.\n\nКонструкция «werden + инфинитив» используется для прогноза, обещания и подчёркивания:\n\nEs **wird** morgen **regnen**. *(прогноз)*\nIch **werde** dir **helfen**. *(обещание)*",
+            "de": "Zukunft meist mit Präsens + Zeitangabe: Morgen fahre ich nach Köln.\n\nwerden + Infinitiv für Prognose und Versprechen: Es wird regnen."
+          },
+          "examples": [
+            { "de": "Nächstes Jahr werde ich Deutsch B1 machen.", "tr": "Gelecek yıl Almanca B1 yapacağım.", "az": "Gələn il alman dili B1 edəcəyəm.", "ru": "В следующем году я сдам немецкий на B1." }
+          ]
+        }
+      ],
+      "words": [
+        "Plan", "Ziel", "Zukunft", "Termin", "Idee", "Möglichkeit",
+        "hoffen", "planen", "denken", "glauben", "wissen", "entscheiden",
+        "versprechen", "werden", "vielleicht", "sicher", "wahrscheinlich",
+        "dass", "wenn", "als", "bald", "nächste", "wichtig", "Grund"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Gelecek yıl için üç planınızı yazın. En az bir «dass» ve bir «wenn» cümlesi kurun.", "az": "Gələn il üçün üç planınızı yazın. Ən azı bir «dass» və bir «wenn» cümləsi qurun.", "ru": "Напишите три плана на следующий год. Минимум одно предложение с «dass» и одно с «wenn».", "de": "Schreiben Sie drei Pläne für nächstes Jahr. Mindestens ein «dass»- und ein «wenn»-Satz." },
+          "mustUse": ["dass", "wenn", "hoffen"],
+          "model": "Ich hoffe, dass ich die B1-Prüfung bestehe. Wenn ich genug Zeit habe, lerne ich jeden Tag."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "a2-07",
+      "title": { "tr": "Sıfat çekimi", "az": "Sifət təsrifi", "ru": "Склонение прилагательных", "de": "Adjektivdeklination" },
+      "theme": { "tr": "Sıfatların isimden önce aldığı ekler", "az": "Sifətlərin isimdən əvvəl aldığı şəkilçilər", "ru": "Окончания прилагательных перед существительным", "de": "Adjektivendungen vor dem Nomen" },
+      "canDo": [
+        { "tr": "Nesneleri sıfatlarla doğru tarif edebilirim", "az": "Əşyaları sifətlərlə düzgün təsvir edə bilərəm", "ru": "Могу правильно описывать предметы прилагательными", "de": "Ich kann Dinge mit Adjektiven korrekt beschreiben" }
+      ],
+      "grammar": [
+        {
+          "id": "adjektivendungen",
+          "title": { "tr": "Sıfat ekleri", "az": "Sifət şəkilçiləri", "ru": "Окончания прилагательных", "de": "Adjektivendungen" },
+          "explain": {
+            "tr": "Sıfat **isimden sonra** gelirse hiç ek almaz:\nDas Haus ist **groß**. ✓\n\nAma **isimden önce** gelirse ek alır:\nDas **große** Haus ✓\n\n**Tek kural yeter:** Artikel cinsiyeti ve hâli zaten gösteriyorsa sıfat yalnızca **-e** veya **-en** alır. Göstermiyorsa sıfat bu işi üstlenir ve artikelin ekini alır.\n\n**Belirli artikelden sonra (der/die/das)** — kolay olan:\n• Nominativ tekil → **-e** (der gut**e** Mann, die gut**e** Frau, das gut**e** Kind)\n• Diğer her yerde → **-en**\n\nYani beş hücre «-e», gerisi hep «-en». Bunu ezberleyin, A2 için yeter.\n\n**Belirsiz artikelden sonra (ein/eine)** — eril Nominativ ve nötrde artikel cinsiyeti göstermediği için sıfat gösterir:\n• ein gut**er** Mann · ein gut**es** Kind · eine gut**e** Frau",
+            "az": "Sifət **isimdən sonra** gəlirsə şəkilçi almır:\nDas Haus ist **groß**. ✓\n\nAmma **isimdən əvvəl** gəlirsə şəkilçi alır:\nDas **große** Haus ✓\n\n**Bir qayda kifayətdir:** Artikl cinsi və halı göstərirsə sifət yalnız **-e** və ya **-en** alır.\n\n**Müəyyən artikldən sonra (der/die/das)**:\n• Nominativ tək → **-e**\n• Qalan hər yerdə → **-en**\n\n**Qeyri-müəyyən artikldən sonra (ein/eine)** — kişi Nominativ və ortada artikl cinsi göstərmədiyi üçün sifət göstərir:\n• ein gut**er** Mann · ein gut**es** Kind · eine gut**e** Frau",
+            "ru": "Прилагательное **после** существительного не склоняется:\nDas Haus ist **groß**. ✓\n\nНо **перед** существительным получает окончание:\nDas **große** Haus ✓\n\n**Достаточно одного принципа:** если артикль уже показывает род и падеж, прилагательное берёт только **-e** или **-en**. Если не показывает — прилагательное берёт это на себя.\n\n**После определённого артикля (der/die/das)**:\n• Nominativ ед. ч. → **-e**\n• Везде остальное → **-en**\n\nПять клеток с «-e», всё прочее «-en». Для A2 этого хватает.\n\n**После неопределённого (ein/eine)** — в мужском Nominativ и среднем артикль род не показывает, поэтому его показывает прилагательное:\n• ein gut**er** Mann · ein gut**es** Kind · eine gut**e** Frau",
+            "de": "Nach dem Nomen: keine Endung. Vor dem Nomen: Endung.\n\nNach der/die/das: Nominativ Singular -e, sonst -en.\nNach ein/eine: ein guter Mann, ein gutes Kind, eine gute Frau."
+          },
+          "table": {
+            "headers": ["", "maskulin", "feminin", "neutral", "Plural"],
+            "rows": [
+              ["Nom.", "der gute", "die gute", "das gute", "die guten"],
+              ["Akk.", "den guten", "die gute", "das gute", "die guten"],
+              ["Dat.", "dem guten", "der guten", "dem guten", "den guten"],
+              ["mit ein-", "ein guter", "eine gute", "ein gutes", "— guten"]
+            ]
+          },
+          "examples": [
+            { "de": "Ich habe einen neuen Computer.", "tr": "Yeni bir bilgisayarım var.", "az": "Yeni kompüterim var.", "ru": "У меня новый компьютер." },
+            { "de": "Die kleine Wohnung ist billig.", "tr": "Küçük daire ucuz.", "az": "Kiçik mənzil ucuzdur.", "ru": "Маленькая квартира дешёвая." },
+            { "de": "Wir wohnen in einem alten Haus.", "tr": "Eski bir evde oturuyoruz.", "az": "Köhnə bir evdə yaşayırıq.", "ru": "Мы живём в старом доме." }
+          ]
+        }
+      ],
+      "words": [
+        "neu", "alt", "jung", "schön", "hässlich", "sauber", "schmutzig",
+        "billig", "teuer", "schnell", "langsam", "leicht", "schwer",
+        "warm", "kalt", "hell", "dunkel", "laut", "leise", "frisch",
+        "beschreiben", "gefallen", "wählen", "Farbe", "Größe"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Odanızdaki beş nesneyi sıfatlarla tarif edin. Hem «der/die/das» hem «ein/eine» kullanın.", "az": "Otağınızdakı beş əşyanı sifətlərlə təsvir edin. Həm «der/die/das» həm «ein/eine» işlədin.", "ru": "Опишите пять предметов в комнате прилагательными. Используйте и определённый, и неопределённый артикль.", "de": "Beschreiben Sie fünf Dinge in Ihrem Zimmer mit Adjektiven — mit bestimmtem und unbestimmtem Artikel." },
+          "mustUse": ["neu", "alt", "klein"],
+          "model": "Ich habe einen alten Schrank. Die kleine Lampe steht auf dem neuen Tisch."
+        }
+      ],
+      "game": "adjektiv-endung"
+    },
+
+    {
+      "id": "a2-08",
+      "title": { "tr": "Yolda", "az": "Yolda", "ru": "В пути", "de": "Unterwegs" },
+      "theme": { "tr": "Ulaşım, yol tarifi, sabit edatlar", "az": "Nəqliyyat, yol izahı, sabit ön qoşmalar", "ru": "Транспорт, дорога, устойчивые предлоги", "de": "Verkehr, Wegbeschreibung, feste Präpositionen" },
+      "canDo": [
+        { "tr": "Yol sorabilir ve tarif edebilirim", "az": "Yol soruşa və izah edə bilərəm", "ru": "Могу спросить и объяснить дорогу", "de": "Ich kann nach dem Weg fragen und ihn beschreiben" }
+      ],
+      "grammar": [
+        {
+          "id": "feste-praepositionen",
+          "title": { "tr": "Hâli sabit edatlar", "az": "Halı sabit ön qoşmalar", "ru": "Предлоги с фиксированным падежом", "de": "Präpositionen mit festem Kasus" },
+          "explain": {
+            "tr": "Değişken edatların (A2-02) yanında, **her zaman aynı hâli isteyen** edatlar vardır. Bunlar listedir, mantık aramayın — ezberleyin.\n\n**Daima Akkusativ:**\ndurch · für · gegen · ohne · um · bis\n*(«DOGFUB» diye hatırlanabilir)*\n\n**Daima Dativ:**\naus · bei · mit · nach · seit · von · zu · gegenüber\n\n**Yön bildirirken hangisi?**\n• **nach** + şehir/ülke (artikelsiz): nach Berlin, nach Deutschland\n• **in** + artikelli ülke: **in die** Türkei, **in die** Schweiz\n• **zu** + kişi/kurum: zum Arzt, zur Schule\n• **aus** = nereden: Ich komme **aus** Baku.\n\nKaynaşmalar: zu dem → **zum** · zu der → **zur** · bei dem → **beim** · von dem → **vom** · in dem → **im**",
+            "az": "Dəyişkən ön qoşmaların yanında **həmişə eyni halı tələb edən** ön qoşmalar var. Bunlar siyahıdır, məntiq axtarmayın.\n\n**Həmişə Akkusativ:**\ndurch · für · gegen · ohne · um · bis\n\n**Həmişə Dativ:**\naus · bei · mit · nach · seit · von · zu · gegenüber\n\n**İstiqamət bildirəndə hansı?**\n• **nach** + şəhər/ölkə (artiklsiz): nach Berlin\n• **in** + artikilli ölkə: **in die** Türkei\n• **zu** + şəxs/qurum: zum Arzt, zur Schule\n• **aus** = haradan: Ich komme **aus** Baku.\n\nBirləşmələr: zum · zur · beim · vom · im",
+            "ru": "Кроме предлогов двойного управления есть предлоги **с фиксированным падежом**. Это список — логики не ищите, учите наизусть.\n\n**Всегда Akkusativ:**\ndurch · für · gegen · ohne · um · bis\n\n**Всегда Dativ:**\naus · bei · mit · nach · seit · von · zu · gegenüber\n\n**Какой предлог для направления?**\n• **nach** + город/страна без артикля: nach Berlin\n• **in** + страна с артиклем: **in die** Türkei\n• **zu** + человек/учреждение: zum Arzt, zur Schule\n• **aus** = откуда: Ich komme **aus** Baku.\n\nСлияния: zum · zur · beim · vom · im",
+            "de": "Immer Akkusativ: durch, für, gegen, ohne, um, bis\nImmer Dativ: aus, bei, mit, nach, seit, von, zu, gegenüber\n\nRichtung: nach Berlin · in die Türkei · zum Arzt · aus Baku\nVerschmelzungen: zum, zur, beim, vom, im"
+          },
+          "examples": [
+            { "de": "Ich fahre mit dem Bus zur Arbeit.", "tr": "İşe otobüsle gidiyorum.", "az": "İşə avtobusla gedirəm.", "ru": "Я езжу на работу на автобусе." },
+            { "de": "Gehen Sie geradeaus bis zur Kreuzung.", "tr": "Kavşağa kadar düz gidin.", "az": "Yol ayrıcına qədər düz gedin.", "ru": "Идите прямо до перекрёстка." },
+            { "de": "Das Café ist gegenüber dem Bahnhof.", "tr": "Kafe garın karşısında.", "az": "Kafe vağzalın qarşısındadır.", "ru": "Кафе напротив вокзала." }
+          ]
+        }
+      ],
+      "words": [
+        "Verkehr", "Bus", "Bahn", "Zug", "Auto", "Fahrrad", "Haltestelle",
+        "Kreuzung", "Ampel", "Ecke", "Richtung", "links", "rechts",
+        "geradeaus", "fahren", "steigen", "aussteigen", "einsteigen",
+        "umsteigen", "abbiegen", "erreichen", "dauern", "weit", "nah"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Evinizden en yakın markete giden yolu tarif edin. Emir kipi ve en az üç edat kullanın.", "az": "Evinizdən ən yaxın marketə gedən yolu izah edin. Əmr forması və ən azı üç ön qoşma işlədin.", "ru": "Объясните дорогу от вашего дома до ближайшего магазина. Повелительное наклонение и минимум три предлога.", "de": "Beschreiben Sie den Weg von Ihrer Wohnung zum nächsten Supermarkt. Imperativ und mindestens drei Präpositionen." },
+          "mustUse": ["gehen", "links", "bis"],
+          "model": "Gehen Sie aus dem Haus und dann nach links. Gehen Sie geradeaus bis zur Ampel."
+        }
+      ],
+      "game": "wo-wohin"
+    },
+
+    {
+      "id": "a2-09",
+      "title": { "tr": "Nezaket ve rica", "az": "Nəzakət və xahiş", "ru": "Вежливость и просьбы", "de": "Höflichkeit und Bitten" },
+      "theme": { "tr": "Konjunktiv II, rica, öneri", "az": "Konjunktiv II, xahiş, təklif", "ru": "Konjunktiv II, просьба, предложение", "de": "Konjunktiv II, Bitten, Vorschläge" },
+      "canDo": [
+        { "tr": "Kibarca rica edebilir ve öneri sunabilirim", "az": "Nəzakətlə xahiş edə və təklif verə bilərəm", "ru": "Могу вежливо попросить и предложить", "de": "Ich kann höflich bitten und Vorschläge machen" }
+      ],
+      "grammar": [
+        {
+          "id": "konjunktiv2",
+          "title": { "tr": "Konjunktiv II — kibar dil", "az": "Konjunktiv II — nəzakətli dil", "ru": "Konjunktiv II — вежливая форма", "de": "Konjunktiv II" },
+          "explain": {
+            "tr": "Almanca'da doğrudan istek kaba durur. «Ich will einen Kaffee» yerine «Ich **hätte** gern einen Kaffee» denir. Bu, dilin nezaket katmanıdır ve günlük hayatta sürekli lazımdır.\n\n**Mutlaka bilinmesi gereken dört biçim:**\n\n• **hätte** (haben'den) → Ich **hätte** gern… = …istiyorum (kibar)\n• **wäre** (sein'den) → Das **wäre** schön. = Güzel olurdu.\n• **könnte** (können'den) → **Könnten** Sie mir helfen? = Yardım eder misiniz?\n• **würde** (werden'den) → **Würden** Sie bitte warten? = Bekler misiniz?\n\nDiğer tüm fiillerde **würde + mastar** kullanılır — tek tek çekim ezberlemeye gerek yok:\nIch **würde** gern nach Wien **fahren**.\n\nDikkat: **könnte** ≠ **konnte**. Umlaut'lu olan nezaket/olasılık (Konjunktiv), umlautsuz olan geçmiş zaman (Präteritum).",
+            "az": "Alman dilində birbaşa istək kobud səslənir. «Ich will einen Kaffee» əvəzinə «Ich **hätte** gern einen Kaffee» deyilir.\n\n**Mütləq bilinməli dörd forma:**\n\n• **hätte** → Ich **hätte** gern… = …istəyirəm (nəzakətli)\n• **wäre** → Das **wäre** schön. = Gözəl olardı.\n• **könnte** → **Könnten** Sie mir helfen?\n• **würde** → **Würden** Sie zəhmət olmasa gözləyin?\n\nQalan bütün feillərdə **würde + məsdər** işlənir:\nIch **würde** gern Vyanaya **fahren**.\n\nDiqqət: **könnte** ≠ **konnte**. Umlautlu olan nəzakət (Konjunktiv), umlautsuz olan keçmiş zaman.",
+            "ru": "Прямое требование по-немецки звучит грубо. Вместо «Ich will einen Kaffee» говорят «Ich **hätte** gern einen Kaffee». Это слой вежливости, без которого не обойтись.\n\n**Четыре формы, которые нужно знать обязательно:**\n\n• **hätte** (от haben) → Ich **hätte** gern… = Я хотел бы…\n• **wäre** (от sein) → Das **wäre** schön. = Это было бы хорошо.\n• **könnte** (от können) → **Könnten** Sie mir helfen? = Не могли бы вы помочь?\n• **würde** (от werden) → **Würden** Sie bitte warten?\n\nСо всеми остальными глаголами — **würde + инфинитив**, спряжения учить не нужно:\nIch **würde** gern nach Wien **fahren**.\n\nВнимание: **könnte** ≠ **konnte**. С умлаутом — вежливость (Konjunktiv), без умлаута — прошедшее (Präteritum).",
+            "de": "Höflichkeit statt direkter Forderung.\n\nhätte · wäre · könnte · würde\n\nIch hätte gern einen Kaffee. Könnten Sie mir helfen?\nAlle anderen Verben: würde + Infinitiv.\n\nAchtung: könnte (Konjunktiv) ≠ konnte (Präteritum)."
+          },
+          "table": {
+            "headers": ["", "haben", "sein", "können", "werden"],
+            "rows": [
+              ["ich", "hätte", "wäre", "könnte", "würde"],
+              ["du", "hättest", "wärst", "könntest", "würdest"],
+              ["er / sie / es", "hätte", "wäre", "könnte", "würde"],
+              ["wir", "hätten", "wären", "könnten", "würden"],
+              ["ihr", "hättet", "wärt", "könntet", "würdet"],
+              ["sie / Sie", "hätten", "wären", "könnten", "würden"]
+            ]
+          },
+          "examples": [
+            { "de": "Ich hätte gern die Rechnung, bitte.", "tr": "Hesabı alabilir miyim, lütfen.", "az": "Zəhmət olmasa hesabı istərdim.", "ru": "Счёт, пожалуйста." },
+            { "de": "Könnten Sie das bitte wiederholen?", "tr": "Bunu tekrar eder misiniz?", "az": "Bunu təkrar edə bilərsinizmi?", "ru": "Не могли бы вы повторить?" },
+            { "de": "An deiner Stelle würde ich warten.", "tr": "Senin yerinde olsam beklerdim.", "az": "Sənin yerində olsam gözləyərdim.", "ru": "На твоём месте я бы подождал." }
+          ]
+        }
+      ],
+      "words": [
+        "Bitte", "Entschuldigung", "Rechnung", "Hilfe", "Vorschlag",
+        "höflich", "freundlich", "gern", "leider", "natürlich",
+        "bitten", "danken", "entschuldigen", "wiederholen", "erklären",
+        "vorschlagen", "einladen", "absagen", "hätte", "wäre", "könnte", "würde"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Bir arkadaşınıza kibar bir e-posta yazın: bir ricada bulunun ve bir öneri sunun. «könnte», «würde» veya «hätte» kullanın.", "az": "Dostunuza nəzakətli e-poçt yazın: bir xahiş edin və bir təklif verin. «könnte», «würde» və ya «hätte» işlədin.", "ru": "Напишите вежливое письмо другу: о чём-то попросите и что-то предложите. Используйте «könnte», «würde» или «hätte».", "de": "Schreiben Sie eine höfliche E-Mail: eine Bitte und ein Vorschlag mit könnte/würde/hätte." },
+          "mustUse": ["könnte", "würde", "gern"],
+          "model": "Könntest du mir am Samstag helfen? Ich würde gern die Wohnung streichen. Das wäre sehr nett."
+        }
+      ],
+      "game": "artikel-rush"
+    },
+
+    {
+      "id": "a2-10",
+      "title": { "tr": "Bayramlar ve medya", "az": "Bayramlar və media", "ru": "Праздники и медиа", "de": "Feste und Medien" },
+      "theme": { "tr": "Gelenekler, haber dili, edilgen çatı", "az": "Ənənələr, xəbər dili, məchul növ", "ru": "Традиции, язык новостей, пассив", "de": "Traditionen, Nachrichtensprache, Passiv" },
+      "canDo": [
+        { "tr": "Bir geleneği tarif edebilirim", "az": "Bir ənənəni təsvir edə bilərəm", "ru": "Могу описать традицию", "de": "Ich kann einen Brauch beschreiben" },
+        { "tr": "Basit haber cümlelerini anlayabilirim", "az": "Sadə xəbər cümlələrini başa düşə bilərəm", "ru": "Могу понимать простые новостные фразы", "de": "Ich kann einfache Nachrichtensätze verstehen" }
+      ],
+      "grammar": [
+        {
+          "id": "passiv",
+          "title": { "tr": "Edilgen çatı (Passiv)", "az": "Məchul növ (Passiv)", "ru": "Пассивный залог (Passiv)", "de": "Das Passiv" },
+          "explain": {
+            "tr": "Edilgen çatı, **eylemi kimin yaptığı önemsizken** kullanılır. Haberlerde, tariflerde ve resmî metinlerde her yerdedir.\n\n**werden + Partizip II**\n\nEtken: Man **feiert** das Fest im Dezember.\nEdilgen: Das Fest **wird** im Dezember **gefeiert**.\n\nYapan kişiyi belirtmek gerekirse **von** + Dativ:\nDas Haus **wird von** den Arbeitern **gebaut**.\n\nDikkat: burada «werden» «olmak» anlamında değil, edilgen yardımcısıdır. İkisini karıştırmayın:\nEr **wird** Arzt. = Doktor oluyor. *(etken)*\nEr **wird** gefragt. = Ona soruluyor. *(edilgen)*",
+            "az": "Məchul növ **hərəkəti kimin etdiyi əhəmiyyətsiz olanda** işlənir. Xəbərlərdə və rəsmi mətnlərdə hər yerdədir.\n\n**werden + Partizip II**\n\nMəlum: Man **feiert** das Fest im Dezember.\nMəchul: Das Fest **wird** im Dezember **gefeiert**.\n\nEdəni bildirmək lazımdırsa **von** + Dativ:\nDas Haus **wird von** den Arbeitern **gebaut**.\n\nDiqqət: burada «werden» «olmaq» mənasında deyil, məchul köməkçisidir.",
+            "ru": "Пассив используется, когда **неважно, кто выполняет действие**. В новостях, инструкциях и официальных текстах он повсюду.\n\n**werden + Partizip II**\n\nАктив: Man **feiert** das Fest im Dezember.\nПассив: Das Fest **wird** im Dezember **gefeiert**.\n\nЕсли нужно указать исполнителя — **von** + Dativ:\nDas Haus **wird von** den Arbeitern **gebaut**.\n\nВнимание: здесь «werden» — не «становиться», а вспомогательный глагол пассива:\nEr **wird** Arzt. = Он становится врачом. *(актив)*\nEr **wird** gefragt. = Его спрашивают. *(пассив)*",
+            "de": "Passiv: werden + Partizip II\n\nDas Fest wird im Dezember gefeiert.\nDas Haus wird von den Arbeitern gebaut.\n\nNicht verwechseln: Er wird Arzt (Aktiv) · Er wird gefragt (Passiv)."
+          },
+          "examples": [
+            { "de": "Weihnachten wird am 25. Dezember gefeiert.", "tr": "Noel 25 Aralık'ta kutlanır.", "az": "Milad 25 dekabrda qeyd olunur.", "ru": "Рождество празднуется 25 декабря." },
+            { "de": "Die Tür wird um acht Uhr geschlossen.", "tr": "Kapı saat sekizde kapatılır.", "az": "Qapı saat səkkizdə bağlanır.", "ru": "Дверь закрывается в восемь." }
+          ]
+        }
+      ],
+      "words": [
+        "Fest", "Feier", "Geschenk", "Tradition", "Gast", "Einladung",
+        "Nachricht", "Zeitung", "Fernsehen", "Radio", "Internet", "Bericht",
+        "feiern", "einladen", "schenken", "gratulieren", "berichten",
+        "senden", "zeigen", "öffnen", "schließen", "bauen", "wichtig", "jährlich"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Ülkenizdeki bir bayramı anlatın: ne zaman kutlanır, ne yapılır, ne yenir? En az iki edilgen cümle kurun.", "az": "Ölkənizdəki bir bayramı danışın: nə vaxt qeyd olunur, nə edilir, nə yeyilir? Ən azı iki məchul cümlə qurun.", "ru": "Расскажите о празднике вашей страны: когда отмечается, что делают, что едят? Минимум два предложения в пассиве.", "de": "Beschreiben Sie ein Fest aus Ihrem Land: Wann wird es gefeiert, was wird gemacht, was wird gegessen? Mindestens zwei Passivsätze." },
+          "mustUse": ["feiern", "werden", "Fest"],
+          "model": "Novruz wird im März gefeiert. Es werden viele Süßigkeiten gemacht. Die Familie kommt zusammen."
+        }
+      ],
+      "game": "perfekt-paare"
+    }
+  ]
+}

@@ -5,6 +5,68 @@ Statik site — GitHub Pages'te sunucusuz çalışır.
 
 ---
 
+## Nasıl kullanılır
+
+Site iki şekilde çalışır ve ikisi aynı ilerlemeyi paylaşır.
+
+### 1. Kurs — kitap gibi, sırayla
+
+**A1 ve A2 için 20 ünite.** Her ünite bir konu, bir dilbilgisi hedefi ve ~25 kelime
+içerir ve sabit bir sırayla ilerler:
+
+```
+🎯 Hedefler → 📖 Kelime → 📐 Dilbilgisi → ✍️ Alıştırma
+           → 🎧 Dinleme → 📝 Yazma → 🎮 Oyun → 🏁 Bitiş
+```
+
+Bu sıra keyfî değil: önce anlam, sonra kural, sonra kuralın üretimde denenmesi,
+sonra aynı malzemenin sesle pekiştirilmesi, sonra serbest üretim, kapanışta hız
+altında otomatikleşme.
+
+Dilbilgisi açıklamaları dört dilde yazılmış; çekim tabloları ve örnek cümleler
+ünitenin kendi malzemesinden geliyor. Alıştırmalar da öyle: sorular o ünitenin
+tablosundan ve örneklerinden üretiliyor, hazır bir soru havuzundan değil.
+
+Üniteler kilitli değil. Mentörlü öğrenmede sırayı bozmak gerekebilir; sıra
+tavsiyedir, duvar değil.
+
+### 2. Günlük plan — "bugün 2 saat çalışacağım"
+
+Süreyi söylersiniz, plan blokları üretir:
+
+| 120 dakika için | |
+|---|---|
+| 📖 Yeni kelime | 34 dk · 20 kelime |
+| 🎧 Dinleme | 34 dk · 24 dikte |
+| 📐 Dilbilgisi | 20 dk · 20 soru |
+| 📝 Yazma | 18 dk |
+| 🎮 Oyun | 14 dk |
+
+Hedef sayıları iyimser değil: bir alıştırmanın düşünme süresi dahil gerçek
+süresinden hesaplanıyor (yeni kelime ~40 sn, dikte ~85 sn, gramer sorusu ~25 sn).
+"34 dakikada 102 kelime" yazan bir plan ilk günde terk edilir.
+
+Yeni kelime hedefi ayarlardaki günlük sınırı aşmaz — aralıklı tekrar yarınki yükü
+bugünün yeni kelimesinden üretir, sınırsız eklemek borç yığar.
+
+### 3. Serbest çalışma
+
+Kelime, dinleme, okuma, dilbilgisi, sözlük ve ilerleme modülleri bağımsız olarak
+da kullanılabilir. Kurs bitince ya da ileri seviyede asıl kullanım burası.
+
+### 🎮 Oyunlar
+
+Altı oyun, hepsi ünitenin gerçek kelimelerinden üretiliyor: **Artikel Yarışı**
+(süreli der/die/das), **Kelime Eşleştirme**, **Cümle Kurma**, **Perfekt Çiftleri**,
+**Nerede/Nereye** (Akkusativ mi Dativ mi), **Sıfat Eki**.
+
+Oyunlar süs değil, bilinçli alıştırmanın bir biçimi: hepsi hız altında çalışıyor.
+Bir kelimenin artikelini 4 saniyede seçmek, düşünerek bulmaktan farklı bir beceriyi
+ölçüyor — otomatikleşme. Konuşurken artikeli düşünecek vaktiniz olmadığı için asıl
+hedef budur.
+
+---
+
 ## Neden bu site farklı
 
 Çoğu dil sitesi içeriği bir seviye etiketine göre dağıtır ("B1 metni") ve kelimeleri
@@ -89,8 +151,9 @@ Hepsi açık lisanslı, hepsi otomatik boru hattıyla üretiliyor.
 | Çekim tablosu | isimlerde 4 hâl × 2 sayı, fiillerde Stammformen | aynı | CC BY-SA 3.0 |
 | IPA | %100 kapsama | aynı | CC BY-SA 3.0 |
 | Kelime telaffuzu | %99,4 kapsama, insan kaydı | Wikimedia Commons | CC / kamu malı |
-| Cümle | 20.400 cümle, zorluk puanlı | [Tatoeba](https://tatoeba.org) | CC BY 2.0 FR |
-| Cümle sesi | 12.294 insan kaydı | Tatoeba | CC BY-NC-ND 3.0 vb. |
+| Cümle | 14.900 cümle, zorluk puanlı | [Tatoeba](https://tatoeba.org) | CC BY 2.0 FR |
+| Cümle sesi | 5.122 insan kaydı | Tatoeba | CC BY-NC-ND 3.0 vb. |
+| Ders | A1 ve A2 için 20 ünite, 4 dilli | elle yazıldı | MIT |
 | Frekans | 156M token | [OpenSubtitles 2018](https://github.com/hermitdave/FrequencyWords) | CC BY-SA 4.0 |
 | TR çeviri | %86,3 kapsama | Wiktionary + TR Wiktionary + [FreeDict](https://freedict.org) | CC BY-SA 3.0 / GPL-2.0+ |
 | RU çeviri | %80,2 kapsama | Wiktionary + FreeDict | CC BY-SA 3.0 |
@@ -188,6 +251,14 @@ Ham kaynaklar (~4 GB) depoda değil. `scripts/README.md` tüm zinciri anlatıyor
   tarayıcıya gönderilmiyor; kapsama, lemma + çoğul + fiil biçimleri + hâl tablosu
   üzerinden hesaplanıyor.
 - **Ses dış kaynaktan akıtılıyor.** `tatoeba.org` erişilemezse dinleme çalışmaz.
+- **Ders modülleri yalnızca A1 ve A2 için.** B1-C1'de serbest çalışma bölümleri,
+  sözlük ve günlük plan çalışıyor ama ünite yok. Yeni ünite eklemek için
+  `curated/curriculum/<seviye>.json` dosyasına yazıp `scripts/06_build_curriculum.py`
+  çalıştırmak yeterli — betik her kelimeyi sözlüğe karşı doğruluyor.
+- **Yazma otomatik değerlendirilmiyor.** Sunucu olmadığı için serbest metni
+  gerçekten puanlamak mümkün değil. Bunun yerine istenen kelimelerin geçip
+  geçmediği, kelime/cümle sayısı ölçülüyor ve örnek cevap karşılaştırma için
+  gösteriliyor. Mentör geri bildirimi bu noktada asıl değeri katıyor.
 
 ## Lisans
 

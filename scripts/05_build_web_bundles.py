@@ -36,7 +36,7 @@ BANDS = ["A1", "A2", "B1", "B2", "C1"]
 #   Almanca-Türkçe çift 22 bin, sesli Almanca cümle 86 bin, kesişimleri ise
 #   çok dar. Rusça bol (227 bin çift) olduğu için zaten sorun yaşamıyor.
 #   Bu yüzden her seviyede ses ve Türkçe için ayrı taban garanti ediliyor.
-AUDIO_QUOTA = {"A1": 3000, "A2": 3000, "B1": 2600, "B2": 2200, "C1": 1500}
+AUDIO_QUOTA = {"A1": 2200, "A2": 1800, "B1": 1300, "B2": 900, "C1": 600}
 TURKISH_QUOTA = {"A1": 2200, "A2": 2000, "B1": 1600, "B2": 1400, "C1": 900}
 
 

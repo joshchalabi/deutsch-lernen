@@ -2,9 +2,9 @@ import {
   createContext, useCallback, useContext, useEffect, useMemo, useRef, useState,
   type ReactNode,
 } from 'react'
-import { loadState, saveState, bumpSession, computeTotals, type Totals } from './storage'
+import { loadState, saveState, bumpSession, computeTotals, todayKey, type Totals } from './storage'
 import { newCard, schedule, type Rating } from './fsrs'
-import type { AppState, Lemma, Settings, Level } from './types'
+import type { AppState, DailyPlan, Lemma, LessonStep, Settings, Level } from './types'
 import { lemmaKey } from './data'
 
 interface Store {
@@ -21,6 +21,11 @@ interface Store {
   /** Çalışma süresini saniye olarak ekler */
   addTime: (seconds: number) => void
   replaceState: (next: AppState) => void
+  /** Ders adımını tamamlandı işaretler */
+  completeStep: (unitId: string, step: LessonStep, totalSteps: number) => void
+  setPlan: (plan: DailyPlan | null) => void
+  completeBlock: (blockId: string) => void
+  saveWriting: (key: string, text: string) => void
 }
 
 const Ctx = createContext<Store | null>(null)
@@ -100,14 +105,57 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const replaceState = useCallback((next: AppState) => setState(next), [])
 
+  const completeStep = useCallback(
+    (unitId: string, step: LessonStep, totalSteps: number) => {
+      setState((s) => {
+        const prev = s.units[unitId] ?? { steps: [], completedAt: null }
+        if (prev.steps.includes(step)) return s
+        const steps = [...prev.steps, step]
+        return {
+          ...s,
+          units: {
+            ...s.units,
+            [unitId]: {
+              steps,
+              completedAt: steps.length >= totalSteps ? Date.now() : prev.completedAt,
+            },
+          },
+        }
+      })
+    },
+    [],
+  )
+
+  const setPlan = useCallback((plan: DailyPlan | null) => {
+    setState((s) => ({ ...s, plan }))
+  }, [])
+
+  const completeBlock = useCallback((blockId: string) => {
+    setState((s) => {
+      if (!s.plan || s.plan.done.includes(blockId)) return s
+      return { ...s, plan: { ...s.plan, done: [...s.plan.done, blockId] } }
+    })
+  }, [])
+
+  const saveWriting = useCallback((key: string, text: string) => {
+    setState((s) => ({ ...s, writings: { ...s.writings, [key]: text } }))
+  }, [])
+
+  // Plan başka bir güne aitse geçersizdir: her sabah yeniden kurulur.
+  useEffect(() => {
+    if (state.plan && state.plan.date !== todayKey()) setPlan(null)
+  }, [state.plan, setPlan])
+
   const totals = useMemo(() => computeTotals(state), [state])
 
   const value = useMemo<Store>(
     () => ({
       state, totals, lang: state.settings.uiLang,
       setSettings, setLevel, addWord, rate, markDictation, addTime, replaceState,
+      completeStep, setPlan, completeBlock, saveWriting,
     }),
-    [state, totals, setSettings, setLevel, addWord, rate, markDictation, addTime, replaceState],
+    [state, totals, setSettings, setLevel, addWord, rate, markDictation, addTime,
+     replaceState, completeStep, setPlan, completeBlock, saveWriting],
   )
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>
