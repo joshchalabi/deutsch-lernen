@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON DATA / VERİ HAKKINDA NOT
+
+This license covers the SOURCE CODE only. The data bundles in public/data/ are
+derived from third-party sources under their own licenses:
+
+  - Wiktionary (de, tr) via kaikki.org ......... CC BY-SA 3.0
+  - Tatoeba sentences ......................... CC BY 2.0 FR
+  - Tatoeba audio recordings .................. CC BY-NC-ND 3.0 and others
+  - OpenSubtitles frequency (hermitdave) ...... CC BY-SA 4.0
+  - FreeDict deu-rus .......................... CC BY-SA 3.0
+  - FreeDict deu-tur .......................... GPL-2.0-or-later
+
+Because FreeDict deu-tur is GPL-2.0-or-later, the derived translation data in
+public/data/ carries that copyleft obligation. Share-alike terms apply to the
+data regardless of the MIT terms above.
+
+Goethe-Institut Wortliste materials were NOT used. See README.md.

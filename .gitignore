@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Ham kaynak veriler: boyutları gigabaytlarca, scripts/ ile yeniden üretilebilir.
+# Yeniden üretmek için: scripts/README.md
+data-src/
+.tmp-test/
