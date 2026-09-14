@@ -7,3 +7,6 @@ dist/
 # Yeniden üretmek için: scripts/README.md
 data-src/
 .tmp-test/
+
+# TypeScript artımlı derleme önbelleği
+*.tsbuildinfo
