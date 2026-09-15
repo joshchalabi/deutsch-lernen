@@ -24,6 +24,8 @@ export function artForUnit(unitId: string): ArtName {
     a2: ['chat', 'home', 'action', 'clock', 'health', 'book', 'write', 'travel', 'greeting', 'trophy'],
     b1: ['chat', 'book', 'leisure', 'action', 'home', 'listen', 'write', 'clock', 'family', 'chat'],
     b2: ['book', 'action', 'chat', 'listen', 'leisure', 'write', 'home', 'book', 'chat', 'trophy'],
+    c1: ['chat', 'listen', 'book', 'write', 'action', 'greeting', 'leisure', 'home', 'book', 'write'],
+    c2: ['book', 'write', 'chat', 'book', 'listen', 'greeting', 'travel', 'leisure', 'chat', 'trophy'],
   }
   const lvl = unitId.split('-')[0]
   return byLevel[lvl]?.[n - 1] ?? 'book'

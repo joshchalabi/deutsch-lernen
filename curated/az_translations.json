@@ -4413,5 +4413,1768 @@
       "sonrakı",
       "bunun ardınca"
     ]
+  },
+  "Ablauf|noun": {
+    "az": [
+      "gedişat",
+      "proses"
+    ]
+  },
+  "Ableitung|noun": {
+    "az": [
+      "törəmə",
+      "düzəltmə"
+    ]
+  },
+  "Andeutung|noun": {
+    "az": [
+      "eyham",
+      "işarə"
+    ]
+  },
+  "Anlass|noun": {
+    "az": [
+      "bəhanə",
+      "vəsilə"
+    ]
+  },
+  "Annahme|noun": {
+    "az": [
+      "ehtimal",
+      "fərziyyə"
+    ]
+  },
+  "Anschein|noun": {
+    "az": [
+      "zahiri görünüş",
+      "təəssürat"
+    ]
+  },
+  "Aufmerksamkeit|noun": {
+    "az": [
+      "diqqət"
+    ]
+  },
+  "Ausdauer|noun": {
+    "az": [
+      "dözüm",
+      "səbat"
+    ]
+  },
+  "Ausdruck|noun": {
+    "az": [
+      "ifadə"
+    ]
+  },
+  "Aussprache|noun": {
+    "az": [
+      "tələffüz"
+    ]
+  },
+  "Auswertung|noun": {
+    "az": [
+      "qiymətləndirmə",
+      "təhlil"
+    ]
+  },
+  "Befund|noun": {
+    "az": [
+      "tapıntı",
+      "nəticə"
+    ]
+  },
+  "Beitrag|noun": {
+    "az": [
+      "töhfə",
+      "pay"
+    ]
+  },
+  "Beleg|noun": {
+    "az": [
+      "dəlil",
+      "sənəd"
+    ]
+  },
+  "Bemerkung|noun": {
+    "az": [
+      "qeyd",
+      "irad"
+    ]
+  },
+  "Bestandteil|noun": {
+    "az": [
+      "tərkib hissəsi"
+    ]
+  },
+  "Bezug|noun": {
+    "az": [
+      "istinad",
+      "əlaqə"
+    ]
+  },
+  "Debatte|noun": {
+    "az": [
+      "debat",
+      "müzakirə"
+    ]
+  },
+  "Dialekt|noun": {
+    "az": [
+      "dialekt",
+      "ləhcə"
+    ]
+  },
+  "Distanz|noun": {
+    "az": [
+      "məsafə"
+    ]
+  },
+  "Eindruck|noun": {
+    "az": [
+      "təəssürat"
+    ]
+  },
+  "Einschränkung|noun": {
+    "az": [
+      "məhdudiyyət"
+    ]
+  },
+  "Einschub|noun": {
+    "az": [
+      "araya əlavə",
+      "əlavə hissə"
+    ]
+  },
+  "Einwand|noun": {
+    "az": [
+      "etiraz",
+      "irad"
+    ]
+  },
+  "Entwurf|noun": {
+    "az": [
+      "qaralama",
+      "layihə"
+    ]
+  },
+  "Ergänzung|noun": {
+    "az": [
+      "əlavə",
+      "tamamlama"
+    ]
+  },
+  "Erzähler|noun": {
+    "az": [
+      "nağılçı",
+      "rəvayətçi"
+    ]
+  },
+  "Fassung|noun": {
+    "az": [
+      "variant",
+      "nüsxə"
+    ]
+  },
+  "Feinheit|noun": {
+    "az": [
+      "incəlik"
+    ]
+  },
+  "Feststellung|noun": {
+    "az": [
+      "qənaət",
+      "müəyyənləşdirmə"
+    ]
+  },
+  "Figur|noun": {
+    "az": [
+      "obraz",
+      "surət"
+    ]
+  },
+  "Fortschritt|noun": {
+    "az": [
+      "irəliləyiş",
+      "tərəqqi"
+    ]
+  },
+  "Gerüst|noun": {
+    "az": [
+      "skelet",
+      "karkas"
+    ]
+  },
+  "Gewohnheit|noun": {
+    "az": [
+      "vərdiş"
+    ]
+  },
+  "Gliederung|noun": {
+    "az": [
+      "quruluş",
+      "bölgü"
+    ]
+  },
+  "Grenze|noun": {
+    "az": [
+      "sərhəd"
+    ]
+  },
+  "Haltung|noun": {
+    "az": [
+      "mövqe",
+      "münasibət"
+    ]
+  },
+  "Handlung|noun": {
+    "az": [
+      "hərəkət",
+      "süjet"
+    ]
+  },
+  "Herkunft|noun": {
+    "az": [
+      "mənşə"
+    ]
+  },
+  "Hinsicht|noun": {
+    "az": [
+      "baxım",
+      "cəhət"
+    ]
+  },
+  "Hochdeutsch|noun": {
+    "az": [
+      "ədəbi alman dili"
+    ]
+  },
+  "Hypothese|noun": {
+    "az": [
+      "fərziyyə",
+      "hipotez"
+    ]
+  },
+  "Ironie|noun": {
+    "az": [
+      "ironiya",
+      "kinayə"
+    ]
+  },
+  "Kasus|noun": {
+    "az": [
+      "hal"
+    ]
+  },
+  "Kommission|noun": {
+    "az": [
+      "komissiya"
+    ]
+  },
+  "Kompromiss|noun": {
+    "az": [
+      "güzəşt",
+      "kompromis"
+    ]
+  },
+  "Leitartikel|noun": {
+    "az": [
+      "baş məqalə"
+    ]
+  },
+  "Motiv|noun": {
+    "az": [
+      "motiv",
+      "səbəb"
+    ]
+  },
+  "Mundart|noun": {
+    "az": [
+      "ləhcə",
+      "şivə"
+    ]
+  },
+  "Nachdruck|noun": {
+    "az": [
+      "təkid",
+      "vurğu"
+    ]
+  },
+  "Nachsilbe|noun": {
+    "az": [
+      "son şəkilçi"
+    ]
+  },
+  "Niveau|noun": {
+    "az": [
+      "səviyyə"
+    ]
+  },
+  "Nuance|noun": {
+    "az": [
+      "çalar",
+      "nüans"
+    ]
+  },
+  "Oberbegriff|noun": {
+    "az": [
+      "üst anlayış"
+    ]
+  },
+  "Objekt|noun": {
+    "az": [
+      "obyekt",
+      "tamamlıq"
+    ]
+  },
+  "Perspektive|noun": {
+    "az": [
+      "baxış bucağı",
+      "perspektiv"
+    ]
+  },
+  "Position|noun": {
+    "az": [
+      "mövqe"
+    ]
+  },
+  "Quellenangabe|noun": {
+    "az": [
+      "mənbə göstərişi"
+    ]
+  },
+  "Rahmen|noun": {
+    "az": [
+      "çərçivə"
+    ]
+  },
+  "Raum|noun": {
+    "az": [
+      "məkan",
+      "otaq"
+    ]
+  },
+  "Rechtschreibung|noun": {
+    "az": [
+      "orfoqrafiya"
+    ]
+  },
+  "Redensart|noun": {
+    "az": [
+      "deyim",
+      "ifadə"
+    ]
+  },
+  "Redewendung|noun": {
+    "az": [
+      "idiom",
+      "deyim"
+    ]
+  },
+  "Regelmäßigkeit|noun": {
+    "az": [
+      "müntəzəmlik"
+    ]
+  },
+  "Rhythmus|noun": {
+    "az": [
+      "ritm",
+      "ahəng"
+    ]
+  },
+  "Risiko|noun": {
+    "az": [
+      "risk"
+    ]
+  },
+  "Rückschritt|noun": {
+    "az": [
+      "geriləmə"
+    ]
+  },
+  "Sachlage|noun": {
+    "az": [
+      "vəziyyət",
+      "məsələnin durumu"
+    ]
+  },
+  "Schattierung|noun": {
+    "az": [
+      "çalar"
+    ]
+  },
+  "Schein|noun": {
+    "az": [
+      "zahiri görünüş"
+    ]
+  },
+  "Schlussfolgerung|noun": {
+    "az": [
+      "nəticə"
+    ]
+  },
+  "Spannung|noun": {
+    "az": [
+      "gərginlik"
+    ]
+  },
+  "Sprachraum|noun": {
+    "az": [
+      "dil arealı"
+    ]
+  },
+  "Staat|noun": {
+    "az": [
+      "dövlət"
+    ]
+  },
+  "Standard|noun": {
+    "az": [
+      "standart"
+    ]
+  },
+  "Stellungnahme|noun": {
+    "az": [
+      "rəy",
+      "mövqe bildirmə"
+    ]
+  },
+  "Stilbruch|noun": {
+    "az": [
+      "üslub pozuntusu"
+    ]
+  },
+  "Stil|noun": {
+    "az": [
+      "üslub"
+    ]
+  },
+  "Stimmung|noun": {
+    "az": [
+      "əhval",
+      "ovqat"
+    ]
+  },
+  "Streitpunkt|noun": {
+    "az": [
+      "mübahisə mövzusu"
+    ]
+  },
+  "Textstelle|noun": {
+    "az": [
+      "mətn parçası"
+    ]
+  },
+  "These|noun": {
+    "az": [
+      "tezis"
+    ]
+  },
+  "Ton|noun": {
+    "az": [
+      "ton",
+      "ahəng"
+    ]
+  },
+  "Umgangssprache|noun": {
+    "az": [
+      "danışıq dili"
+    ]
+  },
+  "Umstand|noun": {
+    "az": [
+      "hal",
+      "şərait"
+    ]
+  },
+  "Untertreibung|noun": {
+    "az": [
+      "azaltma"
+    ]
+  },
+  "Variante|noun": {
+    "az": [
+      "variant"
+    ]
+  },
+  "Verantwortung|noun": {
+    "az": [
+      "məsuliyyət"
+    ]
+  },
+  "Verhandlung|noun": {
+    "az": [
+      "danışıqlar",
+      "müzakirə"
+    ]
+  },
+  "Verweis|noun": {
+    "az": [
+      "istinad"
+    ]
+  },
+  "Voraussetzung|noun": {
+    "az": [
+      "ilkin şərt",
+      "şərt"
+    ]
+  },
+  "Vorgang|noun": {
+    "az": [
+      "proses",
+      "hadisə"
+    ]
+  },
+  "Vorsilbe|noun": {
+    "az": [
+      "ön şəkilçi"
+    ]
+  },
+  "Wandel|noun": {
+    "az": [
+      "dəyişiklik",
+      "təkamül"
+    ]
+  },
+  "Wendung|noun": {
+    "az": [
+      "dönüş",
+      "ifadə"
+    ]
+  },
+  "Wiederholung|noun": {
+    "az": [
+      "təkrar"
+    ]
+  },
+  "Wirklichkeit|noun": {
+    "az": [
+      "gerçəklik"
+    ]
+  },
+  "Wortschatz|noun": {
+    "az": [
+      "söz ehtiyatı"
+    ]
+  },
+  "Wortstamm|noun": {
+    "az": [
+      "söz kökü"
+    ]
+  },
+  "Wortwahl|noun": {
+    "az": [
+      "söz seçimi"
+    ]
+  },
+  "Zugeständnis|noun": {
+    "az": [
+      "güzəşt"
+    ]
+  },
+  "Zusammensetzung|noun": {
+    "az": [
+      "tərkib",
+      "mürəkkəb söz"
+    ]
+  },
+  "Zwischenton|noun": {
+    "az": [
+      "alt məna",
+      "çalar"
+    ]
+  },
+  "Übergang|noun": {
+    "az": [
+      "keçid"
+    ]
+  },
+  "abgrenzen|verb": {
+    "az": [
+      "sərhədini müəyyən etmək",
+      "fərqləndirmək"
+    ]
+  },
+  "ableiten|verb": {
+    "az": [
+      "törətmək",
+      "nəticə çıxarmaq"
+    ]
+  },
+  "abschwächen|verb": {
+    "az": [
+      "zəiflətmək",
+      "yumşaltmaq"
+    ]
+  },
+  "abweichen|verb": {
+    "az": [
+      "fərqlənmək",
+      "kənara çıxmaq"
+    ]
+  },
+  "abwägen|verb": {
+    "az": [
+      "ölçüb-biçmək",
+      "qiymətləndirmək"
+    ]
+  },
+  "andeuten|verb": {
+    "az": [
+      "eyham vurmaq",
+      "işarə etmək"
+    ]
+  },
+  "anwenden|verb": {
+    "az": [
+      "tətbiq etmək"
+    ]
+  },
+  "aufbauen|verb": {
+    "az": [
+      "qurmaq",
+      "tikmək"
+    ]
+  },
+  "auffassen|verb": {
+    "az": [
+      "anlamaq",
+      "qavramaq"
+    ]
+  },
+  "auffrischen|verb": {
+    "az": [
+      "təzələmək",
+      "yeniləmək"
+    ]
+  },
+  "aufgreifen|verb": {
+    "az": [
+      "götürmək",
+      "davam etdirmək"
+    ]
+  },
+  "auftreten|verb": {
+    "az": [
+      "çıxış etmək",
+      "meydana çıxmaq"
+    ]
+  },
+  "auslösen|verb": {
+    "az": [
+      "səbəb olmaq",
+      "yaratmaq"
+    ]
+  },
+  "auswerten|verb": {
+    "az": [
+      "təhlil etmək",
+      "qiymətləndirmək"
+    ]
+  },
+  "bedenken|verb": {
+    "az": [
+      "düşünmək",
+      "nəzərə almaq"
+    ]
+  },
+  "bedürfen|verb": {
+    "az": [
+      "ehtiyac duymaq"
+    ]
+  },
+  "begegnen|verb": {
+    "az": [
+      "rast gəlmək",
+      "qarşılaşmaq"
+    ]
+  },
+  "begehen|verb": {
+    "az": [
+      "törətmək",
+      "qeyd etmək"
+    ]
+  },
+  "beharren|verb": {
+    "az": [
+      "təkid etmək",
+      "israr etmək"
+    ]
+  },
+  "belegen|verb": {
+    "az": [
+      "sübut etmək",
+      "əsaslandırmaq"
+    ]
+  },
+  "benehmen|verb": {
+    "az": [
+      "özünü aparmaq"
+    ]
+  },
+  "beruhen|verb": {
+    "az": [
+      "əsaslanmaq",
+      "dayanmaq"
+    ]
+  },
+  "besorgen|verb": {
+    "az": [
+      "tapıb gətirmək",
+      "əldə etmək"
+    ]
+  },
+  "bestreiten|verb": {
+    "az": [
+      "inkar etmək",
+      "mübahisə etmək"
+    ]
+  },
+  "bewahren|verb": {
+    "az": [
+      "qorumaq",
+      "saxlamaq"
+    ]
+  },
+  "bilden|verb": {
+    "az": [
+      "yaratmaq",
+      "təşkil etmək"
+    ]
+  },
+  "darlegen|verb": {
+    "az": [
+      "izah etmək",
+      "şərh etmək"
+    ]
+  },
+  "deuten|verb": {
+    "az": [
+      "yozmaq",
+      "şərh etmək"
+    ]
+  },
+  "durchblicken|verb": {
+    "az": [
+      "baş çıxarmaq",
+      "anlamaq"
+    ]
+  },
+  "einführen|verb": {
+    "az": [
+      "daxil etmək",
+      "tətbiq etmək"
+    ]
+  },
+  "eingehen|verb": {
+    "az": [
+      "girişmək",
+      "razılaşmaq"
+    ]
+  },
+  "einhaken|verb": {
+    "az": [
+      "söz atmaq",
+      "araya girmək"
+    ]
+  },
+  "einigen|verb": {
+    "az": [
+      "razılığa gəlmək"
+    ]
+  },
+  "einlenken|verb": {
+    "az": [
+      "geri çəkilmək",
+      "güzəştə getmək"
+    ]
+  },
+  "einräumen|verb": {
+    "az": [
+      "etiraf etmək",
+      "qəbul etmək"
+    ]
+  },
+  "einschränken|verb": {
+    "az": [
+      "məhdudlaşdırmaq"
+    ]
+  },
+  "einwenden|verb": {
+    "az": [
+      "etiraz etmək"
+    ]
+  },
+  "einwerfen|verb": {
+    "az": [
+      "söz atmaq",
+      "irad bildirmək"
+    ]
+  },
+  "entdecken|verb": {
+    "az": [
+      "kəşf etmək",
+      "aşkarlamaq"
+    ]
+  },
+  "entfallen|verb": {
+    "az": [
+      "ləğv olmaq",
+      "yaddan çıxmaq"
+    ]
+  },
+  "entnehmen|verb": {
+    "az": [
+      "götürmək",
+      "başa düşmək"
+    ]
+  },
+  "erfassen|verb": {
+    "az": [
+      "qavramaq",
+      "əhatə etmək"
+    ]
+  },
+  "erfolgen|verb": {
+    "az": [
+      "baş vermək",
+      "həyata keçmək"
+    ]
+  },
+  "ergeben|verb": {
+    "az": [
+      "nəticə vermək",
+      "ortaya çıxarmaq"
+    ]
+  },
+  "ergreifen|verb": {
+    "az": [
+      "görmək",
+      "tutmaq"
+    ]
+  },
+  "erhalten|verb": {
+    "az": [
+      "almaq",
+      "qorumaq"
+    ]
+  },
+  "erläutern|verb": {
+    "az": [
+      "izah etmək",
+      "aydınlaşdırmaq"
+    ]
+  },
+  "erscheinen|verb": {
+    "az": [
+      "görünmək",
+      "nəşr olunmaq"
+    ]
+  },
+  "erschließen|verb": {
+    "az": [
+      "mənasını açmaq",
+      "mənimsəmək"
+    ]
+  },
+  "ersuchen|verb": {
+    "az": [
+      "xahiş etmək",
+      "müraciət etmək"
+    ]
+  },
+  "erwecken|verb": {
+    "az": [
+      "oyatmaq",
+      "yaratmaq"
+    ]
+  },
+  "erweisen|verb": {
+    "az": [
+      "göstərmək",
+      "sübut olunmaq"
+    ]
+  },
+  "erwerben|verb": {
+    "az": [
+      "əldə etmək",
+      "qazanmaq"
+    ]
+  },
+  "erörtern|verb": {
+    "az": [
+      "müzakirə etmək",
+      "araşdırmaq"
+    ]
+  },
+  "feilen|verb": {
+    "az": [
+      "cilalamaq",
+      "üzərində işləmək"
+    ]
+  },
+  "festhalten|verb": {
+    "az": [
+      "qeyd etmək",
+      "tutmaq"
+    ]
+  },
+  "festigen|verb": {
+    "az": [
+      "möhkəmləndirmək"
+    ]
+  },
+  "folgern|verb": {
+    "az": [
+      "nəticə çıxarmaq"
+    ]
+  },
+  "formulieren|verb": {
+    "az": [
+      "ifadə etmək",
+      "formalaşdırmaq"
+    ]
+  },
+  "gegenüberstellen|verb": {
+    "az": [
+      "qarşılaşdırmaq",
+      "müqayisə etmək"
+    ]
+  },
+  "gleichen|verb": {
+    "az": [
+      "oxşamaq",
+      "bənzəmək"
+    ]
+  },
+  "gleichsetzen|verb": {
+    "az": [
+      "bərabər tutmaq"
+    ]
+  },
+  "gliedern|verb": {
+    "az": [
+      "bölmək",
+      "quruluş vermək"
+    ]
+  },
+  "kürzen|verb": {
+    "az": [
+      "qısaltmaq",
+      "ixtisar etmək"
+    ]
+  },
+  "leisten|verb": {
+    "az": [
+      "yerinə yetirmək",
+      "göstərmək"
+    ]
+  },
+  "nachgeben|verb": {
+    "az": [
+      "güzəştə getmək",
+      "boyun əymək"
+    ]
+  },
+  "nachweisen|verb": {
+    "az": [
+      "sübut etmək"
+    ]
+  },
+  "nahelegen|verb": {
+    "az": [
+      "düşündürmək",
+      "təklif etmək"
+    ]
+  },
+  "pflegen|verb": {
+    "az": [
+      "qayğısına qalmaq",
+      "davam etdirmək"
+    ]
+  },
+  "relativieren|verb": {
+    "az": [
+      "nisbiləşdirmək",
+      "yumşaltmaq"
+    ]
+  },
+  "schildern|verb": {
+    "az": [
+      "təsvir etmək",
+      "danışmaq"
+    ]
+  },
+  "streichen|verb": {
+    "az": [
+      "pozmaq",
+      "silmək"
+    ]
+  },
+  "tauschen|verb": {
+    "az": [
+      "dəyişmək",
+      "mübadilə etmək"
+    ]
+  },
+  "umstellen|verb": {
+    "az": [
+      "yerini dəyişmək",
+      "yenidən qurmaq"
+    ]
+  },
+  "unterlassen|verb": {
+    "az": [
+      "etməmək",
+      "çəkinmək"
+    ]
+  },
+  "untermauern|verb": {
+    "az": [
+      "əsaslandırmaq",
+      "möhkəmləndirmək"
+    ]
+  },
+  "unterscheiden|verb": {
+    "az": [
+      "fərqləndirmək",
+      "ayırd etmək"
+    ]
+  },
+  "unterstützen|verb": {
+    "az": [
+      "dəstəkləmək"
+    ]
+  },
+  "veranlassen|verb": {
+    "az": [
+      "səbəb olmaq",
+      "əmr etmək"
+    ]
+  },
+  "veranschaulichen|verb": {
+    "az": [
+      "əyaniləşdirmək",
+      "nümunə ilə göstərmək"
+    ]
+  },
+  "verbrauchen|verb": {
+    "az": [
+      "sərf etmək",
+      "istifadə etmək"
+    ]
+  },
+  "verbreiten|verb": {
+    "az": [
+      "yaymaq"
+    ]
+  },
+  "verfassen|verb": {
+    "az": [
+      "yazmaq",
+      "qələmə almaq"
+    ]
+  },
+  "verfügen|verb": {
+    "az": [
+      "malik olmaq",
+      "sərəncam vermək"
+    ]
+  },
+  "verknüpfen|verb": {
+    "az": [
+      "bağlamaq",
+      "əlaqələndirmək"
+    ]
+  },
+  "verlauten|verb": {
+    "az": [
+      "xəbər verilmək",
+      "bildirilmək"
+    ]
+  },
+  "vermitteln|verb": {
+    "az": [
+      "çatdırmaq",
+      "vasitəçilik etmək"
+    ]
+  },
+  "vernachlässigen|verb": {
+    "az": [
+      "laqeyd yanaşmaq",
+      "diqqətdən kənarda qoymaq"
+    ]
+  },
+  "verschleiern|verb": {
+    "az": [
+      "pərdələmək",
+      "gizlətmək"
+    ]
+  },
+  "vertiefen|verb": {
+    "az": [
+      "dərinləşdirmək"
+    ]
+  },
+  "verwechseln|verb": {
+    "az": [
+      "qarışdırmaq",
+      "səhv salmaq"
+    ]
+  },
+  "verweisen|verb": {
+    "az": [
+      "istinad etmək",
+      "yönəltmək"
+    ]
+  },
+  "voraussetzen|verb": {
+    "az": [
+      "şərt qoymaq",
+      "əvvəlcədən nəzərdə tutmaq"
+    ]
+  },
+  "vorlegen|verb": {
+    "az": [
+      "təqdim etmək"
+    ]
+  },
+  "vorliegen|verb": {
+    "az": [
+      "mövcud olmaq",
+      "əldə olmaq"
+    ]
+  },
+  "vornehmen|verb": {
+    "az": [
+      "həyata keçirmək",
+      "etmək"
+    ]
+  },
+  "vortäuschen|verb": {
+    "az": [
+      "özünü elə göstərmək",
+      "saxtalaşdırmaq"
+    ]
+  },
+  "wechseln|verb": {
+    "az": [
+      "dəyişmək",
+      "növbələşmək"
+    ]
+  },
+  "wecken|verb": {
+    "az": [
+      "oyatmaq"
+    ]
+  },
+  "widerlegen|verb": {
+    "az": [
+      "təkzib etmək"
+    ]
+  },
+  "wiedergeben|verb": {
+    "az": [
+      "çatdırmaq",
+      "nəql etmək"
+    ]
+  },
+  "zerbrechen|verb": {
+    "az": [
+      "sındırmaq",
+      "parçalanmaq"
+    ]
+  },
+  "zerlegen|verb": {
+    "az": [
+      "parçalamaq",
+      "hissələrə ayırmaq"
+    ]
+  },
+  "zugeben|verb": {
+    "az": [
+      "etiraf etmək",
+      "əlavə etmək"
+    ]
+  },
+  "zugestehen|verb": {
+    "az": [
+      "güzəşt etmək",
+      "haqq vermək"
+    ]
+  },
+  "zuhören|verb": {
+    "az": [
+      "qulaq asmaq"
+    ]
+  },
+  "zurücktreten|verb": {
+    "az": [
+      "geri çəkilmək",
+      "istefa vermək"
+    ]
+  },
+  "zurückweisen|verb": {
+    "az": [
+      "rədd etmək"
+    ]
+  },
+  "zusammensetzen|verb": {
+    "az": [
+      "birləşdirmək",
+      "tərtib etmək"
+    ]
+  },
+  "zuspitzen|verb": {
+    "az": [
+      "kəskinləşdirmək"
+    ]
+  },
+  "äußern|verb": {
+    "az": [
+      "bildirmək",
+      "ifadə etmək"
+    ]
+  },
+  "überarbeiten|verb": {
+    "az": [
+      "yenidən işləmək",
+      "redaktə etmək"
+    ]
+  },
+  "übernehmen|verb": {
+    "az": [
+      "üzərinə götürmək",
+      "qəbul etmək"
+    ]
+  },
+  "überprüfen|verb": {
+    "az": [
+      "yoxlamaq"
+    ]
+  },
+  "allgemein|adj": {
+    "az": [
+      "ümumi"
+    ]
+  },
+  "angemessen|adj": {
+    "az": [
+      "münasib",
+      "yerinə düşən"
+    ]
+  },
+  "ausdrücklich|adj": {
+    "az": [
+      "açıq-aydın",
+      "qəti"
+    ]
+  },
+  "ausführlich|adj": {
+    "az": [
+      "ətraflı",
+      "geniş"
+    ]
+  },
+  "aussagekräftig|adj": {
+    "az": [
+      "mənalı",
+      "inandırıcı"
+    ]
+  },
+  "beiläufig|adj": {
+    "az": [
+      "ötəri",
+      "yeri gəlmişkən"
+    ]
+  },
+  "belastbar|adj": {
+    "az": [
+      "etibarlı",
+      "davamlı"
+    ]
+  },
+  "beständig|adj": {
+    "az": [
+      "davamlı",
+      "sabit"
+    ]
+  },
+  "dauerhaft|adj": {
+    "az": [
+      "uzunmüddətli",
+      "davamlı"
+    ]
+  },
+  "dicht|adj": {
+    "az": [
+      "sıx",
+      "qapalı"
+    ]
+  },
+  "durchschaubar|adj": {
+    "az": [
+      "anlaşılan",
+      "şəffaf"
+    ]
+  },
+  "eben|adj": {
+    "az": [
+      "hamar",
+      "düz"
+    ]
+  },
+  "eindringlich|adj": {
+    "az": [
+      "təsirli",
+      "israrlı"
+    ]
+  },
+  "einheitlich|adj": {
+    "az": [
+      "vahid",
+      "eynicinsli"
+    ]
+  },
+  "erheblich|adj": {
+    "az": [
+      "xeyli",
+      "əhəmiyyətli"
+    ]
+  },
+  "förmlich|adj": {
+    "az": [
+      "rəsmi"
+    ]
+  },
+  "gebräuchlich|adj": {
+    "az": [
+      "işlək",
+      "geniş yayılmış"
+    ]
+  },
+  "gehoben|adj": {
+    "az": [
+      "yüksək üslublu",
+      "seçmə"
+    ]
+  },
+  "gelegentlich|adj": {
+    "az": [
+      "arabir",
+      "vaxtaşırı"
+    ]
+  },
+  "geläufig|adj": {
+    "az": [
+      "tanış",
+      "işlək"
+    ]
+  },
+  "geringfügig|adj": {
+    "az": [
+      "cüzi",
+      "əhəmiyyətsiz"
+    ]
+  },
+  "glaubwürdig|adj": {
+    "az": [
+      "inandırıcı",
+      "etibarlı"
+    ]
+  },
+  "grundsätzlich|adj": {
+    "az": [
+      "prinsipial",
+      "əsas etibarilə"
+    ]
+  },
+  "indirekt|adj": {
+    "az": [
+      "dolayı",
+      "vasitəli"
+    ]
+  },
+  "knapp|adj": {
+    "az": [
+      "qısa",
+      "az"
+    ]
+  },
+  "komplex|adj": {
+    "az": [
+      "mürəkkəb",
+      "kompleks"
+    ]
+  },
+  "konsequent|adj": {
+    "az": [
+      "ardıcıl",
+      "prinsipial"
+    ]
+  },
+  "landschaftlich|adj": {
+    "az": [
+      "yerli",
+      "regional"
+    ]
+  },
+  "methodisch|adj": {
+    "az": [
+      "metodik",
+      "sistemli"
+    ]
+  },
+  "neutral|adj": {
+    "az": [
+      "bitərəf",
+      "neytral"
+    ]
+  },
+  "nüchtern|adj": {
+    "az": [
+      "ayıq",
+      "soyuqqanlı"
+    ]
+  },
+  "objektiv|adj": {
+    "az": [
+      "obyektiv"
+    ]
+  },
+  "offensichtlich|adj": {
+    "az": [
+      "aydın",
+      "göz qabağında"
+    ]
+  },
+  "polemisch|adj": {
+    "az": [
+      "polemik",
+      "mübahisəli"
+    ]
+  },
+  "produktiv|adj": {
+    "az": [
+      "məhsuldar"
+    ]
+  },
+  "präzise|adj": {
+    "az": [
+      "dəqiq"
+    ]
+  },
+  "regelmäßig|adj": {
+    "az": [
+      "müntəzəm",
+      "qaydalı"
+    ]
+  },
+  "regional|adj": {
+    "az": [
+      "regional",
+      "yerli"
+    ]
+  },
+  "sachlich|adj": {
+    "az": [
+      "işgüzar",
+      "obyektiv"
+    ]
+  },
+  "scheinbar|adj": {
+    "az": [
+      "zahiri",
+      "guya"
+    ]
+  },
+  "schlicht|adj": {
+    "az": [
+      "sadə"
+    ]
+  },
+  "schlüssig|adj": {
+    "az": [
+      "məntiqli",
+      "əsaslı"
+    ]
+  },
+  "sinngemäß|adj": {
+    "az": [
+      "məzmunca",
+      "təxmini"
+    ]
+  },
+  "subtil|adj": {
+    "az": [
+      "incə",
+      "zərif"
+    ]
+  },
+  "treffend|adj": {
+    "az": [
+      "dəqiq",
+      "yerində"
+    ]
+  },
+  "umständlich|adj": {
+    "az": [
+      "dolaşıq",
+      "əziyyətli"
+    ]
+  },
+  "unangemessen|adj": {
+    "az": [
+      "yersiz",
+      "uyğunsuz"
+    ]
+  },
+  "unbedingt|adj": {
+    "az": [
+      "mütləq",
+      "hökmən"
+    ]
+  },
+  "unbestätigt|adj": {
+    "az": [
+      "təsdiqlənməmiş"
+    ]
+  },
+  "unmissverständlich|adj": {
+    "az": [
+      "birmənalı",
+      "aydın"
+    ]
+  },
+  "unpersönlich|adj": {
+    "az": [
+      "şəxssiz"
+    ]
+  },
+  "vage|adj": {
+    "az": [
+      "qeyri-müəyyən",
+      "dumanlı"
+    ]
+  },
+  "veraltet|adj": {
+    "az": [
+      "köhnəlmiş"
+    ]
+  },
+  "verhalten|adj": {
+    "az": [
+      "ehtiyatlı",
+      "təmkinli"
+    ]
+  },
+  "vermeintlich|adj": {
+    "az": [
+      "guya",
+      "zənn edilən"
+    ]
+  },
+  "verzweigt|adj": {
+    "az": [
+      "budaqlanmış",
+      "şaxəli"
+    ]
+  },
+  "vielschichtig|adj": {
+    "az": [
+      "çoxqatlı",
+      "mürəkkəb"
+    ]
+  },
+  "vorläufig|adj": {
+    "az": [
+      "müvəqqəti",
+      "ilkin"
+    ]
+  },
+  "weitgehend|adj": {
+    "az": [
+      "böyük ölçüdə",
+      "geniş"
+    ]
+  },
+  "wirkungsvoll|adj": {
+    "az": [
+      "təsirli"
+    ]
+  },
+  "wörtlich|adj": {
+    "az": [
+      "hərfi",
+      "sözbəsöz"
+    ]
+  },
+  "zurückhaltend|adj": {
+    "az": [
+      "təmkinli",
+      "çəkingən"
+    ]
+  },
+  "übersichtlich|adj": {
+    "az": [
+      "aydın",
+      "səliqəli"
+    ]
+  },
+  "übertragen|adj": {
+    "az": [
+      "məcazi"
+    ]
+  },
+  "überregional|adj": {
+    "az": [
+      "ümumölkə",
+      "regionlararası"
+    ]
+  },
+  "überzeugend|adj": {
+    "az": [
+      "inandırıcı"
+    ]
+  },
+  "üblich|adj": {
+    "az": [
+      "adi",
+      "adət olunmuş"
+    ]
+  },
+  "beinahe|adv": {
+    "az": [
+      "az qala",
+      "demək olar"
+    ]
+  },
+  "dadurch|adv": {
+    "az": [
+      "bununla",
+      "bunun sayəsində"
+    ]
+  },
+  "demnach|adv": {
+    "az": [
+      "deməli",
+      "buna görə"
+    ]
+  },
+  "durchaus|adv": {
+    "az": [
+      "tamamilə",
+      "heç şübhəsiz"
+    ]
+  },
+  "etwa|adv": {
+    "az": [
+      "təxminən",
+      "məsələn"
+    ]
+  },
+  "folglich|adv": {
+    "az": [
+      "deməli",
+      "nəticədə"
+    ]
+  },
+  "gewissermaßen|adv": {
+    "az": [
+      "müəyyən mənada"
+    ]
+  },
+  "gleichsam|adv": {
+    "az": [
+      "sanki",
+      "necə deyərlər"
+    ]
+  },
+  "halt|adv": {
+    "az": [
+      "da",
+      "elə"
+    ]
+  },
+  "hierbei|adv": {
+    "az": [
+      "bu zaman",
+      "burada"
+    ]
+  },
+  "insofern|adv": {
+    "az": [
+      "o baxımdan",
+      "bu mənada"
+    ]
+  },
+  "letztlich|adv": {
+    "az": [
+      "sonda",
+      "nəticə etibarilə"
+    ]
+  },
+  "nahezu|adv": {
+    "az": [
+      "demək olar",
+      "az qala"
+    ]
+  },
+  "ohnehin|adv": {
+    "az": [
+      "onsuz da"
+    ]
+  },
+  "sozusagen|adv": {
+    "az": [
+      "necə deyərlər",
+      "belə demək olar"
+    ]
+  },
+  "vorwiegend|adv": {
+    "az": [
+      "əsasən",
+      "başlıca olaraq"
+    ]
+  },
+  "wobei|adv": {
+    "az": [
+      "bununla belə",
+      "üstəlik"
+    ]
+  },
+  "zumal|adv": {
+    "az": [
+      "xüsusən ki",
+      "hələ üstəlik"
+    ]
+  },
+  "keineswegs|particle": {
+    "az": [
+      "qətiyyən",
+      "heç vəchlə"
+    ]
+  },
+  "indem|conj": {
+    "az": [
+      "-maqla",
+      "yolu ilə"
+    ]
+  },
+  "sofern|conj": {
+    "az": [
+      "bir şərtlə ki",
+      "əgər"
+    ]
+  },
+  "ungeachtet|conj": {
+    "az": [
+      "baxmayaraq"
+    ]
+  },
+  "vertraulich|adj": {
+    "az": [
+      "məhrəm",
+      "gizli"
+    ]
   }
 }

@@ -128,7 +128,7 @@ function estimate(
   for (const l of LEVELS) {
     if (perBand[l] >= 0.8) {
       const next = LEVELS[LEVELS.indexOf(l) + 1]
-      level = next ?? 'C1'
+      level = next ?? 'C2'
     }
   }
   // Hiçbir bantta %50'yi geçemediyse A1'de kal

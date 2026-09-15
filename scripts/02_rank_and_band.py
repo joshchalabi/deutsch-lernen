@@ -51,11 +51,49 @@ SRC = ROOT / "data-src"
 # A1/A2/B1 tavanları hâlâ Goethe listelerinin yayımlanmış BÜYÜKLÜK
 # mertebesiyle aynı düzlemde (A1 ~650-800, A2 ~1.300-2.000, B1 ~2.400-4.000);
 # B2/C1 Nation'ın %98 kapsam eşiğinin üstüne çıkıyor.
-BANDS = [("A1", 800), ("A2", 2_000), ("B1", 4_000), ("B2", 7_000), ("C1", 14_000)]
+# C2 eklendi. C1 tavanı 14.000'den 11.000'e çekilip üstü C2'ye ayrıldı:
+# C1 "akıcı", C2 "anadile yakın" demek ve ikisi arasındaki fark büyük ölçüde
+# seyrek sözcük dağarcığı. Nation'ın %98 kapsam için verdiği 8-9 bin kelime
+# ailesi C1'in ALT sınırı; C2 bunun belirgin üstünde olmalı.
+BANDS = [
+    ("A1", 800), ("A2", 2_000), ("B1", 4_000),
+    ("B2", 7_000), ("C1", 11_000), ("C2", 18_000),
+]
 CEILING = BANDS[-1][1]
+BAND_ORDER = {b: i for i, (b, _) in enumerate(BANDS)}
 
 # Dilbilgisi iskeleti: seyrek olsalar da erken öğretilmeli.
 FUNCTION_POS = {"pron", "prep", "conj", "det", "particle", "num"}
+
+CUR = ROOT / "curated" / "curriculum"
+
+
+def load_curriculum_words():
+    """
+    Elle yazılmış müfredatın öğrettiği kelimeler -> ders seviyesi.
+
+    NEDEN GEREKLİ?
+      Frekans sıralaması OpenSubtitles'a dayanıyor, yani KONUŞMA diline.
+      C1-C2'nin öğrettiği şey ise büyük ölçüde YAZI dili: "zumal", "auswerten",
+      "Gliederung", "Nachdruck" gibi kelimeler akademik metinde sık, film
+      altyazısında neredeyse yok. Ölçüldü: C1/C2 ünitelerinin kelimelerinden
+      48'i 18.000'lik kesimin dışında kaldı — çünkü derlem onları göremiyor,
+      nadir oldukları için değil.
+
+      Bu yüzden müfredatın adını andığı her kelime, frekans sırası ne olursa
+      olsun sözlüğe giriyor ve ÖĞRETİLDİĞİ seviyenin bandına yazılıyor.
+      Sıralama varsayılan; müfredat ise elle doğrulanmış karar.
+    """
+    want = {}
+    for path in sorted(CUR.glob("*.json")):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        level = data["level"]
+        for unit in data.get("units", []):
+            for w in unit.get("words", []):
+                # Aynı kelime birden çok ünitede geçerse EN ERKEN seviye kazanır
+                if w not in want or BAND_ORDER[level] < BAND_ORDER[want[w]]:
+                    want[w] = level
+    return want
 
 WORD_RE = re.compile(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß\-]*")
 SENT_SPLIT = re.compile(r"(?<=[.!?])\s+")
@@ -244,18 +282,39 @@ def main():
     scored.sort(key=lambda x: -x[0])
     print(f"  {len(scored):,} aday lemma puanlandı", flush=True)
 
+    curriculum_words = load_curriculum_words()
+    print(f"  müfredat kelimesi: {len(curriculum_words):,} (kesimin dışında "
+          f"kalanlar da alınacak)", flush=True)
+
     out_path = SRC / "ranked.jsonl"
     written = 0
+    rescued = []
+    seen_words = set()
     with open(out_path, "w", encoding="utf-8") as out:
         for rank, (score, rec) in enumerate(scored, start=1):
             if rank > CEILING:
-                break
-            band = next((b for b, ceil in BANDS if rank <= ceil), "C1")
+                # Kesimin altı: yalnızca müfredatın öğrettiği kelimeler alınır
+                # ve her kelimenin yalnızca en sık sözcük türü (ilk görülen).
+                lvl = curriculum_words.get(rec["w"])
+                if lvl and rec["w"] not in seen_words:
+                    seen_words.add(rec["w"])
+                    rescued.append((lvl, score, rec))
+                continue
+            seen_words.add(rec["w"])
+            band = next((b for b, ceil in BANDS if rank <= ceil), "C2")
             if rec["pos"] in FUNCTION_POS and band in ("B2", "C1"):
                 band = "B1"
             rec.update(rank=rank, freq=round(score, 3), cefr=band)
             out.write(json.dumps(rec, ensure_ascii=False) + "\n")
             written += 1
+
+        # Kurtarılanlar kesimin hemen ardına, kendi ders seviyeleriyle yazılıyor.
+        for i, (lvl, score, rec) in enumerate(rescued, start=CEILING + 1):
+            rec.update(rank=i, freq=round(score, 3), cefr=lvl)
+            out.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            written += 1
+    if rescued:
+        print(f"  kesimin altından kurtarılan müfredat kelimesi: {len(rescued):,}")
 
     print(f"\n✓ {written:,} lemma -> {out_path}")
     dist = defaultdict(int)

@@ -29,7 +29,7 @@ export async function loadVocab(level: Level): Promise<Lemma[]> {
 
 /** Verilen seviyeye kadar tüm kelimeler (A1..level) */
 export async function loadVocabUpTo(level: Level): Promise<Lemma[]> {
-  const levels: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1']
+  const levels: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
   const upTo = levels.slice(0, levels.indexOf(level) + 1)
   const chunks = await Promise.all(upTo.map(loadVocab))
   return chunks.flat()

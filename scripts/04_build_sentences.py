@@ -164,7 +164,7 @@ def score_sentence(text, form_rank):
 
 
 def cefr_of_rank(rank):
-    for band, ceil in (("A1", 650), ("A2", 1600), ("B1", 3000), ("B2", 5500), ("C1", 9000)):
+    for band, ceil in (("A1", 800), ("A2", 2000), ("B1", 4000), ("B2", 7000), ("C1", 11000), ("C2", 18000)):
         if rank <= ceil:
             return band
     return "C2"

@@ -1,0 +1,523 @@
+{
+  "level": "C2",
+  "title": { "tr": "C2 — Anadili düzeyine yakın", "az": "C2 — Ana dili səviyyəsinə yaxın", "ru": "C2 — Уровень, близкий к родному", "de": "C2 — Annähernd muttersprachlich" },
+  "description": {
+    "tr": "C1'de dili doğru ve uygun kullanıyorsunuz. C2 artık dilbilgisi öğretmiyor — söylenmeyeni duymayı, ince anlam farklarını ayırmayı ve kendi üslubunuzu bilinçli seçmeyi çalıştırıyor. Bu seviyede yeni kural neredeyse yok; olan şey, bildiklerinizin hassaslaşmasıdır.",
+    "az": "C1-də dili düzgün və yerində işlədirsiniz. C2 artıq qrammatika öyrətmir — deyilməyəni eşitməyi, incə məna fərqlərini ayırmağı və öz üslubunuzu şüurlu seçməyi məşq etdirir. Bu səviyyədə demək olar yeni qayda yoxdur; olan şey bildiklərinizin dəqiqləşməsidir.",
+    "ru": "На C1 вы пользуетесь языком правильно и уместно. C2 уже не учит грамматике — он тренирует слышать несказанное, различать тончайшие оттенки и осознанно выбирать собственный стиль. Новых правил здесь почти нет; есть уточнение того, что вы уже знаете.",
+    "de": "Auf C1 verwenden Sie die Sprache korrekt und angemessen. C2 lehrt keine neue Grammatik mehr — es schult das Gehör für das Ungesagte, die feinen Bedeutungsunterschiede und die bewusste Wahl des eigenen Stils."
+  },
+  "units": [
+    {
+      "id": "c2-01",
+      "title": { "tr": "Eşanlamlı değildir", "az": "Sinonim deyil", "ru": "Не синонимы", "de": "Synonyme differenzieren" },
+      "theme": { "tr": "Sözlükte aynı, kullanımda başka", "az": "Lüğətdə eyni, işlənmədə başqa", "ru": "В словаре одно, в речи разное", "de": "Bedeutungsnuancen unterscheiden" },
+      "canDo": [
+        { "tr": "Yakın anlamlı kelimeler arasından doğrusunu seçebilirim", "az": "Yaxın mənalı sözlər arasından doğrusunu seçə bilərəm", "ru": "Могу выбрать верное слово из близких по смыслу", "de": "Ich kann zwischen nahen Synonymen sicher wählen" }
+      ],
+      "grammar": [
+        {
+          "id": "synonyme",
+          "title": { "tr": "Yakın anlamlıların ayrımı", "az": "Yaxın mənalıların fərqi", "ru": "Различение близких синонимов", "de": "Synonymdifferenzierung" },
+          "explain": {
+            "tr": "Sözlük üç Almanca kelimeyi aynı Türkçe kelimeyle çevirir ve size hangisinin ne zaman kullanıldığını söylemez. C2'nin işi tam olarak bu boşluktur.\n\n**«bilmek» üçlüsü:**\n• **wissen** → bir olguyu bilmek: *Ich weiß, wo er wohnt.*\n• **kennen** → tanışıklık, deneyim: *Ich kenne ihn seit Jahren.*\n• **können** → beceri: *Ich kann Deutsch.*\n\n**«değişmek»:**\n• **ändern** → bilinçli değiştirmek *(Ich ändere den Plan.)*\n• **verändern** → derinden, görünür biçimde değişmek *(Die Stadt hat sich verändert.)*\n• **wechseln** → birini bırakıp öbürüne geçmek *(den Job wechseln)*\n• **tauschen** → karşılıklı takas\n\n**«yer»:**\n• **Ort** → coğrafi yer, yerleşim\n• **Platz** → boş alan, oturulacak yer\n• **Stelle** → belirli nokta; ayrıca «iş pozisyonu»\n• **Raum** → kapalı mekân, hacim\n\n**«son»:**\n• **Ende** → bitiş noktası\n• **Schluss** → bir işin kapanışı, karar\n• **Ziel** → varış, hedef\n\n**«neden»:**\n• **Grund** → kişisel gerekçe\n• **Ursache** → nedensel kaynak, bilimsel\n• **Anlass** → tetikleyen vesile — *Ursache* ile *Anlass* farkı tarih derslerinin klasik ayrımıdır: savaşın *Ursache*'si yapısaldır, *Anlass*'ı bir suikasttir.\n\nBunları kural ezberleyerek değil, **her yeni kelimeyi tek başına değil karşıtıyla birlikte** not ederek öğrenirsiniz.",
+            "az": "Lüğət üç alman sözünü eyni sözlə tərcümə edir və hansının nə vaxt işləndiyini demir. C2-nin işi məhz bu boşluqdur.\n\n**«bilmək» üçlüyü:**\n• **wissen** → faktı bilmək: *Ich weiß, wo er wohnt.*\n• **kennen** → tanışlıq: *Ich kenne ihn seit Jahren.*\n• **können** → bacarıq: *Ich kann Deutsch.*\n\n**«dəyişmək»:**\n• **ändern** → şüurlu dəyişmək\n• **verändern** → dərindən dəyişmək\n• **wechseln** → birini buraxıb o birinə keçmək\n• **tauschen** → qarşılıqlı mübadilə\n\n**«yer»:** Ort (coğrafi) · Platz (boş sahə) · Stelle (konkret nöqtə, vəzifə) · Raum (qapalı məkan)\n\n**«səbəb»:** Grund (şəxsi əsas) · Ursache (səbəb mənbəyi) · Anlass (bəhanə, vasitə)\n\nBunları qayda əzbərləyərək yox, **hər yeni sözü qarşılığı ilə birlikdə** qeyd edərək öyrənirsiniz.",
+            "ru": "Словарь переводит три немецких слова одним русским и не говорит, какое когда уместно. Работа C2 — именно этот зазор.\n\n**Тройка «знать»:**\n• **wissen** → знать факт: *Ich weiß, wo er wohnt.*\n• **kennen** → быть знакомым: *Ich kenne ihn seit Jahren.*\n• **können** → владеть, уметь: *Ich kann Deutsch.*\n\n**«менять»:**\n• **ändern** → сознательно изменить *(Ich ändere den Plan.)*\n• **verändern** → измениться глубоко, заметно *(Die Stadt hat sich verändert.)*\n• **wechseln** → сменить одно на другое *(den Job wechseln)*\n• **tauschen** → обменяться\n\n**«место»:**\n• **Ort** → географическое место\n• **Platz** → свободное место, площадь\n• **Stelle** → конкретная точка; также «должность»\n• **Raum** → помещение, пространство\n\n**«конец»:** Ende (точка окончания) · Schluss (завершение дела) · Ziel (цель, финиш)\n\n**«причина»:**\n• **Grund** → личное основание\n• **Ursache** → каузальный источник, научное\n• **Anlass** → непосредственный повод — классическое различение из учебников истории: у войны есть *Ursache* (структурная) и *Anlass* (покушение).\n\nЭто учится не заучиванием правил, а **записью каждого нового слова вместе с его конкурентом**.",
+            "de": "wissen (Fakt) · kennen (Vertrautheit) · können (Fähigkeit)\nändern (bewusst) · verändern (tiefgreifend) · wechseln (ersetzen) · tauschen (gegenseitig)\nOrt · Platz · Stelle · Raum\nEnde · Schluss · Ziel\nGrund (persönlich) · Ursache (kausal) · Anlass (auslösend)"
+          },
+          "table": {
+            "headers": ["Wort", "Nuance", "Beispiel"],
+            "rows": [
+              ["wissen", "Fakt", "Ich weiß es."],
+              ["kennen", "Vertrautheit", "Ich kenne ihn."],
+              ["ändern", "bewusst", "Ich ändere den Plan."],
+              ["verändern", "tiefgreifend", "Die Stadt hat sich verändert."],
+              ["Ursache", "kausaler Grund", "die Ursache des Unfalls"],
+              ["Anlass", "auslösendes Ereignis", "der Anlass zum Streit"],
+              ["Stelle", "Punkt / Position", "eine Stelle im Text"]
+            ]
+          },
+          "examples": [
+            { "de": "Die Ursache war technisch, der Anlass völlig banal.", "tr": "Neden teknikti, vesile ise tamamen sıradan.", "az": "Səbəb texniki idi, bəhanə isə tamam adi.", "ru": "Причина была технической, а повод — совершенно банальным." },
+            { "de": "Ich kenne die Stadt, aber ich weiß nicht, wo das Museum ist.", "tr": "Şehri tanıyorum ama müzenin nerede olduğunu bilmiyorum.", "az": "Şəhəri tanıyıram, amma muzeyin harada olduğunu bilmirəm.", "ru": "Я знаю город, но не знаю, где музей." }
+          ]
+        }
+      ],
+      "words": [
+        "wissen", "kennen", "ändern", "verändern", "wechseln", "tauschen",
+        "Ursache", "Anlass", "Grund", "Stelle", "Ort", "Raum", "Schluss",
+        "unterscheiden", "abgrenzen", "verwechseln", "gleichsetzen",
+        "Nuance", "Unterschied", "Feinheit", "Schattierung",
+        "geringfügig", "erheblich", "subtil"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Yakın anlamlı üç kelime çifti seçin (ändern/verändern, Grund/Ursache, Ort/Stelle). Her çift için ikisini de doğru kullandığınız birer cümle yazın ve farkı tek satırda açıklayın.", "az": "Yaxın mənalı üç söz cütü seçin. Hər cüt üçün ikisini də düzgün işlətdiyiniz cümlə yazın və fərqi bir sətirdə izah edin.", "ru": "Возьмите три пары близких слов. Для каждой напишите по предложению с обоими и одной строкой объясните разницу.", "de": "Wählen Sie drei Synonympaare, bilden Sie je zwei Sätze und erklären Sie den Unterschied in einer Zeile." },
+          "mustUse": ["Ursache", "Anlass", "unterscheiden"],
+          "model": "Die Ursache der Krise lag in der Wirtschaft; der Anlass war eine einzelne Rede. Beide Wörter unterscheiden sich darin, dass die Ursache wirkt und der Anlass nur auslöst."
+        }
+      ],
+      "game": "wortsalat"
+    },
+
+    {
+      "id": "c2-02",
+      "title": { "tr": "Kelime üretimi", "az": "Söz yaradıcılığı", "ru": "Словообразование", "de": "Produktive Wortbildung" },
+      "theme": { "tr": "Bilmediğiniz kelimeyi çözmek ve kendiniz kurmak", "az": "Bilmədiyiniz sözü açmaq və özünüz qurmaq", "ru": "Разгадать незнакомое слово и построить своё", "de": "Unbekannte Wörter erschließen und selbst bilden" },
+      "canDo": [
+        { "tr": "Hiç görmediğim bir kelimeyi parçalarından anlayabilirim", "az": "Heç görmədiyim sözü hissələrindən başa düşə bilərəm", "ru": "Могу понять незнакомое слово по его частям", "de": "Ich kann unbekannte Wörter aus ihren Bausteinen erschließen" }
+      ],
+      "grammar": [
+        {
+          "id": "wortbildung",
+          "title": { "tr": "Ön ekler, son ekler, birleşikler", "az": "Ön şəkilçi, son şəkilçi, mürəkkəb sözlər", "ru": "Приставки, суффиксы, сложные слова", "de": "Präfixe, Suffixe, Komposita" },
+          "explain": {
+            "tr": "Almanca kelime dağarcığı sonsuz görünür çünkü dil **sürekli yeni kelime üretir**. Ama üretim kuralları sayılıdır. Bunları bilen kişi sözlüksüz okur.\n\n**1. Birleşik isim — SON parça belirler**\n  die Arbeit + s + die Erlaubnis = die **Arbeitserlaubnis** *(çalışma izni — dişil, çünkü Erlaubnis dişil)*\n  Ne kadar uzun olursa olsun **sondan başa** okuyun: *Donaudampfschifffahrtsgesellschaft* = Gesellschaft ← Fahrt ← Schiff ← Dampf ← Donau.\n\n**2. Ayrılmaz ön ekler anlamı sistemli değiştirir:**\n  • **ver-** → yanlış yapma ya da tüketme: *sprechen → sich versprechen* (dili sürçmek), *kaufen → verkaufen* (satmak)\n  • **zer-** → parçalama: *brechen → zerbrechen*\n  • **ent-** → uzaklaştırma, geri alma: *decken → entdecken* (keşfetmek), *laden → entladen*\n  • **be-** → geçişli yapma: *antworten → beantworten* (+Akk)\n  • **er-** → sonuca ulaştırma: *finden → erfinden* (icat etmek), *arbeiten → erarbeiten*\n  • **miss-** → olumsuzlama: *verstehen → missverstehen*\n\n**3. Son ekler tür ve cinsiyet verir — bu, artikel ezberini yarıya indirir:**\n  • **-ung, -heit, -keit, -schaft, -ion, -tät, -ei** → hep **die**\n  • **-er, -ling, -ismus, -ant** → hep **der**\n  • **-chen, -lein, -tum, -ment, -nis** → çoğunlukla **das**\n  • **-bar, -lich, -sam, -haft, -los** → sıfat yapar\n\n**4. İsimleştirme:** *das Lesen, das Schöne, die Ankunft, der Beginn*\n\nBu dört kural, 7.000 kelimelik C2 listesinin büyük kısmını tahmin edilebilir kılar.",
+            "az": "Alman söz ehtiyatı sonsuz görünür, çünki dil **daim yeni söz istehsal edir**. Amma istehsal qaydaları saylıdır.\n\n**1. Mürəkkəb isim — SON hissə müəyyən edir**\n  Arbeit + s + Erlaubnis = die **Arbeitserlaubnis**\n  Nə qədər uzun olsa da **sondan başa** oxuyun.\n\n**2. Ayrılmayan ön şəkilçilər:**\n  • **ver-** → səhv etmək / sərf etmək: verkaufen\n  • **zer-** → parçalamaq: zerbrechen\n  • **ent-** → uzaqlaşdırmaq: entdecken\n  • **be-** → keçici etmək: beantworten\n  • **er-** → nəticəyə çatdırmaq: erfinden\n  • **miss-** → inkar: missverstehen\n\n**3. Son şəkilçilər cinsi verir:**\n  • **-ung, -heit, -keit, -schaft, -ion** → **die**\n  • **-er, -ling, -ismus** → **der**\n  • **-chen, -lein, -tum, -ment** → **das**\n  • **-bar, -lich, -sam, -los** → sifət\n\n**4. İsimləşdirmə:** das Lesen, das Schöne, die Ankunft",
+            "ru": "Немецкий словарь кажется бесконечным, потому что язык **непрерывно порождает новые слова**. Но правил порождения — счётное число. Кто их знает, читает без словаря.\n\n**1. Сложное существительное — род задаёт ПОСЛЕДНЯЯ часть**\n  die Arbeit + s + die Erlaubnis = die **Arbeitserlaubnis**\n  Каким бы длинным слово ни было, читайте **с конца к началу**: *Donaudampfschifffahrtsgesellschaft* = Gesellschaft ← Fahrt ← Schiff ← Dampf ← Donau.\n\n**2. Неотделяемые приставки меняют значение системно:**\n  • **ver-** → сделать неверно или израсходовать: *sich versprechen* (оговориться), *verkaufen* (продать)\n  • **zer-** → раздробить: *zerbrechen*\n  • **ent-** → удалить, отменить: *entdecken* (открыть), *entladen*\n  • **be-** → сделать переходным: *beantworten* (+Akk)\n  • **er-** → довести до результата: *erfinden* (изобрести)\n  • **miss-** → отрицание: *missverstehen*\n\n**3. Суффиксы задают род — это вдвое сокращает зубрёжку артиклей:**\n  • **-ung, -heit, -keit, -schaft, -ion, -tät** → всегда **die**\n  • **-er, -ling, -ismus, -ant** → всегда **der**\n  • **-chen, -lein, -tum, -ment, -nis** → обычно **das**\n  • **-bar, -lich, -sam, -haft, -los** → образуют прилагательное\n\n**4. Субстантивация:** *das Lesen, das Schöne, die Ankunft, der Beginn*",
+            "de": "Komposita: das letzte Glied bestimmt Genus — von hinten lesen.\nPräfixe: ver- (falsch/verbrauchen) · zer- (zerteilen) · ent- (entfernen) · be- (transitiv) · er- (Resultat) · miss- (Negation).\nSuffixe: -ung/-heit/-keit/-schaft/-ion → die · -er/-ling/-ismus → der · -chen/-lein/-tum/-ment → das.\nNominalisierung: das Lesen, das Schöne, die Ankunft."
+          },
+          "table": {
+            "headers": ["Baustein", "Wirkung", "Beispiel"],
+            "rows": [
+              ["ver-", "falsch / verbrauchen", "sich versprechen"],
+              ["zer-", "in Teile", "zerbrechen"],
+              ["ent-", "wegnehmen", "entdecken"],
+              ["be-", "transitiv machen", "beantworten"],
+              ["er-", "Resultat erreichen", "erfinden"],
+              ["-ung → die", "Handlung", "die Änderung"],
+              ["-heit → die", "Eigenschaft", "die Freiheit"],
+              ["-bar", "Adjektiv: möglich", "lesbar"]
+            ]
+          },
+          "examples": [
+            { "de": "Das Wort ist zusammengesetzt: das letzte Glied bestimmt den Artikel.", "tr": "Kelime birleşiktir: artikeli son parça belirler.", "az": "Söz mürəkkəbdir: artikli son hissə müəyyən edir.", "ru": "Слово сложное: артикль задаёт последняя часть." },
+            { "de": "Aus «denken» wird mit «be-» das Verb «bedenken».", "tr": "«denken»den «be-» ile «bedenken» olur.", "az": "«denken»dən «be-» ilə «bedenken» yaranır.", "ru": "Из «denken» с приставкой «be-» получается «bedenken»." }
+          ]
+        }
+      ],
+      "words": [
+        "Vorsilbe", "Nachsilbe", "Wortstamm", "Zusammensetzung", "Ableitung",
+        "bilden", "zusammensetzen", "ableiten", "erschließen", "zerlegen",
+        "entdecken", "erfinden", "beantworten", "zerbrechen", "missverstehen",
+        "verbrauchen", "entfallen", "ergänzen", "bedenken",
+        "produktiv", "regelmäßig", "durchschaubar", "Wandel"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Hiç bilmediğiniz beş uzun Almanca kelime bulun. Her birini parçalarına ayırın, anlamını tahmin edin, sonra sözlükten kontrol edin ve tahmininizin neden tuttuğunu ya da tutmadığını yazın.", "az": "Heç bilmədiyiniz beş uzun alman sözü tapın. Hər birini hissələrə ayırın, mənasını təxmin edin, sonra lüğətdən yoxlayın.", "ru": "Найдите пять незнакомых длинных немецких слов. Разберите каждое на части, угадайте значение, затем проверьте по словарю.", "de": "Suchen Sie fünf unbekannte lange Wörter, zerlegen Sie sie, raten Sie die Bedeutung und prüfen Sie nach." },
+          "mustUse": ["zerlegen", "erschließen", "Bedeutung"],
+          "model": "Ich habe das Wort zerlegt: Arbeit + s + Erlaubnis. Daraus ließ sich die Bedeutung erschließen, ohne im Wörterbuch nachzusehen."
+        }
+      ],
+      "game": "wortsalat"
+    },
+
+    {
+      "id": "c2-03",
+      "title": { "tr": "Söylenmeyen anlam", "az": "Deyilməyən məna", "ru": "Несказанный смысл", "de": "Implizite Bedeutung" },
+      "theme": { "tr": "İma, ironi, kibar ret", "az": "İma, ironiya, nəzakətli rədd", "ru": "Намёк, ирония, вежливый отказ", "de": "Andeutung, Ironie, höfliche Ablehnung" },
+      "canDo": [
+        { "tr": "Kibarca söylenmiş bir «hayır»ı fark edebilirim", "az": "Nəzakətlə deyilmiş «yox»u sezə bilərəm", "ru": "Могу распознать вежливо сказанное «нет»", "de": "Ich erkenne eine höflich verpackte Ablehnung" }
+      ],
+      "grammar": [
+        {
+          "id": "implizit",
+          "title": { "tr": "Ne dedi, ne demek istedi", "az": "Nə dedi, nə demək istədi", "ru": "Что сказано и что имелось в виду", "de": "Gesagtes und Gemeintes" },
+          "explain": {
+            "tr": "İleri seviyedeki asıl güçlük, kelimeleri anlamamak değil — **hepsini anlayıp yine de mesajı kaçırmaktır**. Almanca profesyonel ortamda doğrudan konuşma ünü vardır, ama ret ve eleştiri neredeyse hep dolaylıdır.\n\n**Kibar ret kalıpları — hepsi «hayır» demektir:**\n• *Das ist sicher eine interessante Idee, aber …* → hayır\n• *Da müsste man noch einmal drüber nachdenken.* → hayır\n• *Ich bin mir nicht sicher, ob das der richtige Weg ist.* → yanlış yoldasın\n• *Das lässt sich so pauschal nicht sagen.* → söylediğin fazla basit\n• *Prinzipiell ja, nur …* → «nur»dan sonrası asıl mesaj\n\n**Eleştiri yumuşatıcıları** — bunları kaldırırsanız cümle sert olur:\n  *eigentlich, eher, etwas, vielleicht, nicht ganz, im Prinzip, durchaus*\n  *Das ist **nicht ganz** korrekt.* = yanlış.\n  *Ihre Arbeit ist **durchaus** solide.* = iyi ama olağanüstü değil.\n\n**Litotes — olumsuzla övme:** *nicht schlecht* = iyi; *nicht uninteressant* = ilginç. Alman yazı dilinde çok yaygındır ve abartısız bir onay biçimidir.\n\n**İroni işaretleri:** aşırı resmî kelime seçimi, gereksiz vurgu (*ja, sicher, natürlich*), gerçekle çelişen övgü.\n  *Na, das ist ja großartig gelaufen.* — bağlam kötüyse: felaket oldu.\n\nBu kalıplar dilbilgisi değil **kültürel bilgidir** ve yalnızca gerçek metin ve diyaloglarda karşılaşarak öğrenilir.",
+            "az": "İrəli səviyyədə əsas çətinlik sözləri anlamamaq yox — **hamısını anlayıb yenə mesajı qaçırmaqdır**.\n\n**Nəzakətli rədd qəlibləri — hamısı «yox» deməkdir:**\n• *Das ist sicher eine interessante Idee, aber …*\n• *Da müsste man noch einmal drüber nachdenken.*\n• *Ich bin mir nicht sicher, ob das der richtige Weg ist.*\n• *Prinzipiell ja, nur …* → «nur»dan sonrası əsas mesajdır\n\n**Tənqid yumşaldıcıları:** eigentlich, eher, etwas, nicht ganz, durchaus\n  *Das ist **nicht ganz** korrekt.* = səhvdir.\n\n**Litotes — inkarla tərif:** *nicht schlecht* = yaxşı\n\n**İroniya əlamətləri:** həddindən artıq rəsmi söz seçimi, artıq vurğu (*ja, natürlich*), gerçəklə ziddiyyətli tərif.",
+            "ru": "Главная трудность продвинутого уровня — не непонимание слов, а **понимание всех слов при полном непонимании сообщения**. У немцев репутация прямолинейных, но отказ и критика почти всегда непрямые.\n\n**Формулы вежливого отказа — все означают «нет»:**\n• *Das ist sicher eine interessante Idee, aber …* → нет\n• *Da müsste man noch einmal drüber nachdenken.* → нет\n• *Ich bin mir nicht sicher, ob das der richtige Weg ist.* → вы не правы\n• *Das lässt sich so pauschal nicht sagen.* → вы упрощаете\n• *Prinzipiell ja, nur …* → суть идёт после «nur»\n\n**Смягчители критики** — уберите их, и фраза станет резкой:\n  *eigentlich, eher, etwas, vielleicht, nicht ganz, im Prinzip, durchaus*\n  *Das ist **nicht ganz** korrekt.* = неверно.\n  *Ihre Arbeit ist **durchaus** solide.* = хорошо, но не более.\n\n**Литота — похвала через отрицание:** *nicht schlecht* = хорошо; *nicht uninteressant* = любопытно. В письменном немецком это обычный, сдержанный способ одобрения.\n\n**Признаки иронии:** нарочито официальная лексика, лишнее подчёркивание (*ja, sicher, natürlich*), похвала вопреки фактам.\n  *Na, das ist ja großartig gelaufen.* — при плохом контексте: провал.",
+            "de": "Höfliche Ablehnung: «Da müsste man noch einmal drüber nachdenken.» = nein.\nAbschwächer: eigentlich, eher, etwas, nicht ganz, im Prinzip, durchaus.\nLitotes: nicht schlecht = gut.\nIronie: übertriebenes Register, betonte Partikeln, Lob gegen die Faktenlage."
+          },
+          "table": {
+            "headers": ["Gesagt", "Gemeint"],
+            "rows": [
+              ["Interessante Idee, aber …", "nein"],
+              ["Da müsste man nachdenken.", "nein"],
+              ["Nicht ganz korrekt.", "falsch"],
+              ["Durchaus solide.", "gut, nicht mehr"],
+              ["Nicht schlecht.", "gut"],
+              ["Prinzipiell ja, nur …", "die Einschränkung zählt"]
+            ]
+          },
+          "examples": [
+            { "de": "Ich bin mir nicht sicher, ob das der richtige Weg ist.", "tr": "Bunun doğru yol olduğundan emin değilim. *(= yanlış yoldasın)*", "az": "Bunun doğru yol olduğuna əmin deyiləm. *(= səhvdir)*", "ru": "Не уверен, что это верный путь. *(= вы не правы)*" },
+            { "de": "Das lässt sich so pauschal nicht sagen.", "tr": "Bu kadar genel söylenemez. *(= fazla basitleştiriyorsun)*", "az": "Bunu belə ümumi demək olmaz.", "ru": "Так огульно сказать нельзя." }
+          ]
+        }
+      ],
+      "words": [
+        "andeuten", "durchblicken", "verstehen", "auffassen", "deuten",
+        "ablehnen", "zurückweisen", "einwenden", "relativieren", "abschwächen",
+        "Andeutung", "Ironie", "Untertreibung", "Zwischenton", "Absicht",
+        "höflich", "indirekt", "zurückhaltend", "vage", "unmissverständlich",
+        "eigentlich", "durchaus", "keineswegs", "allerdings"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Bir iş fikrini reddeden iki metin yazın: biri açıkça, biri Almancadaki dolaylı kalıplarla. Sonra ikincisinin hangi ifadelerle «hayır» dediğini işaretleyin.", "az": "Bir iş fikrini rədd edən iki mətn yazın: biri açıq, biri dolayı qəliblərlə. Sonra ikincisinin hansı ifadələrlə «yox» dediyini göstərin.", "ru": "Напишите два отказа от рабочей идеи: прямой и непрямой, немецкими формулами. Затем отметьте, какими выражениями второй говорит «нет».", "de": "Lehnen Sie einen Vorschlag zweimal ab: direkt und indirekt — und markieren Sie, welche Wendungen das «Nein» tragen." },
+          "mustUse": ["andeuten", "höflich", "allerdings"],
+          "model": "Ihr Vorschlag ist durchaus interessant. Allerdings müsste man den Zeitrahmen noch einmal überdenken. Damit deute ich höflich an, dass ich ihn für nicht umsetzbar halte."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "c2-04",
+      "title": { "tr": "Bilim ve uzmanlık dili", "az": "Elm və ixtisas dili", "ru": "Научный и профессиональный язык", "de": "Wissenschafts- und Fachsprache" },
+      "theme": { "tr": "Akademik metnin kalıpları", "az": "Akademik mətnin qəlibləri", "ru": "Формулы академического текста", "de": "Konventionen des Fachtextes" },
+      "canDo": [
+        { "tr": "Akademik bir metni doğru kalıplarla yazabilirim", "az": "Akademik mətni düzgün qəliblərlə yaza bilərəm", "ru": "Могу писать академический текст принятыми формулами", "de": "Ich kann einen wissenschaftlichen Text konventionsgerecht verfassen" }
+      ],
+      "grammar": [
+        {
+          "id": "fachsprache",
+          "title": { "tr": "Akademik Almancanın araçları", "az": "Akademik alman dilinin vasitələri", "ru": "Инструменты академического немецкого", "de": "Mittel der Wissenschaftssprache" },
+          "explain": {
+            "tr": "Akademik Almanca ayrı bir lehçedir: kelime dağarcığı değil, **cümle mimarisi** farklıdır. Beş özelliği:\n\n**1. İsim üslubu (Nominalstil)** — fiil yerine isim\n  *Man hat die Daten geprüft* → *nach **Prüfung** der Daten*\n  Bu, C1'de öğrendiğiniz dönüşümün zorunlu hale geldiği yerdir.\n\n**2. Kişisizlik** *(c1-08)* — «ich» yok, «man» seyrek, edilgen bol\n  *Es wird angenommen, dass …* · *Daraus ergibt sich, dass …*\n\n**3. Kaynak gösterme ve mesafe koyma:**\n  *Nach Ansicht von Müller (2019) …*\n  *Der Autor vertritt die Auffassung, dass …*\n  *Dies legt nahe, dass …* *(kesin iddia değil)*\n  *Es spricht einiges dafür, dass …*\n  Almanca akademik yazıda **kesin konuşmak zayıflıktır**; ihtiyat işareti bilimselliktir.\n\n**4. Yapı kalıpları:**\n  *Zunächst … · Im Folgenden … · Abschließend lässt sich festhalten, dass …*\n  *Im Gegensatz dazu · Demgegenüber · Hierbei ist zu beachten, dass …*\n\n**5. Konjunktiv I ile aktarma** — başkasının iddiasını kendi iddianızdan ayırır\n  Der Autor betont, die Ergebnisse **seien** vorläufig.\n  Bu ayrım Türkçede «-mış» ekiyle, Rusçada «мол/якобы» ile karşılanır ama Almancada dilbilgisel ve zorunludur.\n\nUyarı: bu üslup akademik metin dışında **kullanılmaz**; günlük bir e-postada gülünç durur.",
+            "az": "Akademik alman dili ayrı bir ləhcədir: söz ehtiyatı yox, **cümlə memarlığı** fərqlidir.\n\n**1. İsim üslubu:** *nach **Prüfung** der Daten*\n**2. Şəxssizlik:** *Es wird angenommen, dass …*\n**3. Mənbə göstərmə və məsafə:**\n  *Nach Ansicht von Müller (2019) …*\n  *Dies legt nahe, dass …*\n  Akademik yazıda **qəti danışmaq zəiflikdir**.\n**4. Quruluş qəlibləri:** Zunächst … · Im Folgenden … · Abschließend lässt sich festhalten …\n**5. Konjunktiv I ilə nəql:** Der Autor betont, die Ergebnisse **seien** vorläufig.\n\nXəbərdarlıq: bu üslub akademik mətndən kənarda **işlənmir**.",
+            "ru": "Академический немецкий — отдельный диалект: отличается не лексика, а **архитектура фразы**. Пять черт:\n\n**1. Именной стиль (Nominalstil)** — существительное вместо глагола\n  *Man hat die Daten geprüft* → *nach **Prüfung** der Daten*\n\n**2. Безличность** *(c1-08)* — никакого «ich», редкое «man», обильный пассив\n  *Es wird angenommen, dass …* · *Daraus ergibt sich, dass …*\n\n**3. Ссылка на источник и дистанцирование:**\n  *Nach Ansicht von Müller (2019) …*\n  *Der Autor vertritt die Auffassung, dass …*\n  *Dies legt nahe, dass …* *(не категорично)*\n  В немецком научном письме **категоричность — признак слабости**; оговорка есть знак научности.\n\n**4. Структурные формулы:**\n  *Zunächst … · Im Folgenden … · Abschließend lässt sich festhalten, dass …*\n  *Im Gegensatz dazu · Demgegenüber · Hierbei ist zu beachten, dass …*\n\n**5. Konjunktiv I в косвенной речи** — отделяет чужое утверждение от вашего\n  Der Autor betont, die Ergebnisse **seien** vorläufig.\n  В русском это передаётся «мол, якобы», но в немецком оно грамматично и обязательно.\n\nВнимание: вне научного текста этот стиль **не употребляется** — в бытовом письме он смешон.",
+            "de": "Nominalstil · Unpersönlichkeit · Quellenbezug und Distanzierung (Dies legt nahe, dass …) · Gliederungsformeln (Zunächst, Im Folgenden, Abschließend) · Konjunktiv I zur Redewiedergabe.\n\nVorsicht: außerhalb des Fachtextes wirkt dieses Register unfreiwillig komisch."
+          },
+          "table": {
+            "headers": ["Funktion", "Wendung"],
+            "rows": [
+              ["einleiten", "Zunächst ist festzuhalten, dass …"],
+              ["fortführen", "Im Folgenden wird gezeigt, dass …"],
+              ["belegen", "Nach Ansicht von Müller (2019) …"],
+              ["vorsichtig behaupten", "Dies legt nahe, dass …"],
+              ["einschränken", "Hierbei ist zu beachten, dass …"],
+              ["abschließen", "Abschließend lässt sich festhalten, dass …"]
+            ]
+          },
+          "examples": [
+            { "de": "Die Befunde legen nahe, dass ein Zusammenhang besteht.", "tr": "Bulgular bir ilişkinin varlığını düşündürüyor.", "az": "Nəticələr əlaqənin olduğunu düşündürür.", "ru": "Результаты позволяют предположить наличие связи." },
+            { "de": "Abschließend lässt sich festhalten, dass weitere Forschung nötig ist.", "tr": "Sonuç olarak daha fazla araştırmaya ihtiyaç olduğu söylenebilir.", "az": "Yekunda daha çox araşdırmanın lazım olduğunu demək olar.", "ru": "В заключение можно констатировать, что нужны дальнейшие исследования." }
+          ]
+        }
+      ],
+      "words": [
+        "Befund", "These", "Annahme", "Hypothese", "Beleg", "Quelle",
+        "Untersuchung", "Auswertung", "Zusammenhang", "Schlussfolgerung",
+        "belegen", "nachweisen", "widerlegen", "annehmen", "überprüfen",
+        "auswerten", "festhalten", "nahelegen", "erörtern", "gliedern",
+        "vorläufig", "belastbar", "aussagekräftig", "methodisch"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "İlgi duyduğunuz bir konuda 150 kelimelik akademik bir paragraf yazın: bir tez, bir dayanak, bir çekince ve bir sonuç. «ich» kullanmayın.", "az": "Maraqlandığınız mövzuda 150 sözlük akademik abzas yazın: bir tez, bir dəlil, bir çəkincə və bir nəticə. «ich» işlətməyin.", "ru": "Напишите академический абзац на 150 слов: тезис, обоснование, оговорка, вывод. Без «ich».", "de": "Schreiben Sie einen wissenschaftlichen Absatz (150 Wörter): These, Beleg, Einschränkung, Fazit — ohne «ich»." },
+          "mustUse": ["These", "belegen", "festhalten"],
+          "model": "Zunächst ist die These zu prüfen, dass frühes Lesen den Wortschatz vergrößert. Mehrere Studien belegen diesen Zusammenhang. Hierbei ist allerdings zu beachten, dass die Stichproben klein waren. Abschließend lässt sich festhalten, dass der Befund vorläufig bleibt."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "c2-05",
+      "title": { "tr": "Konjunktiv I ve aktarma", "az": "Konjunktiv I və nəql", "ru": "Konjunktiv I и пересказ", "de": "Konjunktiv I und Redewiedergabe" },
+      "theme": { "tr": "Gazetecilik ve bilim dilinin mesafesi", "az": "Jurnalistika və elm dilinin məsafəsi", "ru": "Дистанция журналистского и научного языка", "de": "Distanz in Presse und Wissenschaft" },
+      "canDo": [
+        { "tr": "Başkasının sözünü kendi iddiamdan ayırabilirim", "az": "Başqasının sözünü öz iddiamdan ayıra bilərəm", "ru": "Могу отделить чужое высказывание от собственного", "de": "Ich kann fremde Aussagen klar von eigenen trennen" }
+      ],
+      "grammar": [
+        {
+          "id": "konjunktiv1",
+          "title": { "tr": "Dolaylı anlatım", "az": "Dolayı nəql", "ru": "Косвенная речь", "de": "Indirekte Rede" },
+          "explain": {
+            "tr": "Almanca, başkasının sözünü aktarırken **fiil biçimini değiştirerek** araya mesafe koyar. Bu yapı konuşma dilinde neredeyse ölmüştür ama gazete, mahkeme ve akademik metinlerde zorunludur — C2 okuma parçalarının yarısı buna dayanır.\n\n**Kuruluş:** mastar kökü + **-e, -est, -e, -en, -et, -en**\n  sagen → er **sage** · haben → er **habe** · kommen → er **komme**\n  **sein** düzensiz: ich sei, er **sei**, wir **seien**\n\n**Temel kullanım:**\n  Doğrudan: *Er sagt: «Ich bin müde.»*\n  Dolaylı: *Er sagt, er **sei** müde.*\n\nDikkat: *dass* gerekmez; bağlaçsız kurulduğunda fiil **ikinci sırada** kalır.\n\n**Kaçınma kuralı — C2'nin asıl inceliği:**\nKonjunktiv I biçimi Indikativ ile aynı görünüyorsa (özellikle *ich* ve çoğul *wir/sie*: *sie haben* = *sie haben*), aktarma anlaşılmaz olur. O zaman **Konjunktiv II'ye geçilir**:\n  *Sie sagen, sie **hätten** keine Zeit.* *(«haben» ayırt edilmezdi)*\n\n**Zaman aktarımı:**\n| Doğrudan | Dolaylı |\n|---|---|\n| Präsens | Konjunktiv I: er komme |\n| Perfekt/Präteritum | Konj. I geçmiş: er sei gekommen |\n| Futur | er werde kommen |\n\n**Tarafsızlık işlevi:** gazeteci *er sei unschuldig* yazdığında iddianın kendisine ait olmadığını dilbilgisiyle belirtir. *er ist unschuldig* yazsaydı gazete iddiayı üstlenmiş olurdu. Türkçedeki «-mış» ve Rusçadaki «якобы» bu işlevi taşır ama Almancada seçenek değil kuraldır.",
+            "az": "Alman dili başqasının sözünü nəql edərkən **feil formasını dəyişərək** məsafə qoyur. Danışıqda demək olar ölüb, amma qəzet, məhkəmə və akademik mətnlərdə məcburidir.\n\n**Quruluş:** məsdər kökü + **-e, -est, -e, -en, -et, -en**\n  sagen → er **sage** · haben → er **habe**\n  **sein** qaydasız: er **sei**, wir **seien**\n\n**Əsas işlənmə:**\n  Düz: *Er sagt: «Ich bin müde.»*\n  Dolayı: *Er sagt, er **sei** müde.*\n\n*dass* lazım deyil; bağlayıcısız qurulanda feil **ikinci yerdə** qalır.\n\n**Qaçınma qaydası:** Konjunktiv I forması Indikativ ilə eyni görünürsə, **Konjunktiv II-yə keçilir**:\n  *Sie sagen, sie **hätten** keine Zeit.*\n\n**Bitərəflik funksiyası:** jurnalist *er sei unschuldig* yazanda iddianın ona aid olmadığını qrammatika ilə bildirir.",
+            "ru": "Немецкий, передавая чужие слова, ставит дистанцию **сменой формы глагола**. В разговорной речи конструкция почти вымерла, но в прессе, суде и науке она обязательна — на ней держится половина текстов уровня C2.\n\n**Образование:** основа инфинитива + **-e, -est, -e, -en, -et, -en**\n  sagen → er **sage** · haben → er **habe** · kommen → er **komme**\n  **sein** нерегулярен: er **sei**, wir **seien**\n\n**Базовое употребление:**\n  Прямая: *Er sagt: «Ich bin müde.»*\n  Косвенная: *Er sagt, er **sei** müde.*\n\nВажно: *dass* не нужен; без союза глагол остаётся **на втором месте**.\n\n**Правило ухода — главная тонкость C2:**\nЕсли форма Konjunktiv I совпадает с изъявительной (особенно *ich* и множественное *wir/sie*: *sie haben* = *sie haben*), пересказ становится неразличим. Тогда **переходят на Konjunktiv II**:\n  *Sie sagen, sie **hätten** keine Zeit.*\n\n**Согласование времён:**\n| Прямая | Косвенная |\n|---|---|\n| Präsens | Konjunktiv I: er komme |\n| Perfekt/Präteritum | er sei gekommen |\n| Futur | er werde kommen |\n\n**Функция нейтральности:** журналист, пишущий *er sei unschuldig*, грамматически обозначает, что утверждение не его. Написав *er ist unschuldig*, газета взяла бы утверждение на себя. Русское «якобы» несёт ту же функцию, но в немецком это не выбор, а норма.",
+            "de": "Konjunktiv I: Infinitivstamm + -e, -est, -e, -en, -et, -en. sein: sei, seiest, sei, seien.\nEr sagt, er sei müde. (kein dass nötig, Verb an Position 2)\nAusweichregel: bei Formengleichheit mit dem Indikativ → Konjunktiv II (sie hätten).\nVorzeitigkeit: er sei gekommen. Zukunft: er werde kommen.\nFunktion: Distanzierung — die Aussage gehört nicht dem Berichtenden."
+          },
+          "table": {
+            "headers": ["Direkt", "Indirekt (Konj. I)"],
+            "rows": [
+              ["Ich bin müde.", "Er sagt, er sei müde."],
+              ["Ich habe Zeit.", "Er sagt, er habe Zeit."],
+              ["Wir haben Zeit.", "Sie sagen, sie hätten Zeit. (Konj. II)"],
+              ["Ich kam spät.", "Er sagt, er sei spät gekommen."],
+              ["Ich werde kommen.", "Er sagt, er werde kommen."]
+            ]
+          },
+          "examples": [
+            { "de": "Der Sprecher erklärte, die Lage sei unter Kontrolle.", "tr": "Sözcü, durumun kontrol altında olduğunu açıkladı.", "az": "Sözçü vəziyyətin nəzarətdə olduğunu bildirdi.", "ru": "Представитель заявил, что ситуация под контролем." },
+            { "de": "Die Anwälte betonten, ihre Mandanten hätten nichts gewusst.", "tr": "Avukatlar, müvekkillerinin hiçbir şey bilmediğini vurguladı.", "az": "Vəkillər müvəkkillərinin heç nə bilmədiyini vurğuladılar.", "ru": "Адвокаты подчеркнули, что их клиенты ничего не знали." }
+          ]
+        }
+      ],
+      "words": [
+        "erklären", "betonen", "behaupten", "bestreiten", "einräumen",
+        "berichten", "melden", "zitieren", "wiedergeben", "verlauten",
+        "Aussage", "Behauptung", "Stellungnahme", "Sprecher", "Bericht",
+        "angeblich", "eigenen", "wörtlich", "sinngemäß", "unbestätigt",
+        "Distanz", "neutral", "glaubwürdig", "Quellenangabe"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Kısa bir haber yazın: üç farklı kişinin açıklamasını Konjunktiv I ile aktarın. En az bir yerde biçim çakışması yüzünden Konjunktiv II'ye geçmek zorunda kalın ve bunu not edin.", "az": "Qısa xəbər yazın: üç fərqli şəxsin açıqlamasını Konjunktiv I ilə nəql edin. Ən azı bir yerdə forma üst-üstə düşdüyü üçün Konjunktiv II-yə keçin.", "ru": "Напишите короткую новость: передайте заявления трёх человек через Konjunktiv I. Минимум в одном месте перейдите на Konjunktiv II из-за совпадения форм.", "de": "Schreiben Sie eine kurze Meldung mit drei Aussagen in indirekter Rede — mit mindestens einem Ausweichen auf Konjunktiv II." },
+          "mustUse": ["erklären", "betonen", "Aussage"],
+          "model": "Die Leitung erklärte, der Betrieb laufe normal. Die Beschäftigten betonten dagegen, sie hätten seit Wochen keine Information erhalten. Diese Aussage blieb unbestätigt."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "c2-06",
+      "title": { "tr": "Söz sanatları", "az": "Söz sənətləri", "ru": "Риторические средства", "de": "Rhetorische Mittel" },
+      "theme": { "tr": "İkna eden metnin yapısı", "az": "İnandıran mətnin quruluşu", "ru": "Как устроен убеждающий текст", "de": "Wie überzeugende Texte gebaut sind" },
+      "canDo": [
+        { "tr": "Bir metnin beni nasıl ikna etmeye çalıştığını çözebilirim", "az": "Mətnin məni necə inandırmağa çalışdığını aça bilərəm", "ru": "Могу разобрать, как текст меня убеждает", "de": "Ich erkenne, mit welchen Mitteln ein Text überzeugen will" }
+      ],
+      "grammar": [
+        {
+          "id": "rhetorik",
+          "title": { "tr": "İkna araçları", "az": "İnandırma vasitələri", "ru": "Средства убеждения", "de": "Mittel der Überzeugung" },
+          "explain": {
+            "tr": "İyi bir Almanca konuşma ya da başyazı rastgele yazılmaz; sayılı bir araç takımı kullanır. Bunları tanımak hem daha iyi yazmanızı hem de manipülasyonu fark etmenizi sağlar.\n\n**Yapı araçları:**\n• **Dreierfigur (üçleme)** — üç öğeli sıralama en akılda kalıcısıdır\n  *schnell, einfach und sicher*\n• **Anapher** — art arda cümlelerin aynı kelimeyle başlaması\n  *Wir haben gearbeitet. Wir haben gewartet. Wir haben genug.*\n• **Parallelismus** — aynı yapının tekrarı\n• **Klimax** — artan yoğunluk: *schwierig, hart, unmöglich*\n\n**Anlam araçları:**\n• **Metapher** — *die Weichen stellen* (rayları ayarlamak = yönü belirlemek)\n• **Rhetorische Frage** — cevap beklenmez, cevabı dayatır\n  *Wer will das schon?*\n• **Antithese** — karşıtlık kurma: *nicht … sondern …*\n• **Euphemismus** — yumuşatma: *Preisanpassung* = zam; *Freisetzung* = işten çıkarma\n\n**Dil düzeyinde:**\n• Kısa cümle vurgu yapar, uzun cümle açıklar. **Ritmi değiştirmek** en etkili tekniktir.\n• *wir* kullanımı ortaklık kurar, *man* mesafe koyar.\n\n**Eleştirel okuma:** Euphemismus ve rhetorische Frage, resmî metinlerde en sık kullanılan iki araçtır. *Preisanpassung* okuduğunuzda *Preiserhöhung* anlayın — bu dil becerisi değil, okuryazarlıktır.",
+            "az": "Yaxşı alman nitqi və ya baş məqalə təsadüfən yazılmır; saylı alət dəsti işlədir.\n\n**Quruluş vasitələri:**\n• **Dreierfigur (üçləmə)** — *schnell, einfach und sicher*\n• **Anapher** — ardıcıl cümlələrin eyni sözlə başlaması\n• **Parallelismus** — eyni quruluşun təkrarı\n• **Klimax** — artan şiddət: *schwierig, hart, unmöglich*\n\n**Məna vasitələri:**\n• **Metapher** — *die Weichen stellen*\n• **Ritorik sual** — cavabı dayatır: *Wer will das schon?*\n• **Antitez** — *nicht … sondern …*\n• **Evfemizm** — *Preisanpassung* = qiymət artımı\n\n**Dil səviyyəsində:** qısa cümlə vurğulayır, uzun cümlə izah edir. *wir* ortaqlıq qurur, *man* məsafə qoyur.\n\n**Tənqidi oxu:** *Preisanpassung* oxuyanda *Preiserhöhung* başa düşün.",
+            "ru": "Хорошая немецкая речь или передовица написана не наугад — она пользуется счётным набором приёмов. Их узнавание помогает и писать лучше, и замечать манипуляцию.\n\n**Структурные приёмы:**\n• **Dreierfigur (триада)** — перечисление из трёх элементов запоминается лучше всего\n  *schnell, einfach und sicher*\n• **Анафора** — одинаковое начало соседних фраз\n  *Wir haben gearbeitet. Wir haben gewartet. Wir haben genug.*\n• **Параллелизм** — повтор конструкции\n• **Климакс** — нарастание: *schwierig, hart, unmöglich*\n\n**Смысловые приёмы:**\n• **Метафора** — *die Weichen stellen* (перевести стрелки = задать направление)\n• **Риторический вопрос** — не ждёт ответа, а навязывает его: *Wer will das schon?*\n• **Антитеза** — *nicht … sondern …*\n• **Эвфемизм** — *Preisanpassung* = подорожание; *Freisetzung* = увольнение\n\n**На уровне языка:** короткая фраза подчёркивает, длинная объясняет; **смена ритма** — самый действенный приём. *wir* создаёт общность, *man* — дистанцию.\n\n**Критическое чтение:** эвфемизм и риторический вопрос — два самых частых приёма официальных текстов. Читая *Preisanpassung*, понимайте *Preiserhöhung*.",
+            "de": "Dreierfigur · Anapher · Parallelismus · Klimax\nMetapher · rhetorische Frage · Antithese · Euphemismus\n\nKurzer Satz betont, langer erklärt — der Rhythmuswechsel wirkt am stärksten.\nKritisch lesen: «Preisanpassung» heißt Preiserhöhung."
+          },
+          "table": {
+            "headers": ["Mittel", "Beispiel", "Wirkung"],
+            "rows": [
+              ["Dreierfigur", "schnell, einfach, sicher", "einprägsam"],
+              ["Anapher", "Wir haben … Wir haben …", "Nachdruck"],
+              ["Klimax", "schwierig, hart, unmöglich", "Steigerung"],
+              ["rhetorische Frage", "Wer will das schon?", "Zustimmung erzwingen"],
+              ["Antithese", "nicht Wunsch, sondern Pflicht", "Kontrast"],
+              ["Euphemismus", "Preisanpassung", "verschleiern"]
+            ]
+          },
+          "examples": [
+            { "de": "Das ist keine Bitte, sondern eine Notwendigkeit.", "tr": "Bu bir rica değil, bir zorunluluk.", "az": "Bu xahiş deyil, zərurətdir.", "ru": "Это не просьба, а необходимость." },
+            { "de": "Hier werden die Weichen für die nächsten Jahre gestellt.", "tr": "Önümüzdeki yılların yönü burada belirleniyor.", "az": "Qarşıdakı illərin istiqaməti burada müəyyənləşir.", "ru": "Здесь задаётся направление на ближайшие годы." }
+          ]
+        }
+      ],
+      "words": [
+        "überzeugen", "beeinflussen", "verschleiern", "betonen", "steigern",
+        "gegenüberstellen", "veranschaulichen", "zuspitzen", "untermauern",
+        "Wirkung", "Absicht", "Vergleich", "Gegensatz", "Bild", "Nachdruck",
+        "Rede", "Leitartikel", "Argument", "Einwand",
+        "eindringlich", "wirkungsvoll", "sachlich", "polemisch"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Beğendiğiniz bir konuda 120 kelimelik kısa bir konuşma yazın. İçinde bilinçli olarak üçleme, anafora ve retorik soru kullanın; sonra hangi cümlede hangisini kullandığınızı listeleyin.", "az": "Bəyəndiyiniz mövzuda 120 sözlük qısa nitq yazın. İçində şüurlu şəkildə üçləmə, anafora və ritorik sual işlədin.", "ru": "Напишите короткую речь (120 слов), сознательно применив триаду, анафору и риторический вопрос; затем перечислите, где какой приём.", "de": "Schreiben Sie eine kurze Rede (120 Wörter) mit Dreierfigur, Anapher und rhetorischer Frage — und listen Sie auf, wo Sie was verwendet haben." },
+          "mustUse": ["überzeugen", "Wirkung", "betonen"],
+          "model": "Wir wollen lernen. Wir wollen verstehen. Wir wollen mitreden. Wer könnte dagegen sein? Mit dieser Wiederholung betone ich das Gemeinsame — genau darin liegt die Wirkung."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "c2-07",
+      "title": { "tr": "Bölgesel ve tarihsel çeşitler", "az": "Regional və tarixi variantlar", "ru": "Региональные и исторические варианты", "de": "Regionale und historische Varianten" },
+      "theme": { "tr": "Avusturya, İsviçre, eski metinler", "az": "Avstriya, İsveçrə, köhnə mətnlər", "ru": "Австрия, Швейцария, старые тексты", "de": "Österreich, Schweiz, ältere Texte" },
+      "canDo": [
+        { "tr": "Farklı ülkelerin Almancasını tanıyabilirim", "az": "Fərqli ölkələrin alman dilini tanıya bilərəm", "ru": "Узнаю немецкий разных стран", "de": "Ich erkenne die Varietäten des Deutschen" }
+      ],
+      "grammar": [
+        {
+          "id": "varianten",
+          "title": { "tr": "Bir dil, üç resmî standart", "az": "Bir dil, üç rəsmi standart", "ru": "Один язык, три официальных стандарта", "de": "Eine Sprache, drei Standards" },
+          "explain": {
+            "tr": "Almanca **plurizentrik** bir dildir: Almanya, Avusturya ve İsviçre'nin her birinin kendi resmî standardı vardır. Avusturya Almancası «yanlış Almanca» değil, eşit derecede doğru bir standarttır — bu, C2'de bilinmesi beklenen bir bilgidir.\n\n**Sözcük farkları:**\n| Almanya | Avusturya | İsviçre |\n|---|---|---|\n| Tüte | Sackerl | Sack |\n| Sahne | Obers | Rahm |\n| Januar | Jänner | Januar |\n| Tomate | Paradeiser | Tomate |\n| Treppe | Stiege | Treppe |\n| Brötchen | Semmel | Brötli |\n\n**Dilbilgisi farkları:**\n• Avusturya'da *sitzen, liegen, stehen* Perfekt'te **sein** alır: *Ich bin gesessen.* (Almanya: *Ich habe gesessen.*)\n• İsviçre yazımında **ß harfi yoktur**, hep *ss*: *Strasse, heissen*.\n• Avusturya'da resmî unvan kullanımı çok daha yaygındır.\n\n**Tarihsel katman** — eski metin okurken:\n• *ward* = wurde · *ob* = über · *dieweil* = während\n• Genitiv çok daha sık; edat Genitivleri canlı\n• *du* biçimleri ve **-e** son ekli Dativ: *dem Manne*\n\n**Lehçe ≠ varyant:** Bayerisch, Schwäbisch, Schwyzerdütsch birer *lehçedir* ve yazılı standarttan çok uzaktır. İsviçre'de günlük konuşma lehçedir, yazı ise standart Almancadır — bu ikilik (Diglossie) İsviçre'yi ziyaret edenleri en çok şaşırtan şeydir.",
+            "az": "Alman dili **plurisentrik** dildir: Almaniya, Avstriya və İsveçrənin hər birinin öz rəsmi standartı var. Avstriya alman dili «səhv alman dili» deyil, eyni dərəcədə düzgün standartdır.\n\n**Söz fərqləri:**\n| Almaniya | Avstriya | İsveçrə |\n|---|---|---|\n| Tüte | Sackerl | Sack |\n| Sahne | Obers | Rahm |\n| Januar | Jänner | Januar |\n| Tomate | Paradeiser | Tomate |\n\n**Qrammatika fərqləri:**\n• Avstriyada *sitzen, liegen, stehen* Perfektdə **sein** alır: *Ich bin gesessen.*\n• İsveçrə yazısında **ß hərfi yoxdur**: *Strasse*.\n\n**Tarixi qat:** *ward* = wurde · *dieweil* = während · Genitiv daha tez-tez\n\n**Ləhcə ≠ variant:** İsveçrədə gündəlik danışıq ləhcədir, yazı isə standart alman dilidir.",
+            "ru": "Немецкий — **плюрицентричный** язык: у Германии, Австрии и Швейцарии есть собственные официальные стандарты. Австрийский немецкий не «неправильный», а равноправный стандарт — на C2 это ожидаемое знание.\n\n**Лексические различия:**\n| Германия | Австрия | Швейцария |\n|---|---|---|\n| Tüte | Sackerl | Sack |\n| Sahne | Obers | Rahm |\n| Januar | Jänner | Januar |\n| Tomate | Paradeiser | Tomate |\n| Treppe | Stiege | Treppe |\n\n**Грамматические различия:**\n• В Австрии *sitzen, liegen, stehen* образуют Perfekt с **sein**: *Ich bin gesessen.*\n• В швейцарской орфографии **нет буквы ß**, всегда *ss*: *Strasse, heissen*.\n\n**Исторический слой** — при чтении старых текстов:\n• *ward* = wurde · *ob* = über · *dieweil* = während\n• Genitiv гораздо частотнее; предложное управление родительным живо\n• Дательный с окончанием **-e**: *dem Manne*\n\n**Диалект ≠ вариант:** баварский, швабский, швицердюч — это *диалекты*, далёкие от письменной нормы. В Швейцарии говорят на диалекте, а пишут на стандартном немецком — эта диглоссия сильнее всего удивляет приезжих.",
+            "de": "Plurizentrik: D — A — CH, drei gleichberechtigte Standards.\nTüte/Sackerl/Sack · Sahne/Obers/Rahm · Januar/Jänner · Tomate/Paradeiser\nÖsterreich: ich bin gesessen. Schweiz: kein ß — Strasse.\nÄltere Texte: ward, dieweil, Dativ-e (dem Manne), häufiger Genitiv.\nDialekt ≠ Varietät: in der Schweiz herrscht Diglossie."
+          },
+          "table": {
+            "headers": ["Deutschland", "Österreich", "Schweiz"],
+            "rows": [
+              ["Tüte", "Sackerl", "Sack"],
+              ["Sahne", "Obers", "Rahm"],
+              ["Januar", "Jänner", "Januar"],
+              ["Treppe", "Stiege", "Treppe"],
+              ["ich habe gesessen", "ich bin gesessen", "ich bin gesessen"],
+              ["Straße", "Straße", "Strasse"]
+            ]
+          },
+          "examples": [
+            { "de": "In Österreich sagt man Jänner statt Januar.", "tr": "Avusturya'da Januar yerine Jänner denir.", "az": "Avstriyada Januar əvəzinə Jänner deyilir.", "ru": "В Австрии говорят Jänner вместо Januar." },
+            { "de": "Die Schweizer Rechtschreibung kennt kein ß.", "tr": "İsviçre yazımında ß harfi yoktur.", "az": "İsveçrə orfoqrafiyasında ß hərfi yoxdur.", "ru": "В швейцарской орфографии нет буквы ß." }
+          ]
+        }
+      ],
+      "words": [
+        "Variante", "Mundart", "Dialekt", "Hochdeutsch", "Standard",
+        "Aussprache", "Rechtschreibung", "Ausdruck", "Herkunft", "Gebiet",
+        "abweichen", "verbreiten", "übernehmen", "bewahren", "verstehen",
+        "regional", "überregional", "landschaftlich", "veraltet", "gebräuchlich",
+        "Sprachraum", "Staat", "Grenze"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Bir Avusturya ya da İsviçre gazetesinden kısa bir haber okuyun. Almanya Almancasından farklı bulduğunuz beş noktayı listeleyip her biri için standart karşılığını yazın.", "az": "Avstriya və ya İsveçrə qəzetindən qısa xəbər oxuyun. Almaniya alman dilindən fərqli tapdığınız beş nöqtəni sadalayın.", "ru": "Прочитайте короткую новость из австрийской или швейцарской газеты. Выпишите пять отличий от немецкого Германии с их стандартными соответствиями.", "de": "Lesen Sie eine Meldung aus einer österreichischen oder Schweizer Zeitung und notieren Sie fünf Abweichungen mit ihren bundesdeutschen Entsprechungen." },
+          "mustUse": ["Variante", "abweichen", "regional"],
+          "model": "Der Text weicht in mehreren Punkten ab. Statt Januar steht dort Jänner, und die Schreibung Strasse zeigt die Schweizer Variante. Solche regionalen Formen sind keine Fehler."
+        }
+      ],
+      "game": "wortsalat"
+    },
+
+    {
+      "id": "c2-08",
+      "title": { "tr": "Edebî metni okumak", "az": "Ədəbi mətni oxumaq", "ru": "Чтение литературного текста", "de": "Literarische Texte lesen" },
+      "theme": { "tr": "Anlatıcı, bakış açısı, üslup", "az": "Nağılçı, baxış bucağı, üslub", "ru": "Рассказчик, точка зрения, стиль", "de": "Erzähler, Perspektive, Stil" },
+      "canDo": [
+        { "tr": "Edebî bir metnin nasıl anlattığını çözümleyebilirim", "az": "Ədəbi mətnin necə danışdığını təhlil edə bilərəm", "ru": "Могу проанализировать, как устроен литературный текст", "de": "Ich kann literarische Texte strukturell analysieren" }
+      ],
+      "grammar": [
+        {
+          "id": "literatur",
+          "title": { "tr": "Anlatım araçları", "az": "Təhkiyə vasitələri", "ru": "Средства повествования", "de": "Erzählmittel" },
+          "explain": {
+            "tr": "Edebî metin, dilin kurallarını **bilinçli olarak esneterek** anlam üretir. C2 okuma parçalarında sizden beklenen, bu esnemeyi fark etmektir.\n\n**Anlatıcı biçimleri:**\n• **Ich-Erzähler** → sınırlı, taraflı, güvenilmez olabilir\n• **Auktorialer Erzähler** → her şeyi bilir, yorum yapar\n• **Personaler Erzähler** → bir karakterin omzundan bakar, yorum yapmaz\n\n**Erlebte Rede (yaşanmış konuşma)** — Almanca edebiyatın en karakteristik aracı. Ne doğrudan ne dolaylı anlatımdır: anlatıcının sesiyle karakterin düşüncesi iç içe geçer.\n  *Was sollte er jetzt tun? Er konnte doch nicht einfach gehen.*\n  Üçüncü tekil şahıs ve Präteritum kullanılır ama düşünce karakterindir. Tırnak yok, *dachte er* yok — ve tam da bu yüzden okur karakterin içinde durur.\n\n**Zaman kullanımı:**\n• Anlatının temel zamanı **Präteritum**'dur — konuşmada ölü olan bu zaman edebiyatta canlıdır.\n• **Präsens** kullanımı olayı okurun gözü önüne taşır, gerilim yaratır.\n\n**Üslup göstergeleri:**\n• cümle uzunluğu ritmi kurar: kısa cümle dizisi nefessizlik, uzun cümle akış\n• kelime düzeyi karakteri belirler\n• tekrarlar ve leitmotif\n• sıra dışı kelime sırası (*Inversion*) vurgu yaratır\n\n**Okuma yöntemi:** metni iki kez okuyun. İlkinde ne olduğunu anlayın, ikincisinde **nasıl anlatıldığını** işaretleyin. C2 sınavlarındaki soruların çoğu ikinci okumaya aittir.",
+            "az": "Ədəbi mətn dilin qaydalarını **şüurlu əyərək** məna yaradır.\n\n**Nağılçı formaları:**\n• **Ich-Erzähler** → məhdud, tərəfli\n• **Auktorialer Erzähler** → hər şeyi bilir\n• **Personaler Erzähler** → bir personajın çiynindən baxır\n\n**Erlebte Rede** — alman ədəbiyyatının ən xarakterik vasitəsi. Nə düz, nə dolayı nitqdir:\n  *Was sollte er jetzt tun? Er konnte doch nicht einfach gehen.*\n  Üçüncü şəxs və Präteritum işlənir, amma fikir personajındır.\n\n**Zaman:** təhkiyənin əsas zamanı **Präteritum**-dur. **Präsens** gərginlik yaradır.\n\n**Üslub göstəriciləri:** cümlə uzunluğu, söz səviyyəsi, təkrarlar, qeyri-adi söz sırası.\n\n**Oxu üsulu:** mətni iki dəfə oxuyun — əvvəl nə olduğunu, sonra **necə danışıldığını**.",
+            "ru": "Литературный текст порождает смысл, **сознательно растягивая** правила языка. На C2 от вас ждут умения это растяжение заметить.\n\n**Типы повествователя:**\n• **Ich-Erzähler** → ограничен, пристрастен, может быть ненадёжен\n• **Auktorialer Erzähler** → всеведущ, комментирует\n• **Personaler Erzähler** → смотрит из-за плеча персонажа, не комментирует\n\n**Erlebte Rede (несобственно-прямая речь)** — самое характерное средство немецкой прозы. Ни прямая, ни косвенная: голос повествователя сплавлен с мыслью персонажа.\n  *Was sollte er jetzt tun? Er konnte doch nicht einfach gehen.*\n  Третье лицо и Präteritum — но мысль принадлежит герою. Ни кавычек, ни «подумал он»; именно поэтому читатель остаётся внутри персонажа.\n\n**Время:**\n• Основное время повествования — **Präteritum**: мёртвое в разговоре, оно живо в литературе.\n• **Präsens** переносит событие на глаза читателю и создаёт напряжение.\n\n**Признаки стиля:** длина фраз задаёт ритм; лексический уровень характеризует героя; повторы и лейтмотив; необычный порядок слов как акцент.\n\n**Метод чтения:** читайте текст дважды. В первый раз — что произошло, во второй — **как это рассказано**. Большинство экзаменационных вопросов C2 относится ко второму чтению.",
+            "de": "Erzählformen: Ich-Erzähler · auktorial · personal.\nErlebte Rede: 3. Person + Präteritum, aber Gedanke der Figur — «Was sollte er tun?»\nPräteritum als Erzähltempus, Präsens als Vergegenwärtigung.\nStil: Satzlänge, Wortwahl, Wiederholung, Inversion.\nZweimal lesen: erst was, dann wie."
+          },
+          "table": {
+            "headers": ["Mittel", "Kennzeichen"],
+            "rows": [
+              ["Ich-Erzähler", "begrenzte Sicht, subjektiv"],
+              ["auktorial", "allwissend, kommentiert"],
+              ["personal", "Innensicht einer Figur"],
+              ["erlebte Rede", "3. Person + Präteritum, Gedanke der Figur"],
+              ["Präsens im Erzähltext", "Vergegenwärtigung, Spannung"],
+              ["Inversion", "Betonung durch Umstellung"]
+            ]
+          },
+          "examples": [
+            { "de": "Was sollte er jetzt tun? Gehen konnte er nicht.", "tr": "Şimdi ne yapmalıydı? Gitmesi mümkün değildi.", "az": "İndi nə etməli idi? Getmək mümkün deyildi.", "ru": "Что ему было делать? Уйти он не мог." },
+            { "de": "Der Erzähler tritt zurück und überlässt der Figur das Wort.", "tr": "Anlatıcı geri çekilir ve sözü karaktere bırakır.", "az": "Nağılçı geri çəkilir və sözü personaja verir.", "ru": "Повествователь отступает и передаёт слово персонажу." }
+          ]
+        }
+      ],
+      "words": [
+        "Erzähler", "Figur", "Handlung", "Perspektive", "Abschnitt",
+        "Stimmung", "Spannung", "Wendung", "Motiv", "Bild",
+        "erzählen", "schildern", "andeuten", "darstellen", "aufbauen",
+        "zurücktreten", "einführen", "verknüpfen",
+        "eindringlich", "nüchtern", "dicht", "vielschichtig", "knapp"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Kısa bir sahne yazın (10-12 cümle) ve bir yerinde «erlebte Rede» kullanın: karakterin düşüncesini tırnak ya da «dachte er» olmadan üçüncü şahısla verin.", "az": "Qısa səhnə yazın (10-12 cümlə) və bir yerində «erlebte Rede» işlədin: personajın fikrini dırnaqsız, üçüncü şəxslə verin.", "ru": "Напишите короткую сцену (10-12 фраз) с одним фрагментом несобственно-прямой речи: мысль героя в третьем лице, без кавычек и «подумал он».", "de": "Schreiben Sie eine kurze Szene (10-12 Sätze) mit einer Passage in erlebter Rede." },
+          "mustUse": ["Figur", "erzählen", "Stimmung"],
+          "model": "Die Figur stand am Fenster. Warum hatte niemand angerufen? Es konnte doch nicht so schwer sein. Der Erzähler bleibt außen vor; die Stimmung entsteht allein aus ihren Gedanken."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "c2-09",
+      "title": { "tr": "Tartışma ve müzakere", "az": "Mübahisə və danışıqlar", "ru": "Дискуссия и переговоры", "de": "Diskussion und Verhandlung" },
+      "theme": { "tr": "Baskı altında dil", "az": "Təzyiq altında dil", "ru": "Язык под давлением", "de": "Sprache unter Druck" },
+      "canDo": [
+        { "tr": "Zor bir tartışmada pozisyonumu koruyabilirim", "az": "Çətin mübahisədə mövqeyimi qoruya bilərəm", "ru": "Могу удержать позицию в трудном споре", "de": "Ich kann meine Position auch unter Druck behaupten" }
+      ],
+      "grammar": [
+        {
+          "id": "diskussion",
+          "title": { "tr": "Söz alma, karşı çıkma, geri adım atma", "az": "Söz almaq, etiraz etmək, geri çəkilmək", "ru": "Взять слово, возразить, уступить", "de": "Wort ergreifen, widersprechen, einlenken" },
+          "explain": {
+            "tr": "C2'de dilbilgisi sorun değildir; sorun **eşzamanlı yük**tür: dinlemek, karşı argümanı değerlendirmek ve aynı anda kendi cümlenizi kurmak. Hazır kalıplar bu yükü hafifletir çünkü düşünmeye zaman kazandırır.\n\n**Söz alma (kesmeden):**\n  *Wenn ich kurz einhaken darf …*\n  *Dazu möchte ich etwas ergänzen.*\n  *Darf ich an dieser Stelle einwerfen, dass …*\n\n**Karşı çıkma — sertlik derecesine göre:**\n  yumuşak: *Da bin ich mir nicht so sicher.*\n  orta: *Das sehe ich anders.*\n  net: *Dem muss ich widersprechen.*\n  sert: *Das halte ich für falsch.*\n\n**Önce kabul, sonra itiraz (en etkili yapı):**\n  *Sie haben insofern recht, als … Allerdings …*\n  *Das mag zutreffen, ändert aber nichts daran, dass …*\n  *Ich verstehe Ihren Punkt, sehe aber ein Problem darin, dass …*\n\n**Zaman kazanma:**\n  *Das ist eine gute Frage. · Lassen Sie mich kurz überlegen. · Wenn ich Sie richtig verstehe, meinen Sie …*\n  Son kalıp iki iş birden yapar: hem düşünmek için saniye kazandırır, hem yanlış anlamayı önler.\n\n**Geri adım atmak (zayıflık değil, yetkinlik göstergesi):**\n  *Da haben Sie recht, das hatte ich nicht bedacht.*\n  *Diesen Punkt nehme ich zurück.*\n\n**Toparlama:**\n  *Fassen wir zusammen: … · Können wir uns darauf einigen, dass …*",
+            "az": "C2-də qrammatika problem deyil; problem **eyni anda gələn yükdür**: dinləmək, qarşı arqumenti qiymətləndirmək və eyni anda öz cümləni qurmaq. Hazır qəliblər bu yükü yüngülləşdirir.\n\n**Söz almaq:** *Wenn ich kurz einhaken darf …* · *Dazu möchte ich etwas ergänzen.*\n\n**Etiraz — sərtlik dərəcəsinə görə:**\n  yumşaq: *Da bin ich mir nicht so sicher.*\n  orta: *Das sehe ich anders.*\n  aydın: *Dem muss ich widersprechen.*\n\n**Əvvəl qəbul, sonra etiraz:**\n  *Sie haben insofern recht, als … Allerdings …*\n  *Das mag zutreffen, ändert aber nichts daran, dass …*\n\n**Vaxt qazanmaq:** *Wenn ich Sie richtig verstehe, meinen Sie …*\n\n**Geri çəkilmək:** *Da haben Sie recht, das hatte ich nicht bedacht.*\n\n**Yekunlaşdırmaq:** *Fassen wir zusammen: …*",
+            "ru": "На C2 проблема не в грамматике, а в **одновременной нагрузке**: слушать, оценивать контраргумент и параллельно строить свою фразу. Готовые формулы эту нагрузку снимают, выигрывая время на мысль.\n\n**Взять слово, не перебивая:**\n  *Wenn ich kurz einhaken darf …*\n  *Dazu möchte ich etwas ergänzen.*\n  *Darf ich an dieser Stelle einwerfen, dass …*\n\n**Возразить — по степени резкости:**\n  мягко: *Da bin ich mir nicht so sicher.*\n  средне: *Das sehe ich anders.*\n  чётко: *Dem muss ich widersprechen.*\n  резко: *Das halte ich für falsch.*\n\n**Сначала согласие, потом возражение (самая действенная схема):**\n  *Sie haben insofern recht, als … Allerdings …*\n  *Das mag zutreffen, ändert aber nichts daran, dass …*\n  *Ich verstehe Ihren Punkt, sehe aber ein Problem darin, dass …*\n\n**Выиграть время:**\n  *Das ist eine gute Frage. · Lassen Sie mich kurz überlegen. · Wenn ich Sie richtig verstehe, meinen Sie …*\n  Последняя формула делает два дела сразу: даёт секунды и снимает недопонимание.\n\n**Уступить (признак компетентности, а не слабости):**\n  *Da haben Sie recht, das hatte ich nicht bedacht.*\n\n**Подвести итог:**\n  *Fassen wir zusammen: … · Können wir uns darauf einigen, dass …*",
+            "de": "Wort ergreifen: Wenn ich kurz einhaken darf …\nWidersprechen (abgestuft): Da bin ich mir nicht sicher → Das sehe ich anders → Dem muss ich widersprechen.\nZugeständnis + Einwand: Sie haben insofern recht, als … Allerdings …\nZeit gewinnen: Wenn ich Sie richtig verstehe, meinen Sie …\nEinlenken: Das hatte ich nicht bedacht.\nBündeln: Fassen wir zusammen …"
+          },
+          "table": {
+            "headers": ["Funktion", "Wendung"],
+            "rows": [
+              ["Wort ergreifen", "Wenn ich kurz einhaken darf …"],
+              ["sanft widersprechen", "Da bin ich mir nicht so sicher."],
+              ["klar widersprechen", "Dem muss ich widersprechen."],
+              ["zugestehen + einwenden", "Das mag zutreffen, allerdings …"],
+              ["Zeit gewinnen", "Wenn ich Sie richtig verstehe …"],
+              ["einlenken", "Das hatte ich nicht bedacht."],
+              ["zusammenfassen", "Fassen wir zusammen: …"]
+            ]
+          },
+          "examples": [
+            { "de": "Das mag zutreffen, ändert aber nichts an den Kosten.", "tr": "Bu doğru olabilir ama maliyeti değiştirmiyor.", "az": "Bu doğru ola bilər, amma xərci dəyişmir.", "ru": "Возможно, это так, но расходов это не меняет." },
+            { "de": "Wenn ich Sie richtig verstehe, geht es Ihnen vor allem um den Zeitplan.", "tr": "Sizi doğru anladıysam asıl meseleniz takvim.", "az": "Sizi düzgün başa düşdümsə, əsas məsələniz qrafikdir.", "ru": "Если я правильно вас понял, вам важен прежде всего график." }
+          ]
+        }
+      ],
+      "words": [
+        "einhaken", "einwerfen", "ergänzen", "widersprechen", "einlenken",
+        "zugestehen", "einwenden", "abwägen", "zusammenfassen", "einigen",
+        "Einwand", "Zugeständnis", "Standpunkt", "Position", "Kompromiss",
+        "Verhandlung", "Streitpunkt", "Argument", "Sachlage",
+        "vermitteln", "beharren", "nachgeben", "überzeugend"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Bir tartışma yazın: iki kişi aynı konuda karşıt görüşte. Her replikte farklı bir kalıp kullanın — söz alma, yumuşak itiraz, önce kabul sonra itiraz, geri adım, toparlama.", "az": "Mübahisə yazın: iki nəfər eyni mövzuda əks fikirdə. Hər replikada fərqli qəlib işlədin.", "ru": "Напишите спор двух людей на одну тему. В каждой реплике — своя формула: взять слово, мягко возразить, уступить, подвести итог.", "de": "Schreiben Sie eine Diskussion zweier Personen — jede Replik mit einer anderen Wendung." },
+          "mustUse": ["widersprechen", "Einwand", "zusammenfassen"],
+          "model": "— Wenn ich kurz einhaken darf: die Zahlen sprechen dagegen. — Dem muss ich widersprechen, Ihr Einwand berücksichtigt die Laufzeit nicht. — Das hatte ich nicht bedacht. Fassen wir zusammen: wir brauchen neue Daten."
+        }
+      ],
+      "game": "satzbau"
+    },
+
+    {
+      "id": "c2-10",
+      "title": { "tr": "Dili elde tutmak", "az": "Dili əldə saxlamaq", "ru": "Удержать язык", "de": "Die Sprache erhalten" },
+      "theme": { "tr": "Kurstan sonra ne yapmalı", "az": "Kursdan sonra nə etməli", "ru": "Что делать после курса", "de": "Nach dem Kurs weitermachen" },
+      "canDo": [
+        { "tr": "Kendi öğrenmemi kurssuz sürdürebilirim", "az": "Öz öyrənməmi kurssuz davam etdirə bilərəm", "ru": "Могу продолжать учиться без курса", "de": "Ich kann mein Lernen selbstständig fortsetzen" }
+      ],
+      "grammar": [
+        {
+          "id": "erhalten",
+          "title": { "tr": "Unutmaya karşı sistem", "az": "Unutmağa qarşı sistem", "ru": "Система против забывания", "de": "System gegen das Vergessen" },
+          "explain": {
+            "tr": "C2, bir bitiş değil bir eşiktir: bu seviyede kazanılan dil **kullanılmazsa en hızlı kaybedilen** dildir, çünkü nadir kelimeler nadir karşılaşılır. Bakım planı gerekir.\n\n**Neden kaybedilir?** Bahrick'in uzun süreli çalışmaları (1984) şunu gösterdi: ileri seviyede öğrenilen dil ilk 3-6 yılda belirgin düşer, sonra kalan kısım onlarca yıl neredeyse hiç azalmaz. Yani asıl tehlike **ilk birkaç yıldır** ve düzenli az temas, düzensiz çok temastan üstündür.\n\n**Haftalık asgari plan (toplam ~4 saat):**\n• **Günlük 10 dakika tekrar** — bu uygulamadaki FSRS kartları. Aralıklı tekrarın işlevi bilgiyi *öğretmek* değil, unutma eğrisini düzleştirmektir.\n• **Haftada 2 saat gerçek içerik** — podcast, dizi, kitap. Alt yazısız, çeviri yapmadan.\n• **Haftada 30 dakika yazma** — günlük, yorum, e-posta. Üretim olmadan kelime pasif kalır.\n• **Ayda bir konuşma** — tandem ya da grup.\n\n**Aktif ve pasif dağarcık farkı:** C2'de pasif dağarcık 15-20 bin kelimeye çıkar ama aktif dağarcık genellikle üçte biridir. Aradaki farkı kapatmanın tek yolu **üretim**tir; okumak aktif dağarcığı büyütmez.\n\n**Yeni kelime yakalama alışkanlığı:** okurken bilmediğiniz kelimeyi hemen aramayın, **cümleyle birlikte** not edin ve akşam bir kez işleyin. Bağlamsız kelime listesi yarın unutulur; bağlamlı olan kalır.\n\n**Son not:** bu kurstaki her ünite bir kez bitirilip kapatılacak bir şey değil. A1 kelimelerinin tekrar döngüsü hâlâ çalışıyor ve çalışmalı — ileri seviyede en sık yapılan hata, temeli bırakıp yalnızca yeninin peşine düşmektir.",
+            "az": "C2 son deyil, astanadır: bu səviyyədə qazanılan dil **işlədilmirsə ən tez itirilən** dildir, çünki nadir sözlərə nadir rast gəlinir.\n\n**Niyə itirilir?** Bahrick-in uzunmüddətli araşdırmaları (1984) göstərdi: irəli səviyyədə öyrənilən dil ilk 3-6 ildə nəzərəçarpan düşür, sonra qalan hissə onilliklər boyu demək olar azalmır. Deməli əsas təhlükə **ilk bir neçə ildir**.\n\n**Həftəlik minimum plan (~4 saat):**\n• **Gündə 10 dəqiqə təkrar** — bu tətbiqdəki FSRS kartları\n• **Həftədə 2 saat əsl məzmun** — podkast, serial, kitab. Altyazısız\n• **Həftədə 30 dəqiqə yazı** — gündəlik, şərh, e-poçt\n• **Ayda bir danışıq** — tandem və ya qrup\n\n**Aktiv və passiv ehtiyat fərqi:** C2-də passiv ehtiyat 15-20 min sözə çatır, aktiv isə adətən üçdə biridir. Fərqi bağlamağın yeganə yolu **istehsaldır**.\n\n**Yeni söz tutma vərdişi:** bilmədiyiniz sözü dərhal axtarmayın, **cümlə ilə birlikdə** qeyd edin.\n\n**Son qeyd:** A1 sözlərinin təkrar dövrü hələ işləyir və işləməlidir.",
+            "ru": "C2 — не финиш, а порог: язык этого уровня **теряется быстрее всего**, если им не пользоваться, потому что редкие слова редко встречаются. Нужен план поддержания.\n\n**Почему теряется?** Многолетние исследования Бэррика (1984) показали: язык, выученный на продвинутом уровне, заметно проседает в первые 3–6 лет, а оставшееся держится потом десятилетиями почти без потерь. Значит, опасны именно **первые годы**, и регулярный малый контакт лучше нерегулярного большого.\n\n**Недельный минимум (~4 часа):**\n• **10 минут повторения в день** — карточки FSRS в этом приложении. Задача интервального повторения не «выучить», а сгладить кривую забывания.\n• **2 часа настоящего контента в неделю** — подкаст, сериал, книга. Без субтитров и перевода.\n• **30 минут письма в неделю** — дневник, комментарий, письмо. Без продукции слово остаётся пассивным.\n• **Разговор раз в месяц** — тандем или группа.\n\n**Активный и пассивный запас:** на C2 пассивный доходит до 15–20 тысяч слов, активный — обычно треть от него. Закрыть разрыв можно только **производством**; чтение активный запас не растит.\n\n**Привычка ловить слова:** встретив незнакомое слово, не лезьте в словарь сразу — выпишите его **вместе с фразой** и разберите вечером. Список без контекста забудется завтра; с контекстом — останется.\n\n**Последнее:** ни один раздел курса не «закрывается» навсегда. Цикл повторения слов A1 работает и должен работать — самая частая ошибка продвинутых в том, что они бросают основу ради нового.",
+            "de": "C2 ist kein Abschluss, sondern eine Schwelle. Bahrick (1984): Der Abfall geschieht in den ersten 3-6 Jahren, danach bleibt der Rest jahrzehntelang stabil.\n\nWochenminimum: 10 Min. Wiederholung täglich · 2 Std. echte Inhalte · 30 Min. Schreiben · monatlich sprechen.\n\nAktiver Wortschatz ist etwa ein Drittel des passiven — nur Produktion schließt die Lücke.\nNeue Wörter immer mit Satz notieren, nie isoliert."
+          },
+          "table": {
+            "headers": ["Aktivität", "Dauer", "Zweck"],
+            "rows": [
+              ["Wiederholung (FSRS)", "10 Min. täglich", "Vergessenskurve flach halten"],
+              ["Hören / Lesen", "2 Std. pro Woche", "Input, passiver Wortschatz"],
+              ["Schreiben", "30 Min. pro Woche", "aktiver Wortschatz"],
+              ["Sprechen", "monatlich", "Abruf unter Zeitdruck"],
+              ["Wörter notieren", "laufend", "immer mit Kontextsatz"]
+            ]
+          },
+          "examples": [
+            { "de": "Wer die Sprache nicht benutzt, verliert sie in den ersten Jahren am schnellsten.", "tr": "Dili kullanmayan onu en hızlı ilk yıllarda kaybeder.", "az": "Dili işlətməyən onu ən tez ilk illərdə itirir.", "ru": "Кто не пользуется языком, теряет его быстрее всего в первые годы." },
+            { "de": "Zehn Minuten täglich wirken mehr als drei Stunden im Monat.", "tr": "Günde on dakika, ayda üç saatten çok işe yarar.", "az": "Gündə on dəqiqə, ayda üç saatdan çox fayda verir.", "ru": "Десять минут ежедневно дают больше, чем три часа раз в месяц." }
+          ]
+        }
+      ],
+      "words": [
+        "erhalten", "pflegen", "auffrischen", "vertiefen", "festigen",
+        "vernachlässigen", "verlieren", "wiederholen", "anwenden", "üben",
+        "Gewohnheit", "Regelmäßigkeit", "Fortschritt", "Rückschritt", "Niveau",
+        "Wortschatz", "Aufwand", "Ausdauer", "Ziel",
+        "dauerhaft", "beständig", "gelegentlich", "konsequent"
+      ],
+      "writing": [
+        {
+          "prompt": { "tr": "Kendiniz için gerçekçi bir yıllık Almanca bakım planı yazın: haftada kaç saat, hangi içerikler, hangi gün ne. Sonra planın en kırılgan noktasını ve o noktada ne yapacağınızı belirtin.", "az": "Özünüz üçün real illik alman dili baxım planı yazın: həftədə neçə saat, hansı məzmun, hansı gün nə. Sonra planın ən kövrək nöqtəsini göstərin.", "ru": "Составьте себе реалистичный годовой план поддержания немецкого: сколько часов в неделю, какой контент, что в какой день. Затем назовите самое уязвимое место плана.", "de": "Erstellen Sie einen realistischen Jahresplan zum Spracherhalt — und benennen Sie den anfälligsten Punkt darin." },
+          "mustUse": ["pflegen", "regelmäßig", "Gewohnheit"],
+          "model": "Ich will die Sprache regelmäßig pflegen, nicht in Schüben. Zehn Minuten Wiederholung am Morgen sind längst eine Gewohnheit geworden. Am anfälligsten sind die Wochen mit viel Arbeit; dann kürze ich auf fünf Minuten, statt ganz auszusetzen."
+        }
+      ],
+      "game": "satzbau"
+    }
+  ]
+}

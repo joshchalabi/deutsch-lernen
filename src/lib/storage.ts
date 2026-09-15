@@ -245,4 +245,8 @@ export const GUIDED_HOURS: Record<Level, number> = {
   B1: 400,
   B2: 700,
   C1: 1000,
+  // C2 için Goethe'nin yayımlanmış bir saat tahmini yok; C1'in üstüne
+  // benzer büyüklükte bir adım eklendi. Kesin bir ölçü olmadığı için
+  // gösterge burada "yaklaşık" demek — uydurma bir kesinlik iddia etmiyor.
+  C2: 1500,
 }

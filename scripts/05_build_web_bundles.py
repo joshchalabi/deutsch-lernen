@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data-src"
 WEB = ROOT / "public" / "data"
 
-BANDS = ["A1", "A2", "B1", "B2", "C1"]
+BANDS = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
 # İKİ FARKLI İHTİYAÇ, İKİ AYRI KOTA
 #   Dinleme/dikte modülü SES olmadan çalışmıyor.
@@ -36,8 +36,8 @@ BANDS = ["A1", "A2", "B1", "B2", "C1"]
 #   Almanca-Türkçe çift 22 bin, sesli Almanca cümle 86 bin, kesişimleri ise
 #   çok dar. Rusça bol (227 bin çift) olduğu için zaten sorun yaşamıyor.
 #   Bu yüzden her seviyede ses ve Türkçe için ayrı taban garanti ediliyor.
-AUDIO_QUOTA = {"A1": 2200, "A2": 1800, "B1": 1300, "B2": 900, "C1": 600}
-TURKISH_QUOTA = {"A1": 2200, "A2": 2000, "B1": 1600, "B2": 1400, "C1": 900}
+AUDIO_QUOTA = {"A1": 2200, "A2": 1800, "B1": 1300, "B2": 900, "C1": 600, "C2": 300}
+TURKISH_QUOTA = {"A1": 2200, "A2": 2000, "B1": 1600, "B2": 1400, "C1": 900, "C2": 600}
 
 
 def select_sentences(items, band):

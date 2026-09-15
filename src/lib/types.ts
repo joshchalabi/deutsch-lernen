@@ -1,8 +1,8 @@
 import type { Card } from './fsrs'
 import type { AiSettings } from './ai'
 
-export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1'
-export const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1']
+export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+export const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 /** Arayüz dilleri. Almanca da dahil: ileri seviyede tek dilli çalışmak için. */
 export type UiLang = 'tr' | 'az' | 'ru' | 'de'
