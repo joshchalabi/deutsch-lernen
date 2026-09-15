@@ -57,11 +57,24 @@ def build_examples():
       bir cümle bağlanıyor: çekimli biçimler üzerinden eşleşme kuruluyor,
       çünkü cümlede "Haus" değil "Häuser" geçiyor olabilir.
 
+    NEDEN İKİ ÖRNEK?
+      Ölçüldü: Tatoeba'da Almanca cümlelerin %92'sinin Rusçası var ama
+      yalnızca %35'inin Türkçesi, %2'sinin Azericesi. Tek bir cümle
+      seçmek zorunda kalınca Türkçeyi kollamak Rusçayı düşürüyordu
+      (A2'de Rusça %97 -> %75). Bu bir dili öbürüne feda etmek demek.
+
+      Bunun yerine lemma başına en fazla İKİ cümle saklanıyor:
+        xs  — Türkçesi olan en iyi cümle (yoksa genel en iyi)
+        xs2 — yalnızca birincinin taşımadığı bir dili getiriyorsa
+      Arayüz istenen dili taşıyan ilkini gösteriyor. Azerice her iki
+      örnekte de yoksa Türkçeden köprüleniyor (rozetle belirtilerek).
+
     SEÇİM ÖLÇÜTÜ (sırayla)
-      1. Kaç dile çevrilmiş — çok dilli cümle daha çok öğrenciye yarıyor
-      2. Uzunluğu 8 kelimeye ne kadar yakın
-      3. Sözlük kapsaması yüksek olan (bilinmeyen kelime az)
-      4. Kimlik — eşitlikte sonuç her derlemede aynı çıksın diye
+      1. İstenen dil var mı
+      2. Kaç dile çevrilmiş
+      3. Uzunluğu 8 kelimeye ne kadar yakın
+      4. Sözlük kapsaması yüksek olan (bilinmeyen kelime az)
+      5. Kimlik — eşitlikte sonuç her derlemede aynı çıksın diye
     """
     # çekimli biçim -> o biçimi üreten lemma anahtarları
     forms = defaultdict(set)
@@ -71,8 +84,11 @@ def build_examples():
             if len(parts) == 3:
                 forms[norm(parts[0])].add(f"{parts[1]}|{parts[2]}")
 
-    best = {}
-    scores = {}
+    # Her lemma için iki yarış birden: biri Türkçeli cümleler arasında,
+    # biri Rusçalı cümleler arasında. Kazananlar sonra birleştiriliyor.
+    best = {"tr": {}, "ru": {}}
+    scores = {"tr": {}, "ru": {}}
+
     with open(SRC / "sentences.jsonl", encoding="utf-8") as fh:
         for line in fh:
             s = json.loads(line)
@@ -80,20 +96,34 @@ def build_examples():
             if not langs:
                 continue  # çevirisiz cümle bu iş için değersiz
             score = (-len(langs), abs(s["n"] - IDEAL_LEN), -s["cov"], int(s["id"]))
+            rec = {"d": s["de"]}
+            for lg in langs:
+                rec[lg] = s[lg]
+            tracks = [t for t in ("tr", "ru") if s.get(t)]
             seen = set()
             for tok in WORD_RE.findall(s["de"]):
                 for key in forms.get(norm(tok), ()):
                     if key in seen:
                         continue
                     seen.add(key)
-                    if key not in scores or score < scores[key]:
-                        scores[key] = score
-                        rec = {"d": s["de"]}
-                        for lg in langs:
-                            rec[lg] = s[lg]
-                        best[key] = rec
-    print(f"  örnek cümlesi bağlanan lemma: {len(best):,}")
-    return best
+                    for tr_k in tracks:
+                        if key not in scores[tr_k] or score < scores[tr_k][key]:
+                            scores[tr_k][key] = score
+                            best[tr_k][key] = rec
+
+    out = {}
+    for key in set(best["tr"]) | set(best["ru"]):
+        primary = best["tr"].get(key) or best["ru"][key]
+        entry = {"xs": primary}
+        other = best["ru"].get(key)
+        # İkinci örnek yalnızca birincinin taşımadığı bir dil getiriyorsa
+        if other and other is not primary and "ru" not in primary:
+            entry["xs2"] = other
+        out[key] = entry
+
+    n2 = sum(1 for v in out.values() if "xs2" in v)
+    print(f"  örnek cümlesi bağlanan lemma: {len(out):,} ({n2:,} tanesinde ikinci örnek)")
+    return out
 
 # İKİ FARKLI İHTİYAÇ, İKİ AYRI KOTA
 #   Dinleme/dikte modülü SES olmadan çalışmıyor.
@@ -167,7 +197,7 @@ def trim_lemma(r, examples):
     # öğrencinin seçtiği dilde gösteriyor.
     ex = examples.get(f"{r['w']}|{r['pos']}")
     if ex:
-        out["xs"] = ex
+        out.update(ex)
     return out
 
 

@@ -37,6 +37,8 @@ export interface Sense {
 }
 
 /** Paketlenmiş kelime kaydı (public/data/vocab/<seviye>.json) */
+export type Example = { d: string } & Partial<Record<TransLang, string>>
+
 export interface Lemma {
   w: string
   p: Pos
@@ -60,11 +62,16 @@ export interface Lemma {
   k?: Record<string, CaseCell>
   syn?: string[]
   ant?: string[]
-  /**
+/**
    * Çevirili örnek cümle (Tatoeba). Sözlük kaydındaki `s[].x` örnekleri
    * yalnızca Almanca; bu alan Almancasıyla birlikte karşılığını da taşıyor.
+   *
+   * İkisi birden olabiliyor: tek bir cümle hem Türkçe hem Rusça taşımadığında
+   * `xs` Türkçeyi, `xs2` Rusçayı getiriyor. Arayüz istenen dili taşıyan
+   * ilkini gösteriyor.
    */
-  xs?: { d: string } & Partial<Record<TransLang, string>>
+  xs?: Example
+  xs2?: Example
 }
 
 /** Arama indeksi kaydı (public/data/index.json) */

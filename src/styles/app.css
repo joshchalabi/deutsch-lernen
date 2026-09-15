@@ -488,6 +488,9 @@ label {
 .example-pair .trans {
   margin: 5px 0 0; font-size: .89rem; line-height: 1.5; color: var(--text-dim);
 }
+/* Köprü rozeti satırın içinde küçük kalsın, cümleyi bastırmasın */
+.example-pair .trans .badge,
+.feedback .trans .badge { font-size: .64rem; padding: 2px 8px; vertical-align: 1px; }
 
 /* dikte karşılaştırması */
 .diff { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; line-height: 2.05; }

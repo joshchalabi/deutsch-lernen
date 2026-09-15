@@ -215,7 +215,17 @@ function Example({ lemma }: { lemma: Lemma }) {
   return (
     <div className="example-pair">
       <p className="de">{ex.de}</p>
-      {ex.text && <p className="trans" lang={ex.lang ?? undefined}>{ex.text}</p>}
+      {ex.text && (
+        <p className="trans" lang={ex.lang ?? undefined}>
+          {ex.text}
+          {ex.bridged && (
+            <>
+              {' '}
+              <Badge kind="warn">{t('bridgedFromTurkish', lang)}</Badge>
+            </>
+          )}
+        </p>
+      )}
     </div>
   )
 }
@@ -380,7 +390,15 @@ export function ClozeExercise(props: ExerciseProps) {
           <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
             <span className="de">{sentence}</span>
             {example?.text && (
-              <span className="trans" lang={example.lang ?? undefined}>{example.text}</span>
+              <span className="trans" lang={example.lang ?? undefined}>
+                {example.text}
+                {example.bridged && (
+                  <>
+                    {' '}
+                    <Badge kind="warn">{t('bridgedFromTurkish', lang)}</Badge>
+                  </>
+                )}
+              </span>
             )}
           </div>
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />

@@ -5,7 +5,9 @@
  * C1 kelimelerini hiç indirmez.
  */
 
-import type { Curriculum, IndexEntry, Lemma, Level, Sentence, TransLang, UiLang, Unit } from './types'
+import type {
+  Curriculum, Example, IndexEntry, Lemma, Level, Sentence, TransLang, UiLang, Unit,
+} from './types'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -176,17 +178,34 @@ export function exampleFor(
   l: Lemma,
   transLang: TransLang,
   uiLang: UiLang,
-): { de: string; text: string | null; lang: TransLang | null } | null {
-  if (l.xs) {
-    const order: TransLang[] = uiLang === 'de' ? [transLang] : [transLang, uiLang as TransLang]
-    for (const code of order) {
-      const text = l.xs[code]
-      if (text) return { de: l.xs.d, text, lang: code }
+): { de: string; text: string | null; lang: TransLang | null; bridged: boolean } | null {
+  const pool = [l.xs, l.xs2].filter(Boolean) as Example[]
+  if (pool.length) {
+    // Aranacak diller: önce seçilen çeviri dili, sonra arayüz dili.
+    // Azerice için Türkçe köprüsü — kelime çevirilerindeki kuralın aynısı.
+    const order: TransLang[] = []
+    const add = (c: TransLang) => {
+      if (!order.includes(c)) order.push(c)
     }
-    return { de: l.xs.d, text: null, lang: null }
+    add(transLang)
+    if (transLang === 'az') add('tr')
+    if (uiLang !== 'de') {
+      add(uiLang as TransLang)
+      if (uiLang === 'az') add('tr')
+    }
+    const wantedAz = transLang === 'az' || uiLang === 'az'
+    // Dil sırası dıştaki döngü: istenen dili taşıyan örnek hangisiyse o
+    // gösterilsin — ikinci örnek sırf ilkinin taşımadığı dil için var.
+    for (const code of order) {
+      for (const ex of pool) {
+        const text = ex[code]
+        if (text) return { de: ex.d, text, lang: code, bridged: wantedAz && code === 'tr' }
+      }
+    }
+    return { de: pool[0].d, text: null, lang: null, bridged: false }
   }
   const de = l.s.find((s) => s.x.length)?.x[0]
-  return de ? { de, text: null, lang: null } : null
+  return de ? { de, text: null, lang: null, bridged: false } : null
 }
 
 /* ---------- metin çözümleme ---------- */
