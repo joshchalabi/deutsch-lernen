@@ -108,11 +108,34 @@ def parse_tr_wiktionary(path):
 
 
 def load_curated():
-    path = CURATED / "core_translations.json"
-    if not path.exists():
-        print(f"  ! elle hazırlanmış dosya yok: {path}")
-        return {}
-    return json.loads(path.read_text(encoding="utf-8"))
+    """
+    İki elle yazılmış dosyayı birleştirir:
+      core_translations.json — en sık işlev sözcükleri, dört dilde
+      az_translations.json   — yalnızca Azerice, A1 ve müfredat kelimeleri
+
+    Ayrı dosyalar çünkü kapsamları farklı: çekirdek dosya bir kelimenin
+    TR/RU/AZ karşılığını birlikte sabitler, Azerice dosyası ise sadece
+    'az' alanını doldurup TR/RU'yu otomatik kaynaklara bırakır.
+    Aynı anahtar iki dosyada varsa diller birleştirilir; çakışan dilde
+    çekirdek dosya kazanır.
+    """
+    merged: dict[str, dict] = {}
+    for name in ("core_translations.json", "az_translations.json"):
+        path = CURATED / name
+        if not path.exists():
+            print(f"  ! elle hazırlanmış dosya yok: {path}")
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        n = 0
+        for key, langs in data.items():
+            if key.startswith("_"):
+                continue
+            slot = merged.setdefault(key, {})
+            for lang, vals in langs.items():
+                slot.setdefault(lang, vals)
+            n += 1
+        print(f"    {name}: {n:,} kayıt")
+    return merged
 
 
 def add_translations(rec, lang, words, source):

@@ -11,7 +11,7 @@ Site iki şekilde çalışır ve ikisi aynı ilerlemeyi paylaşır.
 
 ### 1. Kurs — kitap gibi, sırayla
 
-**A1 ve A2 için 20 ünite.** Her ünite bir konu, bir dilbilgisi hedefi ve ~25 kelime
+**A1'den B2'ye 40 ünite.** Her ünite bir konu, bir dilbilgisi hedefi ve ~25 kelime
 içerir ve sabit bir sırayla ilerler:
 
 ```
@@ -49,7 +49,30 @@ süresinden hesaplanıyor (yeni kelime ~40 sn, dikte ~85 sn, gramer sorusu ~25 s
 Yeni kelime hedefi ayarlardaki günlük sınırı aşmaz — aralıklı tekrar yarınki yükü
 bugünün yeni kelimesinden üretir, sınırsız eklemek borç yığar.
 
-### 3. Serbest çalışma
+### 3. 🤖 Yapay zekâ öğretmen (isteğe bağlı)
+
+"Neden burada Dativ?", "Bu cümlem doğru mu?" gibi soruları soracağınız bir sohbet
+penceresi. Varsayılan olarak **kapalı**; açmak için ayarlardan bir sağlayıcı seçmek
+gerekiyor. Üç ücretsiz yol var:
+
+| Sağlayıcı | Anahtar | Not |
+|---|---|---|
+| **OpenRouter** | ücretsiz kayıt | 20'den fazla ücretsiz model. En güvenilir. |
+| **Google AI Studio** | ücretsiz kayıt | Günlük kota var. |
+| **Pollinations** | gerekmez | Kurulumsuz, ama kotası sık tükeniyor — ölçtük, çalışmayabilir. |
+
+Sunucumuz olmadığı için istek **doğrudan tarayıcıdan** sağlayıcıya gidiyor. Bunun
+iki sonucu var ve ikisi de arayüzde yazılı:
+
+1. Anahtar yalnızca sizin tarayıcınızda durur ve **ilerleme yedeğine dahil edilmez** —
+   yedek dosyasını paylaşmak anahtarınızı sızdırmaz.
+2. Yalnızca sorduğunuz metin dışarı çıkar. Sitenin geri kalanı hiçbir veri göndermez.
+
+Öğretmenin kimliği dar tutuldu: en fazla üç cümle açıklama, ardından mutlaka Almanca
+örnek cümle ve çevirisi. Konu dışı sorulara "sadece Almanca konusunda yardımcı
+olabilirim" diyor. Sözlükteki her kelimenin yanında **🤖 Öğretmene sor** düğmesi var.
+
+### 4. Serbest çalışma
 
 Kelime, dinleme, okuma, dilbilgisi, sözlük ve ilerleme modülleri bağımsız olarak
 da kullanılabilir. Kurs bitince ya da ileri seviyede asıl kullanım burası.
@@ -153,11 +176,12 @@ Hepsi açık lisanslı, hepsi otomatik boru hattıyla üretiliyor.
 | Kelime telaffuzu | %99,4 kapsama, insan kaydı | Wikimedia Commons | CC / kamu malı |
 | Cümle | 14.900 cümle, zorluk puanlı | [Tatoeba](https://tatoeba.org) | CC BY 2.0 FR |
 | Cümle sesi | 5.122 insan kaydı | Tatoeba | CC BY-NC-ND 3.0 vb. |
-| Ders | A1 ve A2 için 20 ünite, 4 dilli | elle yazıldı | MIT |
+| Ders | A1–B2 için 40 ünite, 4 dilli | elle yazıldı | MIT |
+| Azerice (kurs kelimeleri) | 919/919 = %100 yerli | elle yazıldı | MIT |
 | Frekans | 156M token | [OpenSubtitles 2018](https://github.com/hermitdave/FrequencyWords) | CC BY-SA 4.0 |
 | TR çeviri | %86,3 kapsama | Wiktionary + TR Wiktionary + [FreeDict](https://freedict.org) | CC BY-SA 3.0 / GPL-2.0+ |
 | RU çeviri | %80,2 kapsama | Wiktionary + FreeDict | CC BY-SA 3.0 |
-| AZ çeviri | %8,1 yerli + %78 köprü | Wiktionary + elle | CC BY-SA 3.0 |
+| AZ çeviri | %17 yerli (kurs kelimelerinde %100) | Wiktionary + elle | CC BY-SA 3.0 |
 
 ### Seviye bandları nasıl belirlendi
 
@@ -189,10 +213,17 @@ Bu yüzden köprü yaklaşımı kullanılıyor: doğrulanmış Azerice karşıl�
 kelimelerde Türkçe karşılık gösteriliyor ve arayüzde **"Türkçeden"** rozetiyle
 işaretleniyor. Sessizce Türkçeyi Azerice diye sunmak dürüst olmazdı.
 
-En sık ~180 işlev sözcüğü (zamirler, modal fiiller, edatlar, bağlaçlar) elle
-doğrulanmış dört dilli çevirilerle `curated/core_translations.json` dosyasında.
-Otomatik kaynaklar tam da bu kelimelerde başarısız oluyordu — oysa bunlar dilin
-iskeleti. Katkı vermek için bu dosyayı düzenlemek yeterli.
+**Otomatik köprü artık istisna, kural değil.** Kursta geçen 919 kelimenin
+tamamının Azericesi elle yazıldı (`curated/az_translations.json`), en sık 180 işlev
+sözcüğü de dört dilli olarak `curated/core_translations.json` dosyasında.
+
+Neden otomatik yapılmadı: mevcut tek otomatik yol İngilizce üzerinden köprü kurmak
+(Almanca → İngilizce → Azerice) ve bu, çok anlamlı kelimelerde sistematik olarak
+yanlış sonuç veriyor. Örneğin "danke" için açık veride Azerice karşılık hiç yok;
+köprü Türkçe "teşekkür"ü gösteriyordu, oysa doğrusu **"sağ ol"**.
+
+Kurs dışındaki seyrek kelimelerde köprü hâlâ devrede ve arayüzde "Türkçeden"
+rozetiyle işaretli. Katkı vermek için bu iki dosyayı düzenlemek yeterli.
 
 ---
 
@@ -251,7 +282,7 @@ Ham kaynaklar (~4 GB) depoda değil. `scripts/README.md` tüm zinciri anlatıyor
   tarayıcıya gönderilmiyor; kapsama, lemma + çoğul + fiil biçimleri + hâl tablosu
   üzerinden hesaplanıyor.
 - **Ses dış kaynaktan akıtılıyor.** `tatoeba.org` erişilemezse dinleme çalışmaz.
-- **Ders modülleri yalnızca A1 ve A2 için.** B1-C1'de serbest çalışma bölümleri,
+- **Ders modülleri A1'den B2'ye kadar.** C1'de serbest çalışma bölümleri,
   sözlük ve günlük plan çalışıyor ama ünite yok. Yeni ünite eklemek için
   `curated/curriculum/<seviye>.json` dosyasına yazıp `scripts/06_build_curriculum.py`
   çalıştırmak yeterli — betik her kelimeyi sözlüğe karşı doğruluyor.

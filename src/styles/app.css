@@ -510,3 +510,49 @@ table.paradigm td.de { font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ---------- YAPAY ZEKÂ ÖĞRETMEN ---------- */
+.starters { display: grid; gap: 7px; margin-top: 10px; }
+.starter {
+  text-align: start; padding: 11px 14px; font-size: .9rem; font-weight: 500;
+  border-style: dashed;
+}
+.starter:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+
+.chat { display: grid; gap: 10px; margin-top: 14px; }
+
+.bubble {
+  max-width: 88%; padding: 12px 15px; border-radius: 16px;
+  box-shadow: var(--shadow); line-height: 1.65;
+}
+.bubble p { margin: 0 0 .5em; }
+.bubble p:last-child { margin-bottom: 0; }
+.bubble.user {
+  justify-self: end; border-bottom-right-radius: 5px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff;
+}
+.bubble.assistant {
+  justify-self: start; border-bottom-left-radius: 5px;
+  background: var(--surface); border: 1px solid var(--border);
+}
+.chat-example {
+  background: var(--violet-soft); border-inline-start: 3px solid var(--violet);
+  padding: 7px 11px; border-radius: 0 9px 9px 0; font-size: 1.02rem;
+}
+
+.bubble.thinking { display: flex; gap: 5px; padding: 16px 18px; }
+.bubble.thinking span {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--text-dim);
+  animation: blink 1.3s infinite both;
+}
+.bubble.thinking span:nth-child(2) { animation-delay: .18s; }
+.bubble.thinking span:nth-child(3) { animation-delay: .36s; }
+@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+
+.chat-input {
+  position: sticky; bottom: 12px; display: flex; gap: 8px; margin-top: 16px;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px); padding: 8px; border-radius: 14px;
+}
+.chat-input input { flex: 1; }
+.chat-input button { padding: 10px 18px; font-size: 1.1rem; }

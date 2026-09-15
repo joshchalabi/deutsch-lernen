@@ -1,0 +1,4399 @@
+{
+  "_readme": "Elle doğrulanmış AZERİCE çeviriler. Anahtar: 'kelime|tür'. Bu dosya yalnızca 'az' alanını doldurur; TR ve RU otomatik kaynaklardan gelmeye devam eder. Açık veride Almanca-Azerice neredeyse hiç yok (Tatoeba'da 272 cümle, kaikki'de azwiktionary yok) ve İngilizce üzerinden köprü kurmak çok anlamlı kelimelerde yanlış sonuç veriyor. Bu yüzden A1 ve müfredat kelimeleri elle yazıldı.",
+  "ein|num": {
+    "az": [
+      "bir"
+    ]
+  },
+  "ein|pron": {
+    "az": [
+      "bir",
+      "hər hansı"
+    ]
+  },
+  "der|det": {
+    "az": [
+      "(müəyyənlik artikli)"
+    ]
+  },
+  "die|det": {
+    "az": [
+      "(müəyyənlik artikli)"
+    ]
+  },
+  "der|pron": {
+    "az": [
+      "bu",
+      "o",
+      "hansı ki"
+    ]
+  },
+  "die|pron": {
+    "az": [
+      "bu",
+      "o",
+      "hansı ki"
+    ]
+  },
+  "all|pron": {
+    "az": [
+      "bütün",
+      "hamısı"
+    ]
+  },
+  "auf|adv": {
+    "az": [
+      "açıq"
+    ]
+  },
+  "zu|adv": {
+    "az": [
+      "bağlı"
+    ]
+  },
+  "zu|adj": {
+    "az": [
+      "bağlı"
+    ]
+  },
+  "zu|particle": {
+    "az": [
+      "həddindən artıq",
+      "çox"
+    ]
+  },
+  "dies|pron": {
+    "az": [
+      "bu"
+    ]
+  },
+  "kein|pron": {
+    "az": [
+      "heç bir"
+    ]
+  },
+  "keiner|pron": {
+    "az": [
+      "heç kim"
+    ]
+  },
+  "ihrer|pron": {
+    "az": [
+      "onların"
+    ]
+  },
+  "Ihr|pron": {
+    "az": [
+      "Sizin"
+    ]
+  },
+  "tun|verb": {
+    "az": [
+      "etmək"
+    ]
+  },
+  "an|adv": {
+    "az": [
+      "açıq",
+      "işləyir"
+    ]
+  },
+  "oder|particle": {
+    "az": [
+      "yoxsa",
+      "elə deyilmi?"
+    ]
+  },
+  "in|adj": {
+    "az": [
+      "dəbdə"
+    ]
+  },
+  "einen|verb": {
+    "az": [
+      "birləşdirmək"
+    ]
+  },
+  "um|conj": {
+    "az": [
+      "-maq üçün"
+    ]
+  },
+  "anderer|pron": {
+    "az": [
+      "başqa",
+      "digər"
+    ]
+  },
+  "ein|adv": {
+    "az": [
+      "içəri"
+    ]
+  },
+  "ein|adj": {
+    "az": [
+      "işlək"
+    ]
+  },
+  "da|adv": {
+    "az": [
+      "orada",
+      "burada"
+    ]
+  },
+  "da|conj": {
+    "az": [
+      "çünki"
+    ]
+  },
+  "mit|adv": {
+    "az": [
+      "birlikdə"
+    ]
+  },
+  "Leben|noun": {
+    "az": [
+      "həyat",
+      "yaşayış"
+    ]
+  },
+  "einfach|adj": {
+    "az": [
+      "sadə",
+      "asan"
+    ]
+  },
+  "aber|particle": {
+    "az": [
+      "axı"
+    ]
+  },
+  "aber|adv": {
+    "az": [
+      "yenə"
+    ]
+  },
+  "bitten|verb": {
+    "az": [
+      "xahiş etmək"
+    ]
+  },
+  "neu|adj": {
+    "az": [
+      "yeni"
+    ]
+  },
+  "klein|adj": {
+    "az": [
+      "kiçik",
+      "balaca"
+    ]
+  },
+  "reden|verb": {
+    "az": [
+      "danışmaq"
+    ]
+  },
+  "alt|adj": {
+    "az": [
+      "köhnə",
+      "yaşlı"
+    ]
+  },
+  "zurück|adv": {
+    "az": [
+      "geri"
+    ]
+  },
+  "als|adv": {
+    "az": [
+      "kimi"
+    ]
+  },
+  "bekommen|verb": {
+    "az": [
+      "almaq",
+      "əldə etmək"
+    ]
+  },
+  "einmal|adv": {
+    "az": [
+      "bir dəfə"
+    ]
+  },
+  "lieben|verb": {
+    "az": [
+      "sevmək"
+    ]
+  },
+  "Welt|noun": {
+    "az": [
+      "dünya"
+    ]
+  },
+  "Arbeit|noun": {
+    "az": [
+      "iş",
+      "əmək"
+    ]
+  },
+  "Problem|noun": {
+    "az": [
+      "problem",
+      "məsələ"
+    ]
+  },
+  "schön|adj": {
+    "az": [
+      "gözəl"
+    ]
+  },
+  "hasten|verb": {
+    "az": [
+      "tələsmək"
+    ]
+  },
+  "beide|num": {
+    "az": [
+      "hər ikisi"
+    ]
+  },
+  "Weg|noun": {
+    "az": [
+      "yol"
+    ]
+  },
+  "aus|adv": {
+    "az": [
+      "sönmüş",
+      "bitmiş"
+    ]
+  },
+  "erzählen|verb": {
+    "az": [
+      "danışmaq",
+      "nağıl etmək"
+    ]
+  },
+  "Nein|noun": {
+    "az": [
+      "xeyr",
+      "imtina"
+    ]
+  },
+  "erste|num": {
+    "az": [
+      "birinci",
+      "ilk"
+    ]
+  },
+  "bitte|particle": {
+    "az": [
+      "zəhmət olmasa",
+      "buyurun"
+    ]
+  },
+  "lang|adj": {
+    "az": [
+      "uzun"
+    ]
+  },
+  "lieb|adj": {
+    "az": [
+      "əziz",
+      "mehriban"
+    ]
+  },
+  "stellen|verb": {
+    "az": [
+      "qoymaq",
+      "yerləşdirmək"
+    ]
+  },
+  "davon|adv": {
+    "az": [
+      "ondan",
+      "bundan"
+    ]
+  },
+  "man|adv": {
+    "az": [
+      "(qeyri-müəyyən şəxs)"
+    ]
+  },
+  "nun|adv": {
+    "az": [
+      "indi"
+    ]
+  },
+  "treffen|verb": {
+    "az": [
+      "görüşmək",
+      "vurmaq"
+    ]
+  },
+  "malen|verb": {
+    "az": [
+      "rəsm çəkmək",
+      "boyamaq"
+    ]
+  },
+  "fühlen|verb": {
+    "az": [
+      "hiss etmək"
+    ]
+  },
+  "Ding|noun": {
+    "az": [
+      "şey",
+      "əşya"
+    ]
+  },
+  "bis|particle": {
+    "az": [
+      "-a qədər"
+    ]
+  },
+  "bis|conj": {
+    "az": [
+      "-a qədər"
+    ]
+  },
+  "letzte|adj": {
+    "az": [
+      "sonuncu",
+      "axırıncı"
+    ]
+  },
+  "schlecht|adj": {
+    "az": [
+      "pis"
+    ]
+  },
+  "Sache|noun": {
+    "az": [
+      "şey",
+      "məsələ"
+    ]
+  },
+  "Uhr|noun": {
+    "az": [
+      "saat"
+    ]
+  },
+  "Mama|noun": {
+    "az": [
+      "ana"
+    ]
+  },
+  "wohl|adv": {
+    "az": [
+      "yaxşı",
+      "rahat"
+    ]
+  },
+  "wohl|particle": {
+    "az": [
+      "yəqin",
+      "güman ki"
+    ]
+  },
+  "gegen|particle": {
+    "az": [
+      "qarşı"
+    ]
+  },
+  "gehören|verb": {
+    "az": [
+      "aid olmaq",
+      "məxsus olmaq"
+    ]
+  },
+  "stimmen|verb": {
+    "az": [
+      "doğru olmaq",
+      "səs vermək"
+    ]
+  },
+  "tragen|verb": {
+    "az": [
+      "daşımaq",
+      "geyinmək"
+    ]
+  },
+  "mal|adv": {
+    "az": [
+      "bir dəfə"
+    ]
+  },
+  "mal|conj": {
+    "az": [
+      "vur",
+      "dəfə"
+    ]
+  },
+  "mal|particle": {
+    "az": [
+      "bir"
+    ]
+  },
+  "weg|adv": {
+    "az": [
+      "getmiş",
+      "yox"
+    ]
+  },
+  "sicher|adj": {
+    "az": [
+      "əmin",
+      "təhlükəsiz"
+    ]
+  },
+  "erinnern|verb": {
+    "az": [
+      "xatırlamaq",
+      "xatırlatmaq"
+    ]
+  },
+  "wichtig|adj": {
+    "az": [
+      "vacib",
+      "mühüm"
+    ]
+  },
+  "hoffen|verb": {
+    "az": [
+      "ümid etmək"
+    ]
+  },
+  "verlieren|verb": {
+    "az": [
+      "itirmək"
+    ]
+  },
+  "danken|verb": {
+    "az": [
+      "təşəkkür etmək"
+    ]
+  },
+  "danke|particle": {
+    "az": [
+      "sağ ol",
+      "təşəkkür edirəm"
+    ]
+  },
+  "Dank|noun": {
+    "az": [
+      "təşəkkür",
+      "minnətdarlıq"
+    ]
+  },
+  "einzig|adj": {
+    "az": [
+      "yeganə",
+      "tək"
+    ]
+  },
+  "spät|adj": {
+    "az": [
+      "gec"
+    ]
+  },
+  "Freundin|noun": {
+    "az": [
+      "rəfiqə",
+      "qız yoldaş"
+    ]
+  },
+  "passieren|verb": {
+    "az": [
+      "baş vermək",
+      "olmaq"
+    ]
+  },
+  "Hilfe|noun": {
+    "az": [
+      "kömək",
+      "yardım"
+    ]
+  },
+  "scheinen|verb": {
+    "az": [
+      "görünmək",
+      "parlamaq"
+    ]
+  },
+  "leid|adj": {
+    "az": [
+      "təəssüf",
+      "peşman"
+    ]
+  },
+  "hin|adv": {
+    "az": [
+      "oraya"
+    ]
+  },
+  "schnell|adj": {
+    "az": [
+      "sürətli",
+      "tez"
+    ]
+  },
+  "sitzen|verb": {
+    "az": [
+      "oturmaq"
+    ]
+  },
+  "selbst|pron": {
+    "az": [
+      "özüm",
+      "özün"
+    ]
+  },
+  "selbst|particle": {
+    "az": [
+      "hətta"
+    ]
+  },
+  "schaffen|verb": {
+    "az": [
+      "bacarmaq",
+      "yaratmaq"
+    ]
+  },
+  "rufen|verb": {
+    "az": [
+      "çağırmaq",
+      "qışqırmaq"
+    ]
+  },
+  "fallen|verb": {
+    "az": [
+      "düşmək",
+      "yıxılmaq"
+    ]
+  },
+  "dabei|adv": {
+    "az": [
+      "bu zaman",
+      "yanında"
+    ]
+  },
+  "dazu|adv": {
+    "az": [
+      "bunun üçün",
+      "əlavə olaraq"
+    ]
+  },
+  "Name|noun": {
+    "az": [
+      "ad"
+    ]
+  },
+  "Mal|noun": {
+    "az": [
+      "dəfə",
+      "kərə"
+    ]
+  },
+  "nennen|verb": {
+    "az": [
+      "adlandırmaq",
+      "demək"
+    ]
+  },
+  "ab|prep": {
+    "az": [
+      "-dan etibarən"
+    ]
+  },
+  "her|adv": {
+    "az": [
+      "bəri",
+      "buraya"
+    ]
+  },
+  "Ende|noun": {
+    "az": [
+      "son",
+      "axır"
+    ]
+  },
+  "leiden|verb": {
+    "az": [
+      "əziyyət çəkmək"
+    ]
+  },
+  "Er|pron": {
+    "az": [
+      "o"
+    ]
+  },
+  "Zimmer|noun": {
+    "az": [
+      "otaq"
+    ]
+  },
+  "holen|verb": {
+    "az": [
+      "gətirmək",
+      "götürmək"
+    ]
+  },
+  "darauf|adv": {
+    "az": [
+      "bundan sonra",
+      "onun üstündə"
+    ]
+  },
+  "wohnen|verb": {
+    "az": [
+      "yaşamaq"
+    ]
+  },
+  "eigen|adj": {
+    "az": [
+      "öz",
+      "şəxsi"
+    ]
+  },
+  "welche|pron": {
+    "az": [
+      "hansı"
+    ]
+  },
+  "jung|adj": {
+    "az": [
+      "cavan",
+      "gənc"
+    ]
+  },
+  "sonst|adv": {
+    "az": [
+      "adətən",
+      "başqa cür"
+    ]
+  },
+  "also|adv": {
+    "az": [
+      "deməli",
+      "beləliklə"
+    ]
+  },
+  "kurz|adj": {
+    "az": [
+      "qısa"
+    ]
+  },
+  "Wahrheit|noun": {
+    "az": [
+      "həqiqət",
+      "doğru"
+    ]
+  },
+  "glücklich|adj": {
+    "az": [
+      "xoşbəxt"
+    ]
+  },
+  "sofort|adv": {
+    "az": [
+      "dərhal"
+    ]
+  },
+  "ziehen|verb": {
+    "az": [
+      "çəkmək"
+    ]
+  },
+  "Glück|noun": {
+    "az": [
+      "xoşbəxtlik",
+      "şans"
+    ]
+  },
+  "fangen|verb": {
+    "az": [
+      "tutmaq"
+    ]
+  },
+  "Sorge|noun": {
+    "az": [
+      "narahatlıq",
+      "qayğı"
+    ]
+  },
+  "Grund|noun": {
+    "az": [
+      "səbəb",
+      "əsas"
+    ]
+  },
+  "legen|verb": {
+    "az": [
+      "qoymaq",
+      "uzatmaq"
+    ]
+  },
+  "weit|adj": {
+    "az": [
+      "geniş",
+      "uzaq"
+    ]
+  },
+  "Musik|noun": {
+    "az": [
+      "musiqi"
+    ]
+  },
+  "Fall|noun": {
+    "az": [
+      "hal",
+      "hadisə"
+    ]
+  },
+  "falsch|adj": {
+    "az": [
+      "yanlış",
+      "səhv"
+    ]
+  },
+  "richtig|adj": {
+    "az": [
+      "düzgün",
+      "doğru"
+    ]
+  },
+  "richtig|adv": {
+    "az": [
+      "həqiqətən",
+      "doğrudan"
+    ]
+  },
+  "Herr|noun": {
+    "az": [
+      "cənab",
+      "ağa"
+    ]
+  },
+  "wünschen|verb": {
+    "az": [
+      "arzulamaq",
+      "istəmək"
+    ]
+  },
+  "vergessen|verb": {
+    "az": [
+      "unutmaq"
+    ]
+  },
+  "gewinnen|verb": {
+    "az": [
+      "udmaq",
+      "qazanmaq"
+    ]
+  },
+  "Idee|noun": {
+    "az": [
+      "fikir",
+      "ideya"
+    ]
+  },
+  "echt|adj": {
+    "az": [
+      "əsl",
+      "həqiqi"
+    ]
+  },
+  "tot|adj": {
+    "az": [
+      "ölü"
+    ]
+  },
+  "schlagen|verb": {
+    "az": [
+      "vurmaq",
+      "döymək"
+    ]
+  },
+  "seit|conj": {
+    "az": [
+      "-dan bəri"
+    ]
+  },
+  "entschuldigen|verb": {
+    "az": [
+      "üzr istəmək",
+      "bağışlamaq"
+    ]
+  },
+  "Entschuldigung|noun": {
+    "az": [
+      "üzr",
+      "bağışlayın"
+    ]
+  },
+  "Fehler|noun": {
+    "az": [
+      "səhv",
+      "xəta"
+    ]
+  },
+  "Göttin|noun": {
+    "az": [
+      "ilahə"
+    ]
+  },
+  "anrufen|verb": {
+    "az": [
+      "zəng etmək"
+    ]
+  },
+  "über|adv": {
+    "az": [
+      "artıq",
+      "üstündə"
+    ]
+  },
+  "bisschen|pron": {
+    "az": [
+      "bir az"
+    ]
+  },
+  "genau|adj": {
+    "az": [
+      "dəqiq"
+    ]
+  },
+  "lange|adv": {
+    "az": [
+      "uzun müddət"
+    ]
+  },
+  "freuen|verb": {
+    "az": [
+      "sevinmək"
+    ]
+  },
+  "heiraten|verb": {
+    "az": [
+      "evlənmək"
+    ]
+  },
+  "leicht|adj": {
+    "az": [
+      "yüngül",
+      "asan"
+    ]
+  },
+  "wahr|adj": {
+    "az": [
+      "doğru",
+      "həqiqi"
+    ]
+  },
+  "stark|adj": {
+    "az": [
+      "güclü"
+    ]
+  },
+  "bezahlen|verb": {
+    "az": [
+      "ödəmək"
+    ]
+  },
+  "schauen|verb": {
+    "az": [
+      "baxmaq"
+    ]
+  },
+  "erklären|verb": {
+    "az": [
+      "izah etmək"
+    ]
+  },
+  "Ordnung|noun": {
+    "az": [
+      "qayda",
+      "nizam"
+    ]
+  },
+  "bedeuten|verb": {
+    "az": [
+      "mənasını vermək",
+      "demək"
+    ]
+  },
+  "ändern|verb": {
+    "az": [
+      "dəyişmək",
+      "dəyişdirmək"
+    ]
+  },
+  "Seite|noun": {
+    "az": [
+      "tərəf",
+      "səhifə"
+    ]
+  },
+  "Spiel|noun": {
+    "az": [
+      "oyun"
+    ]
+  },
+  "raus|adv": {
+    "az": [
+      "bayıra",
+      "çölə"
+    ]
+  },
+  "na|particle": {
+    "az": [
+      "hə",
+      "yaxşı"
+    ]
+  },
+  "nett|adj": {
+    "az": [
+      "mehriban",
+      "xoş"
+    ]
+  },
+  "töten|verb": {
+    "az": [
+      "öldürmək"
+    ]
+  },
+  "Film|noun": {
+    "az": [
+      "film"
+    ]
+  },
+  "versprechen|verb": {
+    "az": [
+      "söz vermək"
+    ]
+  },
+  "solch|pron": {
+    "az": [
+      "belə",
+      "bu cür"
+    ]
+  },
+  "hassen|verb": {
+    "az": [
+      "nifrət etmək"
+    ]
+  },
+  "kümmern|verb": {
+    "az": [
+      "qayğısına qalmaq"
+    ]
+  },
+  "jedes|pron": {
+    "az": [
+      "hər"
+    ]
+  },
+  "möglich|adj": {
+    "az": [
+      "mümkün"
+    ]
+  },
+  "anfangen|verb": {
+    "az": [
+      "başlamaq"
+    ]
+  },
+  "reichen|verb": {
+    "az": [
+      "uzatmaq",
+      "kifayət etmək"
+    ]
+  },
+  "Art|noun": {
+    "az": [
+      "növ",
+      "cür"
+    ]
+  },
+  "Straße|noun": {
+    "az": [
+      "küçə",
+      "yol"
+    ]
+  },
+  "geschehen|verb": {
+    "az": [
+      "baş vermək"
+    ]
+  },
+  "kaum|adv": {
+    "az": [
+      "çətin",
+      "az qala heç"
+    ]
+  },
+  "wieso|adv": {
+    "az": [
+      "niyə",
+      "necə"
+    ]
+  },
+  "niemals|adv": {
+    "az": [
+      "heç vaxt"
+    ]
+  },
+  "aufhören|verb": {
+    "az": [
+      "dayandırmaq",
+      "kəsmək"
+    ]
+  },
+  "Plan|noun": {
+    "az": [
+      "plan",
+      "xəritə"
+    ]
+  },
+  "singen|verb": {
+    "az": [
+      "oxumaq",
+      "mahnı oxumaq"
+    ]
+  },
+  "Spaß|noun": {
+    "az": [
+      "əyləncə",
+      "zarafat"
+    ]
+  },
+  "Gefühl|noun": {
+    "az": [
+      "hiss",
+      "duyğu"
+    ]
+  },
+  "passen|verb": {
+    "az": [
+      "uyğun gəlmək",
+      "yaraşmaq"
+    ]
+  },
+  "erst|adv": {
+    "az": [
+      "əvvəlcə",
+      "yalnız"
+    ]
+  },
+  "gerne|adv": {
+    "az": [
+      "məmnuniyyətlə",
+      "həvəslə"
+    ]
+  },
+  "nah|adj": {
+    "az": [
+      "yaxın"
+    ]
+  },
+  "nahe|adj": {
+    "az": [
+      "yaxın"
+    ]
+  },
+  "langsam|adj": {
+    "az": [
+      "yavaş"
+    ]
+  },
+  "vorbei|adv": {
+    "az": [
+      "keçmiş",
+      "bitmiş"
+    ]
+  },
+  "führen|verb": {
+    "az": [
+      "aparmaq",
+      "rəhbərlik etmək"
+    ]
+  },
+  "ruhig|adj": {
+    "az": [
+      "sakit",
+      "rahat"
+    ]
+  },
+  "darum|adv": {
+    "az": [
+      "ona görə"
+    ]
+  },
+  "retten|verb": {
+    "az": [
+      "xilas etmək"
+    ]
+  },
+  "klar|adj": {
+    "az": [
+      "aydın",
+      "açıq"
+    ]
+  },
+  "Platz|noun": {
+    "az": [
+      "meydan",
+      "yer"
+    ]
+  },
+  "Wagen|noun": {
+    "az": [
+      "maşın",
+      "araba"
+    ]
+  },
+  "los|adj": {
+    "az": [
+      "boş",
+      "sərbəst"
+    ]
+  },
+  "los|adv": {
+    "az": [
+      "irəli",
+      "başla"
+    ]
+  },
+  "schwer|adj": {
+    "az": [
+      "ağır",
+      "çətin"
+    ]
+  },
+  "gefallen|verb": {
+    "az": [
+      "xoşuna gəlmək"
+    ]
+  },
+  "Bild|noun": {
+    "az": [
+      "şəkil",
+      "rəsm"
+    ]
+  },
+  "Meinung|noun": {
+    "az": [
+      "fikir",
+      "rəy"
+    ]
+  },
+  "verschwinden|verb": {
+    "az": [
+      "yox olmaq",
+      "itmək"
+    ]
+  },
+  "woher|adv": {
+    "az": [
+      "haradan"
+    ]
+  },
+  "wohin|adv": {
+    "az": [
+      "haraya"
+    ]
+  },
+  "besser|adj": {
+    "az": [
+      "daha yaxşı"
+    ]
+  },
+  "bereits|adv": {
+    "az": [
+      "artıq"
+    ]
+  },
+  "erwarten|verb": {
+    "az": [
+      "gözləmək"
+    ]
+  },
+  "stecken|verb": {
+    "az": [
+      "soxmaq",
+      "olmaq"
+    ]
+  },
+  "werfen|verb": {
+    "az": [
+      "atmaq"
+    ]
+  },
+  "Ort|noun": {
+    "az": [
+      "yer",
+      "məkan"
+    ]
+  },
+  "erkennen|verb": {
+    "az": [
+      "tanımaq",
+      "dərk etmək"
+    ]
+  },
+  "bestehen|verb": {
+    "az": [
+      "keçmək",
+      "ibarət olmaq"
+    ]
+  },
+  "früh|adj": {
+    "az": [
+      "erkən",
+      "tez"
+    ]
+  },
+  "kriegen|verb": {
+    "az": [
+      "almaq",
+      "əldə etmək"
+    ]
+  },
+  "Teil|noun": {
+    "az": [
+      "hissə",
+      "pay"
+    ]
+  },
+  "Fuß|noun": {
+    "az": [
+      "ayaq"
+    ]
+  },
+  "kalt|adj": {
+    "az": [
+      "soyuq"
+    ]
+  },
+  "Moment|noun": {
+    "az": [
+      "an",
+      "məqam"
+    ]
+  },
+  "hoch|adj": {
+    "az": [
+      "hündür",
+      "yüksək"
+    ]
+  },
+  "Licht|noun": {
+    "az": [
+      "işıq"
+    ]
+  },
+  "fliegen|verb": {
+    "az": [
+      "uçmaq"
+    ]
+  },
+  "dauern|verb": {
+    "az": [
+      "davam etmək",
+      "çəkmək"
+    ]
+  },
+  "schicken|verb": {
+    "az": [
+      "göndərmək"
+    ]
+  },
+  "benutzen|verb": {
+    "az": [
+      "istifadə etmək"
+    ]
+  },
+  "derselbe|pron": {
+    "az": [
+      "eyni",
+      "həmin"
+    ]
+  },
+  "gar|adj": {
+    "az": [
+      "bişmiş",
+      "hazır"
+    ]
+  },
+  "gar|particle": {
+    "az": [
+      "heç",
+      "tamamilə"
+    ]
+  },
+  "erreichen|verb": {
+    "az": [
+      "çatmaq",
+      "nail olmaq"
+    ]
+  },
+  "folgen|verb": {
+    "az": [
+      "izləmək",
+      "tabe olmaq"
+    ]
+  },
+  "fehlen|verb": {
+    "az": [
+      "çatmamaq",
+      "əskik olmaq"
+    ]
+  },
+  "bereiten|verb": {
+    "az": [
+      "hazırlamaq"
+    ]
+  },
+  "Baby|noun": {
+    "az": [
+      "körpə",
+      "uşaq"
+    ]
+  },
+  "steigen|verb": {
+    "az": [
+      "qalxmaq",
+      "artmaq"
+    ]
+  },
+  "dumm|adj": {
+    "az": [
+      "axmaq",
+      "səfeh"
+    ]
+  },
+  "verkaufen|verb": {
+    "az": [
+      "satmaq"
+    ]
+  },
+  "Ruhe|noun": {
+    "az": [
+      "sakitlik",
+      "istirahət"
+    ]
+  },
+  "Menge|noun": {
+    "az": [
+      "miqdar",
+      "çoxluq"
+    ]
+  },
+  "Traum|noun": {
+    "az": [
+      "yuxu",
+      "arzu"
+    ]
+  },
+  "vertrauen|verb": {
+    "az": [
+      "etibar etmək",
+      "güvənmək"
+    ]
+  },
+  "schlimm|adj": {
+    "az": [
+      "pis",
+      "ağır"
+    ]
+  },
+  "völlig|adj": {
+    "az": [
+      "tam",
+      "bütöv"
+    ]
+  },
+  "lügen|verb": {
+    "az": [
+      "yalan danışmaq"
+    ]
+  },
+  "fertig|adj": {
+    "az": [
+      "hazır",
+      "bitmiş"
+    ]
+  },
+  "funktionieren|verb": {
+    "az": [
+      "işləmək",
+      "fəaliyyət göstərmək"
+    ]
+  },
+  "verlassen|verb": {
+    "az": [
+      "tərk etmək"
+    ]
+  },
+  "verlassen|adj": {
+    "az": [
+      "tərk edilmiş",
+      "kimsəsiz"
+    ]
+  },
+  "Chance|noun": {
+    "az": [
+      "şans",
+      "imkan"
+    ]
+  },
+  "hängen|verb": {
+    "az": [
+      "asmaq",
+      "asılı olmaq"
+    ]
+  },
+  "Stelle|noun": {
+    "az": [
+      "yer",
+      "iş yeri"
+    ]
+  },
+  "ehrlich|adj": {
+    "az": [
+      "dürüst",
+      "səmimi"
+    ]
+  },
+  "Person|noun": {
+    "az": [
+      "şəxs",
+      "adam"
+    ]
+  },
+  "heiß|adj": {
+    "az": [
+      "isti",
+      "qaynar"
+    ]
+  },
+  "umbringen|verb": {
+    "az": [
+      "öldürmək"
+    ]
+  },
+  "gleich|adj": {
+    "az": [
+      "eyni",
+      "bərabər"
+    ]
+  },
+  "gleich|adv": {
+    "az": [
+      "dərhal",
+      "indicə"
+    ]
+  },
+  "gleich|prep": {
+    "az": [
+      "kimi"
+    ]
+  },
+  "verloren|adj": {
+    "az": [
+      "itirilmiş",
+      "itmiş"
+    ]
+  },
+  "paar|adj": {
+    "az": [
+      "cüt"
+    ]
+  },
+  "paar|pron": {
+    "az": [
+      "bir neçə"
+    ]
+  },
+  "besuchen|verb": {
+    "az": [
+      "ziyarət etmək",
+      "getmək"
+    ]
+  },
+  "Büro|noun": {
+    "az": [
+      "ofis",
+      "idarə"
+    ]
+  },
+  "Sinn|noun": {
+    "az": [
+      "məna",
+      "hiss"
+    ]
+  },
+  "hart|adj": {
+    "az": [
+      "sərt",
+      "ağır"
+    ]
+  },
+  "klingen|verb": {
+    "az": [
+      "səslənmək"
+    ]
+  },
+  "ernst|adj": {
+    "az": [
+      "ciddi"
+    ]
+  },
+  "entscheiden|verb": {
+    "az": [
+      "qərar vermək"
+    ]
+  },
+  "Entscheidung|noun": {
+    "az": [
+      "qərar"
+    ]
+  },
+  "froh|adj": {
+    "az": [
+      "şad",
+      "sevincli"
+    ]
+  },
+  "oben|adv": {
+    "az": [
+      "yuxarıda"
+    ]
+  },
+  "deshalb|adv": {
+    "az": [
+      "ona görə də"
+    ]
+  },
+  "dafür|adv": {
+    "az": [
+      "bunun üçün"
+    ]
+  },
+  "Ei|noun": {
+    "az": [
+      "yumurta"
+    ]
+  },
+  "fürchten|verb": {
+    "az": [
+      "qorxmaq"
+    ]
+  },
+  "zwar|conj": {
+    "az": [
+      "düzdür",
+      "doğrudur"
+    ]
+  },
+  "Zukunft|noun": {
+    "az": [
+      "gələcək"
+    ]
+  },
+  "müde|adj": {
+    "az": [
+      "yorğun"
+    ]
+  },
+  "Schlüssel|noun": {
+    "az": [
+      "açar"
+    ]
+  },
+  "nächst|adj": {
+    "az": [
+      "növbəti",
+      "ən yaxın"
+    ]
+  },
+  "interessant|adj": {
+    "az": [
+      "maraqlı"
+    ]
+  },
+  "Stück|noun": {
+    "az": [
+      "parça",
+      "ədəd"
+    ]
+  },
+  "verdienen|verb": {
+    "az": [
+      "qazanmaq",
+      "layiq olmaq"
+    ]
+  },
+  "Foto|noun": {
+    "az": [
+      "foto",
+      "şəkil"
+    ]
+  },
+  "schwierig|adj": {
+    "az": [
+      "çətin"
+    ]
+  },
+  "Hündin|noun": {
+    "az": [
+      "dişi it"
+    ]
+  },
+  "Rede|noun": {
+    "az": [
+      "nitq",
+      "çıxış"
+    ]
+  },
+  "gefährlich|adj": {
+    "az": [
+      "təhlükəli"
+    ]
+  },
+  "überall|adv": {
+    "az": [
+      "hər yerdə"
+    ]
+  },
+  "verbringen|verb": {
+    "az": [
+      "keçirmək"
+    ]
+  },
+  "hübsch|adj": {
+    "az": [
+      "yaraşıqlı",
+      "gözəl"
+    ]
+  },
+  "Job|noun": {
+    "az": [
+      "iş"
+    ]
+  },
+  "einig|adj": {
+    "az": [
+      "razı",
+      "həmfikir"
+    ]
+  },
+  "tanzen|verb": {
+    "az": [
+      "rəqs etmək",
+      "oynamaq"
+    ]
+  },
+  "hey|phrase": {
+    "az": [
+      "hey",
+      "ay"
+    ]
+  },
+  "Geschäft|noun": {
+    "az": [
+      "mağaza",
+      "iş"
+    ]
+  },
+  "Wohnung|noun": {
+    "az": [
+      "mənzil",
+      "ev"
+    ]
+  },
+  "alleine|adj": {
+    "az": [
+      "tək",
+      "təkbaşına"
+    ]
+  },
+  "manch|pron": {
+    "az": [
+      "bəzi"
+    ]
+  },
+  "damit|adv": {
+    "az": [
+      "bununla"
+    ]
+  },
+  "kennenlernen|verb": {
+    "az": [
+      "tanış olmaq"
+    ]
+  },
+  "küssen|verb": {
+    "az": [
+      "öpmək"
+    ]
+  },
+  "Stimme|noun": {
+    "az": [
+      "səs"
+    ]
+  },
+  "weiter|adj": {
+    "az": [
+      "daha uzaq",
+      "növbəti"
+    ]
+  },
+  "Ziel|noun": {
+    "az": [
+      "məqsəd",
+      "hədəf"
+    ]
+  },
+  "vorstellen|verb": {
+    "az": [
+      "təqdim etmək",
+      "təsəvvür etmək"
+    ]
+  },
+  "kämpfen|verb": {
+    "az": [
+      "döyüşmək",
+      "mübarizə aparmaq"
+    ]
+  },
+  "Junges|noun": {
+    "az": [
+      "bala"
+    ]
+  },
+  "sichern|verb": {
+    "az": [
+      "təmin etmək",
+      "qorumaq"
+    ]
+  },
+  "ziemlich|particle": {
+    "az": [
+      "kifayət qədər",
+      "xeyli"
+    ]
+  },
+  "Geschenk|noun": {
+    "az": [
+      "hədiyyə"
+    ]
+  },
+  "treten|verb": {
+    "az": [
+      "addımlamaq",
+      "təpikləmək"
+    ]
+  },
+  "teilen|verb": {
+    "az": [
+      "bölmək",
+      "paylaşmaq"
+    ]
+  },
+  "ohne|conj": {
+    "az": [
+      "-madan",
+      "-sız"
+    ]
+  },
+  "durch|adv": {
+    "az": [
+      "bitmiş",
+      "tam bişmiş"
+    ]
+  },
+  "interessieren|verb": {
+    "az": [
+      "maraqlandırmaq",
+      "maraqlanmaq"
+    ]
+  },
+  "denn|particle": {
+    "az": [
+      "axı"
+    ]
+  },
+  "denn|adv": {
+    "az": [
+      "bəs"
+    ]
+  },
+  "lösen|verb": {
+    "az": [
+      "həll etmək",
+      "açmaq"
+    ]
+  },
+  "wählen|verb": {
+    "az": [
+      "seçmək",
+      "nömrə yığmaq"
+    ]
+  },
+  "darüber|adv": {
+    "az": [
+      "onun üstündə",
+      "bu haqda"
+    ]
+  },
+  "bereit|adj": {
+    "az": [
+      "hazır"
+    ]
+  },
+  "einige|num": {
+    "az": [
+      "bir neçə"
+    ]
+  },
+  "hinter|adj": {
+    "az": [
+      "arxa"
+    ]
+  },
+  "bauen|verb": {
+    "az": [
+      "tikmək",
+      "qurmaq"
+    ]
+  },
+  "schätzen|verb": {
+    "az": [
+      "qiymətləndirmək",
+      "dəyər vermək"
+    ]
+  },
+  "Wahl|noun": {
+    "az": [
+      "seçim",
+      "seçki"
+    ]
+  },
+  "Geist|noun": {
+    "az": [
+      "ruh",
+      "zəka"
+    ]
+  },
+  "ankommen|verb": {
+    "az": [
+      "çatmaq",
+      "gəlib çıxmaq"
+    ]
+  },
+  "aussehen|verb": {
+    "az": [
+      "görünmək"
+    ]
+  },
+  "Kleid|noun": {
+    "az": [
+      "paltar",
+      "don"
+    ]
+  },
+  "daran|adv": {
+    "az": [
+      "ona",
+      "onun yanında"
+    ]
+  },
+  "Nonne|noun": {
+    "az": [
+      "rahibə"
+    ]
+  },
+  "offen|adj": {
+    "az": [
+      "açıq"
+    ]
+  },
+  "brechen|verb": {
+    "az": [
+      "sındırmaq",
+      "qırmaq"
+    ]
+  },
+  "lustig|adj": {
+    "az": [
+      "gülməli",
+      "əyləncəli"
+    ]
+  },
+  "genauso|adv": {
+    "az": [
+      "eynilə",
+      "elə həmin cür"
+    ]
+  },
+  "behalten|verb": {
+    "az": [
+      "saxlamaq",
+      "yadda saxlamaq"
+    ]
+  },
+  "plötzlich|adj": {
+    "az": [
+      "qəfil",
+      "birdən"
+    ]
+  },
+  "damals|adv": {
+    "az": [
+      "o vaxt"
+    ]
+  },
+  "danach|adv": {
+    "az": [
+      "ondan sonra"
+    ]
+  },
+  "Boden|noun": {
+    "az": [
+      "yer",
+      "döşəmə"
+    ]
+  },
+  "Körper|noun": {
+    "az": [
+      "bədən"
+    ]
+  },
+  "Mund|noun": {
+    "az": [
+      "ağız"
+    ]
+  },
+  "Bus|noun": {
+    "az": [
+      "avtobus"
+    ]
+  },
+  "Preis|noun": {
+    "az": [
+      "qiymət",
+      "mükafat"
+    ]
+  },
+  "traurig|adj": {
+    "az": [
+      "kədərli",
+      "qəmgin"
+    ]
+  },
+  "schwimmen|verb": {
+    "az": [
+      "üzmək"
+    ]
+  },
+  "schenken|verb": {
+    "az": [
+      "hədiyyə etmək",
+      "bağışlamaq"
+    ]
+  },
+  "lieber|adv": {
+    "az": [
+      "daha çox",
+      "üstün tutaraq"
+    ]
+  },
+  "träumen|verb": {
+    "az": [
+      "yuxu görmək",
+      "arzulamaq"
+    ]
+  },
+  "Karte|noun": {
+    "az": [
+      "kart",
+      "bilet"
+    ]
+  },
+  "einladen|verb": {
+    "az": [
+      "dəvət etmək"
+    ]
+  },
+  "Einladung|noun": {
+    "az": [
+      "dəvət",
+      "dəvətnamə"
+    ]
+  },
+  "wirken|verb": {
+    "az": [
+      "təsir etmək",
+      "görünmək"
+    ]
+  },
+  "wachsen|verb": {
+    "az": [
+      "böyümək",
+      "artmaq"
+    ]
+  },
+  "Ohr|noun": {
+    "az": [
+      "qulaq"
+    ]
+  },
+  "schmecken|verb": {
+    "az": [
+      "dadlı olmaq",
+      "dadına baxmaq"
+    ]
+  },
+  "kochen|verb": {
+    "az": [
+      "bişirmək",
+      "qaynatmaq"
+    ]
+  },
+  "Schmerz|noun": {
+    "az": [
+      "ağrı"
+    ]
+  },
+  "klug|adj": {
+    "az": [
+      "ağıllı",
+      "zəkalı"
+    ]
+  },
+  "Möglichkeit|noun": {
+    "az": [
+      "imkan",
+      "ehtimal"
+    ]
+  },
+  "teuer|adj": {
+    "az": [
+      "bahalı",
+      "əziz"
+    ]
+  },
+  "Garten|noun": {
+    "az": [
+      "bağ",
+      "bağça"
+    ]
+  },
+  "krank|adj": {
+    "az": [
+      "xəstə"
+    ]
+  },
+  "kosten|verb": {
+    "az": [
+      "dəyəri olmaq",
+      "dadına baxmaq"
+    ]
+  },
+  "Firma|noun": {
+    "az": [
+      "firma",
+      "şirkət"
+    ]
+  },
+  "warm|adj": {
+    "az": [
+      "isti",
+      "ilıq"
+    ]
+  },
+  "beeilen|verb": {
+    "az": [
+      "tələsmək"
+    ]
+  },
+  "später|adj": {
+    "az": [
+      "sonrakı",
+      "daha sonra"
+    ]
+  },
+  "wahrscheinlich|adj": {
+    "az": [
+      "ehtimal ki",
+      "çox güman"
+    ]
+  },
+  "Farbe|noun": {
+    "az": [
+      "rəng",
+      "boya"
+    ]
+  },
+  "Lehrer|noun": {
+    "az": [
+      "müəllim"
+    ]
+  },
+  "waschen|verb": {
+    "az": [
+      "yumaq"
+    ]
+  },
+  "Erfahrung|noun": {
+    "az": [
+      "təcrübə"
+    ]
+  },
+  "Wand|noun": {
+    "az": [
+      "divar"
+    ]
+  },
+  "aufstehen|verb": {
+    "az": [
+      "durmaq",
+      "qalxmaq"
+    ]
+  },
+  "reisen|verb": {
+    "az": [
+      "səyahət etmək"
+    ]
+  },
+  "Fleisch|noun": {
+    "az": [
+      "ət"
+    ]
+  },
+  "Bericht|noun": {
+    "az": [
+      "hesabat",
+      "məlumat"
+    ]
+  },
+  "Restaurant|noun": {
+    "az": [
+      "restoran"
+    ]
+  },
+  "leise|adj": {
+    "az": [
+      "sakit",
+      "asta"
+    ]
+  },
+  "bestellen|verb": {
+    "az": [
+      "sifariş etmək"
+    ]
+  },
+  "sauber|adj": {
+    "az": [
+      "təmiz"
+    ]
+  },
+  "Wetter|noun": {
+    "az": [
+      "hava"
+    ]
+  },
+  "Richtung|noun": {
+    "az": [
+      "istiqamət",
+      "tərəf"
+    ]
+  },
+  "freundlich|adj": {
+    "az": [
+      "mehriban",
+      "xoşrəftar"
+    ]
+  },
+  "Vergangenheit|noun": {
+    "az": [
+      "keçmiş"
+    ]
+  },
+  "Urlaub|noun": {
+    "az": [
+      "məzuniyyət",
+      "tətil"
+    ]
+  },
+  "packen|verb": {
+    "az": [
+      "yığmaq",
+      "tutmaq"
+    ]
+  },
+  "dunkel|adj": {
+    "az": [
+      "qaranlıq",
+      "tünd"
+    ]
+  },
+  "vorbereiten|verb": {
+    "az": [
+      "hazırlamaq"
+    ]
+  },
+  "möchten|verb": {
+    "az": [
+      "istəmək",
+      "arzu etmək"
+    ]
+  },
+  "Erinnerung|noun": {
+    "az": [
+      "xatirə",
+      "yaddaş"
+    ]
+  },
+  "Fernsehen|noun": {
+    "az": [
+      "televiziya"
+    ]
+  },
+  "laut|adj": {
+    "az": [
+      "uca",
+      "səsli"
+    ]
+  },
+  "Stuhl|noun": {
+    "az": [
+      "stul"
+    ]
+  },
+  "links|adv": {
+    "az": [
+      "solda",
+      "sola"
+    ]
+  },
+  "rechts|adv": {
+    "az": [
+      "sağda",
+      "sağa"
+    ]
+  },
+  "Hose|noun": {
+    "az": [
+      "şalvar"
+    ]
+  },
+  "wiederholen|verb": {
+    "az": [
+      "təkrar etmək"
+    ]
+  },
+  "Chef|noun": {
+    "az": [
+      "rəis",
+      "müdir"
+    ]
+  },
+  "früher|adj": {
+    "az": [
+      "əvvəlki",
+      "keçmiş"
+    ]
+  },
+  "schwach|adj": {
+    "az": [
+      "zəif"
+    ]
+  },
+  "feiern|verb": {
+    "az": [
+      "qeyd etmək",
+      "bayram etmək"
+    ]
+  },
+  "Reise|noun": {
+    "az": [
+      "səyahət",
+      "səfər"
+    ]
+  },
+  "Vorschlag|noun": {
+    "az": [
+      "təklif"
+    ]
+  },
+  "vorschlagen|verb": {
+    "az": [
+      "təklif etmək"
+    ]
+  },
+  "Koffer|noun": {
+    "az": [
+      "çamadan"
+    ]
+  },
+  "frisch|adj": {
+    "az": [
+      "təzə",
+      "sərin"
+    ]
+  },
+  "anziehen|verb": {
+    "az": [
+      "geyinmək"
+    ]
+  },
+  "ausziehen|verb": {
+    "az": [
+      "soyunmaq",
+      "köçmək"
+    ]
+  },
+  "gesund|adj": {
+    "az": [
+      "sağlam"
+    ]
+  },
+  "Medikament|noun": {
+    "az": [
+      "dərman"
+    ]
+  },
+  "Bahnhof|noun": {
+    "az": [
+      "vağzal",
+      "stansiya"
+    ]
+  },
+  "Hallo|noun": {
+    "az": [
+      "salam"
+    ]
+  },
+  "Kunde|noun": {
+    "az": [
+      "müştəri"
+    ]
+  },
+  "Rechnung|noun": {
+    "az": [
+      "hesab",
+      "faktura"
+    ]
+  },
+  "Radio|noun": {
+    "az": [
+      "radio"
+    ]
+  },
+  "dick|adj": {
+    "az": [
+      "qalın",
+      "kök"
+    ]
+  },
+  "Feier|noun": {
+    "az": [
+      "bayram",
+      "mərasim"
+    ]
+  },
+  "Fest|noun": {
+    "az": [
+      "bayram",
+      "şənlik"
+    ]
+  },
+  "mitkommen|verb": {
+    "az": [
+      "birlikdə gəlmək"
+    ]
+  },
+  "aufwachen|verb": {
+    "az": [
+      "oyanmaq"
+    ]
+  },
+  "Kollege|noun": {
+    "az": [
+      "həmkar"
+    ]
+  },
+  "Kleidung|noun": {
+    "az": [
+      "geyim",
+      "paltar"
+    ]
+  },
+  "gewöhnen|verb": {
+    "az": [
+      "öyrəşmək",
+      "alışdırmaq"
+    ]
+  },
+  "Mittag|noun": {
+    "az": [
+      "günorta"
+    ]
+  },
+  "schmutzig|adj": {
+    "az": [
+      "çirkli"
+    ]
+  },
+  "hässlich|adj": {
+    "az": [
+      "çirkin"
+    ]
+  },
+  "Bad|noun": {
+    "az": [
+      "hamam",
+      "vanna otağı"
+    ]
+  },
+  "Termin|noun": {
+    "az": [
+      "görüş vaxtı",
+      "randevu"
+    ]
+  },
+  "Keller|noun": {
+    "az": [
+      "zirzəmi"
+    ]
+  },
+  "senden|verb": {
+    "az": [
+      "göndərmək",
+      "yayımlamaq"
+    ]
+  },
+  "Beruf|noun": {
+    "az": [
+      "peşə",
+      "sənət"
+    ]
+  },
+  "ärgern|verb": {
+    "az": [
+      "acıqlandırmaq",
+      "əsəbləşmək"
+    ]
+  },
+  "beschreiben|verb": {
+    "az": [
+      "təsvir etmək"
+    ]
+  },
+  "Größe|noun": {
+    "az": [
+      "ölçü",
+      "böyüklük"
+    ]
+  },
+  "einkaufen|verb": {
+    "az": [
+      "alış-veriş etmək"
+    ]
+  },
+  "putzen|verb": {
+    "az": [
+      "təmizləmək"
+    ]
+  },
+  "Treppe|noun": {
+    "az": [
+      "pilləkən"
+    ]
+  },
+  "billig|adj": {
+    "az": [
+      "ucuz"
+    ]
+  },
+  "leiten|verb": {
+    "az": [
+      "rəhbərlik etmək",
+      "yönəltmək"
+    ]
+  },
+  "kündigen|verb": {
+    "az": [
+      "işdən çıxmaq",
+      "müqaviləni ləğv etmək"
+    ]
+  },
+  "entspannen|verb": {
+    "az": [
+      "dincəlmək",
+      "rahatlamaq"
+    ]
+  },
+  "Euro|noun": {
+    "az": [
+      "avro"
+    ]
+  },
+  "Markt|noun": {
+    "az": [
+      "bazar"
+    ]
+  },
+  "Jugend|noun": {
+    "az": [
+      "gənclik"
+    ]
+  },
+  "vergleichen|verb": {
+    "az": [
+      "müqayisə etmək"
+    ]
+  },
+  "Schlafzimmer|noun": {
+    "az": [
+      "yataq otağı"
+    ]
+  },
+  "Wohnzimmer|noun": {
+    "az": [
+      "qonaq otağı"
+    ]
+  },
+  "Schrank|noun": {
+    "az": [
+      "şkaf"
+    ]
+  },
+  "Kindheit|noun": {
+    "az": [
+      "uşaqlıq"
+    ]
+  },
+  "wehtun|verb": {
+    "az": [
+      "ağrımaq",
+      "incitmək"
+    ]
+  },
+  "berichten|verb": {
+    "az": [
+      "məlumat vermək",
+      "xəbər vermək"
+    ]
+  },
+  "Charakter|noun": {
+    "az": [
+      "xarakter",
+      "xasiyyət"
+    ]
+  },
+  "höflich|adj": {
+    "az": [
+      "nəzakətli"
+    ]
+  },
+  "Ecke|noun": {
+    "az": [
+      "künc",
+      "tin"
+    ]
+  },
+  "Sofa|noun": {
+    "az": [
+      "divan"
+    ]
+  },
+  "absagen|verb": {
+    "az": [
+      "ləğv etmək",
+      "imtina etmək"
+    ]
+  },
+  "duschen|verb": {
+    "az": [
+      "duş qəbul etmək"
+    ]
+  },
+  "Dusche|noun": {
+    "az": [
+      "duş"
+    ]
+  },
+  "gratulieren|verb": {
+    "az": [
+      "təbrik etmək"
+    ]
+  },
+  "Studium|noun": {
+    "az": [
+      "təhsil",
+      "ali təhsil"
+    ]
+  },
+  "Teppich|noun": {
+    "az": [
+      "xalça"
+    ]
+  },
+  "mieten|verb": {
+    "az": [
+      "kirayə götürmək"
+    ]
+  },
+  "aussteigen|verb": {
+    "az": [
+      "düşmək"
+    ]
+  },
+  "einsteigen|verb": {
+    "az": [
+      "minmək"
+    ]
+  },
+  "umsteigen|verb": {
+    "az": [
+      "nəqliyyatı dəyişmək"
+    ]
+  },
+  "lecker|adj": {
+    "az": [
+      "dadlı",
+      "ləzzətli"
+    ]
+  },
+  "hell|adj": {
+    "az": [
+      "işıqlı",
+      "açıq"
+    ]
+  },
+  "Verkehr|noun": {
+    "az": [
+      "nəqliyyat",
+      "hərəkət"
+    ]
+  },
+  "Lampe|noun": {
+    "az": [
+      "lampa"
+    ]
+  },
+  "modern|adj": {
+    "az": [
+      "müasir"
+    ]
+  },
+  "blond|adj": {
+    "az": [
+      "sarışın"
+    ]
+  },
+  "Tradition|noun": {
+    "az": [
+      "ənənə"
+    ]
+  },
+  "Möbel|noun": {
+    "az": [
+      "mebel"
+    ]
+  },
+  "Lohn|noun": {
+    "az": [
+      "maaş",
+      "əmək haqqı"
+    ]
+  },
+  "planen|verb": {
+    "az": [
+      "planlaşdırmaq"
+    ]
+  },
+  "organisieren|verb": {
+    "az": [
+      "təşkil etmək"
+    ]
+  },
+  "Bahn|noun": {
+    "az": [
+      "qatar",
+      "yol"
+    ]
+  },
+  "Regal|noun": {
+    "az": [
+      "rəf"
+    ]
+  },
+  "Freizeit|noun": {
+    "az": [
+      "boş vaxt"
+    ]
+  },
+  "Würde|noun": {
+    "az": [
+      "ləyaqət",
+      "şərəf"
+    ]
+  },
+  "Ausbildung|noun": {
+    "az": [
+      "təhsil",
+      "peşə hazırlığı"
+    ]
+  },
+  "bewerben|verb": {
+    "az": [
+      "müraciət etmək"
+    ]
+  },
+  "Bewerbung|noun": {
+    "az": [
+      "müraciət",
+      "ərizə"
+    ]
+  },
+  "abfahren|verb": {
+    "az": [
+      "yola düşmək"
+    ]
+  },
+  "Balkon|noun": {
+    "az": [
+      "balkon"
+    ]
+  },
+  "Ampel|noun": {
+    "az": [
+      "svetofor"
+    ]
+  },
+  "durstig|adj": {
+    "az": [
+      "susuz"
+    ]
+  },
+  "räumen|verb": {
+    "az": [
+      "boşaltmaq",
+      "yığışdırmaq"
+    ]
+  },
+  "abbiegen|verb": {
+    "az": [
+      "dönmək"
+    ]
+  },
+  "geradeaus|adv": {
+    "az": [
+      "düz irəli"
+    ]
+  },
+  "schlank|adj": {
+    "az": [
+      "arıq",
+      "incə"
+    ]
+  },
+  "Kreuzung|noun": {
+    "az": [
+      "yol ayrıcı"
+    ]
+  },
+  "jährlich|adj": {
+    "az": [
+      "illik",
+      "hər il"
+    ]
+  },
+  "Verkäufer|noun": {
+    "az": [
+      "satıcı"
+    ]
+  },
+  "Alltag|noun": {
+    "az": [
+      "gündəlik həyat"
+    ]
+  },
+  "Haltestelle|noun": {
+    "az": [
+      "dayanacaq"
+    ]
+  },
+  "trotzdem|adv": {
+    "az": [
+      "buna baxmayaraq"
+    ]
+  },
+  "dennoch|adv": {
+    "az": [
+      "buna baxmayaraq",
+      "yenə də"
+    ]
+  },
+  "Folge|noun": {
+    "az": [
+      "nəticə",
+      "ardıcıllıq"
+    ]
+  },
+  "Zweck|noun": {
+    "az": [
+      "məqsəd"
+    ]
+  },
+  "vermeiden|verb": {
+    "az": [
+      "qaçınmaq"
+    ]
+  },
+  "ermöglichen|verb": {
+    "az": [
+      "imkan yaratmaq"
+    ]
+  },
+  "verhindern|verb": {
+    "az": [
+      "qarşısını almaq",
+      "maneə olmaq"
+    ]
+  },
+  "Absicht|noun": {
+    "az": [
+      "niyyət",
+      "məqsəd"
+    ]
+  },
+  "Ergebnis|noun": {
+    "az": [
+      "nəticə"
+    ]
+  },
+  "Bedingung|noun": {
+    "az": [
+      "şərt"
+    ]
+  },
+  "Situation|noun": {
+    "az": [
+      "vəziyyət"
+    ]
+  },
+  "entwickeln|verb": {
+    "az": [
+      "inkişaf etdirmək",
+      "inkişaf etmək"
+    ]
+  },
+  "verbessern|verb": {
+    "az": [
+      "yaxşılaşdırmaq",
+      "düzəltmək"
+    ]
+  },
+  "beweisen|verb": {
+    "az": [
+      "sübut etmək"
+    ]
+  },
+  "bemerken|verb": {
+    "az": [
+      "fərq etmək",
+      "qeyd etmək"
+    ]
+  },
+  "allerdings|adv": {
+    "az": [
+      "düzdür",
+      "lakin"
+    ]
+  },
+  "jedoch|adv": {
+    "az": [
+      "lakin",
+      "ancaq"
+    ]
+  },
+  "außerdem|adv": {
+    "az": [
+      "bundan əlavə"
+    ]
+  },
+  "Gegenstand|noun": {
+    "az": [
+      "əşya",
+      "mövzu"
+    ]
+  },
+  "Eigenschaft|noun": {
+    "az": [
+      "xüsusiyyət"
+    ]
+  },
+  "bestimmen|verb": {
+    "az": [
+      "müəyyən etmək"
+    ]
+  },
+  "erwähnen|verb": {
+    "az": [
+      "qeyd etmək",
+      "xatırlatmaq"
+    ]
+  },
+  "handeln|verb": {
+    "az": [
+      "hərəkət etmək",
+      "ticarət etmək"
+    ]
+  },
+  "bekannt|adj": {
+    "az": [
+      "tanınmış",
+      "məlum"
+    ]
+  },
+  "unbekannt|adj": {
+    "az": [
+      "naməlum"
+    ]
+  },
+  "typisch|adj": {
+    "az": [
+      "tipik",
+      "səciyyəvi"
+    ]
+  },
+  "ähnlich|adj": {
+    "az": [
+      "oxşar",
+      "bənzər"
+    ]
+  },
+  "Beispiel|noun": {
+    "az": [
+      "nümunə",
+      "misal"
+    ]
+  },
+  "Bedeutung|noun": {
+    "az": [
+      "məna",
+      "əhəmiyyət"
+    ]
+  },
+  "Erklärung|noun": {
+    "az": [
+      "izah"
+    ]
+  },
+  "Verhältnis|noun": {
+    "az": [
+      "münasibət",
+      "nisbət"
+    ]
+  },
+  "betreffen|verb": {
+    "az": [
+      "aid olmaq",
+      "toxunmaq"
+    ]
+  },
+  "gelten|verb": {
+    "az": [
+      "keçərli olmaq",
+      "sayılmaq"
+    ]
+  },
+  "zählen|verb": {
+    "az": [
+      "saymaq",
+      "sayılmaq"
+    ]
+  },
+  "bezeichnen|verb": {
+    "az": [
+      "adlandırmaq",
+      "işarə etmək"
+    ]
+  },
+  "Wunsch|noun": {
+    "az": [
+      "arzu",
+      "istək"
+    ]
+  },
+  "Rat|noun": {
+    "az": [
+      "məsləhət"
+    ]
+  },
+  "Vorstellung|noun": {
+    "az": [
+      "təsəvvür",
+      "fikir"
+    ]
+  },
+  "überlegen|adj": {
+    "az": [
+      "üstün"
+    ]
+  },
+  "raten|verb": {
+    "az": [
+      "məsləhət vermək",
+      "təxmin etmək"
+    ]
+  },
+  "verzichten|verb": {
+    "az": [
+      "imtina etmək"
+    ]
+  },
+  "wagen|verb": {
+    "az": [
+      "cürət etmək"
+    ]
+  },
+  "unmöglich|adj": {
+    "az": [
+      "qeyri-mümkün"
+    ]
+  },
+  "sicherlich|adv": {
+    "az": [
+      "şübhəsiz",
+      "mütləq"
+    ]
+  },
+  "Vorschrift|noun": {
+    "az": [
+      "qayda",
+      "təlimat"
+    ]
+  },
+  "Regel|noun": {
+    "az": [
+      "qayda"
+    ]
+  },
+  "Verfahren|noun": {
+    "az": [
+      "üsul",
+      "prosedur"
+    ]
+  },
+  "Produktion|noun": {
+    "az": [
+      "istehsal"
+    ]
+  },
+  "Herstellung|noun": {
+    "az": [
+      "istehsal",
+      "hazırlanma"
+    ]
+  },
+  "herstellen|verb": {
+    "az": [
+      "istehsal etmək"
+    ]
+  },
+  "produzieren|verb": {
+    "az": [
+      "istehsal etmək"
+    ]
+  },
+  "reparieren|verb": {
+    "az": [
+      "təmir etmək"
+    ]
+  },
+  "verbieten|verb": {
+    "az": [
+      "qadağan etmək"
+    ]
+  },
+  "erlauben|verb": {
+    "az": [
+      "icazə vermək"
+    ]
+  },
+  "prüfen|verb": {
+    "az": [
+      "yoxlamaq"
+    ]
+  },
+  "kontrollieren|verb": {
+    "az": [
+      "nəzarət etmək"
+    ]
+  },
+  "unterschreiben|verb": {
+    "az": [
+      "imzalamaq"
+    ]
+  },
+  "veröffentlichen|verb": {
+    "az": [
+      "dərc etmək",
+      "yayımlamaq"
+    ]
+  },
+  "Vertrag|noun": {
+    "az": [
+      "müqavilə"
+    ]
+  },
+  "Formular|noun": {
+    "az": [
+      "forma",
+      "blank"
+    ]
+  },
+  "Antrag|noun": {
+    "az": [
+      "ərizə",
+      "müraciət"
+    ]
+  },
+  "Behörde|noun": {
+    "az": [
+      "idarə",
+      "orqan"
+    ]
+  },
+  "Verwaltung|noun": {
+    "az": [
+      "idarəetmə",
+      "administrasiya"
+    ]
+  },
+  "Material|noun": {
+    "az": [
+      "material"
+    ]
+  },
+  "Maschine|noun": {
+    "az": [
+      "maşın",
+      "dəzgah"
+    ]
+  },
+  "Technik|noun": {
+    "az": [
+      "texnika"
+    ]
+  },
+  "Industrie|noun": {
+    "az": [
+      "sənaye"
+    ]
+  },
+  "Energie|noun": {
+    "az": [
+      "enerji"
+    ]
+  },
+  "statt|conj": {
+    "az": [
+      "yerinə"
+    ]
+  },
+  "innerhalb|prep": {
+    "az": [
+      "içində",
+      "ərzində"
+    ]
+  },
+  "außerhalb|adv": {
+    "az": [
+      "xaricində",
+      "kənarında"
+    ]
+  },
+  "Eigentum|noun": {
+    "az": [
+      "mülkiyyət"
+    ]
+  },
+  "Besitz|noun": {
+    "az": [
+      "sahiblik",
+      "mülk"
+    ]
+  },
+  "Anteil|noun": {
+    "az": [
+      "pay",
+      "hissə"
+    ]
+  },
+  "Mitglied|noun": {
+    "az": [
+      "üzv"
+    ]
+  },
+  "Gesellschaft|noun": {
+    "az": [
+      "cəmiyyət",
+      "şirkət"
+    ]
+  },
+  "Regierung|noun": {
+    "az": [
+      "hökumət"
+    ]
+  },
+  "Bereich|noun": {
+    "az": [
+      "sahə",
+      "bölmə"
+    ]
+  },
+  "Zustand|noun": {
+    "az": [
+      "vəziyyət",
+      "hal"
+    ]
+  },
+  "besitzen|verb": {
+    "az": [
+      "sahib olmaq"
+    ]
+  },
+  "verwalten|verb": {
+    "az": [
+      "idarə etmək"
+    ]
+  },
+  "vertreten|verb": {
+    "az": [
+      "təmsil etmək"
+    ]
+  },
+  "staatlich|adj": {
+    "az": [
+      "dövlət"
+    ]
+  },
+  "offiziell|adj": {
+    "az": [
+      "rəsmi"
+    ]
+  },
+  "privat|adj": {
+    "az": [
+      "özəl",
+      "şəxsi"
+    ]
+  },
+  "öffentlich|adj": {
+    "az": [
+      "ictimai",
+      "açıq"
+    ]
+  },
+  "diskutieren|verb": {
+    "az": [
+      "müzakirə etmək"
+    ]
+  },
+  "teilnehmen|verb": {
+    "az": [
+      "iştirak etmək"
+    ]
+  },
+  "abhängen|verb": {
+    "az": [
+      "asılı olmaq"
+    ]
+  },
+  "achten|verb": {
+    "az": [
+      "hörmət etmək",
+      "diqqət etmək"
+    ]
+  },
+  "sorgen|verb": {
+    "az": [
+      "qayğı göstərmək",
+      "narahat olmaq"
+    ]
+  },
+  "Interesse|noun": {
+    "az": [
+      "maraq"
+    ]
+  },
+  "Thema|noun": {
+    "az": [
+      "mövzu"
+    ]
+  },
+  "Gespräch|noun": {
+    "az": [
+      "söhbət"
+    ]
+  },
+  "vorhaben|verb": {
+    "az": [
+      "niyyətində olmaq"
+    ]
+  },
+  "empfehlen|verb": {
+    "az": [
+      "tövsiyə etmək"
+    ]
+  },
+  "beschließen|verb": {
+    "az": [
+      "qərara gəlmək"
+    ]
+  },
+  "gelingen|verb": {
+    "az": [
+      "alınmaq",
+      "müvəffəq olmaq"
+    ]
+  },
+  "Aufgabe|noun": {
+    "az": [
+      "tapşırıq",
+      "vəzifə"
+    ]
+  },
+  "Pflicht|noun": {
+    "az": [
+      "borc",
+      "vəzifə"
+    ]
+  },
+  "Gelegenheit|noun": {
+    "az": [
+      "fürsət",
+      "imkan"
+    ]
+  },
+  "nötig|adj": {
+    "az": [
+      "lazımlı",
+      "gərəkli"
+    ]
+  },
+  "seitdem|adv": {
+    "az": [
+      "o vaxtdan bəri"
+    ]
+  },
+  "sobald|conj": {
+    "az": [
+      "-an kimi"
+    ]
+  },
+  "solange|conj": {
+    "az": [
+      "nə qədər ki"
+    ]
+  },
+  "Zeitpunkt|noun": {
+    "az": [
+      "vaxt",
+      "an"
+    ]
+  },
+  "Zeitraum|noun": {
+    "az": [
+      "müddət",
+      "dövr"
+    ]
+  },
+  "Reihenfolge|noun": {
+    "az": [
+      "ardıcıllıq"
+    ]
+  },
+  "Anfang|noun": {
+    "az": [
+      "başlanğıc"
+    ]
+  },
+  "Schluss|noun": {
+    "az": [
+      "son",
+      "nəticə"
+    ]
+  },
+  "inzwischen|adv": {
+    "az": [
+      "bu arada"
+    ]
+  },
+  "schließlich|adv": {
+    "az": [
+      "nəhayət",
+      "axırda"
+    ]
+  },
+  "zunächst|adv": {
+    "az": [
+      "əvvəlcə",
+      "ilk növbədə"
+    ]
+  },
+  "erleben|verb": {
+    "az": [
+      "yaşamaq",
+      "təcrübə etmək"
+    ]
+  },
+  "vorher|adv": {
+    "az": [
+      "əvvəl",
+      "qabaqcadan"
+    ]
+  },
+  "nachher|adv": {
+    "az": [
+      "sonra"
+    ]
+  },
+  "gleichzeitig|adj": {
+    "az": [
+      "eyni zamanda"
+    ]
+  },
+  "Präsident|noun": {
+    "az": [
+      "prezident",
+      "sədr"
+    ]
+  },
+  "Polizist|noun": {
+    "az": [
+      "polis"
+    ]
+  },
+  "Experte|noun": {
+    "az": [
+      "ekspert",
+      "mütəxəssis"
+    ]
+  },
+  "Deutsche|noun": {
+    "az": [
+      "alman"
+    ]
+  },
+  "Erwachsene|noun": {
+    "az": [
+      "yetkin",
+      "böyük"
+    ]
+  },
+  "Verwandte|noun": {
+    "az": [
+      "qohum"
+    ]
+  },
+  "Bekannte|noun": {
+    "az": [
+      "tanış"
+    ]
+  },
+  "Gedanke|noun": {
+    "az": [
+      "fikir",
+      "düşüncə"
+    ]
+  },
+  "Zeuge|noun": {
+    "az": [
+      "şahid"
+    ]
+  },
+  "erwachsen|adj": {
+    "az": [
+      "yetkin",
+      "böyümüş"
+    ]
+  },
+  "fremd|adj": {
+    "az": [
+      "yad",
+      "özgə"
+    ]
+  },
+  "verwandt|adj": {
+    "az": [
+      "qohum"
+    ]
+  },
+  "Argument|noun": {
+    "az": [
+      "arqument",
+      "dəlil"
+    ]
+  },
+  "Vorteil|noun": {
+    "az": [
+      "üstünlük",
+      "fayda"
+    ]
+  },
+  "Nachteil|noun": {
+    "az": [
+      "çatışmazlıq",
+      "zərər"
+    ]
+  },
+  "Standpunkt|noun": {
+    "az": [
+      "mövqe",
+      "baxış"
+    ]
+  },
+  "zustimmen|verb": {
+    "az": [
+      "razılaşmaq"
+    ]
+  },
+  "widersprechen|verb": {
+    "az": [
+      "etiraz etmək",
+      "zidd olmaq"
+    ]
+  },
+  "begründen|verb": {
+    "az": [
+      "əsaslandırmaq"
+    ]
+  },
+  "behaupten|verb": {
+    "az": [
+      "iddia etmək"
+    ]
+  },
+  "überzeugen|verb": {
+    "az": [
+      "inandırmaq"
+    ]
+  },
+  "bezweifeln|verb": {
+    "az": [
+      "şübhə etmək"
+    ]
+  },
+  "betonen|verb": {
+    "az": [
+      "vurğulamaq"
+    ]
+  },
+  "ergänzen|verb": {
+    "az": [
+      "tamamlamaq"
+    ]
+  },
+  "einerseits|adv": {
+    "az": [
+      "bir tərəfdən"
+    ]
+  },
+  "andererseits|adv": {
+    "az": [
+      "digər tərəfdən"
+    ]
+  },
+  "erstens|adv": {
+    "az": [
+      "birincisi"
+    ]
+  },
+  "zweitens|adv": {
+    "az": [
+      "ikincisi"
+    ]
+  },
+  "dagegen|adv": {
+    "az": [
+      "əleyhinə",
+      "buna qarşı"
+    ]
+  },
+  "sinken|verb": {
+    "az": [
+      "batmaq",
+      "azalmaq"
+    ]
+  },
+  "entstehen|verb": {
+    "az": [
+      "yaranmaq",
+      "əmələ gəlmək"
+    ]
+  },
+  "darstellen|verb": {
+    "az": [
+      "təsvir etmək",
+      "təmsil etmək"
+    ]
+  },
+  "Entwicklung|noun": {
+    "az": [
+      "inkişaf"
+    ]
+  },
+  "Zusammenhang|noun": {
+    "az": [
+      "əlaqə",
+      "kontekst"
+    ]
+  },
+  "Faktor|noun": {
+    "az": [
+      "amil",
+      "faktor"
+    ]
+  },
+  "Wirkung|noun": {
+    "az": [
+      "təsir"
+    ]
+  },
+  "Ursache|noun": {
+    "az": [
+      "səbəb"
+    ]
+  },
+  "Zahl|noun": {
+    "az": [
+      "say",
+      "rəqəm"
+    ]
+  },
+  "zunehmend|adv": {
+    "az": [
+      "artan"
+    ]
+  },
+  "erwartet|adj": {
+    "az": [
+      "gözlənilən"
+    ]
+  },
+  "ersetzen|verb": {
+    "az": [
+      "əvəz etmək"
+    ]
+  },
+  "verwenden|verb": {
+    "az": [
+      "istifadə etmək"
+    ]
+  },
+  "verändern|verb": {
+    "az": [
+      "dəyişdirmək"
+    ]
+  },
+  "durchführen|verb": {
+    "az": [
+      "həyata keçirmək"
+    ]
+  },
+  "umsetzen|verb": {
+    "az": [
+      "həyata keçirmək",
+      "tətbiq etmək"
+    ]
+  },
+  "Lösung|noun": {
+    "az": [
+      "həll"
+    ]
+  },
+  "Methode|noun": {
+    "az": [
+      "metod",
+      "üsul"
+    ]
+  },
+  "Maßnahme|noun": {
+    "az": [
+      "tədbir"
+    ]
+  },
+  "denkbar|adj": {
+    "az": [
+      "təsəvvür edilən",
+      "mümkün"
+    ]
+  },
+  "sichtbar|adj": {
+    "az": [
+      "görünən"
+    ]
+  },
+  "verständlich|adj": {
+    "az": [
+      "başa düşülən"
+    ]
+  },
+  "vorhanden|adj": {
+    "az": [
+      "mövcud"
+    ]
+  },
+  "geeignet|adj": {
+    "az": [
+      "uyğun",
+      "münasib"
+    ]
+  },
+  "zuständig|adj": {
+    "az": [
+      "səlahiyyətli",
+      "cavabdeh"
+    ]
+  },
+  "erforderlich|adj": {
+    "az": [
+      "tələb olunan",
+      "lazımi"
+    ]
+  },
+  "sowohl|conj": {
+    "az": [
+      "həm"
+    ]
+  },
+  "weder|conj": {
+    "az": [
+      "nə"
+    ]
+  },
+  "entweder|conj": {
+    "az": [
+      "ya"
+    ]
+  },
+  "sondern|verb": {
+    "az": [
+      "ayırmaq"
+    ]
+  },
+  "je|adv": {
+    "az": [
+      "hər"
+    ]
+  },
+  "Gegensatz|noun": {
+    "az": [
+      "ziddiyyət",
+      "əks"
+    ]
+  },
+  "Alternative|noun": {
+    "az": [
+      "alternativ",
+      "seçim"
+    ]
+  },
+  "Auswahl|noun": {
+    "az": [
+      "seçim"
+    ]
+  },
+  "zunehmen|verb": {
+    "az": [
+      "artmaq",
+      "kökəlmək"
+    ]
+  },
+  "abnehmen|verb": {
+    "az": [
+      "azalmaq",
+      "arıqlamaq"
+    ]
+  },
+  "steigern|verb": {
+    "az": [
+      "artırmaq"
+    ]
+  },
+  "verringern|verb": {
+    "az": [
+      "azaltmaq"
+    ]
+  },
+  "Ausgleich|noun": {
+    "az": [
+      "tarazlıq",
+      "kompensasiya"
+    ]
+  },
+  "ebenso|adv": {
+    "az": [
+      "eyni cür",
+      "həmçinin"
+    ]
+  },
+  "hingegen|adv": {
+    "az": [
+      "əksinə",
+      "isə"
+    ]
+  },
+  "vielmehr|adv": {
+    "az": [
+      "daha çox",
+      "əksinə"
+    ]
+  },
+  "teilweise|adv": {
+    "az": [
+      "qismən"
+    ]
+  },
+  "hauptsächlich|adj": {
+    "az": [
+      "əsasən"
+    ]
+  },
+  "insgesamt|adv": {
+    "az": [
+      "ümumilikdə"
+    ]
+  },
+  "mitteilen|verb": {
+    "az": [
+      "bildirmək"
+    ]
+  },
+  "bestätigen|verb": {
+    "az": [
+      "təsdiq etmək"
+    ]
+  },
+  "melden|verb": {
+    "az": [
+      "xəbər vermək",
+      "məlumat vermək"
+    ]
+  },
+  "ankündigen|verb": {
+    "az": [
+      "elan etmək"
+    ]
+  },
+  "zitieren|verb": {
+    "az": [
+      "sitat gətirmək"
+    ]
+  },
+  "leugnen|verb": {
+    "az": [
+      "inkar etmək"
+    ]
+  },
+  "Aussage|noun": {
+    "az": [
+      "ifadə",
+      "bəyanat"
+    ]
+  },
+  "Behauptung|noun": {
+    "az": [
+      "iddia"
+    ]
+  },
+  "Quelle|noun": {
+    "az": [
+      "mənbə",
+      "bulaq"
+    ]
+  },
+  "Presse|noun": {
+    "az": [
+      "mətbuat"
+    ]
+  },
+  "Sprecher|noun": {
+    "az": [
+      "natiq",
+      "sözçü"
+    ]
+  },
+  "Studie|noun": {
+    "az": [
+      "tədqiqat",
+      "araşdırma"
+    ]
+  },
+  "Untersuchung|noun": {
+    "az": [
+      "araşdırma",
+      "müayinə"
+    ]
+  },
+  "Angabe|noun": {
+    "az": [
+      "məlumat",
+      "göstərici"
+    ]
+  },
+  "angeblich|adj": {
+    "az": [
+      "guya",
+      "iddia edilən"
+    ]
+  },
+  "offenbar|adj": {
+    "az": [
+      "aydın",
+      "görünür"
+    ]
+  },
+  "vermutlich|adv": {
+    "az": [
+      "ehtimal ki"
+    ]
+  },
+  "tatsächlich|adj": {
+    "az": [
+      "həqiqətən",
+      "faktiki"
+    ]
+  },
+  "annehmen|verb": {
+    "az": [
+      "fərz etmək",
+      "qəbul etmək"
+    ]
+  },
+  "zweifeln|verb": {
+    "az": [
+      "şübhə etmək"
+    ]
+  },
+  "ausschließen|verb": {
+    "az": [
+      "istisna etmək"
+    ]
+  },
+  "möglicherweise|adv": {
+    "az": [
+      "ola bilsin"
+    ]
+  },
+  "anscheinend|adv": {
+    "az": [
+      "görünür"
+    ]
+  },
+  "eventuell|adj": {
+    "az": [
+      "bəlkə",
+      "lazım gələrsə"
+    ]
+  },
+  "Vermutung|noun": {
+    "az": [
+      "ehtimal",
+      "güman"
+    ]
+  },
+  "Zweifel|noun": {
+    "az": [
+      "şübhə"
+    ]
+  },
+  "Hinweis|noun": {
+    "az": [
+      "işarə",
+      "göstəriş"
+    ]
+  },
+  "Anzeichen|noun": {
+    "az": [
+      "əlamət"
+    ]
+  },
+  "beobachten|verb": {
+    "az": [
+      "müşahidə etmək"
+    ]
+  },
+  "Veränderung|noun": {
+    "az": [
+      "dəyişiklik"
+    ]
+  },
+  "Verlust|noun": {
+    "az": [
+      "itki",
+      "zərər"
+    ]
+  },
+  "Beginn|noun": {
+    "az": [
+      "başlanğıc"
+    ]
+  },
+  "Abschluss|noun": {
+    "az": [
+      "bitirmə",
+      "məzuniyyət"
+    ]
+  },
+  "Ankunft|noun": {
+    "az": [
+      "gəliş"
+    ]
+  },
+  "Abfahrt|noun": {
+    "az": [
+      "yola düşmə"
+    ]
+  },
+  "Vorbereitung|noun": {
+    "az": [
+      "hazırlıq"
+    ]
+  },
+  "Ausführung|noun": {
+    "az": [
+      "icra",
+      "yerinə yetirmə"
+    ]
+  },
+  "Wachstum|noun": {
+    "az": [
+      "artım",
+      "böyümə"
+    ]
+  },
+  "erhöhen|verb": {
+    "az": [
+      "artırmaq",
+      "qaldırmaq"
+    ]
+  },
+  "senken|verb": {
+    "az": [
+      "aşağı salmaq",
+      "azaltmaq"
+    ]
+  },
+  "abschließen|verb": {
+    "az": [
+      "bitirmək",
+      "bağlamaq"
+    ]
+  },
+  "feststellen|verb": {
+    "az": [
+      "müəyyən etmək",
+      "aşkar etmək"
+    ]
+  },
+  "verursachen|verb": {
+    "az": [
+      "səbəb olmaq"
+    ]
+  },
+  "beeinflussen|verb": {
+    "az": [
+      "təsir etmək"
+    ]
+  },
+  "Rücksicht|noun": {
+    "az": [
+      "nəzərə alma",
+      "hörmət"
+    ]
+  },
+  "Verfügung|noun": {
+    "az": [
+      "sərəncam",
+      "ixtiyar"
+    ]
+  },
+  "Kraft|noun": {
+    "az": [
+      "güc",
+      "qüvvə"
+    ]
+  },
+  "Rolle|noun": {
+    "az": [
+      "rol",
+      "rulon"
+    ]
+  },
+  "Kritik|noun": {
+    "az": [
+      "tənqid"
+    ]
+  },
+  "Abschied|noun": {
+    "az": [
+      "vida",
+      "ayrılıq"
+    ]
+  },
+  "Anwendung|noun": {
+    "az": [
+      "tətbiq",
+      "istifadə"
+    ]
+  },
+  "Erfüllung|noun": {
+    "az": [
+      "yerinə yetirilmə"
+    ]
+  },
+  "üben|verb": {
+    "az": [
+      "məşq etmək"
+    ]
+  },
+  "Vorstand|noun": {
+    "az": [
+      "idarə heyəti"
+    ]
+  },
+  "Gesetz|noun": {
+    "az": [
+      "qanun"
+    ]
+  },
+  "beantragen|verb": {
+    "az": [
+      "müraciət etmək"
+    ]
+  },
+  "genehmigen|verb": {
+    "az": [
+      "təsdiq etmək",
+      "icazə vermək"
+    ]
+  },
+  "ablehnen|verb": {
+    "az": [
+      "rədd etmək"
+    ]
+  },
+  "beantworten|verb": {
+    "az": [
+      "cavablandırmaq"
+    ]
+  },
+  "bearbeiten|verb": {
+    "az": [
+      "emal etmək",
+      "işləmək"
+    ]
+  },
+  "verlaufen|verb": {
+    "az": [
+      "keçmək",
+      "azmaq"
+    ]
+  },
+  "erfinden|verb": {
+    "az": [
+      "icad etmək"
+    ]
+  },
+  "zerstören|verb": {
+    "az": [
+      "dağıtmaq",
+      "məhv etmək"
+    ]
+  },
+  "missverstehen|verb": {
+    "az": [
+      "səhv başa düşmək"
+    ]
+  },
+  "übersetzen|verb": {
+    "az": [
+      "tərcümə etmək"
+    ]
+  },
+  "umgehen|verb": {
+    "az": [
+      "yan keçmək",
+      "davranmaq"
+    ]
+  },
+  "Verständnis|noun": {
+    "az": [
+      "anlayış"
+    ]
+  },
+  "Fähigkeit|noun": {
+    "az": [
+      "bacarıq",
+      "qabiliyyət"
+    ]
+  },
+  "Freundschaft|noun": {
+    "az": [
+      "dostluq"
+    ]
+  },
+  "arbeitslos|adj": {
+    "az": [
+      "işsiz"
+    ]
+  },
+  "erfolgreich|adj": {
+    "az": [
+      "uğurlu"
+    ]
+  },
+  "wertvoll|adj": {
+    "az": [
+      "dəyərli"
+    ]
+  },
+  "somit|adv": {
+    "az": [
+      "beləliklə"
+    ]
+  },
+  "anschließen|verb": {
+    "az": [
+      "qoşmaq",
+      "birləşdirmək"
+    ]
+  },
+  "beispielsweise|adv": {
+    "az": [
+      "məsələn"
+    ]
+  },
+  "nämlich|adj": {
+    "az": [
+      "yəni",
+      "çünki"
+    ]
+  },
+  "daher|adv": {
+    "az": [
+      "ona görə",
+      "buna görə"
+    ]
+  },
+  "zudem|adv": {
+    "az": [
+      "bundan başqa"
+    ]
+  },
+  "Abschnitt|noun": {
+    "az": [
+      "bölmə",
+      "hissə"
+    ]
+  },
+  "Absatz|noun": {
+    "az": [
+      "abzas",
+      "paraqraf"
+    ]
+  },
+  "Struktur|noun": {
+    "az": [
+      "struktur",
+      "quruluş"
+    ]
+  },
+  "Aufbau|noun": {
+    "az": [
+      "quruluş",
+      "tikinti"
+    ]
+  },
+  "zusammenfassen|verb": {
+    "az": [
+      "ümumiləşdirmək",
+      "xülasə etmək"
+    ]
+  },
+  "Glied|noun": {
+    "az": [
+      "üzv",
+      "halqa"
+    ]
+  },
+  "verbinden|verb": {
+    "az": [
+      "birləşdirmək",
+      "bağlamaq"
+    ]
+  },
+  "Zusammenfassung|noun": {
+    "az": [
+      "xülasə"
+    ]
+  },
+  "Aspekt|noun": {
+    "az": [
+      "aspekt",
+      "cəhət"
+    ]
+  },
+  "Tatsache|noun": {
+    "az": [
+      "fakt",
+      "həqiqət"
+    ]
+  },
+  "hinweisen|verb": {
+    "az": [
+      "işarə etmək",
+      "diqqət çəkmək"
+    ]
+  },
+  "berücksichtigen|verb": {
+    "az": [
+      "nəzərə almaq"
+    ]
+  },
+  "unklar|adj": {
+    "az": [
+      "aydın olmayan",
+      "qeyri-müəyyən"
+    ]
+  },
+  "deutlich|adj": {
+    "az": [
+      "aydın",
+      "açıq"
+    ]
+  },
+  "zweifelhaft|adj": {
+    "az": [
+      "şübhəli"
+    ]
+  },
+  "wesentlich|adj": {
+    "az": [
+      "əsaslı",
+      "mühüm"
+    ]
+  }
+}

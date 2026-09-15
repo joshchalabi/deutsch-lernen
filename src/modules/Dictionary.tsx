@@ -11,6 +11,7 @@
  */
 
 import { useDeferredValue, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { loadIndex, loadVocabUpTo, lemmaKey } from '../lib/data'
 import type { IndexEntry, Lemma, TransLang } from '../lib/types'
 import { useStore } from '../lib/store'
@@ -168,6 +169,10 @@ function DetailBody({
         {lemma.ipa && <span className="muted small">/{lemma.ipa}/</span>}
         <PlayButton url={lemma.a ?? null} text={lemma.w} label="Aussprache" />
         <span className="spacer" />
+        {/* Kelimeyi öğretmene taşır: soru zaten bağlamıyla birlikte gider */}
+        <Link to={`/tutor?word=${encodeURIComponent(lemma.w)}`}>
+          <button className="ghost">🤖 {t('askTutor', lang)}</button>
+        </Link>
         <button className={inDeck ? 'ghost' : 'primary'} disabled={inDeck} onClick={onAdd}>
           {inDeck ? t('inStudy', lang) : t('addToStudy', lang)}
         </button>

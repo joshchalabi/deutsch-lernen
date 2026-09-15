@@ -14,6 +14,7 @@ import Settings from './modules/Settings'
 import Course from './modules/Course'
 import Lesson from './modules/Lesson'
 import DailyPlan from './modules/DailyPlan'
+import Tutor from './modules/Tutor'
 
 /**
  * Gezinme iki katmanlı: önce KURS (kitap gibi sıralı dersler) ve GÜNLÜK PLAN,
@@ -28,6 +29,7 @@ const NAV = [
   { to: '/listening', key: 'listening' },
   { to: '/reading', key: 'reading' },
   { to: '/dictionary', key: 'dictionary' },
+  { to: '/tutor', key: 'tutor' },
   { to: '/progress', key: 'progress' },
 ] as const
 
@@ -91,6 +93,7 @@ export default function App() {
         <Route path="/grammar" element={<Grammar />} />
         <Route path="/dictionary" element={<Dictionary />} />
         <Route path="/progress" element={<Progress />} />
+        <Route path="/tutor" element={<Tutor />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

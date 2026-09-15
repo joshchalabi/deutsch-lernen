@@ -4,6 +4,7 @@ import { useStore } from '../lib/store'
 import { t, LANG_NAMES } from '../i18n/strings'
 import { exportState, importState } from '../lib/storage'
 import { UI_LANGS, type TransLang, type UiLang } from '../lib/types'
+import { PROVIDER_INFO, type AiProvider } from '../lib/ai'
 
 export default function Settings() {
   const { state, lang, setSettings, replaceState } = useStore()
@@ -116,6 +117,8 @@ export default function Settings() {
         </div>
       </div>
 
+      <AiSection />
+
       <div className="card">
         <h3>{t('exportData', lang)}</h3>
         <p className="hint" style={{ marginTop: 0 }}>{t('exportNote', lang)}</p>
@@ -153,6 +156,76 @@ export default function Settings() {
 
       <Attribution />
     </main>
+  )
+}
+
+/**
+ * Yapay zekâ ayarları.
+ *
+ * Anahtar alanı type="password": omuz üstünden okunmasın diye. Değeri
+ * yalnızca localStorage'da durur ve yedeğe girmez (bkz. storage.ts).
+ */
+function AiSection() {
+  const { state, lang, setSettings } = useStore()
+  const ai = state.settings.ai
+  const info = ai.provider === 'off' ? null : PROVIDER_INFO[ai.provider]
+
+  const setProvider = (provider: AiProvider) => {
+    const next = provider === 'off' ? null : PROVIDER_INFO[provider]
+    setSettings({
+      ai: { ...ai, provider, model: next ? next.defaultModel : ai.model },
+    })
+  }
+
+  return (
+    <div className="card">
+      <h3>🤖 {t('tutor', lang)}</h3>
+
+      <div className="field">
+        <label>{t('aiProvider', lang)}</label>
+        <select value={ai.provider} onChange={(e) => setProvider(e.target.value as AiProvider)}>
+          <option value="off">{t('aiOff', lang)}</option>
+          <option value="openrouter">{PROVIDER_INFO.openrouter.label}</option>
+          <option value="gemini">{PROVIDER_INFO.gemini.label}</option>
+          <option value="pollinations">{PROVIDER_INFO.pollinations.label}</option>
+        </select>
+      </div>
+
+      {info?.needsKey && (
+        <div className="field">
+          <label>{t('aiApiKey', lang)}</label>
+          <input
+            type="password"
+            autoComplete="off"
+            spellCheck={false}
+            value={ai.apiKey}
+            placeholder="sk-…"
+            onChange={(e) => setSettings({ ai: { ...ai, apiKey: e.target.value } })}
+          />
+          <p className="hint">
+            <a href={info.signup} target="_blank" rel="noreferrer">{info.signup}</a>
+          </p>
+        </div>
+      )}
+
+      {ai.provider !== 'off' && (
+        <div className="field">
+          <label>{t('aiModel', lang)}</label>
+          <input
+            type="text"
+            spellCheck={false}
+            value={ai.model}
+            onChange={(e) => setSettings({ ai: { ...ai, model: e.target.value } })}
+          />
+        </div>
+      )}
+
+      {ai.provider === 'pollinations' && (
+        <div className="feedback bad small">{t('aiPollinationsNote', lang)}</div>
+      )}
+
+      <p className="hint">{t('aiPrivacyNote', lang)}</p>
+    </div>
   )
 }
 

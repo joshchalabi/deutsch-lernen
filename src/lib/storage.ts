@@ -12,6 +12,7 @@
  */
 
 import type { AppState, Level, LessonStep, Settings, StudySession } from './types'
+import { DEFAULT_AI } from './ai'
 
 const KEY = 'deutsch-lernen/state/v1'
 const STATE_VERSION = 2
@@ -25,6 +26,7 @@ export const DEFAULT_SETTINGS: Settings = {
   ttsFallback: false,
   playbackRate: 1,
   theme: 'system',
+  ai: { ...DEFAULT_AI },
 }
 
 export function emptyState(): AppState {
@@ -67,6 +69,7 @@ export function loadState(): AppState {
     if (parsed.version !== STATE_VERSION) return migrate(parsed)
     // Sonradan eklenen alanlar eski kayıtlarda yok; varsayılanla doldur.
     parsed.settings = { ...DEFAULT_SETTINGS, ...parsed.settings }
+    parsed.settings.ai = { ...DEFAULT_AI, ...parsed.settings.ai }
     parsed.dictationDone ??= []
     parsed.units ??= {}
     parsed.plan ??= null
@@ -140,8 +143,16 @@ export function bumpSession(
 /* ---------- dışa / içe aktarma ---------- */
 
 export function exportState(state: AppState): string {
+  // YZ anahtarı yedeğe GİRMEZ. Yedek dosyası paylaşılabilir bir şey;
+  // içinde kullanıcının kişisel API anahtarının bulunması sızıntıdır.
+  const { ai, ...settingsWithoutKey } = state.settings
   return JSON.stringify(
-    { exportedAt: new Date().toISOString(), app: 'deutsch-lernen', ...state },
+    {
+      exportedAt: new Date().toISOString(),
+      app: 'deutsch-lernen',
+      ...state,
+      settings: { ...settingsWithoutKey, ai: { ...ai, apiKey: '' } },
+    },
     null,
     2,
   )

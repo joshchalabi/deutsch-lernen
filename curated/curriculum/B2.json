@@ -1,0 +1,1302 @@
+{
+  "level": "B2",
+  "title": {
+    "tr": "B2 — İleri kullanım",
+    "az": "B2 — İrəli səviyyə",
+    "ru": "B2 — Продвинутый уровень",
+    "de": "B2 — Fortgeschrittene Sprachverwendung"
+  },
+  "description": {
+    "tr": "B2'de dil artık iletişim aracı olmaktan çıkıp üslup meselesine dönüşüyor. Aynı şeyi söylemenin birkaç yolunu öğrenip aralarından seçim yapmaya başlıyorsunuz: gazete dili mi, konuşma dili mi, resmî yazı mı.",
+    "az": "B2-də dil artıq sadəcə ünsiyyət vasitəsi olmaqdan çıxıb üslub məsələsinə çevrilir. Eyni şeyi deməyin bir neçə yolunu öyrənib aralarından seçim etməyə başlayırsınız.",
+    "ru": "На B2 язык перестаёт быть просто средством общения и становится вопросом стиля. Вы учитесь говорить одно и то же несколькими способами и выбирать между ними.",
+    "de": "Auf B2 wird Sprache zur Stilfrage. Sie lernen mehrere Wege, dasselbe zu sagen, und wählen bewusst zwischen ihnen."
+  },
+  "units": [
+    {
+      "id": "b2-01",
+      "title": {
+        "tr": "Sıfat gibi kullanılan sıfat-fiiller",
+        "az": "Sifət kimi işlənən feili sifətlər",
+        "ru": "Причастия как определения",
+        "de": "Partizipialattribute"
+      },
+      "theme": {
+        "tr": "Partizip I ve II ile sıkıştırılmış tanımlar",
+        "az": "Partizip I və II ilə sıxılmış təyinlər",
+        "ru": "Сжатые определения через Partizip I и II",
+        "de": "Verdichtete Beschreibungen mit Partizip I und II"
+      },
+      "canDo": [
+        {
+          "tr": "İlgi cümlesini kısa bir sıfat öbeğine çevirebilirim",
+          "az": "Təyin budaq cümləsini qısa sifət birləşməsinə çevirə bilərəm",
+          "ru": "Могу свернуть относительное придаточное в причастный оборот",
+          "de": "Ich kann Relativsätze zu Partizipialattributen verkürzen"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "partizip-attribut",
+          "title": {
+            "tr": "Partizip I ve Partizip II sıfat olarak",
+            "az": "Partizip I və II sifət kimi",
+            "ru": "Partizip I и II в роли определения",
+            "de": "Partizip I und II als Attribut"
+          },
+          "explain": {
+            "tr": "B1'de ilgi cümlesi kurdunuz. B2'de aynı bilgiyi **isim öbeğinin içine sıkıştırmayı** öğreniyorsunuz — gazete ve akademik dilin temel aracı.\n\n**Partizip I** = mastar + **-d** → *yapmakta olan*, etken, sürüyor\n  spielen → spielend → das **spielende** Kind (oynayan çocuk)\n  = das Kind, **das spielt**\n\n**Partizip II** = bildiğiniz Perfekt biçimi → *yapılmış*, edilgen, bitmiş\n  reparieren → repariert → das **reparierte** Auto (onarılmış araba)\n  = das Auto, **das repariert wurde**\n\nHer ikisi de **sıfat gibi çekilir**: das spielend**e** Kind, mit dem spielend**en** Kind.\n\n**Genişletilmiş biçim** — asıl güç burada. Sıfatın önüne tümleçler eklenir:\n\n*das seit Jahren in Berlin **lebende** Ehepaar*\n= das Ehepaar, das seit Jahren in Berlin lebt\n\nOkurken kural: **önce ismi bul, sonra geriye doğru oku.**\n\nAyrıca «zu + Partizip I» zorunluluk bildirir:\ndie **zu lösende** Aufgabe = çözülmesi gereken görev",
+            "az": "B1-də təyin budaq cümləsi qurdunuz. B2-də eyni məlumatı **isim birləşməsinin içinə sıxmağı** öyrənirsiniz.\n\n**Partizip I** = məsdər + **-d** → etken, davam edən\n  spielen → spielend → das **spielende** Kind\n\n**Partizip II** = Perfekt forması → məchul, bitmiş\n  reparieren → repariert → das **reparierte** Auto\n\nHər ikisi **sifət kimi təsriflənir**.\n\n**Genişlənmiş forma:**\n*das seit Jahren in Berlin **lebende** Ehepaar*\n\nOxuyarkən qayda: **əvvəl ismi tap, sonra geriyə doğru oxu.**\n\n«zu + Partizip I» məcburiyyət bildirir: die **zu lösende** Aufgabe",
+            "ru": "На B1 вы строили относительные придаточные. На B2 вы учитесь **сжимать ту же информацию внутрь именной группы** — основной приём газетного и academического языка.\n\n**Partizip I** = инфинитив + **-d** → действительное, длящееся\n  spielen → spielend → das **spielende** Kind (играющий ребёнок)\n\n**Partizip II** = знакомая форма Perfekt → страдательное, завершённое\n  reparieren → repariert → das **reparierte** Auto (отремонтированная машина)\n\nОба **склоняются как прилагательные**.\n\n**Распространённая форма** — вот где сила приёма:\n*das seit Jahren in Berlin **lebende** Ehepaar*\n= супруги, которые годами живут в Берлине\n\nПравило чтения: **сначала найдите существительное, потом читайте назад.**\n\n«zu + Partizip I» выражает долженствование:\ndie **zu lösende** Aufgabe = задача, которую нужно решить",
+            "de": "Partizip I (Infinitiv + d): aktiv, gleichzeitig — das spielende Kind.\nPartizip II: passiv, abgeschlossen — das reparierte Auto.\n\nBeide werden wie Adjektive dekliniert.\nErweitert: das seit Jahren in Berlin lebende Ehepaar.\nzu + Partizip I: die zu lösende Aufgabe (Notwendigkeit)."
+          },
+          "table": {
+            "headers": [
+              "Relativsatz",
+              "Partizipialattribut"
+            ],
+            "rows": [
+              [
+                "das Kind, das spielt",
+                "das spielende Kind"
+              ],
+              [
+                "der Zug, der ankommt",
+                "der ankommende Zug"
+              ],
+              [
+                "das Auto, das repariert wurde",
+                "das reparierte Auto"
+              ],
+              [
+                "die Aufgabe, die gelöst werden muss",
+                "die zu lösende Aufgabe"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Die steigenden Preise belasten viele Familien.",
+              "tr": "Artan fiyatlar birçok aileyi zorluyor.",
+              "az": "Artan qiymətlər bir çox ailəni çətinliyə salır.",
+              "ru": "Растущие цены обременяют многие семьи."
+            },
+            {
+              "de": "Das am Montag veröffentlichte Ergebnis war überraschend.",
+              "tr": "Pazartesi yayımlanan sonuç şaşırtıcıydı.",
+              "az": "Bazar ertəsi dərc olunan nəticə təəccüblü idi.",
+              "ru": "Опубликованный в понедельник результат оказался неожиданным."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "steigen",
+        "sinken",
+        "wachsen",
+        "betreffen",
+        "entstehen",
+        "veröffentlichen",
+        "erwähnen",
+        "beschreiben",
+        "darstellen",
+        "zeigen",
+        "Entwicklung",
+        "Ergebnis",
+        "Zusammenhang",
+        "Bereich",
+        "Faktor",
+        "Wirkung",
+        "Ursache",
+        "Folge",
+        "Anteil",
+        "Zahl",
+        "zunehmend",
+        "wachsend",
+        "bestehend",
+        "genannt",
+        "erwartet"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Bir haber metni yazın (5-6 cümle). En az üç yerde ilgi cümlesi yerine sıfat-fiil kullanın.",
+            "az": "Bir xəbər mətni yazın (5-6 cümlə). Ən azı üç yerdə təyin budaq cümləsi yerinə feili sifət işlədin.",
+            "ru": "Напишите новостную заметку (5-6 предложений), минимум трижды заменив придаточное причастным оборотом.",
+            "de": "Schreiben Sie eine kurze Nachricht (5-6 Sätze) mit mindestens drei Partizipialattributen."
+          },
+          "mustUse": [
+            "steigend",
+            "veröffentlicht",
+            "Entwicklung"
+          ],
+          "model": "Die steigenden Mietpreise sind ein wachsendes Problem. Die gestern veröffentlichte Studie zeigt eine klare Entwicklung. Betroffen sind vor allem die in Großstädten lebenden Familien."
+        }
+      ],
+      "game": "adjektiv-endung"
+    },
+    {
+      "id": "b2-02",
+      "title": {
+        "tr": "Edilgen yerine geçen yapılar",
+        "az": "Məchulu əvəz edən quruluşlar",
+        "ru": "Заменители пассива",
+        "de": "Passiv-Ersatzformen"
+      },
+      "theme": {
+        "tr": "sich lassen, sein+zu, -bar eki",
+        "az": "sich lassen, sein+zu, -bar şəkilçisi",
+        "ru": "sich lassen, sein+zu, суффикс -bar",
+        "de": "sich lassen, sein + zu, Suffix -bar"
+      },
+      "canDo": [
+        {
+          "tr": "Aynı anlamı üç farklı yapıyla kurabilirim",
+          "az": "Eyni mənanı üç fərqli quruluşla qura bilərəm",
+          "ru": "Могу выразить одно значение тремя конструкциями",
+          "de": "Ich kann denselben Inhalt in drei Konstruktionen ausdrücken"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "passiv-ersatz",
+          "title": {
+            "tr": "Edilgen anlamı, etken biçim",
+            "az": "Məchul məna, məlum forma",
+            "ru": "Пассивное значение в активной форме",
+            "de": "Passivische Bedeutung, aktive Form"
+          },
+          "explain": {
+            "tr": "Almanca, «yapılabilir / yapılmalı» anlamını edilgen çatı kullanmadan da verir. B2'nin üslup dersi budur: aynı içeriğin üç farklı kaydı var.\n\nÇıkış cümlesi: *Das Problem **kann gelöst werden**.* (edilgen + modal)\n\n**1. sich + lassen + mastar** → «yapılabilir», en konuşma dili olanı\n  Das Problem **lässt sich lösen**.\n\n**2. sein + zu + mastar** → hem «yapılabilir» hem «yapılmalı», resmî\n  Das Problem **ist zu lösen**.\n  *(Bağlam belirler: «Die Rechnung ist bis Freitag zu bezahlen» = ödenmeli.)*\n\n**3. -bar / -lich eki** → sıfat üretir, en sıkışık olan\n  Das Problem ist **lösbar**.\n  machen → mach**bar** · essen → ess**bar** · verstehen → verständ**lich**\n\nHepsi aynı anlamı taşır ama üslupları farklı: **lassen** günlük, **sein+zu** resmî yazı, **-bar** sıfat gerektiğinde.\n\nAyrıca genel özne için **man** her zaman bir seçenektir:\n**Man kann** das Problem lösen.",
+            "az": "Alman dili «edilə bilər / edilməli» mənasını məchul növ işlətmədən də verir:\n\nÇıxış: *Das Problem **kann gelöst werden**.*\n\n**1. sich + lassen + məsdər** → danışıq dili\n  Das Problem **lässt sich lösen**.\n\n**2. sein + zu + məsdər** → rəsmi\n  Das Problem **ist zu lösen**.\n\n**3. -bar / -lich şəkilçisi** → sifət düzəldir\n  Das Problem ist **lösbar**.\n  machen → mach**bar** · verstehen → verständ**lich**\n\nÜmumi mübtəda üçün **man** həmişə seçimdir:\n**Man kann** das Problem lösen.",
+            "ru": "Немецкий выражает значение «можно/нужно сделать» и без пассива. В этом стилистический урок B2: у одного содержания есть три регистра.\n\nИсходное: *Das Problem **kann gelöst werden**.*\n\n**1. sich + lassen + инфинитив** → «можно», самое разговорное\n  Das Problem **lässt sich lösen**.\n\n**2. sein + zu + инфинитив** → и «можно», и «нужно», официальное\n  Das Problem **ist zu lösen**.\n  *(Контекст решает: «Die Rechnung ist bis Freitag zu bezahlen» = нужно оплатить.)*\n\n**3. суффикс -bar / -lich** → даёт прилагательное, самое компактное\n  Das Problem ist **lösbar**.\n  machen → mach**bar** · verstehen → verständ**lich**\n\nДля обобщённого лица всегда есть **man**:\n**Man kann** das Problem lösen.",
+            "de": "Passivische Bedeutung ohne Passiv:\n\nsich lassen + Infinitiv (umgangssprachlich): lässt sich lösen\nsein + zu + Infinitiv (formell): ist zu lösen\n-bar / -lich (Adjektiv): lösbar, verständlich\nman + Modalverb: man kann lösen"
+          },
+          "table": {
+            "headers": [
+              "Form",
+              "Beispiel",
+              "Register"
+            ],
+            "rows": [
+              [
+                "Passiv + Modalverb",
+                "kann gelöst werden",
+                "neutral"
+              ],
+              [
+                "sich lassen",
+                "lässt sich lösen",
+                "gesprochen"
+              ],
+              [
+                "sein + zu",
+                "ist zu lösen",
+                "formell"
+              ],
+              [
+                "-bar",
+                "ist lösbar",
+                "kompakt"
+              ],
+              [
+                "man",
+                "man kann lösen",
+                "allgemein"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Die Tür lässt sich nicht öffnen.",
+              "tr": "Kapı açılmıyor.",
+              "az": "Qapı açılmır.",
+              "ru": "Дверь не открывается."
+            },
+            {
+              "de": "Die Formulare sind bis Montag abzugeben.",
+              "tr": "Formlar pazartesiye kadar teslim edilmeli.",
+              "az": "Formalar bazar ertəsinə qədər təhvil verilməlidir.",
+              "ru": "Бланки нужно сдать до понедельника."
+            },
+            {
+              "de": "Der Text ist gut verständlich.",
+              "tr": "Metin kolay anlaşılır.",
+              "az": "Mətn asan başa düşüləndir.",
+              "ru": "Текст хорошо понятен."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "lösen",
+        "erklären",
+        "beweisen",
+        "ersetzen",
+        "verwenden",
+        "vermeiden",
+        "verbessern",
+        "verändern",
+        "durchführen",
+        "umsetzen",
+        "Lösung",
+        "Methode",
+        "Maßnahme",
+        "Verfahren",
+        "Aufwand",
+        "möglich",
+        "nötig",
+        "denkbar",
+        "sichtbar",
+        "verständlich",
+        "vorhanden",
+        "geeignet",
+        "zuständig",
+        "erforderlich"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "İş yerinizde ya da okulunuzda bir sorunu ve çözümünü anlatın. Aynı düşünceyi bir kez «lässt sich», bir kez «ist zu» ile ifade edin.",
+            "az": "İş yerinizdə və ya məktəbdə bir problemi və həllini danışın. Eyni fikri bir dəfə «lässt sich», bir dəfə «ist zu» ilə ifadə edin.",
+            "ru": "Опишите проблему и её решение на работе или в учёбе. Одну мысль выразите через «lässt sich», другую через «ist zu».",
+            "de": "Beschreiben Sie ein Problem und seine Lösung — einmal mit «lässt sich», einmal mit «ist zu»."
+          },
+          "mustUse": [
+            "lösen",
+            "möglich",
+            "vermeiden"
+          ],
+          "model": "Das Problem lässt sich ohne großen Aufwand lösen. Die Unterlagen sind bis Ende der Woche einzureichen. So ist ein Fehler vermeidbar."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "b2-03",
+      "title": {
+        "tr": "İkili bağlaçlar",
+        "az": "Cüt bağlayıcılar",
+        "ru": "Парные союзы",
+        "de": "Zweiteilige Konnektoren"
+      },
+      "theme": {
+        "tr": "je…desto, sowohl…als auch, weder…noch",
+        "az": "je…desto, sowohl…als auch, weder…noch",
+        "ru": "je…desto, sowohl…als auch, weder…noch",
+        "de": "je…desto, sowohl…als auch, weder…noch"
+      },
+      "canDo": [
+        {
+          "tr": "İki öğe arasındaki ilişkiyi kesin biçimde kurabilirim",
+          "az": "İki element arasındakı əlaqəni dəqiq qura bilərəm",
+          "ru": "Могу точно выразить связь между двумя элементами",
+          "de": "Ich kann Beziehungen zwischen zwei Elementen präzise ausdrücken"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "zweiteilige-konnektoren",
+          "title": {
+            "tr": "İki parçalı bağlaçlar",
+            "az": "İki hissəli bağlayıcılar",
+            "ru": "Двухчастные союзы",
+            "de": "Zweiteilige Konnektoren"
+          },
+          "explain": {
+            "tr": "Bunlar B2 yazılı sınavında üslubu yükselten en hızlı araçtır. Her birinin kendi sözdizimi var:\n\n**je … desto / umso** — orantılı artış. En dikkat isteyeni:\n  **Je** mehr ich **lerne**, **desto** besser **verstehe** ich.\n  → «je» kısmı YAN CÜMLEDİR, fiil sona gider.\n  → «desto» kısmı ANA CÜMLEDİR, fiil hemen arkasından gelir.\n  → Her ikisinde de sıfat **karşılaştırma derecesinde** (mehr, besser).\n\n**sowohl … als auch** — her ikisi de\n  Er spricht **sowohl** Englisch **als auch** Französisch.\n\n**nicht nur … sondern auch** — sadece … değil, aynı zamanda\n  Sie ist **nicht nur** klug, **sondern auch** fleißig.\n\n**weder … noch** — ne … ne de *(kendisi zaten olumsuz, ayrıca «nicht» konmaz)*\n  Ich habe **weder** Zeit **noch** Geld.\n\n**entweder … oder** — ya … ya da\n**zwar … aber** — gerçi … ama\n\nDikkat: «weder … noch» sonrası fiil çekimi çoğula gider mi? Genelde evet:\nWeder er noch ich **haben** das gewusst.",
+            "az": "Bunlar B2 yazılı imtahanında üslubu yüksəldən ən sürətli vasitədir:\n\n**je … desto** — mütənasib artım:\n  **Je** mehr ich **lerne**, **desto** besser **verstehe** ich.\n  → «je» hissəsi BUDAQ cümlədir, feil sonda.\n  → «desto» hissəsi BAŞ cümlədir, feil dərhal arxasından.\n  → Hər ikisində sifət **müqayisə dərəcəsində**.\n\n**sowohl … als auch** — hər ikisi də\n**nicht nur … sondern auch** — təkcə … yox, həm də\n**weder … noch** — nə … nə də *(özü inkardır, əlavə «nicht» qoyulmur)*\n**entweder … oder** — ya … ya da",
+            "ru": "Это самый быстрый способ поднять стиль в письменной части B2. У каждого — свой синтаксис:\n\n**je … desto / umso** — пропорциональный рост, самый капризный:\n  **Je** mehr ich **lerne**, **desto** besser **verstehe** ich.\n  → часть с «je» — ПРИДАТОЧНОЕ, глагол в конце.\n  → часть с «desto» — ГЛАВНОЕ, глагол сразу после.\n  → в обеих частях прилагательное в **сравнительной степени**.\n\n**sowohl … als auch** — и то, и другое\n**nicht nur … sondern auch** — не только … но и\n**weder … noch** — ни … ни *(само по себе отрицание, «nicht» не добавляют)*\n**entweder … oder** — или … или\n**zwar … aber** — хотя … но",
+            "de": "je … desto: je-Teil = Nebensatz (Verb am Ende), desto-Teil = Hauptsatz (Verb direkt danach), beide im Komparativ.\n\nsowohl … als auch · nicht nur … sondern auch · weder … noch (schon negativ) · entweder … oder"
+          },
+          "table": {
+            "headers": [
+              "Konnektor",
+              "Bedeutung",
+              "Beispiel"
+            ],
+            "rows": [
+              [
+                "je … desto",
+                "proportional",
+                "Je älter, desto ruhiger."
+              ],
+              [
+                "sowohl … als auch",
+                "beides",
+                "sowohl heute als auch morgen"
+              ],
+              [
+                "nicht nur … sondern auch",
+                "zusätzlich",
+                "nicht nur schnell, sondern auch sicher"
+              ],
+              [
+                "weder … noch",
+                "keins von beiden",
+                "weder Zeit noch Lust"
+              ],
+              [
+                "entweder … oder",
+                "Alternative",
+                "entweder jetzt oder nie"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Je länger ich hier wohne, desto wohler fühle ich mich.",
+              "tr": "Burada ne kadar uzun yaşarsam kendimi o kadar iyi hissediyorum.",
+              "az": "Burada nə qədər uzun yaşasam, özümü bir o qədər yaxşı hiss edirəm.",
+              "ru": "Чем дольше я здесь живу, тем комфортнее себя чувствую."
+            },
+            {
+              "de": "Ich habe weder Zeit noch Lust dazu.",
+              "tr": "Buna ne vaktim ne de isteğim var.",
+              "az": "Buna nə vaxtım, nə də həvəsim var.",
+              "ru": "У меня нет на это ни времени, ни желания."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "sowohl",
+        "weder",
+        "entweder",
+        "sondern",
+        "je",
+        "Verhältnis",
+        "Vergleich",
+        "Gegensatz",
+        "Alternative",
+        "Auswahl",
+        "zunehmen",
+        "abnehmen",
+        "steigern",
+        "verringern",
+        "ausgleichen",
+        "gleichzeitig",
+        "ebenso",
+        "hingegen",
+        "dagegen",
+        "vielmehr",
+        "teilweise",
+        "hauptsächlich",
+        "insgesamt",
+        "besonders"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Şehirde mi köyde mi yaşamak daha iyi? Karşılaştırın ve en az üç ikili bağlaç kullanın.",
+            "az": "Şəhərdə yoxsa kənddə yaşamaq daha yaxşıdır? Müqayisə edin və ən azı üç cüt bağlayıcı işlədin.",
+            "ru": "Где лучше жить — в городе или в деревне? Сравните, используя минимум три парных союза.",
+            "de": "Stadt oder Land — was ist besser? Vergleichen Sie mit mindestens drei zweiteiligen Konnektoren."
+          },
+          "mustUse": [
+            "sowohl",
+            "weder",
+            "je"
+          ],
+          "model": "Je größer die Stadt ist, desto teurer wird das Wohnen. Auf dem Land gibt es weder Lärm noch Hektik. Ich schätze sowohl die Ruhe als auch die guten Verbindungen."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "b2-04",
+      "title": {
+        "tr": "Dolaylı anlatım",
+        "az": "Vasitəli nitq",
+        "ru": "Косвенная речь",
+        "de": "Indirekte Rede"
+      },
+      "theme": {
+        "tr": "Konjunktiv I, haber ve alıntı dili",
+        "az": "Konjunktiv I, xəbər və sitat dili",
+        "ru": "Konjunktiv I, язык новостей и цитирования",
+        "de": "Konjunktiv I, Nachrichten und Zitate"
+      },
+      "canDo": [
+        {
+          "tr": "Başkasının söylediğini mesafe koyarak aktarabilirim",
+          "az": "Başqasının dediyini məsafə qoyaraq ötürə bilərəm",
+          "ru": "Могу передать чужие слова, дистанцируясь от них",
+          "de": "Ich kann Aussagen anderer distanziert wiedergeben"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "konjunktiv1",
+          "title": {
+            "tr": "Konjunktiv I",
+            "az": "Konjunktiv I",
+            "ru": "Konjunktiv I",
+            "de": "Der Konjunktiv I"
+          },
+          "explain": {
+            "tr": "Almanca, aktarılan sözden **dilbilgisiyle mesafe koyar**. Türkçede bunu «-mış» ile, Rusçada «якобы» gibi kelimelerle yaparsınız; Almanca ayrı bir kip kullanır.\n\nDirekt: Er sagt: «Ich **bin** krank.»\nDolaylı: Er sagt, er **sei** krank.\n\nBu «sei» tarafsızdır — konuşmacı doğruluğuna karışmaz. Haber dilinde standarttır.\n\n**Oluşumu:** mastar gövdesi + **-e, -est, -e, -en, -et, -en**\n  sein düzensiz: ich sei, du seist, er **sei**, wir seien\n  haben: er **habe** · können: er **könne** · werden: er **werde**\n\n**Pratik kural:** En çok gereken biçim **3. tekil şahıs**tır, çünkü aktarılan söz genelde «o» hakkındadır. Orada Konjunktiv I her zaman görünür farklıdır: er hat → er **habe**, er ist → er **sei**.\n\n**Konjunktiv I ile Indikativ aynı görünüyorsa** (çoğunlukla çoğulda: sie haben = sie haben), **Konjunktiv II'ye geçilir**:\n  Sie sagen, sie **hätten** keine Zeit. *(«haben» ayırt edilemediği için)*\n\n**Geçmiş için** tek biçim vardır: **habe / sei + Partizip II**\n  Er sagt, er **habe** gestern **gearbeitet**.",
+            "az": "Alman dili ötürülən sözdən **qrammatika ilə məsafə qoyur**:\n\nBirbaşa: Er sagt: «Ich **bin** krank.»\nVasitəli: Er sagt, er **sei** krank.\n\n**Düzəlişi:** məsdər kökü + **-e, -est, -e, -en, -et, -en**\n  sein: er **sei** · haben: er **habe** · können: er **könne**\n\n**Praktik qayda:** Ən çox lazım olan forma **3-cü tək şəxs**dir.\n\n**Konjunktiv I ilə Indikativ eyni görünürsə** (əsasən cəmdə), **Konjunktiv II-yə keçilir**:\n  Sie sagen, sie **hätten** keine Zeit.\n\n**Keçmiş üçün:** **habe / sei + Partizip II**",
+            "ru": "Немецкий **грамматически дистанцируется** от чужих слов. В русском для этого есть «якобы» и «мол»; немецкий использует отдельное наклонение.\n\nПрямая: Er sagt: «Ich **bin** krank.»\nКосвенная: Er sagt, er **sei** krank.\n\n«sei» нейтрально — говорящий не берёт на себя ответственность за правдивость. В новостях это стандарт.\n\n**Образование:** основа инфинитива + **-e, -est, -e, -en, -et, -en**\n  sein: er **sei** · haben: er **habe** · können: er **könne**\n\n**Практическое правило:** чаще всего нужна форма **3-го лица ед. ч.**, потому что передают обычно слова «его/её». Именно там Konjunktiv I всегда отличается: er hat → er **habe**.\n\n**Если Konjunktiv I совпадает с изъявительным** (чаще во мн. ч.), **переходят на Konjunktiv II**:\n  Sie sagen, sie **hätten** keine Zeit.\n\n**Прошедшее** — одна форма: **habe / sei + Partizip II**",
+            "de": "Indirekte Rede mit Konjunktiv I: Er sagt, er sei krank.\n\nBildung: Infinitivstamm + e/est/e/en/et/en. Wichtig ist vor allem die 3. Person Singular.\nBei Formengleichheit mit dem Indikativ: Konjunktiv II (hätten, wären).\nVergangenheit: habe/sei + Partizip II."
+          },
+          "table": {
+            "headers": [
+              "direkt",
+              "indirekt (Konjunktiv I)"
+            ],
+            "rows": [
+              [
+                "«Ich bin müde.»",
+                "Er sagt, er sei müde."
+              ],
+              [
+                "«Ich habe Zeit.»",
+                "Sie sagt, sie habe Zeit."
+              ],
+              [
+                "«Ich kann kommen.»",
+                "Er sagt, er könne kommen."
+              ],
+              [
+                "«Wir haben nichts.»",
+                "Sie sagen, sie hätten nichts."
+              ],
+              [
+                "«Ich habe gearbeitet.»",
+                "Er sagt, er habe gearbeitet."
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Der Minister erklärte, die Lage sei unter Kontrolle.",
+              "tr": "Bakan, durumun kontrol altında olduğunu açıkladı.",
+              "az": "Nazir vəziyyətin nəzarət altında olduğunu bildirdi.",
+              "ru": "Министр заявил, что ситуация под контролем."
+            },
+            {
+              "de": "Sie schrieb, sie habe den Termin vergessen.",
+              "tr": "Randevuyu unuttuğunu yazdı.",
+              "az": "Görüşü unutduğunu yazdı.",
+              "ru": "Она написала, что забыла о встрече."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "behaupten",
+        "erklären",
+        "mitteilen",
+        "betonen",
+        "bestätigen",
+        "melden",
+        "berichten",
+        "ankündigen",
+        "zitieren",
+        "leugnen",
+        "Aussage",
+        "Behauptung",
+        "Quelle",
+        "Nachricht",
+        "Presse",
+        "Sprecher",
+        "Bericht",
+        "Studie",
+        "Untersuchung",
+        "Angabe",
+        "angeblich",
+        "offenbar",
+        "vermutlich",
+        "tatsächlich"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Okuduğunuz bir haberi ya da bir arkadaşınızın anlattığını dolaylı anlatımla aktarın. En az üç Konjunktiv I biçimi kullanın.",
+            "az": "Oxuduğunuz xəbəri və ya dostunuzun danışdığını vasitəli nitqlə ötürün. Ən azı üç Konjunktiv I forması işlədin.",
+            "ru": "Перескажите новость или слова друга в косвенной речи. Минимум три формы Konjunktiv I.",
+            "de": "Geben Sie eine Nachricht oder die Worte eines Freundes in indirekter Rede wieder — mit mindestens drei Konjunktiv-I-Formen."
+          },
+          "mustHint": null,
+          "mustUse": [
+            "sagen",
+            "berichten",
+            "sein"
+          ],
+          "model": "Mein Kollege sagte, er sei letzte Woche krank gewesen. Er berichtete, der Arzt habe ihm Ruhe empfohlen. Er meinte, er könne erst nächste Woche wiederkommen."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "b2-05",
+      "title": {
+        "tr": "Modal fiillerin tahmin anlamı",
+        "az": "Modal feillərin ehtimal mənası",
+        "ru": "Модальные глаголы в значении предположения",
+        "de": "Subjektive Modalverben"
+      },
+      "theme": {
+        "tr": "Olasılık derecesi, çıkarım",
+        "az": "Ehtimal dərəcəsi, nəticə çıxarma",
+        "ru": "Степень вероятности, вывод",
+        "de": "Wahrscheinlichkeitsgrade, Vermutung"
+      },
+      "canDo": [
+        {
+          "tr": "Bir tahminin ne kadar güçlü olduğunu ifade edebilirim",
+          "az": "Bir ehtimalın nə qədər güclü olduğunu ifadə edə bilərəm",
+          "ru": "Могу выразить степень уверенности в предположении",
+          "de": "Ich kann ausdrücken, wie sicher eine Vermutung ist"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "modalverben-subjektiv",
+          "title": {
+            "tr": "İkinci anlam: tahmin",
+            "az": "İkinci məna: ehtimal",
+            "ru": "Второе значение: предположение",
+            "de": "Subjektiver Gebrauch"
+          },
+          "explain": {
+            "tr": "A1'de öğrendiğiniz modal fiillerin ikinci bir hayatı var. Aynı kelimeler, **konuşmacının ne kadar emin olduğunu** anlatmak için kullanılır.\n\nKarşılaştırın:\n• Er **muss** arbeiten. = Çalışmak zorunda. *(nesnel: zorunluluk)*\n• Er **muss** krank sein. = Hasta olmalı. *(öznel: güçlü tahmin)*\n\n**Emin olma derecesine göre sıra:**\n\n| Biçim | Güven | Anlam |\n|---|---|---|\n| Er **muss** krank sein. | ~%95 | Kesin öyle olmalı |\n| Er **dürfte** krank sein. | ~%75 | Muhtemelen |\n| Er **könnte / kann** krank sein. | ~%50 | Olabilir |\n| Er **mag** krank sein. | ~%40 | Olabilir de (nadir) |\n| Er **kann nicht** krank sein. | ~%0 | İmkânsız |\n\n**Ayrı bir grup — başkasının iddiası:**\n• Er **soll** reich sein. = Zenginmiş *(söyleniyor, başkaları öyle diyor)*\n• Er **will** reich sein. = Zengin olduğunu iddia ediyor *(kendisi öyle diyor)*\n\nBu ikisi Türkçedeki «-mış» ile «iddia ediyor» ayrımına denk gelir ve B2'de sık sınanır.\n\nGeçmiş için: modal + Partizip II + **haben/sein**\nEr **muss** gestern krank **gewesen sein**.",
+            "az": "A1-də öyrəndiyiniz modal feillərin ikinci həyatı var: **danışanın nə qədər əmin olduğunu** bildirir.\n\n• Er **muss** arbeiten. = İşləməlidir. *(obyektiv)*\n• Er **muss** krank sein. = Xəstə olmalıdır. *(ehtimal)*\n\n| Forma | Əminlik |\n|---|---|\n| muss | ~95% |\n| dürfte | ~75% |\n| könnte / kann | ~50% |\n| kann nicht | ~0% |\n\n**Başqasının iddiası:**\n• Er **soll** reich sein. = Varlı imiş *(deyirlər)*\n• Er **will** reich sein. = Varlı olduğunu iddia edir *(özü deyir)*\n\nKeçmiş üçün: modal + Partizip II + **haben/sein**",
+            "ru": "У модальных глаголов с A1 есть вторая жизнь: те же слова выражают, **насколько говорящий уверен**.\n\nСравните:\n• Er **muss** arbeiten. = Он должен работать. *(объективно)*\n• Er **muss** krank sein. = Он, должно быть, болен. *(предположение)*\n\n| Форма | Уверенность |\n|---|---|\n| Er **muss** krank sein. | ~95% |\n| Er **dürfte** krank sein. | ~75% |\n| Er **könnte / kann** krank sein. | ~50% |\n| Er **kann nicht** krank sein. | ~0% |\n\n**Отдельная группа — чужое утверждение:**\n• Er **soll** reich sein. = Говорят, он богат *(чужие слова)*\n• Er **will** reich sein. = Он утверждает, что богат *(его собственные слова)*\n\nЭто различие часто проверяют на B2.\n\nПрошедшее: модальный + Partizip II + **haben/sein**\nEr **muss** gestern krank **gewesen sein**.",
+            "de": "Modalverben drücken auch Vermutungen aus:\nmuss (sehr sicher) > dürfte > könnte/kann > kann nicht (ausgeschlossen)\n\nFremdbehauptung: soll (andere sagen) · will (er selbst behauptet)\nVergangenheit: muss … gewesen sein."
+          },
+          "table": {
+            "headers": [
+              "Modalverb",
+              "objektiv",
+              "subjektiv"
+            ],
+            "rows": [
+              [
+                "müssen",
+                "Zwang",
+                "sehr sichere Vermutung"
+              ],
+              [
+                "dürfen (dürfte)",
+                "Erlaubnis",
+                "wahrscheinlich"
+              ],
+              [
+                "können",
+                "Fähigkeit",
+                "möglich"
+              ],
+              [
+                "sollen",
+                "Auftrag",
+                "andere behaupten"
+              ],
+              [
+                "wollen",
+                "Wunsch",
+                "er selbst behauptet"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Das Licht brennt — sie muss zu Hause sein.",
+              "tr": "Işık yanıyor — evde olmalı.",
+              "az": "İşıq yanır — evdə olmalıdır.",
+              "ru": "Свет горит — она, должно быть, дома."
+            },
+            {
+              "de": "Er soll sehr streng sein, sagen die Studenten.",
+              "tr": "Öğrenciler çok katı olduğunu söylüyor.",
+              "az": "Tələbələr onun çox sərt olduğunu deyirlər.",
+              "ru": "Говорят, он очень строгий — так считают студенты."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "vermuten",
+        "annehmen",
+        "schätzen",
+        "zweifeln",
+        "ausschließen",
+        "wahrscheinlich",
+        "vermutlich",
+        "möglicherweise",
+        "offenbar",
+        "sicherlich",
+        "anscheinend",
+        "angeblich",
+        "kaum",
+        "wohl",
+        "eventuell",
+        "Vermutung",
+        "Zweifel",
+        "Beweis",
+        "Hinweis",
+        "Anzeichen",
+        "schließen",
+        "erkennen",
+        "beobachten"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Tanımadığınız bir komşunuz hakkında gözlemlerinizden tahminler yürütün. Farklı güven derecelerinde en az üç modal fiil kullanın.",
+            "az": "Tanımadığınız qonşunuz haqqında müşahidələrinizdən ehtimallar irəli sürün. Fərqli əminlik dərəcələrində ən azı üç modal feil işlədin.",
+            "ru": "Сделайте предположения о незнакомом соседе на основе наблюдений. Минимум три модальных глагола с разной степенью уверенности.",
+            "de": "Stellen Sie Vermutungen über einen unbekannten Nachbarn an — mit mindestens drei Modalverben unterschiedlicher Sicherheit."
+          },
+          "mustUse": [
+            "müssen",
+            "können",
+            "vermutlich"
+          ],
+          "model": "Mein Nachbar kommt immer spät nach Hause — er muss viel arbeiten. Er könnte Arzt sein, denn er trägt oft weiße Kleidung. Vermutlich wohnt er allein."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "b2-06",
+      "title": {
+        "tr": "İsimleştirme",
+        "az": "İsimləşdirmə",
+        "ru": "Номинализация",
+        "de": "Nominalisierung"
+      },
+      "theme": {
+        "tr": "Fiil cümlesinden isim öbeğine ve geri",
+        "az": "Feil cümləsindən isim birləşməsinə və geri",
+        "ru": "От глагольной фразы к именной и обратно",
+        "de": "Vom Verbalstil zum Nominalstil"
+      },
+      "canDo": [
+        {
+          "tr": "Yan cümleyi isim öbeğine, isim öbeğini yan cümleye çevirebilirim",
+          "az": "Budaq cümləni isim birləşməsinə və əksinə çevirə bilərəm",
+          "ru": "Могу превращать придаточное в именную группу и наоборот",
+          "de": "Ich kann zwischen Verbal- und Nominalstil wechseln"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "nominalisierung",
+          "title": {
+            "tr": "İsim üslubu ve fiil üslubu",
+            "az": "İsim üslubu və feil üslubu",
+            "ru": "Именной и глагольный стиль",
+            "de": "Nominalstil und Verbalstil"
+          },
+          "explain": {
+            "tr": "Almanca resmî yazı dili, eylemleri **isimleştirmeyi** sever. Aynı içeriği iki üslupta yazabilmek B2'nin en görünür becerisidir — sınavda «şu cümleyi dönüştürün» olarak sorulur.\n\n**Fiil üslubu (konuşma):**\n  **Weil** die Preise **gestiegen sind**, kaufen die Leute weniger.\n**İsim üslubu (yazı):**\n  **Wegen des Anstiegs** der Preise kaufen die Leute weniger.\n\n**Dönüşüm eşleşmeleri — ezberlenecek tablo bu:**\n\n| Bağlaç | Edat |\n|---|---|\n| weil | wegen + Gen. |\n| obwohl | trotz + Gen. |\n| wenn / falls | bei + Dat. |\n| während | während + Gen. |\n| bevor | vor + Dat. |\n| nachdem | nach + Dat. |\n| damit / um…zu | zu + Dat. / zwecks |\n\n**İsim yapma yolları:**\n• mastarı büyük harfle: lesen → **das Lesen**\n• -ung eki: entwickeln → **die Entwicklung** *(en yaygın)*\n• gövdeden: beginnen → **der Beginn**\n• -heit / -keit sıfattan: möglich → **die Möglichkeit**\n\nUyarı: isim üslubu resmî metinlerde doğru, ama günlük konuşmada ağır ve yapmacık kaçar. Beceri, **hangisinin nerede kullanılacağını bilmektir.**",
+            "az": "Alman rəsmi yazı dili hərəkətləri **isimləşdirməyi** sevir:\n\n**Feil üslubu:** **Weil** die Preise **gestiegen sind**, …\n**İsim üslubu:** **Wegen des Anstiegs** der Preise …\n\n**Çevirmə cədvəli:**\n| Bağlayıcı | Ön qoşma |\n|---|---|\n| weil | wegen + Gen. |\n| obwohl | trotz + Gen. |\n| wenn | bei + Dat. |\n| bevor | vor + Dat. |\n| nachdem | nach + Dat. |\n\n**İsim düzəltmə:**\n• məsdər böyük hərflə: **das Lesen**\n• -ung: **die Entwicklung**\n• -heit / -keit: **die Möglichkeit**",
+            "ru": "Официальный немецкий любит **превращать действия в существительные**. Умение писать одно и то же в двух стилях — самый заметный навык B2; на экзамене это задание «преобразуйте предложение».\n\n**Глагольный стиль (разговорный):**\n  **Weil** die Preise **gestiegen sind**, kaufen die Leute weniger.\n**Именной стиль (письменный):**\n  **Wegen des Anstiegs** der Preise kaufen die Leute weniger.\n\n**Таблица соответствий — её и надо выучить:**\n\n| Союз | Предлог |\n|---|---|\n| weil | wegen + Gen. |\n| obwohl | trotz + Gen. |\n| wenn / falls | bei + Dat. |\n| während | während + Gen. |\n| bevor | vor + Dat. |\n| nachdem | nach + Dat. |\n\n**Способы образования существительных:**\n• инфинитив с большой буквы: **das Lesen**\n• суффикс -ung: **die Entwicklung** *(самый частый)*\n• от основы: **der Beginn**\n• -heit / -keit: **die Möglichkeit**\n\nОсторожно: именной стиль уместен в официальных текстах, но в разговоре звучит тяжело и напыщенно.",
+            "de": "Verbalstil ↔ Nominalstil.\n\nweil → wegen + Gen. · obwohl → trotz + Gen. · wenn → bei + Dat.\nbevor → vor + Dat. · nachdem → nach + Dat.\n\nNominalisierung: das Lesen, die Entwicklung, der Beginn, die Möglichkeit."
+          },
+          "table": {
+            "headers": [
+              "Verbalstil",
+              "Nominalstil"
+            ],
+            "rows": [
+              [
+                "weil es regnet",
+                "wegen des Regens"
+              ],
+              [
+                "obwohl er krank war",
+                "trotz seiner Krankheit"
+              ],
+              [
+                "wenn man ankommt",
+                "bei der Ankunft"
+              ],
+              [
+                "nachdem er geprüft hat",
+                "nach der Prüfung"
+              ],
+              [
+                "bevor wir abfahren",
+                "vor der Abfahrt"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Nach der Ankunft des Zuges begann das Gedränge.",
+              "tr": "Trenin varışından sonra izdiham başladı.",
+              "az": "Qatarın gəlişindən sonra sıxlıq başladı.",
+              "ru": "После прибытия поезда началась давка."
+            },
+            {
+              "de": "Trotz der langen Vorbereitung war das Ergebnis enttäuschend.",
+              "tr": "Uzun hazırlığa rağmen sonuç hayal kırıklığıydı.",
+              "az": "Uzun hazırlığa baxmayaraq nəticə məyusedici idi.",
+              "ru": "Несмотря на долгую подготовку, результат разочаровал."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Entwicklung",
+        "Veränderung",
+        "Entscheidung",
+        "Untersuchung",
+        "Bedeutung",
+        "Verlust",
+        "Beginn",
+        "Abschluss",
+        "Ankunft",
+        "Abfahrt",
+        "Vorbereitung",
+        "Ausführung",
+        "Wachstum",
+        "wichtig",
+        "erhöhen",
+        "senken",
+        "durchführen",
+        "abschließen",
+        "vorbereiten",
+        "feststellen",
+        "verursachen",
+        "beeinflussen",
+        "ermöglichen"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Bir olayı önce konuşma diliyle (yan cümlelerle), sonra aynı içeriği resmî yazı diliyle (isim öbekleriyle) yazın.",
+            "az": "Bir hadisəni əvvəl danışıq dili ilə (budaq cümlələrlə), sonra eyni məzmunu rəsmi yazı dili ilə (isim birləşmələri ilə) yazın.",
+            "ru": "Опишите событие сначала разговорно (придаточными), затем то же — официальным именным стилем.",
+            "de": "Beschreiben Sie ein Ereignis zuerst im Verbalstil, dann denselben Inhalt im Nominalstil."
+          },
+          "mustUse": [
+            "wegen",
+            "Entwicklung",
+            "nach"
+          ],
+          "model": "Weil das Wetter schlecht war, wurde das Fest verschoben. — Wegen des schlechten Wetters wurde das Fest verschoben. Nach der Verschiebung kamen weniger Gäste."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "b2-07",
+      "title": {
+        "tr": "Kalıplaşmış isim-fiil birleşimleri",
+        "az": "Qəlibləşmiş isim-feil birləşmələri",
+        "ru": "Устойчивые глагольно-именные сочетания",
+        "de": "Funktionsverbgefüge"
+      },
+      "theme": {
+        "tr": "Entscheidung treffen, in Frage kommen…",
+        "az": "Entscheidung treffen, in Frage kommen…",
+        "ru": "Entscheidung treffen, in Frage kommen…",
+        "de": "Feste Nomen-Verb-Verbindungen"
+      },
+      "canDo": [
+        {
+          "tr": "Resmî dilde doğal duran kalıpları kullanabilirim",
+          "az": "Rəsmi dildə təbii səslənən qəlibləri işlədə bilərəm",
+          "ru": "Могу употреблять устойчивые обороты официального стиля",
+          "de": "Ich kann feste Wendungen der Schriftsprache verwenden"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "funktionsverbgefuege",
+          "title": {
+            "tr": "İsim + fiil kalıpları",
+            "az": "İsim + feil qəlibləri",
+            "ru": "Именно-глагольные обороты",
+            "de": "Funktionsverbgefüge"
+          },
+          "explain": {
+            "tr": "Bu kalıplarda **fiil anlamını neredeyse tamamen kaybeder**; anlamı isim taşır. «treffen» burada «karşılaşmak» değildir; «Entscheidung treffen» bir bütün olarak «karar vermek» demektir.\n\nBu yüzden **kelime kelime çevrilemezler** ve tek tek ezberlenirler. Tam olarak Türkçedeki «karar vermek», «göz önünde bulundurmak» gibi birleşik fiillere denk gelirler.\n\n**En sık olanlar:**\n• eine Entscheidung **treffen** = karar vermek\n• eine Frage **stellen** = soru sormak\n• Rücksicht **nehmen** auf = -i göz önünde bulundurmak\n• zur Verfügung **stehen / stellen** = hizmete hazır olmak / sunmak\n• in Frage **kommen** = söz konusu olmak\n• eine Rolle **spielen** = rol oynamak\n• Kritik **üben** an = eleştirmek\n• in Kraft **treten** = yürürlüğe girmek\n• Abschied **nehmen** von = veda etmek\n• zur Sprache **bringen** = gündeme getirmek\n\nÇoğunun tek kelimelik bir fiil karşılığı vardır ve o karşılık daha konuşma dilidir:\n• eine Entscheidung treffen ≈ **entscheiden**\n• Kritik üben ≈ **kritisieren**\n\nB2 sınavı tam da bu ikisi arasında geçiş yapmanızı ister.",
+            "az": "Bu qəliblərdə **feil mənasını demək olar itirir**; mənanı isim daşıyır. «Entscheidung treffen» bütöv halda «qərar vermək» deməkdir.\n\n**Ən çox işlənənlər:**\n• eine Entscheidung **treffen** = qərar vermək\n• eine Frage **stellen** = sual vermək\n• Rücksicht **nehmen** auf = nəzərə almaq\n• zur Verfügung **stehen** = sərəncamda olmaq\n• in Frage **kommen** = söhbət gedə bilmək\n• eine Rolle **spielen** = rol oynamaq\n• Kritik **üben** an = tənqid etmək\n• in Kraft **treten** = qüvvəyə minmək\n\nÇoxunun tək sözlük feil qarşılığı var:\n• eine Entscheidung treffen ≈ **entscheiden**",
+            "ru": "В этих оборотах **глагол почти теряет значение**; смысл несёт существительное. «treffen» здесь не «встречать»: «Entscheidung treffen» целиком означает «принять решение».\n\nПоэтому их **нельзя переводить дословно** — их заучивают целиком. Это прямой аналог русских «принять решение», «принимать во внимание».\n\n**Самые частотные:**\n• eine Entscheidung **treffen** = принять решение\n• eine Frage **stellen** = задать вопрос\n• Rücksicht **nehmen** auf = считаться с\n• zur Verfügung **stehen / stellen** = быть в распоряжении / предоставить\n• in Frage **kommen** = рассматриваться как вариант\n• eine Rolle **spielen** = играть роль\n• Kritik **üben** an = критиковать\n• in Kraft **treten** = вступить в силу\n• Abschied **nehmen** von = прощаться\n\nУ большинства есть однословный эквивалент, более разговорный:\n• eine Entscheidung treffen ≈ **entscheiden**\n• Kritik üben ≈ **kritisieren**\n\nЭкзамен B2 как раз требует переключаться между ними.",
+            "de": "Im Funktionsverbgefüge trägt das Nomen die Bedeutung, das Verb ist fast leer.\n\neine Entscheidung treffen · eine Frage stellen · Rücksicht nehmen auf\nzur Verfügung stehen · in Frage kommen · eine Rolle spielen\nKritik üben an · in Kraft treten\n\nOft gibt es ein einfaches Verb: entscheiden, kritisieren."
+          },
+          "table": {
+            "headers": [
+              "Funktionsverbgefüge",
+              "einfaches Verb"
+            ],
+            "rows": [
+              [
+                "eine Entscheidung treffen",
+                "entscheiden"
+              ],
+              [
+                "Kritik üben an",
+                "kritisieren"
+              ],
+              [
+                "eine Frage stellen",
+                "fragen"
+              ],
+              [
+                "in Erfüllung gehen",
+                "sich erfüllen"
+              ],
+              [
+                "Anwendung finden",
+                "angewendet werden"
+              ],
+              [
+                "zur Diskussion stehen",
+                "diskutiert werden"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Der Vorstand hat gestern eine wichtige Entscheidung getroffen.",
+              "tr": "Yönetim kurulu dün önemli bir karar aldı.",
+              "az": "İdarə heyəti dünən mühüm qərar qəbul etdi.",
+              "ru": "Правление вчера приняло важное решение."
+            },
+            {
+              "de": "Das neue Gesetz tritt im Januar in Kraft.",
+              "tr": "Yeni yasa ocakta yürürlüğe giriyor.",
+              "az": "Yeni qanun yanvarda qüvvəyə minir.",
+              "ru": "Новый закон вступает в силу в январе."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Entscheidung",
+        "Rücksicht",
+        "Verfügung",
+        "Kraft",
+        "Rolle",
+        "Kritik",
+        "Abschied",
+        "Anwendung",
+        "Diskussion",
+        "Erfüllung",
+        "treffen",
+        "stellen",
+        "nehmen",
+        "üben",
+        "treten",
+        "Vorstand",
+        "Gesetz",
+        "Verwaltung",
+        "Behörde",
+        "Antrag",
+        "beantragen",
+        "genehmigen",
+        "ablehnen",
+        "prüfen"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Resmî bir e-posta yazın: bir başvuru yapıyorsunuz. En az üç kalıplaşmış isim-fiil birleşimi kullanın.",
+            "az": "Rəsmi e-poçt yazın: müraciət edirsiniz. Ən azı üç qəlibləşmiş isim-feil birləşməsi işlədin.",
+            "ru": "Напишите официальное письмо-заявку. Минимум три устойчивых глагольно-именных оборота.",
+            "de": "Schreiben Sie eine formelle E-Mail mit einer Anfrage — mit mindestens drei Funktionsverbgefügen."
+          },
+          "mustUse": [
+            "Entscheidung",
+            "Verfügung",
+            "stellen"
+          ],
+          "model": "Ich möchte eine Frage zur Bewerbung stellen. Die Unterlagen stehen Ihnen ab Montag zur Verfügung. Ich hoffe, dass Sie bald eine Entscheidung treffen können."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "b2-08",
+      "title": {
+        "tr": "Kelime türetme",
+        "az": "Söz düzəltmə",
+        "ru": "Словообразование",
+        "de": "Wortbildung"
+      },
+      "theme": {
+        "tr": "Ön ekler, son ekler, ayrılan-ayrılmayan",
+        "az": "Ön şəkilçilər, son şəkilçilər, ayrılan-ayrılmayan",
+        "ru": "Приставки, суффиксы, отделяемость",
+        "de": "Präfixe, Suffixe, trennbar oder nicht"
+      },
+      "canDo": [
+        {
+          "tr": "Bilmediğim bir kelimenin anlamını parçalarından çıkarabilirim",
+          "az": "Bilmədiyim sözün mənasını hissələrindən çıxara bilərəm",
+          "ru": "Могу вывести значение незнакомого слова из его частей",
+          "de": "Ich kann unbekannte Wörter aus ihren Bestandteilen erschließen"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "wortbildung",
+          "title": {
+            "tr": "Ön ekler anlamı nasıl değiştirir",
+            "az": "Ön şəkilçilər mənanı necə dəyişir",
+            "ru": "Как приставки меняют значение",
+            "de": "Wie Präfixe die Bedeutung ändern"
+          },
+          "explain": {
+            "tr": "B2'de kelime dağarcığını ezberleyerek değil **çözerek** büyütürsünüz. Almanca kelimeler parçalanabilir ve parçaların anlamı düzenlidir.\n\n**Ayrılmayan ön ekler** (vurgu gövdededir, Partizip II'de «ge-» YOK):\n• **be-** → geçişli yapar: antworten → **be**antworten (bir şeyi cevaplamak)\n• **ver-** → yanlışlık, bitiş, ters: laufen → sich **ver**laufen (kaybolmak)\n• **er-** → başarma, sonuca ulaşma: finden → **er**finden (icat etmek)\n• **ent-** → uzaklaşma, giderme: spannen → **ent**spannen (gevşemek)\n• **zer-** → parçalama: brechen → **zer**brechen (kırılıp parçalanmak)\n• **miss-** → olumsuz: verstehen → **miss**verstehen (yanlış anlamak)\n\n**Hem ayrılan hem ayrılmayan olanlar** — anlam belirler:\n• **über**setzen (karşıya geçirmek, ayrılır) ↔ über**setz**en (çevirmek, ayrılmaz)\n• **um**fahren (çarpıp devirmek) ↔ um**fahr**en (etrafından dolaşmak)\nVurgu nerede ise orası belirleyicidir.\n\n**Son eklerden sözcük türü ve cinsiyet okunur:**\n• -ung, -heit, -keit, -schaft, -ion → **die** (isim)\n• -er, -ling, -ismus → **der**\n• -chen, -lein, -tum → **das**\n• -bar, -lich, -ig, -los, -voll, -haft → sıfat\n\nBu yüzden «die Verständlichkeit» kelimesini hiç görmemiş olsanız bile: ver- + stehen + -lich + -keit → «anlaşılabilirlik», dişil.",
+            "az": "B2-də söz ehtiyatını əzbərləyərək yox **parçalayaraq** böyüdürsünüz.\n\n**Ayrılmayan ön şəkilçilər** (Partizip II-də «ge-» YOXDUR):\n• **be-** → keçici edir: **be**antworten\n• **ver-** → səhv, bitmə: sich **ver**laufen (azmaq)\n• **er-** → nail olma: **er**finden (icad etmək)\n• **ent-** → uzaqlaşma: **ent**spannen\n• **zer-** → parçalama: **zer**brechen\n• **miss-** → mənfi: **miss**verstehen\n\n**Son şəkilçilərdən cins oxunur:**\n• -ung, -heit, -keit, -schaft, -ion → **die**\n• -er, -ling → **der**\n• -chen, -lein → **das**\n• -bar, -lich, -ig, -los → sifət",
+            "ru": "На B2 словарный запас растёт не заучиванием, а **разбором**. Немецкие слова разложимы, и значения частей регулярны.\n\n**Неотделяемые приставки** (ударение на корне, в Partizip II нет «ge-»):\n• **be-** → делает глагол переходным: antworten → **be**antworten\n• **ver-** → ошибка, завершение, обратное действие: sich **ver**laufen (заблудиться)\n• **er-** → достижение результата: **er**finden (изобрести)\n• **ent-** → удаление, освобождение: **ent**spannen (расслабиться)\n• **zer-** → разрушение: **zer**brechen (разбиться)\n• **miss-** → отрицательный оттенок: **miss**verstehen\n\n**Приставки с двойным поведением** — значение решает:\n• **über**setzen (переправить, отделяемая) ↔ über**setz**en (переводить, неотделяемая)\n• **um**fahren (сбить) ↔ um**fahr**en (объехать)\n\n**По суффиксу видны часть речи и род:**\n• -ung, -heit, -keit, -schaft, -ion → **die**\n• -er, -ling, -ismus → **der**\n• -chen, -lein, -tum → **das**\n• -bar, -lich, -ig, -los, -voll → прилагательное\n\nПоэтому даже не встречав слова «die Verständlichkeit», вы его разберёте: ver- + stehen + -lich + -keit.",
+            "de": "Nicht trennbare Präfixe: be-, ver-, er-, ent-, zer-, miss- (kein ge- im Partizip II).\nDoppelte: übersetzen/übersetzen, umfahren/umfahren — die Betonung entscheidet.\n\nSuffixe zeigen Wortart und Genus:\n-ung/-heit/-keit/-schaft/-ion → die · -er/-ling → der · -chen/-lein → das\n-bar/-lich/-ig/-los → Adjektiv"
+          },
+          "table": {
+            "headers": [
+              "Präfix",
+              "Bedeutung",
+              "Beispiel"
+            ],
+            "rows": [
+              [
+                "be-",
+                "transitiv machen",
+                "beantworten"
+              ],
+              [
+                "ver-",
+                "falsch / zu Ende",
+                "sich verlaufen"
+              ],
+              [
+                "er-",
+                "Ergebnis erreichen",
+                "erfinden"
+              ],
+              [
+                "ent-",
+                "wegnehmen / lösen",
+                "entspannen"
+              ],
+              [
+                "zer-",
+                "kaputt machen",
+                "zerstören"
+              ],
+              [
+                "miss-",
+                "negativ",
+                "missverstehen"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Ich habe mich in der fremden Stadt verlaufen.",
+              "tr": "Yabancı şehirde kayboldum.",
+              "az": "Yad şəhərdə azdım.",
+              "ru": "Я заблудился в незнакомом городе."
+            },
+            {
+              "de": "Die Regel ist leicht verständlich formuliert.",
+              "tr": "Kural kolay anlaşılır biçimde yazılmış.",
+              "az": "Qayda asan başa düşülən şəkildə yazılıb.",
+              "ru": "Правило сформулировано понятно."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "beantworten",
+        "bearbeiten",
+        "verlaufen",
+        "verlieren",
+        "verändern",
+        "erfinden",
+        "erkennen",
+        "entspannen",
+        "entwickeln",
+        "entstehen",
+        "zerstören",
+        "missverstehen",
+        "übersetzen",
+        "umgehen",
+        "Verständnis",
+        "Bedeutung",
+        "Fähigkeit",
+        "Freundschaft",
+        "Wirkung",
+        "verständlich",
+        "möglich",
+        "arbeitslos",
+        "erfolgreich",
+        "wertvoll"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "Bir metinde karşılaştığınız zor kelimeleri parçalara ayırıp açıklayın: ön ek, gövde, son ek. Sonra kendi cümlelerinizde kullanın.",
+            "az": "Mətndə rastlaşdığınız çətin sözləri hissələrə ayırıb izah edin: ön şəkilçi, kök, son şəkilçi. Sonra öz cümlələrinizdə işlədin.",
+            "ru": "Разберите трудные слова из текста на части: приставка, корень, суффикс. Затем употребите их в своих предложениях.",
+            "de": "Zerlegen Sie schwierige Wörter in Präfix, Stamm und Suffix und verwenden Sie sie dann in eigenen Sätzen."
+          },
+          "mustUse": [
+            "verständlich",
+            "Bedeutung",
+            "erkennen"
+          ],
+          "model": "Das Wort «Verständlichkeit» besteht aus ver-, stehen, -lich und -keit. Seine Bedeutung erkenne ich an den Teilen. Deshalb ist der Text für mich gut verständlich."
+        }
+      ],
+      "game": "wortsalat"
+    },
+    {
+      "id": "b2-09",
+      "title": {
+        "tr": "Metin bağlayıcıları",
+        "az": "Mətn bağlayıcıları",
+        "ru": "Текстовые коннекторы",
+        "de": "Textkonnektoren"
+      },
+      "theme": {
+        "tr": "Paragrafları birbirine bağlama",
+        "az": "Abzasları bir-birinə bağlama",
+        "ru": "Связывание абзацев",
+        "de": "Absätze verbinden"
+      },
+      "canDo": [
+        {
+          "tr": "Uzun bir metni akıcı biçimde bağlayabilirim",
+          "az": "Uzun mətni axıcı şəkildə bağlaya bilərəm",
+          "ru": "Могу связно выстроить длинный текст",
+          "de": "Ich kann einen längeren Text flüssig verbinden"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "textkonnektoren",
+          "title": {
+            "tr": "Cümleden metne",
+            "az": "Cümlədən mətnə",
+            "ru": "От предложения к тексту",
+            "de": "Vom Satz zum Text"
+          },
+          "explain": {
+            "tr": "B2'ye kadar tek tek cümlelerin doğruluğuyla uğraştınız. Buradan sonra sınav **metnin bütünlüğünü** ölçer: cümleler doğru ama birbirine bağlı değilse puan düşer.\n\nBağlayıcıların çoğu **birinci öğedir**, yani arkasından fiil gelir. En sık yapılan hata bunu unutmaktır:\n• ✗ Außerdem **ich habe** keine Zeit.\n• ✓ Außerdem **habe ich** keine Zeit.\n\n**Ekleme:** außerdem, darüber hinaus, zudem, ferner\n**Karşıtlık:** jedoch, allerdings, dagegen, hingegen, dennoch\n**Sebep:** nämlich, denn, aus diesem Grund\n**Sonuç:** folglich, somit, infolgedessen, daher, deshalb\n**Sıralama:** zunächst, anschließend, schließlich, abschließend\n**Örnek:** beispielsweise, etwa, und zwar\n**Özet:** insgesamt, zusammenfassend, kurz gesagt\n**Kısıtlama:** allerdings, immerhin, zumindest\n\n**«nämlich» özel:** cümle başına GELMEZ, fiilden sonra durur:\n  Ich komme später. Ich habe **nämlich** noch einen Termin.\n\nB2 yazılı sınavında iyi bir metin genelde şu iskeleti izler:\n*Einleitung → zunächst … → außerdem … → allerdings … → zusammenfassend*",
+            "az": "B2-yə qədər ayrı-ayrı cümlələrin düzgünlüyü ilə məşğul oldunuz. Bundan sonra imtahan **mətnin bütövlüyünü** ölçür.\n\nBağlayıcıların çoxu **birinci üzvdür**, yəni arxasından feil gəlir:\n• ✗ Außerdem **ich habe** keine Zeit.\n• ✓ Außerdem **habe ich** keine Zeit.\n\n**Əlavə:** außerdem, darüber hinaus, zudem\n**Ziddiyyət:** jedoch, allerdings, dennoch\n**Nəticə:** folglich, somit, daher, deshalb\n**Sıra:** zunächst, anschließend, schließlich\n**Nümunə:** beispielsweise, etwa\n**Xülasə:** insgesamt, zusammenfassend\n\n**«nämlich» xüsusidir:** cümlə əvvəlinə GƏLMİR, feildən sonra durur.",
+            "ru": "До B2 вы следили за правильностью отдельных предложений. Дальше экзамен проверяет **связность текста**: фразы могут быть верными, но если они не сцеплены, балл падает.\n\nБольшинство коннекторов — **первый член предложения**, значит за ними идёт глагол. Это самая частая ошибка:\n• ✗ Außerdem **ich habe** keine Zeit.\n• ✓ Außerdem **habe ich** keine Zeit.\n\n**Добавление:** außerdem, darüber hinaus, zudem, ferner\n**Противопоставление:** jedoch, allerdings, dagegen, hingegen, dennoch\n**Причина:** nämlich, denn, aus diesem Grund\n**Следствие:** folglich, somit, infolgedessen, daher, deshalb\n**Порядок:** zunächst, anschließend, schließlich, abschließend\n**Пример:** beispielsweise, etwa, und zwar\n**Итог:** insgesamt, zusammenfassend, kurz gesagt\n\n**«nämlich» особое:** НЕ ставится в начало, идёт после глагола:\n  Ich komme später. Ich habe **nämlich** noch einen Termin.",
+            "de": "Die meisten Konnektoren stehen auf Position 1 — danach folgt das Verb.\nAußerdem habe ich keine Zeit. (nicht: Außerdem ich habe …)\n\nAddition: außerdem, zudem · Gegensatz: jedoch, allerdings, dennoch\nFolge: folglich, somit, daher · Reihenfolge: zunächst, anschließend, schließlich\n\nnämlich steht nie am Satzanfang."
+          },
+          "table": {
+            "headers": [
+              "Funktion",
+              "Konnektoren"
+            ],
+            "rows": [
+              [
+                "Addition",
+                "außerdem, zudem, darüber hinaus"
+              ],
+              [
+                "Gegensatz",
+                "jedoch, allerdings, dennoch, hingegen"
+              ],
+              [
+                "Folge",
+                "folglich, somit, daher, infolgedessen"
+              ],
+              [
+                "Reihenfolge",
+                "zunächst, anschließend, schließlich"
+              ],
+              [
+                "Beispiel",
+                "beispielsweise, etwa, und zwar"
+              ],
+              [
+                "Zusammenfassung",
+                "insgesamt, zusammenfassend"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "Die Miete ist hoch. Außerdem liegt die Wohnung sehr laut.",
+              "tr": "Kira yüksek. Ayrıca daire çok gürültülü bir yerde.",
+              "az": "Kirayə bahadır. Bundan əlavə mənzil çox səs-küylü yerdədir.",
+              "ru": "Аренда высокая. Кроме того, квартира в очень шумном месте."
+            },
+            {
+              "de": "Er hat viel gelernt. Folglich hat er die Prüfung bestanden.",
+              "tr": "Çok çalıştı. Dolayısıyla sınavı geçti.",
+              "az": "Çox oxudu. Nəticədə imtahanı keçdi.",
+              "ru": "Он много занимался. Следовательно, он сдал экзамен."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "außerdem",
+        "jedoch",
+        "allerdings",
+        "dennoch",
+        "somit",
+        "zunächst",
+        "anschließend",
+        "schließlich",
+        "insgesamt",
+        "beispielsweise",
+        "nämlich",
+        "hingegen",
+        "daher",
+        "zudem",
+        "Abschnitt",
+        "Absatz",
+        "Zusammenhang",
+        "Struktur",
+        "Aufbau",
+        "zusammenfassen",
+        "gliedern",
+        "verbinden",
+        "ergänzen"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "«Uzaktan çalışma» hakkında yapılandırılmış bir metin yazın: giriş, iki argüman, bir karşı argüman, sonuç. Her bölümü bir bağlayıcıyla açın.",
+            "az": "«Uzaqdan işləmə» haqqında strukturlu mətn yazın: giriş, iki arqument, bir əks arqument, nəticə. Hər hissəni bağlayıcı ilə açın.",
+            "ru": "Напишите структурированный текст об удалённой работе: введение, два аргумента, контраргумент, вывод. Каждую часть начните с коннектора.",
+            "de": "Schreiben Sie einen gegliederten Text über Homeoffice — jeden Abschnitt mit einem Konnektor beginnen."
+          },
+          "mustUse": [
+            "zunächst",
+            "außerdem",
+            "allerdings"
+          ],
+          "model": "Zunächst spart Homeoffice viel Zeit. Außerdem kann man konzentrierter arbeiten. Allerdings fehlt der Kontakt zu den Kollegen. Insgesamt überwiegen für mich die Vorteile."
+        }
+      ],
+      "game": "satzbau"
+    },
+    {
+      "id": "b2-10",
+      "title": {
+        "tr": "Tartışma metni yazma",
+        "az": "Müzakirə mətni yazma",
+        "ru": "Аргументированное эссе",
+        "de": "Erörterung schreiben"
+      },
+      "theme": {
+        "tr": "B2 yazılı sınavının hedef metni",
+        "az": "B2 yazılı imtahanının hədəf mətni",
+        "ru": "Целевой текст письменной части B2",
+        "de": "Die Zieltextsorte der B2-Prüfung"
+      },
+      "canDo": [
+        {
+          "tr": "Bir konuyu iki yönüyle tartışıp kendi sonucuma varabilirim",
+          "az": "Bir mövzunu iki tərəfi ilə müzakirə edib öz nəticəmə gələ bilərəm",
+          "ru": "Могу обсудить тему с двух сторон и прийти к выводу",
+          "de": "Ich kann ein Thema abwägen und zu einem Fazit kommen"
+        }
+      ],
+      "grammar": [
+        {
+          "id": "eroerterung",
+          "title": {
+            "tr": "Metnin iskeleti",
+            "az": "Mətnin skeleti",
+            "ru": "Структура текста",
+            "de": "Der Aufbau"
+          },
+          "explain": {
+            "tr": "B2 yazılı sınavı bir iskelet bekler. İçerik ne olursa olsun bu yapı puan getirir:\n\n**1. Einleitung (giriş)** — konuyu tanıt, neden güncel olduğunu söyle\n  *In letzter Zeit wird viel über … diskutiert.*\n  *Immer häufiger stellt sich die Frage, ob …*\n\n**2. Argumente dafür** — en az iki, her biri gerekçe + örnekle\n  *Ein wichtiger Vorteil ist, dass …*\n  *Dafür spricht vor allem, dass …*\n  *Ein Beispiel dafür ist …*\n\n**3. Argumente dagegen**\n  *Andererseits darf man nicht vergessen, dass …*\n  *Kritiker weisen darauf hin, dass …*\n  *Dagegen spricht, dass …*\n\n**4. Eigene Meinung / Fazit**\n  *Meiner Ansicht nach überwiegen die Vorteile.*\n  *Zusammenfassend lässt sich sagen, dass …*\n  *Abschließend bin ich der Meinung, dass …*\n\n**Bu ünitedeki her şey burada birleşiyor:**\n• Bağlayıcılar (b2-09) paragrafları bağlar\n• İkili bağlaçlar (b2-03) argümanları tartar\n• İsim üslubu (b2-06) resmî ton verir\n• Konjunktiv I (b2-04) başkasının görüşünü aktarır\n\nUzunluk: genelde 150-200 kelime. Daha uzun yazmak puan getirmez; **yapı ve bağlantı getirir.**",
+            "az": "B2 yazılı imtahanı skelet gözləyir:\n\n**1. Einleitung** — mövzunu təqdim et\n  *In letzter Zeit wird viel über … diskutiert.*\n\n**2. Argumente dafür** — ən azı iki, əsas + nümunə ilə\n  *Ein wichtiger Vorteil ist, dass …*\n\n**3. Argumente dagegen**\n  *Andererseits darf man nicht vergessen, dass …*\n\n**4. Fazit**\n  *Zusammenfassend lässt sich sagen, dass …*\n\nUzunluq: adətən 150-200 söz. Daha uzun yazmaq bal gətirmir; **struktur və bağlantı gətirir.**",
+            "ru": "Письменная часть B2 ждёт определённого каркаса. Какой бы ни была тема, эта структура приносит баллы:\n\n**1. Einleitung (введение)** — представьте тему, скажите, почему она актуальна\n  *In letzter Zeit wird viel über … diskutiert.*\n\n**2. Argumente dafür** — минимум два, с обоснованием и примером\n  *Ein wichtiger Vorteil ist, dass …*\n  *Ein Beispiel dafür ist …*\n\n**3. Argumente dagegen**\n  *Andererseits darf man nicht vergessen, dass …*\n  *Kritiker weisen darauf hin, dass …*\n\n**4. Eigene Meinung / Fazit**\n  *Zusammenfassend lässt sich sagen, dass …*\n\n**Здесь сходится весь уровень:**\n• коннекторы (b2-09) связывают абзацы\n• парные союзы (b2-03) взвешивают аргументы\n• именной стиль (b2-06) задаёт официальный тон\n• Konjunktiv I (b2-04) передаёт чужое мнение\n\nОбъём — 150-200 слов. Длиннее не значит лучше: баллы даёт **структура и связность**.",
+            "de": "Aufbau: Einleitung → Argumente dafür → Argumente dagegen → Fazit.\n\nRedemittel: In letzter Zeit wird viel über … diskutiert. / Ein wichtiger Vorteil ist, dass … / Andererseits darf man nicht vergessen, dass … / Zusammenfassend lässt sich sagen, dass …\n\nUmfang: 150-200 Wörter. Struktur zählt mehr als Länge."
+          },
+          "table": {
+            "headers": [
+              "Teil",
+              "Redemittel"
+            ],
+            "rows": [
+              [
+                "Einleitung",
+                "In letzter Zeit wird viel über … diskutiert."
+              ],
+              [
+                "Pro",
+                "Ein wichtiger Vorteil ist, dass …"
+              ],
+              [
+                "Beispiel",
+                "Ein Beispiel dafür ist …"
+              ],
+              [
+                "Kontra",
+                "Andererseits darf man nicht vergessen, dass …"
+              ],
+              [
+                "Fazit",
+                "Zusammenfassend lässt sich sagen, dass …"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "de": "In letzter Zeit wird viel über künstliche Intelligenz diskutiert.",
+              "tr": "Son zamanlarda yapay zekâ çok tartışılıyor.",
+              "az": "Son vaxtlar süni intellekt çox müzakirə olunur.",
+              "ru": "В последнее время много обсуждают искусственный интеллект."
+            },
+            {
+              "de": "Zusammenfassend lässt sich sagen, dass beide Seiten gute Argumente haben.",
+              "tr": "Özetle her iki tarafın da iyi argümanları var.",
+              "az": "Xülasə, hər iki tərəfin yaxşı arqumentləri var.",
+              "ru": "Подводя итог, у обеих сторон есть веские аргументы."
+            }
+          ]
+        }
+      ],
+      "words": [
+        "Vorteil",
+        "Nachteil",
+        "Argument",
+        "Zusammenfassung",
+        "Anfang",
+        "Standpunkt",
+        "Aspekt",
+        "Tatsache",
+        "Beispiel",
+        "vergleichen",
+        "gelten",
+        "hinweisen",
+        "berücksichtigen",
+        "bezweifeln",
+        "diskutieren",
+        "begründen",
+        "schließen",
+        "unklar",
+        "deutlich",
+        "zweifelhaft",
+        "wesentlich"
+      ],
+      "writing": [
+        {
+          "prompt": {
+            "tr": "«Üniversite eğitimi herkes için ücretsiz olmalı mı?» konusunda 150-200 kelimelik bir tartışma metni yazın. Dört bölümü de kullanın: giriş, lehte, aleyhte, sonuç.",
+            "az": "«Universitet təhsili hamı üçün pulsuz olmalıdırmı?» mövzusunda 150-200 sözlük müzakirə mətni yazın. Dörd hissəni də işlədin.",
+            "ru": "Напишите эссе 150-200 слов на тему «Должно ли высшее образование быть бесплатным для всех?» — со всеми четырьмя частями.",
+            "de": "Schreiben Sie eine Erörterung (150-200 Wörter): «Sollte ein Studium für alle kostenlos sein?» — mit allen vier Teilen."
+          },
+          "mustUse": [
+            "Vorteil",
+            "andererseits",
+            "zusammenfassend"
+          ],
+          "model": "In letzter Zeit wird viel über kostenlose Studienplätze diskutiert. Ein wichtiger Vorteil ist, dass alle die gleiche Chance bekommen. Andererseits darf man nicht vergessen, dass der Staat die Kosten tragen muss. Zusammenfassend lässt sich sagen, dass Bildung eine Investition in die Zukunft ist."
+        }
+      ],
+      "game": "satzbau"
+    }
+  ]
+}

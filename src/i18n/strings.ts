@@ -45,6 +45,69 @@ export const STRINGS = {
   openLesson: { tr: 'Dersi aç', az: 'Dərsi aç', ru: 'Открыть урок', de: 'Lektion öffnen' },
   continueLesson: { tr: 'Derse devam et', az: 'Dərsə davam et', ru: 'Продолжить урок', de: 'Lektion fortsetzen' },
 
+  /* --- yapay zekâ öğretmen --- */
+  tutor: { tr: 'Öğretmen', az: 'Müəllim', ru: 'Репетитор', de: 'Tutor' },
+  tutorIntro: {
+    tr: 'Almanca ile ilgili bir şey sorun: bir kuralı, bir kelimeyi, kurduğunuz bir cümlenin doğru olup olmadığını. Cevaplar kısa ve örnekli gelir.',
+    az: 'Alman dili ilə bağlı bir şey soruşun: qaydanı, sözü, qurduğunuz cümlənin düzgün olub-olmadığını. Cavablar qısa və nümunəli gəlir.',
+    ru: 'Спросите что-нибудь о немецком: правило, слово, правильно ли построено ваше предложение. Ответы короткие, с примерами.',
+    de: 'Fragen Sie etwas über Deutsch: eine Regel, ein Wort, ob Ihr Satz korrekt ist. Die Antworten sind kurz und mit Beispielen.',
+  },
+  askPlaceholder: {
+    tr: 'Sorunuzu yazın…', az: 'Sualınızı yazın…',
+    ru: 'Напишите вопрос…', de: 'Ihre Frage…',
+  },
+  clearChat: { tr: 'Temizle', az: 'Təmizlə', ru: 'Очистить', de: 'Leeren' },
+  askTutor: { tr: 'Öğretmene sor', az: 'Müəllimdən soruş', ru: 'Спросить репетитора', de: 'Tutor fragen' },
+  aiProvider: { tr: 'Yapay zekâ sağlayıcısı', az: 'Süni intellekt provayderi', ru: 'Провайдер ИИ', de: 'KI-Anbieter' },
+  aiOff: { tr: 'Kapalı', az: 'Bağlı', ru: 'Выключено', de: 'Aus' },
+  aiApiKey: { tr: 'API anahtarı', az: 'API açarı', ru: 'API-ключ', de: 'API-Schlüssel' },
+  aiModel: { tr: 'Model', az: 'Model', ru: 'Модель', de: 'Modell' },
+  aiOffExplain: {
+    tr: 'Yapay zekâ öğretmen kapalı. Açmak için ayarlardan bir sağlayıcı seçin — hepsinin ücretsiz seçeneği var.',
+    az: 'Süni intellekt müəllim bağlıdır. Açmaq üçün tənzimləmələrdən provayder seçin — hamısının pulsuz seçimi var.',
+    ru: 'ИИ-репетитор выключен. Чтобы включить, выберите провайдера в настройках — у всех есть бесплатный вариант.',
+    de: 'Der KI-Tutor ist aus. Wählen Sie in den Einstellungen einen Anbieter — alle haben eine kostenlose Option.',
+  },
+  aiFreeOptions: {
+    tr: 'Ücretsiz seçenekler', az: 'Pulsuz seçimlər',
+    ru: 'Бесплатные варианты', de: 'Kostenlose Optionen',
+  },
+  aiOpenrouterNote: {
+    tr: 'ücretsiz kayıt, 20\u2019den fazla ücretsiz model. En güvenilir seçenek.',
+    az: 'pulsuz qeydiyyat, 20-dən çox pulsuz model. Ən etibarlı seçim.',
+    ru: 'бесплатная регистрация, более 20 бесплатных моделей. Самый надёжный вариант.',
+    de: 'kostenlose Registrierung, über 20 kostenlose Modelle. Die zuverlässigste Option.',
+  },
+  aiGeminiNote: {
+    tr: 'Google hesabıyla ücretsiz anahtar, günlük kota var.',
+    az: 'Google hesabı ilə pulsuz açar, gündəlik kvota var.',
+    ru: 'бесплатный ключ с аккаунтом Google, есть дневная квота.',
+    de: 'kostenloser Schlüssel mit Google-Konto, mit Tageskontingent.',
+  },
+  aiPollinationsNote: {
+    tr: 'anahtar gerekmez ama kotası sık tükeniyor — çalışmayabilir.',
+    az: 'açar tələb olunmur, amma kvotası tez-tez tükənir — işləməyə bilər.',
+    ru: 'ключ не нужен, но квота часто исчерпана — может не работать.',
+    de: 'kein Schlüssel nötig, aber das Kontingent ist oft erschöpft — kann ausfallen.',
+  },
+  aiNeedsSetup: {
+    tr: 'Önce ayarlardan bir sağlayıcı ve anahtar girin.',
+    az: 'Əvvəlcə tənzimləmələrdən provayder və açar daxil edin.',
+    ru: 'Сначала укажите провайдера и ключ в настройках.',
+    de: 'Bitte zuerst Anbieter und Schlüssel in den Einstellungen eintragen.',
+  },
+  aiFailed: {
+    tr: 'Cevap alınamadı.', az: 'Cavab alınmadı.',
+    ru: 'Не удалось получить ответ.', de: 'Keine Antwort erhalten.',
+  },
+  aiPrivacyNote: {
+    tr: 'Sorularınız doğrudan tarayıcınızdan seçtiğiniz sağlayıcıya gider. Anahtarınız yalnızca bu tarayıcıda saklanır ve ilerleme yedeğine dahil edilmez. Sitenin geri kalanı hiçbir veri göndermez.',
+    az: 'Suallarınız birbaşa brauzerinizdən seçdiyiniz provayderə gedir. Açarınız yalnız bu brauzerdə saxlanılır və ehtiyat nüsxəyə daxil edilmir. Saytın qalan hissəsi heç bir məlumat göndərmir.',
+    ru: 'Ваши вопросы идут напрямую из браузера выбранному провайдеру. Ключ хранится только в этом браузере и не попадает в резервную копию. Остальная часть сайта не отправляет никаких данных.',
+    de: 'Ihre Fragen gehen direkt aus Ihrem Browser an den gewählten Anbieter. Der Schlüssel bleibt nur in diesem Browser und ist nicht im Backup enthalten. Der Rest der Seite sendet keine Daten.',
+  },
+
   loading: { tr: 'Yükleniyor…', az: 'Yüklənir…', ru: 'Загрузка…', de: 'Wird geladen…' },
   error: { tr: 'Hata', az: 'Xəta', ru: 'Ошибка', de: 'Fehler' },
   retry: { tr: 'Tekrar dene', az: 'Yenidən cəhd et', ru: 'Повторить', de: 'Erneut versuchen' },

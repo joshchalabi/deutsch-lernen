@@ -1,4 +1,5 @@
 import type { Card } from './fsrs'
+import type { AiSettings } from './ai'
 
 export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1'
 export const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1']
@@ -232,6 +233,8 @@ export interface Settings {
   /** dinleme alıştırmalarında oynatma hızı */
   playbackRate: number
   theme: 'light' | 'dark' | 'system'
+  /** İsteğe bağlı YZ öğretmen. Anahtar dışa aktarıma DAHİL EDİLMEZ. */
+  ai: AiSettings
 }
 
 export interface Profile {
