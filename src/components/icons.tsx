@@ -11,7 +11,7 @@
 
 export type IconName =
   | 'home' | 'calendar' | 'course' | 'cards' | 'headphones'
-  | 'text' | 'book' | 'chat' | 'chart' | 'settings' | 'more'
+  | 'text' | 'book' | 'chat' | 'chart' | 'settings' | 'more' | 'game'
 
 const D: Record<IconName, string> = {
   home: 'M3 10.5 12 3l9 7.5M5.5 9.5V20h13V9.5M9.5 20v-6h5v6',
@@ -25,6 +25,7 @@ const D: Record<IconName, string> = {
   chart: 'M4 20h16M7.5 20v-6M12 20V7M16.5 20v-9',
   settings: 'M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zM19.5 12a7.5 7.5 0 0 0-.12-1.32l2-1.55-2-3.46-2.35.95a7.5 7.5 0 0 0-2.29-1.33L14.4 2.9h-4l-.34 2.39a7.5 7.5 0 0 0-2.29 1.33l-2.35-.95-2 3.46 2 1.55a7.5 7.5 0 0 0 0 2.64l-2 1.55 2 3.46 2.35-.95a7.5 7.5 0 0 0 2.29 1.33l.34 2.39h4l.34-2.39a7.5 7.5 0 0 0 2.29-1.33l2.35.95 2-3.46-2-1.55c.08-.43.12-.87.12-1.32z',
   more: 'M5 12h.01M12 12h.01M19 12h.01',
+  game: 'M8.5 7h7a5 5 0 0 1 4.9 4l.9 5a2.6 2.6 0 0 1-4.7 2l-1.4-2H8.8l-1.4 2a2.6 2.6 0 0 1-4.7-2l.9-5A5 5 0 0 1 8.5 7zM7 12h2.6M8.3 10.7v2.6M15.5 11.5h.01M17.5 13.5h.01',
 }
 
 export function Icon({ name, size = 22 }: { name: IconName; size?: number }) {

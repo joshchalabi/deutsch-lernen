@@ -890,6 +890,52 @@ table.paradigm td.de { font-weight: 650; }
 .unit-grid > *:nth-child(3n+2) .unit-art { background: var(--teal-soft); color: var(--teal); }
 .unit-grid > *.complete .unit-art { background: var(--brand); color: #fff; }
 
+/* ═══════════ BÜYÜK OYUNLAR ═══════════
+   Oyunlar iframe içinde, kendi stilleriyle çalışıyor. Buradaki kurallar
+   yalnızca çerçeveyi ve üstündeki ince şeridi biçimlendiriyor — iframe'in
+   içine hiçbir şey sızmıyor, sızamaz da. */
+.spiel-karte { align-items: flex-start; }
+.spiel-marke {
+  flex: 0 0 46px; height: 46px; display: grid; place-items: center;
+  border-radius: var(--r-sm); font-size: 1.45rem;
+  background: var(--brand-soft);
+  transition: transform .25s var(--spring);
+}
+.unit-grid > *:nth-child(2) .spiel-marke { background: var(--accent-soft); }
+.spiel-karte:hover .spiel-marke { transform: scale(1.08) rotate(-5deg); }
+
+.spiel-seite { display: flex; flex-direction: column; min-height: 0; }
+
+.spiel-leiste {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 16px; font-size: .9rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.spiel-leiste b { font-size: 1rem; }
+
+/* Oyun alanı: ekranın kalanını kaplasın. Telefonda üst başlık ve alt
+   sekme çubuğu, masaüstünde yalnızca oyun şeridi düşülüyor. */
+.spiel-rahmen {
+  display: block; width: 100%; border: 0;
+  height: calc(100dvh - 56px - 44px - var(--tab-h) - env(safe-area-inset-bottom));
+  min-height: 420px;
+  background: var(--surface-2);
+}
+
+.spiel-hilfe {
+  margin: 0; padding: 12px 16px calc(24px + var(--tab-h) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border); background: var(--surface);
+  font-size: .9rem;
+}
+.spiel-hilfe summary { cursor: pointer; font-weight: 650; color: var(--brand); }
+.spiel-hilfe p { margin: 10px 0 0; color: var(--text-dim); line-height: 1.7; max-width: 70ch; }
+
+@media (min-width: 960px) {
+  .spiel-rahmen { height: calc(100dvh - 44px); }
+  .spiel-hilfe { padding-bottom: 24px; }
+}
+
 /* ═══════════ KONFETİ ═══════════ */
 .confetti {
   position: absolute; inset-inline-start: 50%; inset-block-start: 38%;

@@ -16,6 +16,7 @@ import Course from './modules/Course'
 import Lesson from './modules/Lesson'
 import DailyPlan from './modules/DailyPlan'
 import Tutor from './modules/Tutor'
+import Spiele, { SpielPlayer } from './modules/Spiele'
 
 /**
  * GEZİNME — iki yerleşim, tek kaynak
@@ -46,6 +47,7 @@ const SECONDARY: NavItem[] = [
   { to: '/listening', key: 'listening', icon: 'headphones' },
   { to: '/reading', key: 'reading', icon: 'text' },
   { to: '/dictionary', key: 'dictionary', icon: 'book' },
+  { to: '/spiele', key: 'games', icon: 'game' },
   { to: '/tutor', key: 'tutor', icon: 'chat' },
   { to: '/progress', key: 'progress', icon: 'chart' },
 ]
@@ -148,6 +150,8 @@ export default function App() {
           <Route path="/grammar" element={<Grammar />} />
           <Route path="/dictionary" element={<Dictionary />} />
           <Route path="/progress" element={<Progress />} />
+          <Route path="/spiele" element={<Spiele />} />
+          <Route path="/spiele/:spielId" element={<SpielPlayer />} />
           <Route path="/tutor" element={<Tutor />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
