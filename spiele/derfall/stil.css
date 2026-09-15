@@ -1,0 +1,628 @@
+/* DER FALL — Weimar 1924. Nachtschreibtisch, Aktendeckel, Stempelfarbe.
+   Bewusst einweltig: immer Nacht. Alle Farben explizit gesetzt. */
+
+:root {
+  color-scheme: dark;
+
+  --nacht:     #0A0C08;
+  --nacht-2:   #111409;
+  --holz:      #1A1B14;
+
+  --akte:      #C9C4B1;
+  --akte-hell: #D8D3C1;
+  --akte-tief: #B2AC96;
+  --akte-kante:#9A9480;
+
+  --tinte:     #1E1D17;
+  --tinte-2:   #4B493D;
+  --tinte-3:   #78755F;
+  --durchschlag: #2B4160;
+
+  --zinnober:  #A62B1B;
+  --zinnober-h:#C94A35;
+  --gruen:     #4B5B39;
+  --messing:   #C3A052;
+
+  --fraktur: "UnifrakturMaguntia", "Times New Roman", serif;
+  --futura:  "Jost", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+  --maschine:"Special Elite", "Courier New", Courier, monospace;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--futura);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--akte);
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(226,196,124,.16) 0%, rgba(226,196,124,.04) 38%, transparent 66%),
+    radial-gradient(90% 60% at 50% 120%, rgba(0,0,0,.6) 0%, transparent 70%),
+    var(--nacht);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.raum {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-block: 20px 60px;
+  padding-inline: 16px;
+}
+
+/* ---------------- Kopf ---------------- */
+
+.kopf {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.wortmarke {
+  margin: 0;
+  font-family: var(--fraktur);
+  font-size: clamp(34px, 8vw, 58px);
+  line-height: .9;
+  font-weight: 400;
+  color: var(--akte-hell);
+  text-shadow: 0 2px 0 rgba(0,0,0,.6);
+}
+.wortmarke em { font-style: normal; color: var(--zinnober-h); }
+.aktenzeichen {
+  margin: 6px 0 0;
+  font-family: var(--futura);
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--tinte-3);
+}
+
+.uhr { text-align: right; }
+.uhr b {
+  display: block;
+  font-family: var(--futura);
+  font-weight: 500;
+  font-size: clamp(28px, 6vw, 42px);
+  line-height: 1;
+  letter-spacing: .02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--akte-hell);
+}
+.uhr span {
+  font-size: 10px; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--tinte-3);
+}
+.uhr.knapp b { color: var(--zinnober-h); animation: puls 1.4s ease-in-out infinite; }
+@keyframes puls { 50% { opacity: .45; } }
+
+/* ---------------- Registerreiter ---------------- */
+
+.reiter {
+  display: flex;
+  gap: 3px;
+  padding-inline: 10px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.reiter button {
+  font-family: var(--futura);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 8px 15px 9px;
+  color: var(--tinte-2);
+  background: var(--akte-tief);
+  border: none;
+  border-radius: 5px 5px 0 0;
+  box-shadow: inset 0 -6px 10px -6px rgba(0,0,0,.5);
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+  transition: background .15s, color .15s, top .15s;
+}
+.reiter button:hover { background: var(--akte); color: var(--tinte); }
+.reiter button[aria-selected="true"] {
+  background: var(--akte-hell);
+  color: var(--tinte);
+  top: 0;
+  padding-bottom: 12px;
+  box-shadow: none;
+}
+.reiter button[disabled] { opacity: .4; cursor: not-allowed; }
+.reiter .zaehler {
+  font-variant-numeric: tabular-nums;
+  color: var(--zinnober);
+  margin-left: 6px;
+}
+
+/* ---------------- Papier ---------------- */
+
+.blatt {
+  position: relative;
+  background: var(--akte-hell);
+  color: var(--tinte);
+  padding: 26px clamp(18px, 4vw, 40px) 34px;
+  box-shadow:
+    0 1px 0 var(--akte-kante),
+    0 18px 40px -12px rgba(0,0,0,.85),
+    0 2px 0 -1px var(--akte-tief),
+    0 6px 0 -3px var(--akte);
+  border-radius: 2px;
+}
+.blatt::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  opacity: .085;
+  border-radius: 2px;
+}
+.blatt > * { position: relative; z-index: 1; }
+
+.szene[hidden] { display: none; }
+
+.blattkopf {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px; flex-wrap: wrap;
+  border-bottom: 2px solid var(--tinte);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+.blattkopf h2 {
+  margin: 0;
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: clamp(19px, 4vw, 26px);
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--tinte);
+  text-wrap: balance;
+}
+.blattkopf p {
+  margin: 0;
+  font-family: var(--maschine);
+  font-size: 11px;
+  color: var(--tinte-2);
+}
+
+/* Bericht */
+.bericht { display: grid; gap: 14px; max-width: 62ch; }
+.bericht .berichtsatz {
+  margin: 0;
+  font-family: var(--maschine);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--tinte);
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px;
+}
+.bericht .berichtsatz.kursiv > .satz { font-style: italic; }
+.bericht .berichtsatz > .satz { flex: 1 1 24ch; }
+.bericht .berichtsatz > .knopf.mini { flex: none; }
+.tr {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--futura);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--durchschlag);
+  border-left: 2px solid rgba(43,65,96,.3);
+  padding-left: 9px;
+}
+.tr[hidden] { display: none; }
+.tr em { font-style: italic; }
+.tr strong { font-weight: 600; }
+
+.aktenspalten {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 34px);
+  align-items: start;
+}
+@media (max-width: 720px) { .aktenspalten { grid-template-columns: 1fr; } }
+
+.grundriss { width: 100%; height: auto; display: block; }
+.grundriss text {
+  font-family: var(--futura);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  fill: var(--tinte-2);
+}
+.grundriss .etikett { font-size: 8px; fill: var(--zinnober); letter-spacing: .1em; }
+.bildunterschrift {
+  margin: 8px 0 0;
+  font-family: var(--futura);
+  font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--tinte-3);
+}
+
+/* ---------------- Stempel ---------------- */
+
+.stempel {
+  display: inline-block;
+  font-family: var(--futura);
+  font-weight: 600;
+  font-size: clamp(13px, 3vw, 17px);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--zinnober);
+  border: 3px solid var(--zinnober);
+  border-radius: 4px;
+  padding: 6px 14px;
+  transform: rotate(-4deg);
+  opacity: .88;
+  mix-blend-mode: multiply;
+}
+.stempel.gross { font-size: clamp(18px, 5vw, 30px); border-width: 5px; padding: 10px 22px; }
+.stempel.aufschlag { animation: aufschlag .45s cubic-bezier(.2,1.4,.4,1) both; }
+@keyframes aufschlag {
+  0%   { transform: rotate(-16deg) scale(3); opacity: 0; filter: blur(4px); }
+  60%  { transform: rotate(-4deg) scale(.94); opacity: .95; filter: blur(0); }
+  100% { transform: rotate(-4deg) scale(1); opacity: .88; }
+}
+
+/* ---------------- Verdächtigenkarten ---------------- */
+
+.kartei {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+.karte {
+  text-align: left;
+  background: var(--akte);
+  border: 1px solid var(--akte-kante);
+  border-top: 6px solid var(--gruen);
+  padding: 12px 13px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--tinte);
+  box-shadow: 0 6px 14px -8px rgba(0,0,0,.7);
+  transition: transform .16s cubic-bezier(.2,.8,.3,1), box-shadow .16s;
+  display: grid;
+  gap: 8px;
+}
+.karte:hover { transform: translateY(-4px) rotate(-.5deg); box-shadow: 0 14px 24px -10px rgba(0,0,0,.8); }
+.karte.befragt { border-top-color: var(--zinnober); }
+.karte svg { width: 100%; height: 88px; display: block; }
+.karte h3 {
+  margin: 0;
+  font-size: 16px; font-weight: 600; letter-spacing: .01em;
+}
+.karte .rolle {
+  font-family: var(--maschine);
+  font-size: 11px; color: var(--tinte-2);
+  margin: -4px 0 0;
+}
+.karte blockquote {
+  margin: 0;
+  font-family: var(--maschine);
+  font-size: 12px; line-height: 1.5;
+  color: var(--tinte);
+  border-left: 2px solid var(--akte-kante);
+  padding-left: 8px;
+}
+.karte .fortschritt {
+  font-family: var(--futura); font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--tinte-3);
+  display: flex; justify-content: space-between;
+}
+.karte .fortschritt b { color: var(--zinnober); font-weight: 600; }
+
+/* ---------------- Regiepult ---------------- */
+
+.regie {
+  display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+  justify-content: flex-end;
+  margin: 12px 0 -2px;
+}
+.regie .knopf { padding: 6px 11px; font-size: 9.5px; color: var(--akte); border-color: var(--tinte-3); }
+.regie .knopf:hover { background: var(--akte); color: var(--tinte); }
+.regie .knopf[aria-pressed="true"] { background: var(--zinnober); border-color: var(--zinnober); color: #F0E9D8; }
+.regie label {
+  font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--tinte-3); display: flex; align-items: center; gap: 6px;
+}
+.regie select {
+  font-family: var(--futura); font-size: 10px; letter-spacing: .1em;
+  background: transparent; color: var(--akte);
+  border: 1px solid var(--tinte-3); padding: 5px 7px; border-radius: 0;
+}
+.regie select option { background: #171a12; color: var(--akte); }
+
+/* ---------------- Verhör ---------------- */
+
+.verhoerkopf {
+  display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.verhoerkopf svg { width: 66px; height: 66px; flex: none; }
+.verhoerkopf h2 { margin: 0; font-size: 21px; font-weight: 600; text-transform: uppercase; color: var(--tinte); }
+.verhoerkopf p { margin: 0; font-family: var(--maschine); font-size: 11px; color: var(--tinte-2); }
+
+.druck {
+  display: flex; align-items: center; gap: 7px;
+  margin-top: 5px;
+  font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--tinte-3);
+}
+.druck span { display: flex; gap: 4px; }
+.druck i {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 1.5px solid var(--zinnober); display: block;
+}
+.druck i.voll { background: var(--zinnober); }
+
+.eingang {
+  font-family: var(--maschine);
+  font-size: 15px; line-height: 1.7;
+  color: var(--tinte);
+  border-left: 3px solid var(--akte-kante);
+  padding: 2px 0 2px 12px;
+  margin: 0 0 16px;
+  display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap;
+}
+.eingang > span:first-child { flex: 1 1 18ch; }
+
+.aussagen { display: grid; gap: 9px; margin-bottom: 14px; }
+
+.aussage {
+  position: relative;
+  background: var(--akte);
+  border: 1px solid var(--akte-kante);
+  border-left: 4px solid var(--akte-kante);
+  padding: 11px 14px;
+  display: grid; gap: 9px;
+  transition: border-color .15s, box-shadow .15s, background .15s;
+}
+.aussage .kopfzeile {
+  display: flex; justify-content: space-between; gap: 10px; align-items: baseline;
+  font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--tinte-3);
+}
+.aussage .satz {
+  font-family: var(--maschine);
+  font-size: 15px; line-height: 1.72;
+  color: var(--tinte);
+  transition: filter .2s;
+}
+.aussage .werkzeuge { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.aussage .nachtext {
+  font-family: var(--maschine); font-size: 13.5px; line-height: 1.65;
+  color: var(--tinte-2);
+  border-left: 2px solid var(--akte-kante);
+  padding-left: 10px;
+}
+.aussage.erledigt { border-left-color: var(--zinnober); background: #D2CCB9; }
+.aussage.erledigt .kopfzeile b { color: var(--zinnober); }
+
+/* Hörmodus: erst hören, dann lesen. Gilt überall, wo gesprochen wird. */
+.verdeckt > .satz { filter: blur(5.5px); cursor: pointer; user-select: none; }
+.verdeckt > .satz:hover { filter: blur(3px); }
+.verdeckt > .satz > .tr { filter: blur(6px); }
+
+body.jagd .aussage:not(.erledigt) { cursor: crosshair; }
+body.jagd .aussage:not(.erledigt):hover {
+  border-color: var(--zinnober);
+  box-shadow: 0 0 0 2px rgba(166,43,27,.28);
+}
+body.jagd .aussage .werkzeuge { display: none; }
+
+.jagdbanner {
+  background: var(--zinnober); color: #F1EAD9;
+  padding: 10px 14px; margin-bottom: 10px;
+  display: flex; justify-content: space-between; gap: 12px; align-items: center; flex-wrap: wrap;
+  font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase;
+}
+.jagdbanner button {
+  font-family: var(--futura); font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+  background: transparent; color: #F1EAD9; border: 1px solid rgba(241,234,217,.55);
+  padding: 5px 10px; cursor: pointer;
+}
+.jagdbanner button:hover { background: rgba(241,234,217,.18); }
+
+/* Beweisfrage */
+.beweisfrage {
+  border: 2px solid var(--zinnober);
+  background: var(--akte-hell);
+  padding: 15px;
+  display: grid; gap: 9px;
+  margin-bottom: 14px;
+}
+.beweisfrage h4 {
+  margin: 0; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--zinnober);
+}
+.beweisfrage .frage {
+  margin: 0; font-family: var(--maschine); font-size: 15px; color: var(--tinte);
+}
+.option {
+  text-align: left; font-family: var(--maschine); font-size: 14px; line-height: 1.6;
+  padding: 11px 13px; background: var(--akte); color: var(--tinte);
+  border: 1px solid var(--akte-kante); cursor: pointer;
+  transition: border-color .14s, background .14s;
+}
+.option:hover { border-color: var(--tinte); background: #D9D4C3; }
+.option[disabled] { cursor: default; }
+.option.richtig { border-color: #3C6B4E; background: #C7D3C0; }
+.option.falsch  { border-color: var(--zinnober); background: #DCC7C2; }
+
+.blitz {
+  position: fixed; inset: 0; z-index: 60;
+  display: grid; place-items: center;
+  background: rgba(166,43,27,.88);
+  color: #F2EBDA;
+  font-family: var(--futura); font-weight: 600;
+  font-size: clamp(30px, 10vw, 84px); letter-spacing: .12em; text-transform: uppercase;
+  pointer-events: none;
+  animation: blitzAn .9s ease forwards;
+}
+@keyframes blitzAn {
+  0%   { opacity: 0; transform: scale(1.35); }
+  18%  { opacity: 1; transform: scale(1); }
+  72%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ---------------- Knöpfe ---------------- */
+
+.knopf {
+  font-family: var(--futura);
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase;
+  padding: 9px 16px;
+  background: transparent;
+  color: var(--tinte);
+  border: 1px solid var(--tinte-2);
+  cursor: pointer;
+  transition: background .14s, color .14s, border-color .14s;
+}
+.knopf:hover { background: var(--tinte); color: var(--akte-hell); }
+.knopf.rot { border-color: var(--zinnober); color: var(--zinnober); }
+.knopf.rot:hover { background: var(--zinnober); color: var(--akte-hell); }
+.knopf.voll { background: var(--tinte); color: var(--akte-hell); }
+.knopf.voll:hover { background: var(--zinnober); border-color: var(--zinnober); }
+.knopf[disabled] { opacity: .35; cursor: not-allowed; }
+.knopf.dunkel { color: var(--akte); border-color: var(--tinte-3); }
+.knopf.dunkel:hover { background: var(--akte); color: var(--tinte); }
+:focus-visible { outline: 2px solid var(--zinnober-h); outline-offset: 2px; }
+
+/* ---------------- Notizbuch ---------------- */
+
+.notizen { display: grid; gap: 10px; }
+.notiz {
+  background: var(--akte);
+  border-left: 5px solid var(--zinnober);
+  padding: 11px 13px;
+  box-shadow: 0 4px 10px -6px rgba(0,0,0,.6);
+}
+.notiz header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.notiz h4 {
+  margin: 0; font-size: 13px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--tinte);
+}
+.notiz .quelle { font-family: var(--maschine); font-size: 10.5px; color: var(--tinte-3); }
+.notiz .zitat {
+  font-family: var(--maschine); font-size: 14px; color: var(--zinnober);
+  margin: 5px 0 6px; display: block;
+}
+.notiz .erklaerung { margin: 0; font-size: 13px; color: var(--tinte-2); }
+.notiz .erklaerung em { font-style: italic; color: var(--tinte); }
+.notiz .erklaerung strong { color: var(--zinnober); font-weight: 600; }
+
+.hinweisblatt {
+  font-family: var(--maschine);
+  font-size: 13px;
+  color: var(--tinte-2);
+  border: 1px dashed var(--akte-kante);
+  padding: 16px;
+  text-align: center;
+}
+
+/* ---------------- Anklage ---------------- */
+
+.anklagewahl { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 18px; }
+.anklagewahl button {
+  background: var(--akte); border: 1px solid var(--akte-kante); cursor: pointer;
+  padding: 12px; font-family: inherit; color: var(--tinte); text-align: center;
+  transition: border-color .15s, transform .15s;
+}
+.anklagewahl button svg { width: 56px; height: 56px; }
+.anklagewahl button strong { display: block; font-size: 14px; font-weight: 600; }
+.anklagewahl button span { font-family: var(--maschine); font-size: 11px; color: var(--tinte-2); }
+.anklagewahl button:hover { border-color: var(--zinnober); transform: translateY(-3px); }
+.anklagewahl button[aria-pressed="true"] { border: 2px solid var(--zinnober); background: var(--akte-hell); }
+
+.schluss { display: grid; gap: 16px; max-width: 64ch; }
+.bilanz { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.bilanz li {
+  display: flex; gap: 9px; align-items: baseline;
+  font-family: var(--maschine); font-size: 12.5px; color: var(--tinte-2);
+}
+.bilanz li b { color: var(--tinte); font-weight: 400; }
+.bilanz li::before { content: "✓"; color: var(--zinnober); }
+.bilanz li.fehlt::before { content: "—"; color: var(--tinte-3); }
+
+/* ---------------- Titelbild ---------------- */
+
+.titelblatt { text-align: left; display: grid; gap: 18px; justify-items: start; }
+.titelblatt .stempel { align-self: start; }
+.titelblatt p { margin: 0; max-width: 58ch; }
+.einstieg { font-family: var(--maschine); font-size: 14.5px; line-height: 1.75; color: var(--tinte); }
+
+.fuss {
+  margin-top: 26px;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--tinte-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ---------------- Nachträge: Stufen, Vorspann, Tonquelle ---------------- */
+
+.regie .tonwarnung {
+  font-size: 9px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--zinnober-h); border: 1px solid var(--zinnober);
+  padding: 5px 9px; white-space: nowrap;
+}
+
+.knopf.mini { padding: 5px 10px; font-size: 9.5px; letter-spacing: .12em; }
+
+.stufenblock { display: grid; gap: 8px; width: 100%; }
+.stufenblock h3 {
+  margin: 0; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--tinte-3);
+}
+.stufenwahl { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+.stufenwahl button {
+  display: grid; gap: 3px; text-align: left; cursor: pointer;
+  background: var(--akte); border: 1px solid var(--akte-kante);
+  border-left: 4px solid var(--akte-kante);
+  padding: 10px 12px; color: var(--tinte); font-family: inherit;
+  transition: border-color .15s, background .15s;
+}
+.stufenwahl button b {
+  font-family: var(--futura); font-weight: 600; font-size: 15px; letter-spacing: .06em;
+}
+.stufenwahl button span { font-size: 11.5px; color: var(--tinte-2); line-height: 1.4; }
+.stufenwahl button:hover { border-color: var(--tinte-3); }
+.stufenwahl button[aria-pressed="true"] {
+  border-color: var(--zinnober); border-left-color: var(--zinnober); background: var(--akte-hell);
+}
+.stufenwahl button[aria-pressed="true"] b { color: var(--zinnober); }
+.stufeninfo {
+  margin: 0; font-family: var(--maschine); font-size: 11.5px; color: var(--tinte-3);
+}
+
+.vorspann {
+  margin: 0 0 12px;
+  font-family: var(--maschine); font-size: 13.5px; line-height: 1.7;
+  color: var(--tinte-2); font-style: italic;
+  border-left: 3px solid var(--messing);
+  padding: 2px 0 2px 12px;
+}
+
+.jagdbanner.ruhig { background: var(--tinte); }
+.jagdbanner .fliess {
+  text-transform: none; letter-spacing: 0;
+  font-family: var(--maschine); font-size: 13px; line-height: 1.6;
+}
+.jagdbanner .fliess .tr { color: #E8E1CE; border-left-color: rgba(232,225,206,.35); }
+
+.beweisfrage .ergebnis {
+  border-top: 1px solid var(--akte-kante); padding-top: 11px; display: grid; gap: 9px;
+}
+.beweisfrage .ergebnis p { margin: 0; font-size: 13px; color: var(--tinte-2); }
+.beweisfrage .ergebnis strong.gut { color: #3C6B4E; }
+.beweisfrage .ergebnis strong.schlecht { color: var(--zinnober); }
+
+.bilanzkopf { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; margin: 6px 0 0; }
+
+.vorspann > .satz { display: block; }
+.vorspann > .knopf.mini { margin-top: 6px; }

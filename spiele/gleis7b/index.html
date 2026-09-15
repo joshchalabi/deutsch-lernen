@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gleis 7b</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Fira+Sans:wght@400;500;600&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<div class="halle">
+  <header class="kopf">
+    <div class="bahnhof">
+      <span class="db">DB</span>
+      <h1 id="bahnhofname">Hannover Hauptbahnhof</h1>
+    </div>
+    <div class="leiste" id="leiste" hidden>
+      <button type="button" class="knopf" id="k-transkript" aria-pressed="false">Transkript</button>
+      <button type="button" class="knopf" id="k-tr" aria-pressed="false">Türkçe</button>
+      <button type="button" class="knopf" id="k-ton" aria-pressed="true">Ton an</button>
+    </div>
+  </header>
+
+  <!-- Startbildschirm -->
+  <section class="szene" id="szene-start">
+    <div class="plakat">
+      <p class="eyebrow">Hörverstehen · Deutsche Bahn</p>
+      <h2>Sie haben einen Anschluss.</h2>
+      <p class="fliess">
+        Elinde bir bilet var. Hoparlörden anonslar yağıyor ve çoğu seni ilgilendirmiyor.
+        Kendi trenini duyman, peron değişikliğini yakalaman ve zamanında doğru perona
+        varman gerek.
+      </p>
+      <p class="fliess betont">
+        Tabela yalan söyler. Daha doğrusu geç kalır — anons değişikliği duyurduktan
+        saniyeler sonra güncellenir, ileri seviyelerde hiç güncellenmez.
+        <strong>Kulağına güven.</strong>
+      </p>
+      <p class="fliess klein">
+        Perona yürümek zaman alır, yani son saniyede fikir değiştiremezsin.
+        Üç kez tren kaçırırsan yolculuk biter.
+      </p>
+      <div class="knopfreihe">
+        <button type="button" class="knopf gross" id="k-start">Reise beginnen</button>
+        <span class="bestwert" id="bestwert"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spiel -->
+  <section class="szene" id="szene-spiel" hidden>
+    <div class="oben">
+      <div class="fahrkarte" id="fahrkarte">
+        <div class="fk-kopf"><span>Fahrkarte</span><b id="fk-nr">—</b></div>
+        <div class="fk-zug" id="fk-zug">—</div>
+        <div class="fk-ziel" id="fk-ziel">—</div>
+        <dl class="fk-daten">
+          <div><dt>Abfahrt</dt><dd id="fk-zeit">—</dd></div>
+          <div><dt>Gleis</dt><dd id="fk-gleis">—</dd></div>
+        </dl>
+        <dl class="fk-daten fk-wagen" id="fk-wagenzeile" hidden>
+          <div><dt>Wagen</dt><dd id="fk-wagen">—</dd></div>
+          <div><dt>Abschnitt</dt><dd id="fk-abschnitt">—</dd></div>
+        </dl>
+      </div>
+
+      <div class="tafel">
+        <div class="tafel-kopf">
+          <span>Zeit</span><span>Zug</span><span>Ziel</span><span>Gleis</span>
+        </div>
+        <div class="tafel-koerper" id="tafel"></div>
+        <p class="tafel-fuss" id="tafel-hinweis">Angaben ohne Gewähr</p>
+      </div>
+    </div>
+
+    <div class="lautsprecher">
+      <div class="ls-kopf">
+        <span class="ls-lampe" id="ls-lampe"></span>
+        <span id="ls-status">Bahnsteig ruhig</span>
+        <button type="button" class="knopf mini" id="k-nochmal">Nochmal hören −5 s</button>
+      </div>
+      <p class="transkript" id="transkript" hidden></p>
+      <p class="transkript tr" id="transkript-tr" hidden></p>
+    </div>
+
+    <div class="gleisfeld">
+      <div class="bahnsteige" id="bahnsteige"></div>
+      <div class="zugeinfahrt" id="zugeinfahrt" hidden></div>
+    </div>
+
+    <div class="abschnittsleiste" id="abschnittsleiste" hidden>
+      <span class="al-titel">Bahnsteigabschnitt</span>
+      <div class="abschnitte" id="abschnitte"></div>
+    </div>
+
+    <div class="unten">
+      <div class="standort" id="standort">Sie stehen in der Bahnhofshalle.</div>
+      <div class="countdown">
+        <span>Abfahrt in</span>
+        <b id="uhr">00:40</b>
+      </div>
+      <div class="punkte">
+        <span class="p-punkte">Punkte <b id="p-punkte">0</b></span>
+        <span class="p-combo" id="p-combo-box">Serie <b id="p-combo">×1</b></span>
+        <span>Reserve <b id="p-reserve">●●●</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ergebnis -->
+  <section class="szene" id="szene-ende" hidden></section>
+
+  <div class="blitz" id="blitz" hidden><span id="blitz-text"></span></div>
+  <div class="punktepop" id="punktepop" hidden></div>
+
+  <footer class="fuss">
+    <span>Gleis 7b · Ansagen aus Bausteinen — keine zwei Reisen sind gleich</span>
+    <span id="stand">Etappe 1 · Anschlüsse 0</span>
+  </footer>
+</div>
+
+<script src="ansagen.js"></script>
+<script src="spiel.js"></script>
+</body>
+</html>

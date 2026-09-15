@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Der Fall</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Special+Elite&family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<div class="raum">
+  <header class="kopf">
+    <div>
+      <h1 class="wortmarke">Der <em>Fall</em></h1>
+      <p class="aktenzeichen">Kriminalpolizei Berlin · Abteilung I A · Akte 1924/11</p>
+    </div>
+    <div class="uhr" id="uhr">
+      <b id="uhrzeit">23:00</b>
+      <span id="uhrtext">Dienstbeginn</span>
+    </div>
+  </header>
+
+  <div class="regie" id="regie" hidden>
+    <button type="button" class="knopf" id="k-tr" aria-pressed="false">Türkçe</button>
+    <button type="button" class="knopf" id="k-ton" aria-pressed="true">Ton an</button>
+    <button type="button" class="knopf" id="k-hoeren" aria-pressed="false">Hörmodus</button>
+    <span class="tonwarnung" id="tonwarnung" hidden>Tonspur nicht geladen</span>
+    <button type="button" class="knopf" id="k-stopp">Stopp</button>
+    <label for="tempo">Tempo
+      <select id="tempo">
+        <option value="0.7">sehr langsam</option>
+        <option value="0.85">langsam</option>
+        <option value="1" selected>normal</option>
+        <option value="1.15">schnell</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="reiter" id="reiter" hidden>
+    <button type="button" data-szene="akte" aria-selected="true">Akte</button>
+    <button type="button" data-szene="kartei" aria-selected="false">Verdächtige</button>
+    <button type="button" data-szene="notizbuch" aria-selected="false">Notizbuch<span class="zaehler" id="notizzahl">0</span></button>
+    <button type="button" data-szene="anklage" aria-selected="false">Anklage</button>
+  </div>
+
+  <div class="blatt">
+    <!-- 1 · Titel -->
+    <section class="szene" id="szene-titel">
+      <div class="blattkopf">
+        <h2>Der letzte Gast</h2>
+        <p>Berlin, 15. November 1924 · A2 – B2 · Hörverstehen</p>
+      </div>
+      <div class="titelblatt">
+        <span class="stempel">Vertraulich</span>
+        <p class="einstieg">
+          Im Kabarett „Blauer Vogel“ liegt der Besitzer tot in seinem Büro. Vier Zeugen,
+          eine Nacht, sieben Stunden bis zum Morgengrauen. Einer von ihnen lügt.
+        </p>
+        <p>
+          <strong>Her rol ayrı bir sesle konuşuyor</strong> — anlatıcı, komiser ve dört tanık.
+          Metin ekranda duruyor ama önce kulağınla dinle. <em>Hörmodus</em>'u açarsan yazı bulanıklaşır:
+          anlamadığın cümleye tıklayınca açılır.
+        </p>
+        <p>
+          Oynanış tek hamleye indi: tanığı dinle, bir cümlesi seni rahatsız ettiğinde
+          <strong>„Widerspruch!“</strong> de ve o cümleyi göster. Sonra tek soru —
+          <em>seni ne ele verdi?</em> Üç şıktan birini seç. Doğru cevap defterine delil olarak girer.
+        </p>
+        <p>
+          Cümle kurmak yok, yazmak yok. Sadece dinlemek, fark etmek ve suçlamak.
+        </p>
+
+        <div class="stufenblock">
+          <h3>Sprachstufe</h3>
+          <div class="stufenwahl" id="stufenwahl">
+            <button type="button" data-stufe="a2" aria-pressed="false">
+              <b>A2</b><span>Kısa cümleler, somut çelişkiler</span></button>
+            <button type="button" data-stufe="b1" aria-pressed="true">
+              <b>B1</b><span>Passiv ve söylenti kipi devreye girer</span></button>
+            <button type="button" data-stufe="b2" aria-pressed="false">
+              <b>B2</b><span>Konjunktiv I ve öznel modal fiiller</span></button>
+          </div>
+          <p class="stufeninfo" id="stufeninfo">—</p>
+        </div>
+
+        <div class="werkzeug">
+          <button type="button" class="knopf voll" id="k-start">Akte öffnen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Akte -->
+    <section class="szene" id="szene-akte" hidden>
+      <div class="blattkopf">
+        <h2>Tatbestand</h2>
+        <p>Kabarett „Blauer Vogel“, Friedrichstraße 108</p>
+      </div>
+      <div class="aktenspalten">
+        <div class="bericht" id="bericht"></div>
+        <div>
+          <svg class="grundriss" viewBox="0 0 340 212" role="img" aria-label="Grundriss des Kabaretts">
+            <g fill="none" stroke="#1E1D17" stroke-width="1.8">
+              <rect x="6" y="26" width="148" height="150"/>
+              <rect x="6" y="26" width="148" height="34"/>
+              <rect x="6" y="140" width="52" height="36"/>
+              <rect x="112" y="140" width="42" height="36"/>
+              <rect x="186" y="26" width="148" height="150"/>
+              <rect x="186" y="26" width="60" height="36"/>
+              <rect x="246" y="60" width="88" height="66"/>
+            </g>
+            <g stroke="#1E1D17" stroke-width="1.2">
+              <line x1="120" y1="140" x2="146" y2="176"/>
+              <line x1="128" y1="140" x2="154" y2="176"/>
+              <line x1="194" y1="62" x2="220" y2="26"/>
+              <line x1="202" y1="62" x2="228" y2="26"/>
+            </g>
+            <text x="80" y="47" text-anchor="middle">Bühne</text>
+            <text x="80" y="108" text-anchor="middle">Saal</text>
+            <text x="32" y="162" text-anchor="middle">Garderobe</text>
+            <text x="133" y="162" text-anchor="middle">Treppe</text>
+            <text x="216" y="48" text-anchor="middle">Treppe</text>
+            <text x="216" y="150" text-anchor="middle">Flur</text>
+            <text x="290" y="90" text-anchor="middle">Büro</text>
+            <g stroke="#A62B1B" stroke-width="2.4">
+              <line x1="282" y1="98" x2="298" y2="114"/>
+              <line x1="298" y1="98" x2="282" y2="114"/>
+            </g>
+            <text class="etikett" x="290" y="132" text-anchor="middle">Tatort 23:40</text>
+            <text x="80" y="16" text-anchor="middle">Erdgeschoss</text>
+            <text x="260" y="16" text-anchor="middle">Erster Stock</text>
+          </svg>
+          <p class="bildunterschrift">Lageplan · Skizze des Bereitschaftsdienstes</p>
+        </div>
+      </div>
+      <div class="werkzeug">
+        <button type="button" class="knopf" id="k-vorlesen">▶ Bericht vorlesen</button>
+        <button type="button" class="knopf voll" data-gehe="kartei">Zu den Verdächtigen</button>
+      </div>
+    </section>
+
+    <!-- 3 · Kartei -->
+    <section class="szene" id="szene-kartei" hidden>
+      <div class="blattkopf">
+        <h2>Verdächtige</h2>
+        <p>Vier Personen, vier Stimmen · Sorgulamak için karta tıkla</p>
+      </div>
+      <div class="kartei" id="kartei"></div>
+    </section>
+
+    <!-- 4 · Verhör -->
+    <section class="szene" id="szene-verhoer" hidden></section>
+
+    <!-- 5 · Notizbuch -->
+    <section class="szene" id="szene-notizbuch" hidden>
+      <div class="blattkopf">
+        <h2>Notizbuch</h2>
+        <p>Gesicherte Indizien · Toplanan deliller</p>
+      </div>
+      <div id="notizen"></div>
+    </section>
+
+    <!-- 6 · Anklage -->
+    <section class="szene" id="szene-anklage" hidden></section>
+
+    <!-- 7 · Schluss -->
+    <section class="szene" id="szene-schluss" hidden></section>
+
+  </div>
+
+  <footer class="fuss">
+    <span>Der Fall · Hörverstehen als Ermittlungsarbeit</span>
+    <span id="fussstand">Indizien 0 / 8 · für die Anklage nötig: 4</span>
+  </footer>
+</div>
+
+<script src="fall.js"></script>
+<script src="spiel.js"></script>
+</body>
+</html>
