@@ -130,7 +130,7 @@ function TransLine({ code, words }: { code: string; words: string[] }) {
   if (!words.length) return null
   return (
     <div className="trans-line">
-      <span className="code">{code}</span>
+      <span className={`code ${code.toLowerCase()}`}>{code}</span>
       <span>{words.join(', ')}</span>
     </div>
   )
@@ -185,7 +185,7 @@ function DetailBody({
         if (!shown?.length) return null
         return (
           <div className="trans-line" key={l}>
-            <span className="code">{l}</span>
+            <span className={`code ${l}`}>{l}</span>
             <span>
               {shown.join(', ')}
               {showBridge && !words?.length && (
