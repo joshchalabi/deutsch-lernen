@@ -60,8 +60,11 @@ export default function Tutor() {
         if (e instanceof DOMException && e.name === 'AbortError') return
         const kind = e instanceof AiError ? e.kind : 'network'
         setError(
-          kind === 'no-key'
-            ? t('aiNeedsSetup', lang)
+          kind === 'no-key' ? t('aiNeedsSetup', lang)
+            // Model ücretliye geçtiğinde ham 404 göstermek kullanıcıyı yanlış
+            // yere bakmaya iter; ne yapması gerektiğini söylüyoruz.
+            : kind === 'model-not-free' ? t('aiModelNotFree', lang)
+            : kind === 'reasoning-only' ? t('aiReasoningOnly', lang)
             : `${t('aiFailed', lang)} ${e instanceof Error ? e.message : ''}`.slice(0, 220),
         )
         // Cevapsız kalan soruyu geri al ki kullanıcı yeniden deneyebilsin
@@ -92,6 +95,7 @@ export default function Tutor() {
       {messages.length === 0 && (
         <div className="card">
           <p className="muted small" style={{ marginTop: 0 }}>{t('tutorIntro', lang)}</p>
+          <p className="hint" style={{ marginTop: 0 }}>⚠ {t('aiDisclaimer', lang)}</p>
           <div className="starters">
             {starters.map((s) => (
               <button key={s} className="starter" onClick={() => void send(s)}>{s}</button>
@@ -114,7 +118,13 @@ export default function Tutor() {
         <div ref={endRef} />
       </div>
 
-      {error && <div className="feedback bad" style={{ marginTop: 10 }}>{error}</div>}
+      {error && (
+        <div className="feedback bad" style={{ marginTop: 10 }}>
+          {error}
+          {' '}
+          <Link to="/settings">{t('settings', lang)} →</Link>
+        </div>
+      )}
 
       <form
         className="chat-input"
@@ -130,26 +140,47 @@ export default function Tutor() {
         <button className="primary" disabled={busy || !input.trim()}>→</button>
       </form>
 
-      <p className="hint center" style={{ marginTop: 10 }}>{t('aiPrivacyNote', lang)}</p>
+      {messages.length > 0 && (
+        <p className="hint center" style={{ marginTop: 10 }}>⚠ {t('aiDisclaimer', lang)}</p>
+      )}
+      <p className="hint center" style={{ marginTop: 6 }}>{t('aiPrivacyNote', lang)}</p>
     </main>
   )
 }
 
 /**
- * Cevapları biçimlendirir. Almanca örnek cümleleri ayrı gösterebilmek için
- * satır başına bakıyoruz: tırnak içinde ya da tek başına duran Almanca
- * cümleler serif yazıyla çiziliyor, geri kalanı normal.
+ * Cevapları biçimlendirir: Almanca örnek cümleler ayrı bir kutuda ve serif
+ * yazıyla çiziliyor, böylece açıklamadan görsel olarak ayrışıyor.
+ *
+ * Tespit satır başına bakıyor ama önce **liste işaretini kırpıyor**: modeller
+ * örnekleri neredeyse her zaman "1." ya da "- " ile veriyor ve ilk sürüm bu
+ * yüzden hiçbir örneği yakalayamamıştı (ölçüldü: 0/2).
+ *
+ * Ölçüt iki koşulun birlikte sağlanması: satır büyük harfle başlayan bir
+ * Almanca cümleyle açılmalı VE içinde Almanca işlev sözcüğü geçmeli. Tek
+ * başına büyük harf yetmez — Türkçe ve Rusça cümleler de büyük harfle başlar.
  */
+const LIST_MARKER = /^(?:\d+[.)]|[-–•*])\s*/
+const GERMAN_FUNCTION_WORDS =
+  /\b(der|die|das|den|dem|des|ich|du|er|sie|es|wir|ihr|ist|sind|war|hat|haben|habe|ein|eine|einen|einem|nicht|und|oder|zu|mit|auf|für|von|kann|muss|wird)\b/
+
+function looksLikeGermanExample(line: string): boolean {
+  const body = line.replace(LIST_MARKER, '').trim()
+  if (body.length < 8) return false
+  // Almanca kısım genelde çeviriden önce gelir: "Ich sehe den Mann. — Adamı görüyorum."
+  const german = body.split(/\s[—–]\s|\s*\u2014\s*/)[0].trim()
+  if (!/^[»"„']?[A-ZÄÖÜ]/.test(german)) return false
+  return GERMAN_FUNCTION_WORDS.test(german)
+}
+
 function Formatted({ text }: { text: string }) {
   return (
     <>
       {text.split('\n').map((line, i) => {
         const trimmed = line.trim()
         if (!trimmed) return <br key={i} />
-        const looksGerman = /^[»"„]?[A-ZÄÖÜ][^.!?]*[.!?]["«"]?$/.test(trimmed)
-          && /\b(der|die|das|ich|du|er|sie|es|wir|ihr|ist|sind|hat|haben|ein|eine|nicht|und|zu|mit)\b/i.test(trimmed)
         return (
-          <p key={i} className={looksGerman ? 'de chat-example' : undefined}>
+          <p key={i} className={looksLikeGermanExample(trimmed) ? 'de chat-example' : undefined}>
             <Bold text={trimmed} />
           </p>
         )

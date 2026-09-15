@@ -57,9 +57,27 @@ gerekiyor. Üç ücretsiz yol var:
 
 | Sağlayıcı | Anahtar | Not |
 |---|---|---|
-| **OpenRouter** | ücretsiz kayıt | 20'den fazla ücretsiz model. En güvenilir. |
+| **OpenRouter** | ücretsiz kayıt | ~20 ücretsiz model, listeden canlı seçilir. En güvenilir. |
 | **Google AI Studio** | ücretsiz kayıt | Günlük kota var. |
 | **Pollinations** | gerekmez | Kurulumsuz, ama kotası sık tükeniyor — ölçtük, çalışmayabilir. |
+
+**Model listesi koda gömülü değil.** İlk sürümde varsayılan olarak belirli bir
+model yazılıydı; o model ücretliye geçince uygulama 404 verdi. Artık ayarlardaki
+liste OpenRouter'dan **canlı** çekiliyor ve varsayılan `openrouter/free` — o anda
+ücretsiz olan modeller arasından kendisi seçen bir yönlendirici. Eski, ölü model
+kimlikleri açılışta sessizce bununla değiştiriliyor.
+
+İki teknik ayrıntı, ikisi de ölçümle bulundu:
+- **Akıl yürütme modelleri** düşünme adımlarını ayrı bir alana yazıyor ve bu token
+  bütçesinden düşüyor. 500 tokenlık bütçenin tamamı düşünmeye gidip cevap boş
+  dönüyordu. İstek artık `reasoning: { exclude: true }` gönderiyor.
+- Serbest bırakılan modeller **çok uzun cevap** veriyordu (ölçüldü: basit bir soruya
+  4.305 karakter). Sistem istemi kelime sınırı verecek şekilde sıkılaştırıldı;
+  aynı soru artık ~430 karakter.
+
+**Dürüst sınır:** ücretsiz küçük modeller bazen yanlış gerekçe veriyor — testte biri
+«nach» edatını Akkusativ diye açıkladı (doğrusu Dativ). Arayüzde bu konuda uyarı var:
+kurstaki dilbilgisi açıklamaları elle yazıldı, çelişki durumunda kurs geçerli.
 
 Sunucumuz olmadığı için istek **doğrudan tarayıcıdan** sağlayıcıya gidiyor. Bunun
 iki sonucu var ve ikisi de arayüzde yazılı:

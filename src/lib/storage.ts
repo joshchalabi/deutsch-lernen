@@ -12,7 +12,7 @@
  */
 
 import type { AppState, Level, LessonStep, Settings, StudySession } from './types'
-import { DEFAULT_AI } from './ai'
+import { DEFAULT_AI, FREE_ROUTER } from './ai'
 
 const KEY = 'deutsch-lernen/state/v1'
 const STATE_VERSION = 2
@@ -70,6 +70,7 @@ export function loadState(): AppState {
     // Sonradan eklenen alanlar eski kayıtlarda yok; varsayılanla doldur.
     parsed.settings = { ...DEFAULT_SETTINGS, ...parsed.settings }
     parsed.settings.ai = { ...DEFAULT_AI, ...parsed.settings.ai }
+    parsed.settings.ai.model = healModel(parsed.settings.ai.model)
     parsed.dictationDone ??= []
     parsed.units ??= {}
     parsed.plan ??= null
@@ -78,6 +79,21 @@ export function loadState(): AppState {
   } catch {
     return emptyState()
   }
+}
+
+/**
+ * Artık ücretsiz olmayan model kimliklerini yönlendiriciyle değiştirir.
+ *
+ * Kayıtlı ayarlar localStorage'da duruyor, yani eski bir varsayılanı olan
+ * kullanıcı uygulamayı güncelleyince bile 404 almaya devam eder. Bilinen
+ * ölü kimlikleri sessizce düzeltmek, kullanıcıyı ayarlara göndermekten iyi.
+ */
+const RETIRED_MODELS = new Set([
+  'meta-llama/llama-3.3-70b-instruct:free',
+])
+
+function healModel(model: string): string {
+  return RETIRED_MODELS.has(model) ? FREE_ROUTER : model
 }
 
 /**

@@ -97,9 +97,44 @@ export const STRINGS = {
     ru: 'Сначала укажите провайдера и ключ в настройках.',
     de: 'Bitte zuerst Anbieter und Schlüssel in den Einstellungen eintragen.',
   },
+  aiFreeCount: { tr: 'ücretsiz', az: 'pulsuz', ru: 'бесплатных', de: 'kostenlos' },
+  aiUseRouter: {
+    tr: 'Otomatik seç', az: 'Avtomatik seç',
+    ru: 'Выбрать автоматически', de: 'Automatisch wählen',
+  },
+  aiRouterNote: {
+    tr: '⭐ «Free Models Router» o anda ücretsiz olan modeller arasından kendisi seçer — bir model ücretliye geçtiğinde bozulmaz. Önerilen budur.',
+    az: '⭐ «Free Models Router» həmin anda pulsuz olan modellər arasından özü seçir — bir model ödənişliyə keçdikdə pozulmur. Tövsiyə olunan budur.',
+    ru: '⭐ «Free Models Router» сам выбирает из моделей, бесплатных в данный момент, — он не ломается, когда модель становится платной. Рекомендуется.',
+    de: '⭐ Der «Free Models Router» wählt selbst aus den aktuell kostenlosen Modellen — er bricht nicht, wenn ein Modell kostenpflichtig wird. Empfohlen.',
+  },
+  aiModelListFailed: {
+    tr: 'Model listesi alınamadı. Model kimliğini elle yazabilir ya da ↻ ile tekrar deneyebilirsiniz.',
+    az: 'Model siyahısı alınmadı. Model kimliyini əllə yaza və ya ↻ ilə yenidən cəhd edə bilərsiniz.',
+    ru: 'Не удалось получить список моделей. Введите идентификатор вручную или нажмите ↻.',
+    de: 'Modellliste nicht abrufbar. Geben Sie die Modell-ID manuell ein oder versuchen Sie ↻.',
+  },
+  aiModelNotFree: {
+    tr: 'Bu model artık ücretsiz değil. Ayarlardan başka bir ücretsiz model seçin — ⭐ «Otomatik seç» en güvenlisi.',
+    az: 'Bu model artıq pulsuz deyil. Tənzimləmələrdən başqa pulsuz model seçin — ⭐ «Avtomatik seç» ən etibarlısıdır.',
+    ru: 'Эта модель больше не бесплатна. Выберите другую в настройках — надёжнее всего ⭐ «Выбрать автоматически».',
+    de: 'Dieses Modell ist nicht mehr kostenlos. Wählen Sie in den Einstellungen ein anderes — am sichersten ⭐ «Automatisch wählen».',
+  },
+  aiReasoningOnly: {
+    tr: 'Bu model bütün bütçesini düşünmeye harcadı ve cevap üretmedi. Ayarlardan başka bir model deneyin.',
+    az: 'Bu model bütün büdcəni düşünməyə xərclədi və cavab vermədi. Tənzimləmələrdən başqa model sınayın.',
+    ru: 'Эта модель потратила весь лимит на рассуждения и не дала ответа. Попробуйте другую модель в настройках.',
+    de: 'Dieses Modell hat sein Budget für internes Denken verbraucht und nichts geantwortet. Probieren Sie ein anderes Modell.',
+  },
   aiFailed: {
     tr: 'Cevap alınamadı.', az: 'Cavab alınmadı.',
     ru: 'Не удалось получить ответ.', de: 'Keine Antwort erhalten.',
+  },
+  aiDisclaimer: {
+    tr: 'Ücretsiz modeller bazen yanlış gerekçe verir. Kurstaki dilbilgisi açıklamaları elle yazıldı ve doğrudur — çelişki görürseniz kursa güvenin.',
+    az: 'Pulsuz modellər bəzən səhv əsaslandırma verir. Kursdakı qrammatika izahları əllə yazılıb və doğrudur — ziddiyyət görsəniz kursa etibar edin.',
+    ru: 'Бесплатные модели иногда дают неверное объяснение. Грамматика в курсе написана вручную и проверена — при расхождении доверяйте курсу.',
+    de: 'Kostenlose Modelle begründen manchmal falsch. Die Grammatik im Kurs ist handgeschrieben und geprüft — im Zweifel gilt der Kurs.',
   },
   aiPrivacyNote: {
     tr: 'Sorularınız doğrudan tarayıcınızdan seçtiğiniz sağlayıcıya gider. Anahtarınız yalnızca bu tarayıcıda saklanır ve ilerleme yedeğine dahil edilmez. Sitenin geri kalanı hiçbir veri göndermez.',

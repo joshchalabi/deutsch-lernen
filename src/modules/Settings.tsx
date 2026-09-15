@@ -1,10 +1,10 @@
-import { useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../lib/store'
 import { t, LANG_NAMES } from '../i18n/strings'
 import { exportState, importState } from '../lib/storage'
 import { UI_LANGS, type TransLang, type UiLang } from '../lib/types'
-import { PROVIDER_INFO, type AiProvider } from '../lib/ai'
+import { fetchFreeModels, FREE_ROUTER, PROVIDER_INFO, type AiProvider, type FreeModel } from '../lib/ai'
 
 export default function Settings() {
   const { state, lang, setSettings, replaceState } = useStore()
@@ -208,7 +208,14 @@ function AiSection() {
         </div>
       )}
 
-      {ai.provider !== 'off' && (
+      {ai.provider === 'openrouter' && (
+        <ModelPicker
+          value={ai.model}
+          onChange={(model) => setSettings({ ai: { ...ai, model } })}
+        />
+      )}
+
+      {(ai.provider === 'gemini' || ai.provider === 'pollinations') && (
         <div className="field">
           <label>{t('aiModel', lang)}</label>
           <input
@@ -225,6 +232,86 @@ function AiSection() {
       )}
 
       <p className="hint">{t('aiPrivacyNote', lang)}</p>
+    </div>
+  )
+}
+
+/**
+ * Ücretsiz model seçici — listeyi OpenRouter'dan CANLI çeker.
+ *
+ * Model kimliklerini koda gömmek bir kez zaten patladı: varsayılan model
+ * ücretliye geçince uygulama 404 verdi. Liste her açılışta tazeleniyor,
+ * böylece aynı hata tekrarlanamıyor. Ağ yoksa kullanıcı kimliği elle de
+ * yazabilsin diye metin alanı yedekte duruyor.
+ */
+function ModelPicker({
+  value, onChange,
+}: {
+  value: string
+  onChange: (model: string) => void
+}) {
+  const { lang } = useStore()
+  const [models, setModels] = useState<FreeModel[] | null>(null)
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const load = useCallback((signal?: AbortSignal) => {
+    setLoading(true)
+    setError(false)
+    fetchFreeModels(signal).then(
+      (list) => { setModels(list); setLoading(false) },
+      (e) => {
+        if (e instanceof DOMException && e.name === 'AbortError') return
+        setError(true); setLoading(false)
+      },
+    )
+  }, [])
+
+  useEffect(() => {
+    const ctrl = new AbortController()
+    load(ctrl.signal)
+    return () => ctrl.abort()
+  }, [load])
+
+  return (
+    <div className="field">
+      <label>
+        {t('aiModel', lang)}
+        {models && <span className="muted"> · {models.length} {t('aiFreeCount', lang)}</span>}
+      </label>
+
+      {models && !error ? (
+        <select value={value} onChange={(e) => onChange(e.target.value)}>
+          {!models.some((m) => m.id === value) && <option value={value}>{value}</option>}
+          {models.map((m) => (
+            <option key={m.id} value={m.id}>
+              {m.id === FREE_ROUTER ? `⭐ ${m.name}` : m.name}
+            </option>
+          ))}
+        </select>
+      ) : (
+        <input
+          type="text"
+          spellCheck={false}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+        />
+      )}
+
+      <div className="row" style={{ marginTop: 6 }}>
+        <button className="ghost small" disabled={loading} onClick={() => load()}>
+          {loading ? t('loading', lang) : '↻'}
+        </button>
+        {value !== FREE_ROUTER && (
+          <button className="ghost small" onClick={() => onChange(FREE_ROUTER)}>
+            ⭐ {t('aiUseRouter', lang)}
+          </button>
+        )}
+      </div>
+
+      <p className="hint">
+        {error ? t('aiModelListFailed', lang) : t('aiRouterNote', lang)}
+      </p>
     </div>
   )
 }

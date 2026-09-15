@@ -24,6 +24,20 @@ import type { Level, UiLang } from './types'
 
 export type AiProvider = 'off' | 'openrouter' | 'gemini' | 'pollinations'
 
+/**
+ * OpenRouter'ın ücretsiz model YÖNLENDİRİCİSİ.
+ *
+ * NEDEN BELİRLİ BİR MODEL DEĞİL?
+ *   Önce varsayılan `meta-llama/llama-3.3-70b-instruct:free` idi. O model
+ *   ücretliye geçti ve uygulama 404 ile durdu:
+ *     "This model is unavailable for free. The paid version is available now"
+ *   Ücretsiz model listesi sürekli değişiyor; sabit bir kimlik yazmak, bu
+ *   hatanın tekrarını garantilemek demek. `openrouter/free` o anda ücretsiz
+ *   olan modeller arasından kendisi seçiyor, dolayısıyla çürümüyor.
+ *   Kullanıcı isterse ayarlardan canlı listeden belirli bir model seçebilir.
+ */
+export const FREE_ROUTER = 'openrouter/free'
+
 export interface AiSettings {
   provider: AiProvider
   /** Kullanıcının kendi anahtarı. Dışa aktarıma dahil edilmez. */
@@ -34,7 +48,7 @@ export interface AiSettings {
 export const DEFAULT_AI: AiSettings = {
   provider: 'off',
   apiKey: '',
-  model: 'meta-llama/llama-3.3-70b-instruct:free',
+  model: FREE_ROUTER,
 }
 
 export const PROVIDER_INFO: Record<
@@ -45,7 +59,7 @@ export const PROVIDER_INFO: Record<
     label: 'OpenRouter',
     needsKey: true,
     signup: 'https://openrouter.ai/keys',
-    defaultModel: 'meta-llama/llama-3.3-70b-instruct:free',
+    defaultModel: FREE_ROUTER,
   },
   gemini: {
     label: 'Google AI Studio (Gemini)',
@@ -72,17 +86,63 @@ const LANG_NAME: Record<UiLang, string> = {
  */
 export function buildSystemPrompt(lang: UiLang, level: Level | null): string {
   return [
-    'Du bist ein geduldiger Deutschlehrer für einen Lernenden auf Niveau',
-    `${level ?? 'A1'}.`,
+    `Du bist ein geduldiger Deutschlehrer für einen Lernenden auf Niveau ${level ?? 'A1'}.`,
     `Antworte IMMER auf ${LANG_NAME[lang]}, außer bei deutschen Beispielsätzen.`,
-    'Regeln:',
-    '1. Fasse dich kurz: höchstens 3 Sätze Erklärung.',
-    '2. Gib danach immer 1-2 konkrete deutsche Beispielsätze mit Übersetzung.',
-    '3. Nenne Nomen immer mit Artikel (der/die/das) und Plural.',
-    '4. Wenn die Frage nichts mit Deutsch, Sprache oder dem Lernen zu tun hat,',
-    '   sage höflich, dass du nur bei Deutsch helfen kannst.',
-    '5. Erfinde nichts. Wenn du unsicher bist, sage das.',
-  ].join(' ')
+    '',
+    'LÄNGE — das ist die wichtigste Regel:',
+    '• Erklärung: HÖCHSTENS 60 Wörter. Keine Ausnahme.',
+    '• Danach GENAU 1-2 deutsche Beispielsätze, je mit Übersetzung in einer Zeile.',
+    '• KEINE Überschriften, KEINE Tabellen, KEINE Listen mit mehr als 2 Punkten.',
+    '• Wiederhole die Frage nicht und fasse am Ende nichts zusammen.',
+    '',
+    'INHALT:',
+    '• Nenne Nomen immer mit Artikel (der/die/das).',
+    '• Wenn der Lernende einen falschen Satz schickt: zeige zuerst die',
+    '  korrigierte Fassung, dann in einem Satz warum.',
+    '• Erfinde nichts. Bist du unsicher, sage das in einem Satz.',
+    '• Bei Fragen ohne Bezug zu Deutsch oder zum Sprachenlernen: sage höflich,',
+    '  dass du nur bei Deutsch helfen kannst, und nichts weiter.',
+  ].join('\n')
+}
+
+export interface FreeModel {
+  id: string
+  name: string
+  context: number
+}
+
+/**
+ * OpenRouter'dan O ANDA ücretsiz olan metin modellerini çeker.
+ * Anahtar gerektirmiyor; liste herkese açık.
+ *
+ * Süzgeç: hem istem hem üretim ücreti 0 OLMALI (yalnızca prompt'a bakmak
+ * yanıltıcı), çıktı metin olmalı (listede müzik üreten modeller de var,
+ * ör. lyria — sohbet için işe yaramaz).
+ */
+export async function fetchFreeModels(signal?: AbortSignal): Promise<FreeModel[]> {
+  const res = await fetch('https://openrouter.ai/api/v1/models', { signal })
+  if (!res.ok) throw new AiError(`${res.status}`, 'http')
+  const data = (await res.json()) as {
+    data?: {
+      id: string
+      name?: string
+      context_length?: number
+      pricing?: { prompt?: string; completion?: string }
+      architecture?: { output_modalities?: string[] }
+    }[]
+  }
+  const out: FreeModel[] = []
+  for (const m of data.data ?? []) {
+    const p = m.pricing ?? {}
+    if (String(p.prompt) !== '0' || String(p.completion) !== '0') continue
+    const outs = m.architecture?.output_modalities ?? ['text']
+    if (!outs.includes('text') || outs.includes('audio')) continue
+    out.push({ id: m.id, name: m.name ?? m.id, context: m.context_length ?? 0 })
+  }
+  // Yönlendirici her zaman başta: en güvenli seçenek o
+  out.sort((a, b) =>
+    (a.id === FREE_ROUTER ? -1 : b.id === FREE_ROUTER ? 1 : 0) || b.context - a.context)
+  return out
 }
 
 export interface AiMessage {
@@ -91,7 +151,11 @@ export interface AiMessage {
 }
 
 export class AiError extends Error {
-  constructor(message: string, readonly kind: 'no-key' | 'http' | 'network' | 'empty') {
+  constructor(
+    message: string,
+    readonly kind:
+      | 'no-key' | 'http' | 'network' | 'empty' | 'model-not-free' | 'reasoning-only',
+  ) {
     super(message)
   }
 }
@@ -132,14 +196,35 @@ async function askOpenAiCompatible(
     },
     body: JSON.stringify({
       model,
-      max_tokens: 500,
+      // Akıl yürütme modelleri düşünme adımlarını `reasoning` alanına yazıyor
+      // ve bu da token bütçesinden düşüyor. 500 tokenlık bütçe tamamen
+      // düşünmeye gidip `content` BOŞ dönüyordu — ölçüldü: 403 karakter
+      // reasoning, 0 karakter cevap. `exclude` ile düşünme çıktısı istenmiyor,
+      // bütçe de rahat tutuluyor ki parametreyi yok sayan model de sığsın.
+      reasoning: { exclude: true },
+      max_tokens: 1000,
       messages: [{ role: 'system', content: system }, ...history],
     }),
   })
-  if (!res.ok) throw new AiError(`${res.status} ${await res.text()}`.slice(0, 200), 'http')
+  if (!res.ok) {
+    const body = await res.text()
+    // OpenRouter, ücretsizken ücretliye geçen modeller için 404 + bu metni
+    // döndürüyor. Genel "bağlantı hatası" demek kullanıcıyı yanlış yere
+    // bakmaya iter; ayrı bir tür verip ayarlara yönlendiriyoruz.
+    if (/unavailable for free|paid version is available/i.test(body)) {
+      throw new AiError(body.slice(0, 200), 'model-not-free')
+    }
+    throw new AiError(`${res.status} ${body}`.slice(0, 200), 'http')
+  }
   const data = await res.json()
-  const text = data?.choices?.[0]?.message?.content
-  if (!text) throw new AiError('empty', 'empty')
+  const msg = data?.choices?.[0]?.message
+  const text: string | undefined = msg?.content
+  if (!text?.trim()) {
+    // Cevap boş ama düşünme dolu: model bütçeyi düşünmeye harcadı.
+    // Kullanıcıya "bilinmeyen hata" demek yerine ne yapacağını söylüyoruz.
+    if (msg?.reasoning) throw new AiError('reasoning-only', 'reasoning-only')
+    throw new AiError('empty', 'empty')
+  }
   return text
 }
 
@@ -158,7 +243,8 @@ async function askGemini(
         role: m.role === 'assistant' ? 'model' : 'user',
         parts: [{ text: m.content }],
       })),
-      generationConfig: { maxOutputTokens: 600 },
+      // Gemini'nin düşünen sürümleri de bütçeyi tüketebiliyor; rahat tutuluyor
+      generationConfig: { maxOutputTokens: 1200 },
     }),
   })
   if (!res.ok) throw new AiError(`${res.status} ${await res.text()}`.slice(0, 200), 'http')
