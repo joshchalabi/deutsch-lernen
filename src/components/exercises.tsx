@@ -13,7 +13,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import {
-  displayForm, glossOrTranslation, lemmaKey, sample, shuffle,
+  displayForm, exampleFor, glossOrTranslation, lemmaKey, sample, shuffle,
   strictTranslation, wordAudioUrl,
 } from '../lib/data'
 import type { Lemma, TransLang } from '../lib/types'
@@ -192,12 +192,30 @@ export function RecognizeExercise({ lemma, pool, isNew, onAnswer }: ExerciseProp
           <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
             {correct ? t('correct', lang) : `${t('wrong', lang)} — ${correctText}`}
           </div>
-          {lemma.s[0]?.x[0] && (
-            <p className="de small muted" style={{ marginTop: 10 }}>{lemma.s[0].x[0]}</p>
-          )}
+          <Example lemma={lemma} />
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
         </>
       )}
+    </div>
+  )
+}
+
+/**
+ * Kelimenin geçtiği örnek cümle — Almancası ve karşılığı birlikte.
+ *
+ * Tek başına Almanca cümle yeni başlayan için işe yaramıyor: okuyamadığı
+ * için atlıyor ve kelimenin bağlamını hiç görmemiş oluyor. Karşılığıyla
+ * birlikte ise cümle, kelimenin nerede ve nasıl kullanıldığını gösteren
+ * asıl öğretici parçaya dönüşüyor.
+ */
+function Example({ lemma }: { lemma: Lemma }) {
+  const { state, lang } = useStore()
+  const ex = exampleFor(lemma, state.settings.transLang, lang)
+  if (!ex) return null
+  return (
+    <div className="example-pair">
+      <p className="de">{ex.de}</p>
+      {ex.text && <p className="trans" lang={ex.lang ?? undefined}>{ex.text}</p>}
     </div>
   )
 }
@@ -252,6 +270,7 @@ export function ProduceExercise({ lemma, isNew, onAnswer }: ExerciseProps) {
             <strong className="de">{displayForm(lemma)}</strong>
             {lemma.pl && <span className="small muted"> · Pl. {lemma.pl}</span>}
           </div>
+          <Example lemma={lemma} />
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
         </>
       )}
@@ -296,6 +315,7 @@ export function ArticleExercise({ lemma, isNew, onAnswer }: ExerciseProps) {
             <strong className="de">{right} {lemma.w}</strong>
             {lemma.pl && <span className="small"> · Pl. die {lemma.pl}</span>}
           </div>
+          <Example lemma={lemma} />
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
         </>
       )}
@@ -312,7 +332,10 @@ export function ClozeExercise(props: ExerciseProps) {
   const [value, setValue] = useState('')
   const [checked, setChecked] = useState(false)
 
-  const sentence = useMemo(() => lemma.s.find((s) => s.x.length)?.x[0] ?? '', [lemma])
+  // Çevirili örnek varsa onu kullan: cevaptan sonra karşılığını da
+  // gösterebiliyoruz, yoksa sözlükteki Almanca örneğe düşüyor.
+  const example = useMemo(() => exampleFor(lemma, tl, lang), [lemma, tl, lang])
+  const sentence = example?.de ?? ''
 
   const { masked, target } = useMemo(() => {
     const stem = lemma.w.slice(0, Math.max(3, Math.floor(lemma.w.length * 0.6)))
@@ -356,6 +379,9 @@ export function ClozeExercise(props: ExerciseProps) {
         <>
           <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
             <span className="de">{sentence}</span>
+            {example?.text && (
+              <span className="trans" lang={example.lang ?? undefined}>{example.text}</span>
+            )}
           </div>
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
         </>
@@ -439,6 +465,7 @@ export function ListenExercise({ lemma, pool, isNew, onAnswer }: ExerciseProps) 
           <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
             {correct ? t('correct', lang) : `${t('wrong', lang)} — ${correctText}`}
           </div>
+          <Example lemma={lemma} />
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
         </>
       )}
@@ -493,6 +520,7 @@ export function OddOneExercise({ lemma, pool, isNew, onAnswer }: ExerciseProps) 
           <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
             <strong className="de">{built.oddWord}</strong> — {POS_NAME[built.oddPos]?.[lang] ?? built.oddPos}
           </div>
+          <Example lemma={lemma} />
           <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
         </>
       )}

@@ -5,7 +5,7 @@
  * C1 kelimelerini hiç indirmez.
  */
 
-import type { Curriculum, IndexEntry, Lemma, Level, Sentence, TransLang, Unit } from './types'
+import type { Curriculum, IndexEntry, Lemma, Level, Sentence, TransLang, UiLang, Unit } from './types'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -159,6 +159,34 @@ export function glossOrTranslation(
   const t = strictTranslation(l, lang)
   if (t) return { text: t.words.slice(0, 2).join(', '), isGerman: false, bridged: t.bridged }
   return { text: l.s[0]?.g ?? l.w, isGerman: true, bridged: false }
+}
+
+/**
+ * Alıştırmanın altında gösterilecek örnek cümle.
+ *
+ * Önce çevirili Tatoeba cümlesi (`xs`) deneniyor: öğrenci hem Almancasını
+ * hem karşılığını görüyor. Karşılık sırası çeviri dili → arayüz dili;
+ * arayüz dili Almanca ise zaten çeviriye gerek yok.
+ *
+ * Çevirili örnek yoksa sözlük kaydındaki Almanca örneğe düşülüyor —
+ * yoksun kalmaktansa çevirisiz görünsün. Kelimelerin %95'inde çevirili
+ * örnek var, bu yedek yalnızca kalan nadir kelimeler için çalışıyor.
+ */
+export function exampleFor(
+  l: Lemma,
+  transLang: TransLang,
+  uiLang: UiLang,
+): { de: string; text: string | null; lang: TransLang | null } | null {
+  if (l.xs) {
+    const order: TransLang[] = uiLang === 'de' ? [transLang] : [transLang, uiLang as TransLang]
+    for (const code of order) {
+      const text = l.xs[code]
+      if (text) return { de: l.xs.d, text, lang: code }
+    }
+    return { de: l.xs.d, text: null, lang: null }
+  }
+  const de = l.s.find((s) => s.x.length)?.x[0]
+  return de ? { de, text: null, lang: null } : null
 }
 
 /* ---------- metin çözümleme ---------- */

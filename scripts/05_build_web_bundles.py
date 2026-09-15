@@ -20,6 +20,8 @@ CÜMLE SEÇİMİ
   Dinleme ve diktenin çalışabilmesi için sesli cümleler ayrıcalıklı.
 """
 import json
+import re
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -28,6 +30,70 @@ SRC = ROOT / "data-src"
 WEB = ROOT / "public" / "data"
 
 BANDS = ["A1", "A2", "B1", "B2", "C1", "C2"]
+
+WORD_RE = re.compile(r"[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß\-]*")
+
+# Örnek cümle seçiminde hedeflenen uzunluk. Kısa cümle bağlam vermiyor,
+# uzun cümle alıştırmanın odağını kelimeden cümleye kaydırıyor.
+IDEAL_LEN = 8
+
+
+def norm(x):
+    return unicodedata.normalize("NFC", x).lower()
+
+
+def build_examples():
+    """
+    lemma anahtarı -> {"d": almanca, "tr":…, "ru":…, "az":…}
+
+    NEDEN WIKTIONARY ÖRNEĞİ YETMİYOR?
+      Sözlük kaydındaki örnek cümleler yalnızca Almanca; çevirisi yok ve
+      açık veride de yok. Alıştırmada kelimenin altında duran cümlenin
+      öğrenciye bir şey anlatması için karşılığının da görünmesi gerekiyor —
+      yoksa yeni başlayan biri cümleyi okuyamadığı için atlıyor.
+
+      Tatoeba cümleleri ise çevirileriyle birlikte geliyor (4. aşamada
+      Türkçe/Rusça/Azerice eşlenmişti). Burada her lemmaya bu havuzdan
+      bir cümle bağlanıyor: çekimli biçimler üzerinden eşleşme kuruluyor,
+      çünkü cümlede "Haus" değil "Häuser" geçiyor olabilir.
+
+    SEÇİM ÖLÇÜTÜ (sırayla)
+      1. Kaç dile çevrilmiş — çok dilli cümle daha çok öğrenciye yarıyor
+      2. Uzunluğu 8 kelimeye ne kadar yakın
+      3. Sözlük kapsaması yüksek olan (bilinmeyen kelime az)
+      4. Kimlik — eşitlikte sonuç her derlemede aynı çıksın diye
+    """
+    # çekimli biçim -> o biçimi üreten lemma anahtarları
+    forms = defaultdict(set)
+    with open(SRC / "form2lemma.tsv", encoding="utf-8") as fh:
+        for line in fh:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) == 3:
+                forms[norm(parts[0])].add(f"{parts[1]}|{parts[2]}")
+
+    best = {}
+    scores = {}
+    with open(SRC / "sentences.jsonl", encoding="utf-8") as fh:
+        for line in fh:
+            s = json.loads(line)
+            langs = [k for k in ("tr", "ru", "az") if s.get(k)]
+            if not langs:
+                continue  # çevirisiz cümle bu iş için değersiz
+            score = (-len(langs), abs(s["n"] - IDEAL_LEN), -s["cov"], int(s["id"]))
+            seen = set()
+            for tok in WORD_RE.findall(s["de"]):
+                for key in forms.get(norm(tok), ()):
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    if key not in scores or score < scores[key]:
+                        scores[key] = score
+                        rec = {"d": s["de"]}
+                        for lg in langs:
+                            rec[lg] = s[lg]
+                        best[key] = rec
+    print(f"  örnek cümlesi bağlanan lemma: {len(best):,}")
+    return best
 
 # İKİ FARKLI İHTİYAÇ, İKİ AYRI KOTA
 #   Dinleme/dikte modülü SES olmadan çalışmıyor.
@@ -79,7 +145,7 @@ def select_sentences(items, band):
     return list(chosen.values())
 
 
-def trim_lemma(r):
+def trim_lemma(r, examples):
     """Web kaydı: gereksiz alanları at, adları kısalt."""
     out = {
         "w": r["w"], "p": r["pos"], "r": r["rank"], "c": r["cefr"],
@@ -97,6 +163,11 @@ def trim_lemma(r):
                          ("syn", "syn"), ("ant", "ant")):
         if r.get(k_src):
             out[k_dst] = r[k_src]
+    # Çevirili örnek cümle (varsa). Arayüz bunu Almancasıyla birlikte
+    # öğrencinin seçtiği dilde gösteriyor.
+    ex = examples.get(f"{r['w']}|{r['pos']}")
+    if ex:
+        out["xs"] = ex
     return out
 
 
@@ -105,13 +176,16 @@ def main():
     (WEB / "vocab").mkdir(exist_ok=True)
     (WEB / "sentences").mkdir(exist_ok=True)
 
+    print("örnek cümleler eşleniyor...", flush=True)
+    examples = build_examples()
+
     # ---- kelimeler ----
     by_band = defaultdict(list)
     index = []
     with open(SRC / "enriched.jsonl", encoding="utf-8") as fh:
         for line in fh:
             r = json.loads(line)
-            trimmed = trim_lemma(r)
+            trimmed = trim_lemma(r, examples)
             by_band[r["cefr"]].append(trimmed)
             # Arama indeksi: ilk karşılıklar + seviye. Sözlük kutusu bunu kullanır.
             index.append({

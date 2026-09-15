@@ -60,6 +60,11 @@ export interface Lemma {
   k?: Record<string, CaseCell>
   syn?: string[]
   ant?: string[]
+  /**
+   * Çevirili örnek cümle (Tatoeba). Sözlük kaydındaki `s[].x` örnekleri
+   * yalnızca Almanca; bu alan Almancasıyla birlikte karşılığını da taşıyor.
+   */
+  xs?: { d: string } & Partial<Record<TransLang, string>>
 }
 
 /** Arama indeksi kaydı (public/data/index.json) */

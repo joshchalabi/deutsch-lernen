@@ -470,6 +470,24 @@ label {
 }
 .feedback.ok { background: var(--ok-soft); color: var(--ok); }
 .feedback.bad { background: var(--bad-soft); color: var(--bad); }
+/* Boşluk doldurmada cümlenin karşılığı, Almancasının hemen altında */
+.feedback .trans { display: block; margin-top: 5px; font-weight: 500; opacity: .85; }
+
+/* Örnek cümle: Almancası ve karşılığı bir arada.
+   Almanca satır serif ve koyu, karşılık ince ve soluk — göz önce
+   Almancayı okuyor, karşılığa yalnızca takıldığında iniyor. */
+.example-pair {
+  margin-top: 12px; padding: 12px 14px;
+  background: var(--surface-2); border-radius: var(--r-sm);
+  border-inline-start: 3px solid var(--brand-line);
+  animation: riseIn .3s var(--ease) .06s backwards;
+}
+.example-pair .de {
+  margin: 0; font-size: 1.02rem; line-height: 1.55; color: var(--text);
+}
+.example-pair .trans {
+  margin: 5px 0 0; font-size: .89rem; line-height: 1.5; color: var(--text-dim);
+}
 
 /* dikte karşılaştırması */
 .diff { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; line-height: 2.05; }
