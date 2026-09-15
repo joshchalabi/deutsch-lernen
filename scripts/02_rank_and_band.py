@@ -44,7 +44,14 @@ SRC = ROOT / "data-src"
 # mertebesiyle hizalı (A1 ~650, A2 ~1.300, B1 ~2.400). Listelerin İÇERİĞİ
 # kullanılmadı — o materyal telifli. Yalnızca büyüklük referans alındı.
 # B2/C1 tavanları Nation'ın %98 kapsam eşiğinden türetildi.
-BANDS = [("A1", 650), ("A2", 1_600), ("B1", 3_000), ("B2", 5_500), ("C1", 9_000)]
+# Bantlar A1-B2 lehine genişletildi: kurs bu seviyelerde ve öğrenci orada
+# daha çok malzemeye ihtiyaç duyuyor. Tavan 9.000 -> 14.000; fazlası sözlüğü
+# ve ileri seviye okumayı besliyor.
+#
+# A1/A2/B1 tavanları hâlâ Goethe listelerinin yayımlanmış BÜYÜKLÜK
+# mertebesiyle aynı düzlemde (A1 ~650-800, A2 ~1.300-2.000, B1 ~2.400-4.000);
+# B2/C1 Nation'ın %98 kapsam eşiğinin üstüne çıkıyor.
+BANDS = [("A1", 800), ("A2", 2_000), ("B1", 4_000), ("B2", 7_000), ("C1", 14_000)]
 CEILING = BANDS[-1][1]
 
 # Dilbilgisi iskeleti: seyrek olsalar da erken öğretilmeli.

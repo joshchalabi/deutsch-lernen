@@ -14,7 +14,7 @@
  *   hız altında otomatikleşme (oyun).
  */
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import {
   displayForm, findUnit, glossOrTranslation, lemmaKey, loadCurriculum,
@@ -29,6 +29,7 @@ import { t } from '../i18n/strings'
 import { Badge, Loading, PlayButton, useAsync, useAudio } from '../components/ui'
 import { Exercise, pickKind } from '../components/exercises'
 import { Game, GAME_NAMES } from './Games'
+import { Art, artForUnit } from '../components/art'
 
 
 const STEP_ICON: Record<LessonStep, string> = {
@@ -201,6 +202,8 @@ function Player({
         })}
       </nav>
 
+      {/* key: adım değişince bileşen yeniden kurulup geçiş animasyonu oynasın */}
+      <div className="step-body" key={step}>
       {step === 'intro' && <IntroStep unit={unit} onNext={() => finish('intro')} />}
       {step === 'vocab' && <VocabStep lemmas={lemmas} onNext={() => finish('vocab')} />}
       {step === 'grammar' && <GrammarStep unit={unit} onNext={() => finish('grammar')} />}
@@ -208,9 +211,12 @@ function Player({
       {step === 'listening' && (
         <ListeningStep sentences={sentences} onNext={() => finish('listening')} />
       )}
-      {step === 'writing' && <WritingStep unit={unit} onNext={() => finish('writing')} />}
+      {step === 'writing' && (
+        <WritingStep unit={unit} lemmas={lemmas} sentences={sentences} onNext={() => finish('writing')} />
+      )}
       {step === 'game' && <GameStep unit={unit} lemmas={lemmas} onNext={() => finish('game')} />}
       {step === 'done' && <DoneStep unit={unit} onExit={() => navigate('/course')} />}
+      </div>
     </>
   )
 }
@@ -221,6 +227,7 @@ function IntroStep({ unit, onNext }: { unit: Unit; onNext: () => void }) {
   const { lang } = useStore()
   return (
     <div className="card">
+      <div className="art-hero"><Art name={artForUnit(unit.id)} size={88} /></div>
       <h2>🎯 {STEP_LABEL.intro[lang]}</h2>
       <p className="muted small">
         {{ tr: 'Bu ünitenin sonunda şunları yapabileceksiniz:',
@@ -645,92 +652,261 @@ function ListeningStep({
 
 /* ---------- 6. Yazma ---------- */
 
-function WritingStep({ unit, onNext }: { unit: Unit; onNext: () => void }) {
+/**
+ * Yazma adımı üç ödevden oluşuyor. Birincisi elle yazılmış, diğer ikisi
+ * ünitenin KENDİ malzemesinden üretiliyor — yani her açılışta farklı ve
+ * her zaman o ünitenin kelimeleriyle ilgili.
+ *
+ * NEDEN ÜRETİLMİŞ ÖDEV?
+ *   Sabit 40 ödev ikinci turda ezbere döner. Üretilen ödev, öğrencinin o
+ *   ünitede gerçekten çalıştığı kelimeleri üretim moduna sokuyor — ki
+ *   tanımaktan (çoktan seçmeli) üretmeye geçiş, kelime bilgisinin sağlam
+ *   olup olmadığını ortaya çıkaran asıl sınav.
+ */
+
+type TaskKind = 'authored' | 'sentences' | 'translate'
+
+function WritingStep({
+  unit, lemmas, sentences, onNext,
+}: {
+  unit: Unit
+  lemmas: Lemma[]
+  sentences: Sentence[]
+  onNext: () => void
+}) {
+  const { lang } = useStore()
+  const [kind, setKind] = useState<TaskKind>('authored')
+
+  const tabs: { id: TaskKind; icon: string; label: string }[] = [
+    { id: 'authored', icon: '📝', label: t('taskAuthored', lang) },
+    { id: 'sentences', icon: '✏️', label: t('taskOwnSentences', lang) },
+    { id: 'translate', icon: '🔁', label: t('taskTranslate', lang) },
+  ]
+
+  return (
+    <>
+      <div className="task-tabs">
+        {tabs.map((tb) => (
+          <button
+            key={tb.id}
+            className={`task-tab ${kind === tb.id ? 'active' : ''}`}
+            onClick={() => setKind(tb.id)}
+          >
+            <span aria-hidden="true">{tb.icon}</span> {tb.label}
+          </button>
+        ))}
+      </div>
+
+      <div key={kind} className="step-body">
+        {kind === 'authored' && <AuthoredTask unit={unit} />}
+        {kind === 'sentences' && <OwnSentencesTask unit={unit} lemmas={lemmas} />}
+        {kind === 'translate' && <TranslateTask unit={unit} sentences={sentences} />}
+      </div>
+
+      <button className="primary big block" style={{ marginTop: 14 }} onClick={onNext}>
+        {t('finish', lang)} →
+      </button>
+    </>
+  )
+}
+
+/** Kelime sayısı + istenen kelimelerin geçip geçmediği — ortak ölçüm */
+function useWritingCheck(text: string, mustUse: string[]) {
+  return useMemo(() => {
+    const lower = text.toLowerCase()
+    // Çekimli biçimleri de yakalamak için kökün ilk %60'ı aranıyor:
+    // "arbeiten" için "arbeite" de sayılır.
+    const used = mustUse.map((w) => {
+      const stem = w.slice(0, Math.max(3, Math.floor(w.length * 0.6))).toLowerCase()
+      return { word: w, ok: lower.includes(stem) }
+    })
+    return {
+      used,
+      words: tokenize(text).length,
+      sentences: text.split(/[.!?]+/).filter((x) => x.trim().length > 2).length,
+    }
+  }, [text, mustUse])
+}
+
+function MustUseRow({ used }: { used: { word: string; ok: boolean }[] }) {
+  return (
+    <div className="row must-use" style={{ marginBottom: 10 }}>
+      {used.map((u) => (
+        <span key={u.word} className={`badge ${u.ok ? 'ok' : ''}`}>
+          {u.ok ? '✓' : '○'} <span className="de">{u.word}</span>
+        </span>
+      ))}
+    </div>
+  )
+}
+
+function Counter({ words, sentences }: { words: number; sentences: number }) {
+  const { lang } = useStore()
+  return (
+    <span className="mono small muted">
+      {words} {{ tr: 'kelime', az: 'söz', ru: 'слов', de: 'Wörter' }[lang]}
+      {' · '}
+      {sentences} {{ tr: 'cümle', az: 'cümlə', ru: 'предл.', de: 'Sätze' }[lang]}
+    </span>
+  )
+}
+
+/** 1. Elle yazılmış ödev — örnek cevaplı */
+function AuthoredTask({ unit }: { unit: Unit }) {
   const { state, lang, saveWriting } = useStore()
   const [i, setI] = useState(0)
   const task = unit.writing[i]
   const key = `${unit.id}#${i}`
   const [text, setText] = useState(() => state.writings[key] ?? '')
   const [showModel, setShowModel] = useState(false)
+  const chk = useWritingCheck(text, task?.mustUse ?? [])
 
-  if (!task) {
-    return (
-      <div className="card center">
-        <div className="big-emoji">📝</div>
-        <button className="primary big" onClick={onNext}>{t('next', lang)} →</button>
-      </div>
-    )
-  }
+  useEffect(() => { setText(state.writings[key] ?? ''); setShowModel(false) }, [key])  // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Kullanılması istenen kelimeler metinde geçiyor mu? Çekimli biçimleri de
-  // yakalamak için kökün ilk %60'ı aranıyor — "arbeiten" için "arbeite" sayılır.
-  const used = task.mustUse.map((w) => {
-    const stem = w.slice(0, Math.max(3, Math.floor(w.length * 0.6))).toLowerCase()
-    return { word: w, ok: text.toLowerCase().includes(stem) }
-  })
-  const sentences = text.split(/[.!?]+/).filter((s) => s.trim().length > 2).length
-  const words = tokenize(text).length
+  if (!task) return <div className="card muted center">—</div>
 
   return (
     <div className="card">
-      <h2>📝 {STEP_LABEL.writing[lang]}</h2>
       <p className="prompt-text">{task.prompt[lang]}</p>
-
-      <div className="row must-use" style={{ marginBottom: 10 }}>
-        {used.map((u) => (
-          <span key={u.word} className={`badge ${u.ok ? 'ok' : ''}`}>
-            {u.ok ? '✓' : '○'} <span className="de">{u.word}</span>
-          </span>
-        ))}
-      </div>
-
+      <MustUseRow used={chk.used} />
       <textarea
-        rows={6} lang="de" spellCheck
-        value={text}
-        placeholder="…"
+        rows={6} lang="de" spellCheck value={text} placeholder="…"
         onChange={(e) => { setText(e.target.value); saveWriting(key, e.target.value) }}
       />
-
-      <div className="row between small muted" style={{ marginTop: 6 }}>
-        <span className="mono">{words} {{ tr: 'kelime', az: 'söz', ru: 'слов', de: 'Wörter' }[lang]} · {sentences} {{ tr: 'cümle', az: 'cümlə', ru: 'предл.', de: 'Sätze' }[lang]}</span>
-        <button className="ghost" onClick={() => setShowModel((v) => !v)}>
-          {showModel ? t('close', lang) : { tr: 'Örnek cevap', az: 'Nümunə cavab', ru: 'Пример ответа', de: 'Musterlösung' }[lang]}
-        </button>
+      <div className="row between" style={{ marginTop: 6 }}>
+        <Counter words={chk.words} sentences={chk.sentences} />
+        <div className="row" style={{ gap: 6 }}>
+          {unit.writing.length > 1 && (
+            <button className="ghost small" onClick={() => setI((n) => (n + 1) % unit.writing.length)}>
+              {t('next', lang)} ↻
+            </button>
+          )}
+          <button className="ghost small" onClick={() => setShowModel((v) => !v)}>
+            {showModel ? t('close', lang) : t('modelAnswer', lang)}
+          </button>
+        </div>
       </div>
-
       {showModel && (
         <div className="notice" style={{ marginTop: 10 }}>
           <div className="de">{task.model}</div>
-          <div className="hint" style={{ marginTop: 6 }}>
-            {{ tr: 'Bu sadece bir örnek. Kendi metninizle karşılaştırın: eksik kalan yapı hangisi?',
-               az: 'Bu sadəcə nümunədir. Öz mətninizlə müqayisə edin: hansı quruluş əskikdir?',
-               ru: 'Это лишь образец. Сравните со своим текстом: какой конструкции не хватает?',
-               de: 'Nur ein Beispiel. Vergleichen Sie mit Ihrem Text: Was fehlt?' }[lang]}
-          </div>
+          <div className="hint" style={{ marginTop: 6 }}>{t('modelAnswerNote', lang)}</div>
         </div>
       )}
+    </div>
+  )
+}
 
-      <button
-        className="primary big block"
-        style={{ marginTop: 14 }}
-        disabled={words < 5}
-        onClick={() => {
-          if (i + 1 < unit.writing.length) {
-            setI(i + 1); setText(''); setShowModel(false)
-          } else {
-            onNext()
-          }
-        }}
-      >
-        {i + 1 < unit.writing.length ? t('next', lang) : t('finish', lang)} →
+/** 2. Ünitenin kelimeleriyle kendi cümleni kur */
+function OwnSentencesTask({ unit, lemmas }: { unit: Unit; lemmas: Lemma[] }) {
+  const { state, lang, saveWriting } = useStore()
+  const [seed, setSeed] = useState(0)
+  const picked = useMemo(() => sample(lemmas, 5), [lemmas, seed])
+  const key = `${unit.id}#own${seed}`
+  const [text, setText] = useState(() => state.writings[key] ?? '')
+  const chk = useWritingCheck(text, picked.map((l) => l.w))
+
+  useEffect(() => { setText(state.writings[key] ?? '') }, [key])  // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <div className="card">
+      <p className="prompt-text">{t('taskOwnSentencesHint', lang)}</p>
+      <div className="word-grid" style={{ marginBottom: 12 }}>
+        {picked.map((l) => {
+          const done = chk.used.find((u) => u.word === l.w)?.ok
+          return (
+            <div className={`word-chip ${done ? 'used' : ''}`} key={lemmaKey(l)}>
+              <div className="row between">
+                <span className="de lemma">{displayForm(l)}</span>
+                <span>{done ? '✓' : ''}</span>
+              </div>
+              <div className="small muted">{glossOrTranslation(l, state.settings.transLang).text}</div>
+            </div>
+          )
+        })}
+      </div>
+      <textarea
+        rows={6} lang="de" spellCheck value={text} placeholder="…"
+        onChange={(e) => { setText(e.target.value); saveWriting(key, e.target.value) }}
+      />
+      <div className="row between" style={{ marginTop: 6 }}>
+        <Counter words={chk.words} sentences={chk.sentences} />
+        <button className="ghost small" onClick={() => setSeed((n) => n + 1)}>
+          ↻ {t('newWords', lang)}
+        </button>
+      </div>
+    </div>
+  )
+}
+
+/** 3. Çeviri ödevi: kendi dilinden Almancaya */
+function TranslateTask({ unit, sentences }: { unit: Unit; sentences: Sentence[] }) {
+  const { state, lang, saveWriting } = useStore()
+  const tl = state.settings.transLang
+  const [seed, setSeed] = useState(0)
+  const [revealed, setRevealed] = useState<Record<number, boolean>>({})
+
+  // Yalnızca kullanıcının diline çevirisi OLAN cümleler: çeviri ödevi
+  // kaynak metni olmadan kurulamaz.
+  const items = useMemo(
+    () => sample(sentences.filter((s) => s[tl] && s.n <= 10), 4),
+    [sentences, tl, seed],
+  )
+
+  if (!items.length) {
+    return <div className="card muted center">{t('taskTranslateNone', lang)}</div>
+  }
+
+  return (
+    <div className="card">
+      <p className="prompt-text">{t('taskTranslateHint', lang)}</p>
+      {items.map((s, i) => {
+        const key = `${unit.id}#tr${seed}-${i}`
+        return (
+          <TranslateRow
+            key={key}
+            source={s[tl]!}
+            target={s.d}
+            saved={state.writings[key] ?? ''}
+            revealed={!!revealed[i]}
+            onReveal={() => setRevealed((r) => ({ ...r, [i]: true }))}
+            onChange={(v) => saveWriting(key, v)}
+          />
+        )
+      })}
+      <button className="ghost small" onClick={() => { setSeed((n) => n + 1); setRevealed({}) }}>
+        ↻ {t('taskNewSet', lang)}
       </button>
-      {words < 5 && (
-        <p className="hint center">
-          {{ tr: 'Devam etmek için en az birkaç cümle yazın.',
-             az: 'Davam etmək üçün ən azı bir neçə cümlə yazın.',
-             ru: 'Чтобы продолжить, напишите хотя бы несколько предложений.',
-             de: 'Schreiben Sie ein paar Sätze, um fortzufahren.' }[lang]}
-        </p>
+    </div>
+  )
+}
+
+function TranslateRow({
+  source, target, saved, revealed, onReveal, onChange,
+}: {
+  source: string
+  target: string
+  saved: string
+  revealed: boolean
+  onReveal: () => void
+  onChange: (v: string) => void
+}) {
+  const { lang } = useStore()
+  const [text, setText] = useState(saved)
+  return (
+    <div className="translate-row">
+      <div className="src">{source}</div>
+      <input
+        type="text" lang="de" spellCheck={false} value={text} placeholder="Auf Deutsch…"
+        onChange={(e) => { setText(e.target.value); onChange(e.target.value) }}
+      />
+      {revealed ? (
+        <div className="feedback ok" style={{ marginTop: 6 }}>
+          <span className="de">{target}</span>
+        </div>
+      ) : (
+        <button className="ghost small" style={{ marginTop: 4 }} onClick={onReveal}>
+          {t('showAnswer', lang)}
+        </button>
       )}
     </div>
   )
@@ -768,7 +944,7 @@ function DoneStep({ unit, onExit }: { unit: Unit; onExit: () => void }) {
   const { lang } = useStore()
   return (
     <div className="card center celebrate">
-      <div className="big-emoji">🏁</div>
+      <div className="art-hero"><Art name="trophy" size={96} /></div>
       <h2>{unit.title[lang]}</h2>
       <p className="muted">
         {{ tr: 'Ünite tamamlandı. Kelimeler tekrar programına eklendi — birkaç gün içinde tekrar karşınıza çıkacaklar.',

@@ -26,6 +26,7 @@ import { LEVELS, type Level, type Lemma } from '../lib/types'
 import { useStore } from '../lib/store'
 import { t } from '../i18n/strings'
 import { Loading, useAsync } from '../components/ui'
+import { Art } from '../components/art'
 
 /** Her banttan sorulacak gerçek kelime sayısı */
 const PER_BAND = 8
@@ -42,9 +43,17 @@ const PSEUDOWORDS = [
   'Zwirkung', 'plundsam', 'Kroschel', 'fremdlern', 'Spauber',
 ]
 
-/** Bandın temsil ettiği kümülatif kelime sayısı (sözlük tavanları) */
-const BAND_SIZE: Record<Level, number> = {
-  A1: 650, A2: 950, B1: 1500, B2: 2500, C1: 3400,
+/**
+ * Bandın temsil ettiği kelime sayısı — VERİDEN hesaplanıyor, sabit yazılmıyor.
+ *
+ * Önce elle yazılmıştı ve bantlar genişletildiğinde eski değerlerde kaldı;
+ * kelime dağarcığı tahmini sessizce yanlışlaşıyordu. Yüklenen paketin
+ * gerçek boyutunu saymak bu sınıf hataları imkânsız kılıyor.
+ */
+function bandSizes(pools: Record<Level, Lemma[]>): Record<Level, number> {
+  return Object.fromEntries(
+    LEVELS.map((l) => [l, pools[l]?.length ?? 0]),
+  ) as Record<Level, number>
 }
 
 interface Item {
@@ -87,7 +96,11 @@ interface Estimate {
   perBand: Record<Level, number>
 }
 
-function estimate(items: Item[], answers: Record<string, boolean>): Estimate {
+function estimate(
+  items: Item[],
+  answers: Record<string, boolean>,
+  bandSize: Record<Level, number>,
+): Estimate {
   const fakes = items.filter((i) => i.fake)
   const fakeYes = fakes.filter((i) => answers[i.id]).length
   // Yanlış alarm oranı: sahte kelimelere "biliyorum" deme sıklığı
@@ -107,7 +120,7 @@ function estimate(items: Item[], answers: Record<string, boolean>): Estimate {
       falseAlarm >= 1 ? 0 : Math.max(0, (hitRate - falseAlarm) / (1 - falseAlarm))
 
     perBand[level] = corrected
-    vocab += corrected * BAND_SIZE[level]
+    vocab += corrected * bandSize[level]
   }
 
   // Seviye: %80'in üzerinde hâkim olunan en üst bandın bir üstü
@@ -149,6 +162,7 @@ function Test({
   navigate: ReturnType<typeof useNavigate>
 }) {
   const items = useMemo(() => buildItems(pools), [pools])
+  const sizes = useMemo(() => bandSizes(pools), [pools])
   const [started, setStarted] = useState(false)
   const [idx, setIdx] = useState(0)
   const [answers, setAnswers] = useState<Record<string, boolean>>({})
@@ -162,7 +176,7 @@ function Test({
     // Erken bitiş: son iki bandın gerçek kelimelerinde başarı çok düştüyse
     const nextIdx = idx + 1
     if (nextIdx >= items.length) {
-      setResult(estimate(items, next))
+      setResult(estimate(items, next, sizes))
       return
     }
     setIdx(nextIdx)
@@ -170,7 +184,8 @@ function Test({
 
   if (!started) {
     return (
-      <div className="card">
+      <div className="card center">
+        <div className="art-hero"><Art name="book" size={104} /></div>
         <h1>{t('placementTitle', lang)}</h1>
         <p className="muted">{t('placementIntro', lang)}</p>
         <button className="primary big" onClick={() => setStarted(true)}>
@@ -182,7 +197,8 @@ function Test({
 
   if (result) {
     return (
-      <div className="card">
+      <div className="card celebrate">
+        <div className="art-hero"><Art name="trophy" size={92} /></div>
         <h1>{t('placementResult', lang)}</h1>
         <div className="row" style={{ gap: 16, margin: '18px 0' }}>
           <div className="stat" style={{ padding: 0 }}>
@@ -251,16 +267,18 @@ function Test({
         <i style={{ width: `${((idx + 1) / items.length) * 100}%` }} />
       </div>
 
-      <div className="prompt">
+      <div className="prompt word-card" key={item.id}>
         <div className="word de">{item.display}</div>
       </div>
 
-      <div className="row" style={{ gap: 10 }}>
-        <button className="primary big" style={{ flex: 1 }} onClick={() => answer(true)}>
-          {t('knowIt', lang)}
+      <div className="know-row">
+        <button className="know-btn yes" onClick={() => answer(true)}>
+          <span className="ico" aria-hidden="true">✓</span>
+          <span>{t('knowIt', lang)}</span>
         </button>
-        <button className="big" style={{ flex: 1 }} onClick={() => answer(false)}>
-          {t('dontKnow', lang)}
+        <button className="know-btn no" onClick={() => answer(false)}>
+          <span className="ico" aria-hidden="true">✕</span>
+          <span>{t('dontKnow', lang)}</span>
         </button>
       </div>
     </div>

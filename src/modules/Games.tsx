@@ -15,6 +15,7 @@ import type { GameId, Lemma } from '../lib/types'
 import { glossOrTranslation, sample, shuffle } from '../lib/data'
 import { useStore } from '../lib/store'
 import { t } from '../i18n/strings'
+import { Art, Confetti } from '../components/art'
 
 export interface GameProps {
   /** Oyunun soru üreteceği kelimeler */
@@ -62,8 +63,11 @@ function GameOver({
   const pct = total ? Math.round((score / total) * 100) : 0
   const face = pct >= 90 ? '🏆' : pct >= 70 ? '🎉' : pct >= 50 ? '👍' : '💪'
   return (
-    <div className="card center game-over">
-      <div className="big-emoji">{face}</div>
+    <div className="card center game-over celebrate">
+      <Confetti show={pct >= 70} />
+      {pct >= 70
+        ? <div className="art-hero"><Art name="trophy" size={88} /></div>
+        : <div className="big-emoji">{face}</div>}
       <div className="score-big mono">{score} / {total}</div>
       <div className="muted small" style={{ marginBottom: 16 }}>{pct}%</div>
       <button className="primary big" onClick={() => onFinish(score, total)}>

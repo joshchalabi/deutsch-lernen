@@ -556,3 +556,263 @@ table.paradigm td.de { font-weight: 600; }
 }
 .chat-input input { flex: 1; }
 .chat-input button { padding: 10px 18px; font-size: 1.1rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   HAREKET VE EFEKTLER
+
+   İlke: hareket süs değil, geri bildirim. Her animasyonun bir işi var —
+   doğru/yanlışı anında hissettirmek, yeni içeriğin nereden geldiğini
+   göstermek, bir şeyin tıklanabilir olduğunu belli etmek.
+   Süreler kısa (120-420ms): daha uzunu ders temposunu yavaşlatır.
+
+   Hepsi dosyanın sonundaki prefers-reduced-motion kuralıyla kapanıyor.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ---------- giriş animasyonları ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(.88); }
+  60%  { opacity: 1; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(22px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.main > * { animation: fadeUp .34s cubic-bezier(.2, .8, .3, 1) backwards; }
+
+/* Listeler kademeli gelsin: göz sırayı takip etsin */
+.unit-grid > *, .plan-list > *, .grid > *, .choices > * {
+  animation: fadeUp .3s cubic-bezier(.2, .8, .3, 1) backwards;
+}
+.unit-grid > *:nth-child(1), .plan-list > *:nth-child(1), .grid > *:nth-child(1), .choices > *:nth-child(1) { animation-delay: .02s }
+.unit-grid > *:nth-child(2), .plan-list > *:nth-child(2), .grid > *:nth-child(2), .choices > *:nth-child(2) { animation-delay: .06s }
+.unit-grid > *:nth-child(3), .plan-list > *:nth-child(3), .grid > *:nth-child(3), .choices > *:nth-child(3) { animation-delay: .10s }
+.unit-grid > *:nth-child(4), .plan-list > *:nth-child(4), .grid > *:nth-child(4), .choices > *:nth-child(4) { animation-delay: .14s }
+.unit-grid > *:nth-child(5), .plan-list > *:nth-child(5), .grid > *:nth-child(5) { animation-delay: .18s }
+.unit-grid > *:nth-child(n+6) { animation-delay: .22s }
+
+.word-grid > * { animation: popIn .26s cubic-bezier(.2, .9, .3, 1) backwards; }
+.word-grid > *:nth-child(2n) { animation-delay: .04s }
+.word-grid > *:nth-child(3n) { animation-delay: .08s }
+
+/* ---------- düğme etkileşimi ---------- */
+button {
+  position: relative;
+  overflow: hidden;
+  transition: transform .13s cubic-bezier(.2, .8, .3, 1),
+              background .16s, border-color .16s, box-shadow .16s, filter .16s;
+}
+button:hover:not(:disabled) { transform: translateY(-1px); }
+button:active:not(:disabled) { transform: translateY(1px) scale(.985); }
+
+button.primary:hover:not(:disabled) {
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* Basınca yayılan halka — dokunduğunu hissettirir */
+button::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit;
+  background: radial-gradient(circle at var(--rx, 50%) var(--ry, 50%),
+              currentColor 0%, transparent 55%);
+  opacity: 0; pointer-events: none;
+}
+button:active:not(:disabled)::after { opacity: .16; transition: none; }
+
+/* ---------- doğru / yanlış geri bildirimi ---------- */
+@keyframes correctPulse {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.045); box-shadow: 0 0 0 6px color-mix(in srgb, var(--ok) 26%, transparent); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(7px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(3px); }
+}
+
+.choices button.correct,
+.game-card.ok { animation: correctPulse .5s cubic-bezier(.2, .9, .3, 1); }
+.choices button.wrong,
+.game-card.bad { animation: wrongShake .38s; }
+
+.feedback { animation: fadeUp .26s cubic-bezier(.2, .8, .3, 1) backwards; }
+.feedback.ok { border-inline-start: 4px solid var(--ok); }
+.feedback.bad { border-inline-start: 4px solid var(--bad); }
+
+/* ---------- konfeti ---------- */
+.confetti {
+  position: absolute; inset-inline-start: 50%; inset-block-start: 40%;
+  width: 0; height: 0; pointer-events: none; z-index: 5;
+}
+.confetti span {
+  position: absolute; width: 8px; height: 8px; border-radius: 2px;
+  background: var(--accent);
+  animation: burst .85s cubic-bezier(.15, .8, .3, 1) forwards;
+  transform-origin: center;
+}
+.confetti span:nth-child(3n)   { background: var(--teal); border-radius: 50%; }
+.confetti span:nth-child(3n+1) { background: var(--violet); }
+.confetti span:nth-child(4n)   { background: var(--ok); width: 6px; height: 12px; }
+@keyframes burst {
+  0%   { opacity: 1; transform: rotate(0deg) translateY(0) scale(.6); }
+  100% {
+    opacity: 0;
+    transform: rotate(calc(var(--i) * 30deg + 200deg))
+               translateY(calc(-60px - var(--i) * 4px)) scale(1);
+  }
+}
+
+/* ---------- ilerleme çubuğu parıltısı ---------- */
+.bar > i { position: relative; overflow: hidden; }
+.bar > i::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(100deg, transparent 20%,
+              rgba(255, 255, 255, .45) 50%, transparent 80%);
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  60%  { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ---------- görseller ---------- */
+.art { color: var(--accent); display: block; }
+.art.soft { color: var(--text-dim); opacity: .75; }
+.art-hero {
+  display: grid; place-items: center; padding: 6px 0 2px;
+  animation: popIn .42s cubic-bezier(.2, .9, .3, 1) backwards;
+}
+.unit-art {
+  flex: 0 0 44px; height: 44px; display: grid; place-items: center;
+  border-radius: 13px; background: var(--accent-soft); color: var(--accent);
+  transition: transform .2s cubic-bezier(.2, .9, .3, 1);
+}
+.unit-card:hover .unit-art { transform: rotate(-6deg) scale(1.08); }
+.unit-card.complete .unit-art { background: var(--ok-soft); color: var(--ok); }
+
+/* ---------- yerleştirme testi: biliyorum / bilmiyorum ---------- */
+.know-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.know-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 20px 12px; font-size: 1rem; font-weight: 700;
+  border-width: 2px; border-radius: 18px;
+}
+.know-btn .ico { font-size: 1.7rem; line-height: 1; transition: transform .18s; }
+.know-btn:hover:not(:disabled) .ico { transform: scale(1.18) rotate(-6deg); }
+.know-btn.yes { border-color: var(--ok); color: var(--ok); }
+.know-btn.yes:hover:not(:disabled) {
+  background: var(--ok-soft);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--ok) 30%, transparent);
+}
+.know-btn.no { border-color: var(--text-dim); color: var(--text-dim); }
+.know-btn.no:hover:not(:disabled) {
+  background: var(--surface-2); border-color: var(--bad); color: var(--bad);
+}
+
+/* Test kelimesi her soruda yeniden gelsin */
+.word-card { animation: popIn .3s cubic-bezier(.2, .9, .3, 1); }
+
+/* ---------- ders adımı geçişi ---------- */
+.step-body { animation: slideInRight .3s cubic-bezier(.2, .8, .3, 1) backwards; }
+.step { transition: transform .16s cubic-bezier(.2, .9, .3, 1), background .18s, border-color .18s; }
+.step:hover:not(.active) { transform: translateY(-2px); }
+.step.active { animation: popIn .28s cubic-bezier(.2, .9, .3, 1); }
+
+/* ---------- kutlama ---------- */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-9px) rotate(3deg); }
+}
+.celebrate .big-emoji,
+.celebrate .art { animation: floaty 2.6s ease-in-out infinite; }
+.game-over { position: relative; }
+
+/* ---------- kelime kartı ---------- */
+.word-chip { transition: transform .16s cubic-bezier(.2, .9, .3, 1), box-shadow .16s, border-color .16s; }
+.word-chip:hover {
+  transform: translateY(-3px); border-color: var(--accent);
+  box-shadow: var(--shadow-lift);
+}
+
+/* ---------- sohbet balonu ---------- */
+.bubble.user { animation: slideInRight .28s cubic-bezier(.2, .8, .3, 1) backwards; }
+.bubble.assistant { animation: fadeUp .28s cubic-bezier(.2, .8, .3, 1) backwards; }
+
+/* ---------- eşleştirme oyunu ---------- */
+.match-item { transition: transform .16s cubic-bezier(.2, .9, .3, 1), background .16s, border-color .16s, opacity .3s; }
+.match-item:hover:not(:disabled) { transform: translateY(-2px) scale(1.02); }
+.match-item.matched { animation: correctPulse .45s; }
+
+/* ---------- oyun kartı ---------- */
+.game-card { transition: border-color .18s, background .18s; }
+.game-word { animation: popIn .28s cubic-bezier(.2, .9, .3, 1); }
+.timer > i { position: relative; overflow: hidden; }
+
+/* ---------- rozet ---------- */
+.badge.level { box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 32%, transparent); }
+.badge { transition: transform .16s; }
+.badge:hover { transform: scale(1.06); }
+
+/* ---------- hareket azaltma ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .confetti { display: none; }
+  .bar > i::after { display: none; }
+}
+
+/* Dinleme alıştırmasının oynat düğmesi — büyük, nabız atan hedef */
+.listen-orb {
+  width: 84px; height: 84px; border-radius: 50%;
+  font-size: 1.8rem; padding: 0; margin: 6px auto;
+  display: grid; place-items: center;
+}
+.listen-orb::before {
+  content: ''; position: absolute; inset: -6px; border-radius: 50%;
+  border: 2px solid var(--accent); opacity: .45;
+  animation: ring 2s cubic-bezier(.2, .8, .3, 1) infinite;
+}
+@keyframes ring {
+  0%   { transform: scale(.94); opacity: .5; }
+  70%  { transform: scale(1.22); opacity: 0; }
+  100% { transform: scale(1.22); opacity: 0; }
+}
+
+/* ---------- ödev sekmeleri ---------- */
+.task-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; scrollbar-width: none; }
+.task-tabs::-webkit-scrollbar { display: none; }
+.task-tab {
+  flex: 1 0 auto; padding: 10px 14px; font-size: .88rem; border-radius: 12px;
+  white-space: nowrap;
+}
+.task-tab.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent; color: #fff;
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+/* Kullanılmış kelime kartı yeşile döner — ilerleme anında görünür */
+.word-chip.used {
+  border-color: var(--ok); background: color-mix(in srgb, var(--ok-soft) 60%, var(--surface));
+  animation: correctPulse .45s;
+}
+
+/* ---------- çeviri ödevi satırı ---------- */
+.translate-row { padding: 12px 0; }
+.translate-row + .translate-row { border-top: 1px solid var(--border); }
+.translate-row .src {
+  font-size: .95rem; margin-bottom: 7px; padding: 8px 12px;
+  background: var(--violet-soft); border-inline-start: 3px solid var(--violet);
+  border-radius: 0 10px 10px 0;
+}

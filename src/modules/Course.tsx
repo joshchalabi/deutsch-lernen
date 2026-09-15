@@ -13,6 +13,7 @@ import { LESSON_STEPS, LEVELS, type Curriculum, type Level } from '../lib/types'
 import { useStore } from '../lib/store'
 import { t } from '../i18n/strings'
 import { Badge, Loading, useAsync } from '../components/ui'
+import { Art, artForUnit } from '../components/art'
 import { GAME_NAMES } from './Games'
 
 export default function Course() {
@@ -83,6 +84,7 @@ function LevelSection({ level, cur }: { level: Level; cur: Curriculum }) {
               className={`unit-card ${complete ? 'complete' : ''} ${steps > 0 && !complete ? 'started' : ''}`}
             >
               <div className="unit-no">{complete ? '✓' : idx + 1}</div>
+              <div className="unit-art"><Art name={artForUnit(u.id)} size={26} /></div>
               <div className="unit-body">
                 <div className="unit-title">{u.title[lang]}</div>
                 <div className="unit-theme">{u.theme[lang]}</div>

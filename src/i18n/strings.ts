@@ -243,11 +243,54 @@ export const STRINGS = {
     ru: 'Напишите слово',
     de: 'Schreiben Sie das Wort',
   },
+  listenAndPick: {
+    tr: 'Dinleyin ve anlamını seçin',
+    az: 'Dinləyin və mənasını seçin',
+    ru: 'Послушайте и выберите значение',
+    de: 'Hören Sie und wählen Sie die Bedeutung',
+  },
+  oddOneOut: {
+    tr: 'Hangisi diğerlerinden farklı?',
+    az: 'Hansı digərlərindən fərqlidir?',
+    ru: 'Какое слово лишнее?',
+    de: 'Welches Wort passt nicht?',
+  },
   fillGap: {
     tr: 'Boşluğu doldurun',
     az: 'Boşluğu doldurun',
     ru: 'Заполните пропуск',
     de: 'Füllen Sie die Lücke',
+  },
+
+  /* --- yazma ödevleri --- */
+  taskAuthored: { tr: 'Ödev', az: 'Tapşırıq', ru: 'Задание', de: 'Aufgabe' },
+  taskOwnSentences: { tr: 'Kendi cümlelerin', az: 'Öz cümlələrin', ru: 'Свои предложения', de: 'Eigene Sätze' },
+  taskTranslate: { tr: 'Çeviri', az: 'Tərcümə', ru: 'Перевод', de: 'Übersetzung' },
+  taskOwnSentencesHint: {
+    tr: 'Aşağıdaki beş kelimenin her biriyle kendi cümlenizi kurun. Kelime metninizde geçtiğinde ✓ işareti belirir.',
+    az: 'Aşağıdakı beş sözün hər biri ilə öz cümlənizi qurun. Söz mətninizdə keçəndə ✓ işarəsi görünür.',
+    ru: 'Составьте по одному своему предложению с каждым из пяти слов. Когда слово появится в тексте, загорится ✓.',
+    de: 'Bilden Sie zu jedem der fünf Wörter einen eigenen Satz. Sobald ein Wort im Text steht, erscheint ✓.',
+  },
+  taskTranslateHint: {
+    tr: 'Cümleleri Almancaya çevirin. Cevabınızı yazdıktan sonra doğrusunu açıp karşılaştırın — önce kendiniz deneyin, bakmak kolaylaştırır ama öğretmez.',
+    az: 'Cümlələri alman dilinə tərcümə edin. Cavabınızı yazandan sonra düzgününü açıb müqayisə edin — əvvəlcə özünüz çalışın.',
+    ru: 'Переведите предложения на немецкий. Сначала напишите свой вариант, потом откройте правильный и сравните — подсматривать легко, но так не учатся.',
+    de: 'Übersetzen Sie die Sätze ins Deutsche. Schreiben Sie erst selbst, dann vergleichen Sie mit der Lösung.',
+  },
+  taskTranslateNone: {
+    tr: 'Bu seviyede seçtiğiniz dilde yeterli çeviri yok. Çeviri dilini ayarlardan değiştirmeyi deneyebilirsiniz.',
+    az: 'Bu səviyyədə seçdiyiniz dildə kifayət qədər tərcümə yoxdur. Tərcümə dilini tənzimləmələrdən dəyişə bilərsiniz.',
+    ru: 'На этом уровне недостаточно переводов на выбранный язык. Попробуйте сменить язык перевода в настройках.',
+    de: 'Auf diesem Niveau gibt es zu wenige Übersetzungen in Ihrer Sprache. Ändern Sie ggf. die Übersetzungssprache.',
+  },
+  taskNewSet: { tr: 'Yeni set', az: 'Yeni dəst', ru: 'Новый набор', de: 'Neuer Satz' },
+  modelAnswer: { tr: 'Örnek cevap', az: 'Nümunə cavab', ru: 'Пример ответа', de: 'Musterlösung' },
+  modelAnswerNote: {
+    tr: 'Bu sadece bir örnek. Kendi metninizle karşılaştırın: eksik kalan yapı hangisi?',
+    az: 'Bu sadəcə nümunədir. Öz mətninizlə müqayisə edin: hansı quruluş əskikdir?',
+    ru: 'Это лишь образец. Сравните со своим текстом: какой конструкции не хватает?',
+    de: 'Nur ein Beispiel. Vergleichen Sie mit Ihrem Text: Was fehlt?',
   },
 
   /* --- dinleme --- */

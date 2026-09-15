@@ -19,6 +19,15 @@ içerir ve sabit bir sırayla ilerler:
            → 🎧 Dinleme → 📝 Yazma → 🎮 Oyun → 🏁 Bitiş
 ```
 
+**Yazma adımı üç ödev içeriyor:**
+1. **Ödev** — elle yazılmış, örnek cevaplı
+2. **Kendi cümlelerin** — ünitenin beş kelimesiyle kendi cümlelerini kurarsın;
+   kelime metinde geçtiğinde kart yeşile döner (çekimli biçimler de sayılır)
+3. **Çeviri** — kendi dilinden Almancaya; önce yazarsın, sonra doğrusunu açarsın
+
+Son ikisi ünitenin kendi malzemesinden üretiliyor, yani her açılışta farklı —
+sabit bir ödev listesi ikinci turda ezbere döner.
+
 Bu sıra keyfî değil: önce anlam, sonra kural, sonra kuralın üretimde denenmesi,
 sonra aynı malzemenin sesle pekiştirilmesi, sonra serbest üretim, kapanışta hız
 altında otomatikleşme.
@@ -144,14 +153,25 @@ yinelenmesi: bilgiyi tekrar *okumak* yerine *hatırlamaya çalışmak* uzun vade
 hatırlamayı belirgin şekilde artırıyor. Hiçbir alıştırma "şu kelimeye bak ve ezberle"
 demiyor; hepsi önce cevabı üretmeni istiyor.
 
-### 3. Başarı bandı %60-80
+### 3. Altı alıştırma türü
+
+Tanıma (çoktan seçmeli) · Üretim (yazarak) · Artikel · Boşluk doldurma ·
+**Dinleyerek tanıma** (kelimeyi görmeden, sesten) · **Aykırı olanı bul**
+
+Dinleyerek tanıma ayrıca duruyor: diğer alıştırmaların hepsi yazılı biçimi
+gösteriyor, dolayısıyla öğrenci kelimeyi gözüyle tanıyıp kulağıyla tanıyamayabilir.
+Almanca'da bu fark büyük — *Bahn/Bann*, *Beeren/Bären* yazıda ayrışır, seste
+ayrışmaz. Kelimelerin %99'unda insan kaydı olduğu için bu alıştırma gerçek sesle
+çalışıyor.
+
+### 4. Başarı bandı %60-80
 
 Sürekli başarısızlık öğrenme değil tahmin ve kopma üretiyor. Alıştırma türü kelimenin
 geçmiş başarı oranına göre seçiliyor: zayıf kelimelerde tanıma (çoktan seçmeli),
 sağlamlaşmış kelimelerde üretim (yazma), örnek cümlesi olanlarda boşluk doldurma.
 Zorluk öğrencinin gerçek durumuna uyarlanıyor.
 
-### 4. Kapsama oranına göre metin seçimi
+### 5. Kapsama oranına göre metin seçimi
 
 Nation (2006), Laufer (1989), Schmitt vd. (2011): öğrenmenin gerçekleştiği bant,
 metnin **okumada %98, dinlemede %95**'inin anlaşıldığı banttır. Daha kolayı yeni bilgi
@@ -161,7 +181,7 @@ Okuma modülü her cümlenin kapsamasını öğrencinin **gerçek** bilinen keli
 karşı anlık hesaplıyor ve akışı o banda göre süzüyor. İki B1 öğrencisi aynı metinleri
 görmez — çünkü bildikleri kelimeler farklıdır.
 
-### 5. Dikte ve gölgeleme
+### 6. Dikte ve gölgeleme
 
 Dikte, dinlemeyi sesbirim düzeyinde ölçen az sayıda alıştırmadan biri: çoktan seçmeli
 dinleme sorularında tahminle gizlenen boşlukları ortaya çıkarıyor. Cevap kelime
@@ -171,14 +191,14 @@ Gölgeleme (shadowing) üzerine sistematik derlemeler — Hamada & Suzuki (2024)
 fonemik ayırt etme, kelime tanıma, akıcılık ve prozodide ölçülebilir kazanım
 gösteriyor. Hız denetimi (0.6× / 0.75× / 1.0×) bu yüzden var.
 
-### 6. Gerçek saat bütçesi, sahte rozet değil
+### 7. Gerçek saat bütçesi, sahte rozet değil
 
 Goethe-Institut sıfırdan B2 için yaklaşık **600-800 rehberli ders saati** öngörüyor.
 "Saat bankası" göstergesi, uydurma puanlar yerine bu gerçek ölçüye karşı nerede
 olduğunuzu gösteriyor. Sekme arka plana alındığında sayaç duruyor: açık unutulan
 sekme çalışma saati üretmemeli.
 
-### 7. Yerleştirme testi — sahte kelime denetimli
+### 8. Yerleştirme testi — sahte kelime denetimli
 
 Meara & Buxton'ın (1987) Yes/No kelime testi tasarımı. Bilinen zaafı öğrencinin
 kendini fazla değerlendirmesi olduğu için araya Almanca sesbilgisine uygun ama var
@@ -198,7 +218,7 @@ Hepsi açık lisanslı, hepsi otomatik boru hattıyla üretiliyor.
 
 | Ne | Miktar | Kaynak | Lisans |
 |---|---|---|---|
-| Kelime | 9.000 lemma, A1–C1 | [Wiktionary](https://de.wiktionary.org) via [kaikki.org](https://kaikki.org) | CC BY-SA 3.0 |
+| Kelime | 14.000 lemma, A1–C1 | [Wiktionary](https://de.wiktionary.org) via [kaikki.org](https://kaikki.org) | CC BY-SA 3.0 |
 | Çekim tablosu | isimlerde 4 hâl × 2 sayı, fiillerde Stammformen | aynı | CC BY-SA 3.0 |
 | IPA | %100 kapsama | aynı | CC BY-SA 3.0 |
 | Kelime telaffuzu | %99,4 kapsama, insan kaydı | Wikimedia Commons | CC / kamu malı |
@@ -217,9 +237,12 @@ Frekans sırasına göre. Frekans, bir kelimenin CEFR seviyesinin tek başına e
 yordayıcısı. Bandlar:
 
 ```
-A1: 1–650      A2: 651–1.600     B1: 1.601–3.000
-B2: 3.001–5.500                  C1: 5.501–9.000
+A1: 1–800      A2: 801–2.000     B1: 2.001–4.000
+B2: 4.001–7.000                  C1: 7.001–14.000
 ```
+
+Bantlar A1–B2 lehine genişletildi: kurs bu seviyelerde ve öğrencinin orada daha
+çok malzemeye ihtiyacı var. A1 800, A2 1.200, B1 2.134, B2 2.943 kelime.
 
 A1/A2/B1 tavanları Goethe sınav sözcük listelerinin yayımlanmış **boyut mertebesiyle**
 hizalı (A1 ~650, A2 ~1.300, B1 ~2.400 kelime). C1 tavanı Nation'ın %98 kapsam için

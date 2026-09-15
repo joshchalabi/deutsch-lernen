@@ -11,7 +11,7 @@
  *   sonra çeldiriciler yalnızca aynı kipi sağlayabilen kelimelerden seçiliyor.
  */
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   displayForm, glossOrTranslation, lemmaKey, sample, shuffle,
   strictTranslation, wordAudioUrl,
@@ -20,7 +20,8 @@ import type { Lemma, TransLang } from '../lib/types'
 import { previewIntervals, Rating } from '../lib/fsrs'
 import { useStore } from '../lib/store'
 import { t } from '../i18n/strings'
-import { Badge, PlayButton } from './ui'
+import { Badge, PlayButton, useAudio } from './ui'
+import { Confetti } from './art'
 
 export interface ExerciseProps {
   lemma: Lemma
@@ -69,18 +70,34 @@ function Finish({
   onAnswer: ExerciseProps['onAnswer']
 }) {
   const { lang } = useStore()
+  // Konfeti yalnızca doğru cevapta ve bir kez: her render'da patlarsa
+  // ödül olmaktan çıkıp arka plan gürültüsü olur.
+  const [burst, setBurst] = useState(correct)
+  useEffect(() => {
+    if (!correct) return
+    const id = window.setTimeout(() => setBurst(false), 900)
+    return () => window.clearTimeout(id)
+  }, [correct])
   if (isNew) {
     return (
-      <button
-        className="primary block"
-        style={{ marginTop: 12 }}
-        onClick={() => onAnswer(correct, correct ? Rating.Good : Rating.Again)}
-      >
-        {t('next', lang)} →
-      </button>
+      <>
+        <Confetti show={burst} />
+        <button
+          className="primary block"
+          style={{ marginTop: 12 }}
+          onClick={() => onAnswer(correct, correct ? Rating.Good : Rating.Again)}
+        >
+          {t('next', lang)} →
+        </button>
+      </>
     )
   }
-  return <RatingBar lemma={lemma} onRate={(r) => onAnswer(correct, r)} />
+  return (
+    <>
+      <Confetti show={burst} />
+      <RatingBar lemma={lemma} onRate={(r) => onAnswer(correct, r)} />
+    </>
+  )
 }
 
 export function WordHead({ lemma }: { lemma: Lemma }) {
@@ -347,9 +364,160 @@ export function ClozeExercise(props: ExerciseProps) {
   )
 }
 
+/* ---------- 5. Dinleyerek tanıma ---------- */
+
+/**
+ * Kelimeyi GÖRMEDEN sesten tanıma.
+ *
+ * Diğer alıştırmaların hepsi yazılı biçimi gösteriyor; öğrenci kelimeyi
+ * gözüyle tanımayı öğrenip kulağıyla tanıyamayabiliyor. Almanca'da bu fark
+ * büyük: "Bahn / Bann", "Beeren / Bären" gibi çiftler yazıda ayrışıyor,
+ * seste ayrışmıyor. Kelimelerin %99'unda Wikimedia insan kaydı olduğu için
+ * bu alıştırma gerçek sesle çalışabiliyor.
+ */
+export function ListenExercise({ lemma, pool, isNew, onAnswer }: ExerciseProps) {
+  const { state, lang } = useStore()
+  const tl: TransLang = state.settings.transLang
+  const { play } = useAudio()
+  const [picked, setPicked] = useState<string | null>(null)
+  const url = wordAudioUrl(lemma)
+
+  const { correctText, options } = useMemo(() => {
+    const own = strictTranslation(lemma, tl)
+    const render = (l: Lemma) => {
+      const tr = strictTranslation(l, tl)
+      return tr ? tr.words.slice(0, 2).join(', ') : (l.s[0]?.g ?? null)
+    }
+    const right = own ? own.words.slice(0, 2).join(', ') : (lemma.s[0]?.g ?? lemma.w)
+    const near = pool.filter(
+      (l) => l.p === lemma.p && l.w !== lemma.w && Math.abs(l.r - lemma.r) < 2000 && render(l),
+    )
+    const texts = new Set<string>()
+    for (const l of sample(near.length >= 6 ? near : pool, 24)) {
+      const txt = render(l)
+      if (txt && txt !== right) texts.add(txt)
+      if (texts.size >= 3) break
+    }
+    return { correctText: right, options: shuffle([right, ...texts]) }
+  }, [lemma, pool, tl])
+
+  // Ses yoksa bu alıştırma anlamsız: tanımaya düş
+  if (!url) return <RecognizeExercise lemma={lemma} pool={pool} isNew={isNew} onAnswer={onAnswer} />
+
+  const answered = picked !== null
+  const correct = picked === correctText
+
+  return (
+    <div className="card">
+      <div className="prompt">
+        <div className="q">🎧 {t('listenAndPick', lang)}</div>
+        <button
+          className="primary big listen-orb"
+          onClick={() => play(url)}
+          aria-label={t('play', lang)}
+        >
+          ▶
+        </button>
+        {answered && <div className="word de" style={{ marginTop: 14 }}>{displayForm(lemma)}</div>}
+      </div>
+
+      <div className="choices">
+        {options.map((o) => (
+          <button
+            key={o}
+            disabled={answered}
+            className={answered ? (o === correctText ? 'correct' : o === picked ? 'wrong' : '') : ''}
+            onClick={() => setPicked(o)}
+          >
+            {o}
+          </button>
+        ))}
+      </div>
+
+      {answered && (
+        <>
+          <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
+            {correct ? t('correct', lang) : `${t('wrong', lang)} — ${correctText}`}
+          </div>
+          <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
+        </>
+      )}
+    </div>
+  )
+}
+
+/* ---------- 6. Aykırı olanı bul ---------- */
+
+/**
+ * Dört kelimeden üçü aynı sözcük türünden ve yakın frekanstan; biri farklı
+ * türden. Tek kelimeyi tek anlamla eşleştirmek yerine kelimeler arası
+ * ilişkiye bakmayı gerektiriyor — sözcük ağını kuran alıştırma türü.
+ */
+export function OddOneExercise({ lemma, pool, isNew, onAnswer }: ExerciseProps) {
+  const { lang } = useStore()
+  const [picked, setPicked] = useState<string | null>(null)
+
+  const built = useMemo(() => {
+    const same = pool.filter((l) => l.p === lemma.p && l.w !== lemma.w)
+    const other = pool.filter((l) => l.p !== lemma.p && l.p !== 'phrase')
+    if (same.length < 2 || !other.length) return null
+    const odd = sample(other, 1)[0]
+    const items = shuffle([lemma, ...sample(same, 2), odd])
+    return { items, oddWord: odd.w, oddPos: odd.p }
+  }, [lemma, pool])
+
+  if (!built) return <RecognizeExercise lemma={lemma} pool={pool} isNew={isNew} onAnswer={onAnswer} />
+
+  const answered = picked !== null
+  const correct = picked === built.oddWord
+
+  return (
+    <div className="card">
+      <div className="prompt" style={{ paddingBottom: 8 }}>
+        <div className="q">{t('oddOneOut', lang)}</div>
+      </div>
+      <div className="choices">
+        {built.items.map((l) => (
+          <button
+            key={l.w}
+            className={`de ${answered ? (l.w === built.oddWord ? 'correct' : l.w === picked ? 'wrong' : '') : ''}`}
+            disabled={answered}
+            onClick={() => setPicked(l.w)}
+          >
+            {displayForm(l)}
+          </button>
+        ))}
+      </div>
+      {answered && (
+        <>
+          <div className={`feedback ${correct ? 'ok' : 'bad'}`}>
+            <strong className="de">{built.oddWord}</strong> — {POS_NAME[built.oddPos]?.[lang] ?? built.oddPos}
+          </div>
+          <Finish lemma={lemma} correct={correct} isNew={isNew} onAnswer={onAnswer} />
+        </>
+      )}
+    </div>
+  )
+}
+
+const POS_NAME: Record<string, Record<string, string>> = {
+  noun: { tr: 'isim', az: 'isim', ru: 'существительное', de: 'Nomen' },
+  verb: { tr: 'fiil', az: 'feil', ru: 'глагол', de: 'Verb' },
+  adj: { tr: 'sıfat', az: 'sifət', ru: 'прилагательное', de: 'Adjektiv' },
+  adv: { tr: 'zarf', az: 'zərf', ru: 'наречие', de: 'Adverb' },
+  pron: { tr: 'zamir', az: 'əvəzlik', ru: 'местоимение', de: 'Pronomen' },
+  prep: { tr: 'edat', az: 'ön qoşma', ru: 'предлог', de: 'Präposition' },
+  conj: { tr: 'bağlaç', az: 'bağlayıcı', ru: 'союз', de: 'Konjunktion' },
+  num: { tr: 'sayı', az: 'say', ru: 'числительное', de: 'Numerale' },
+  particle: { tr: 'edat', az: 'ədat', ru: 'частица', de: 'Partikel' },
+  intj: { tr: 'ünlem', az: 'nida', ru: 'междометие', de: 'Interjektion' },
+  det: { tr: 'belirteç', az: 'təyinedici', ru: 'детерминатив', de: 'Determinativ' },
+  phrase: { tr: 'deyim', az: 'ifadə', ru: 'выражение', de: 'Wendung' },
+}
+
 /* ---------- alıştırma seçici ---------- */
 
-export type ExerciseKind = 'recognize' | 'produce' | 'article' | 'cloze'
+export type ExerciseKind = 'recognize' | 'produce' | 'article' | 'cloze' | 'listen' | 'oddone'
 
 /**
  * Alıştırma türünü kelimenin geçmişine göre seçer.
@@ -361,9 +529,15 @@ export function pickKind(lemma: Lemma, hist: boolean[], reps: number): ExerciseK
   const isNoun = lemma.p === 'noun' && !!lemma.g?.length
   const hasExample = lemma.s.some((s) => s.x.length > 0)
 
+  const hasAudio = !!lemma.a
+
   if (reps < 2) return 'recognize'
-  if (isNoun && reps % 4 === 2) return 'article'
+  if (isNoun && reps % 5 === 2) return 'article'
+  // Ses tanıma zorluktan bağımsız: göz-kulak açığını erken kapatmak için
+  // düzenli aralıklarla araya giriyor.
+  if (hasAudio && reps % 4 === 3) return 'listen'
   if (rate < 0.6) return 'recognize'
+  if (rate > 0.8 && reps % 6 === 5) return 'oddone'
   if (rate > 0.85 && hasExample && reps % 3 === 0) return 'cloze'
   if (rate > 0.75) return 'produce'
   return 'recognize'
@@ -374,6 +548,8 @@ export function Exercise({ kind, ...props }: ExerciseProps & { kind: ExerciseKin
     case 'article': return <ArticleExercise {...props} />
     case 'produce': return <ProduceExercise {...props} />
     case 'cloze': return <ClozeExercise {...props} />
+    case 'listen': return <ListenExercise {...props} />
+    case 'oddone': return <OddOneExercise {...props} />
     default: return <RecognizeExercise {...props} />
   }
 }
