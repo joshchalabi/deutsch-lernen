@@ -256,11 +256,27 @@ npm run build
 
 ### GitHub Pages'e yayımlama
 
-1. Depoyu GitHub'a gönderin.
-2. Depo adınız `deutsch-lernen` değilse `vite.config.ts` içindeki `base` değerini
-   güncelleyin (ya da `BASE_PATH=/depo-adiniz/ npm run build` ile derleyin).
-3. Depo ayarlarında **Settings → Pages → Source: GitHub Actions** seçin.
-4. `main` dalına her gönderimde `.github/workflows/deploy.yml` otomatik yayımlar.
+Canlı: **https://joshchalabi.github.io/deutsch-lernen/**
+
+Güncellemek için tek komut:
+
+```bash
+npm run deploy
+```
+
+Derlemeyi yerelde yapıp `dist/` klasörünü `gh-pages` dalına gönderir. Pages o dalı
+sunar. Bir-iki dakika içinde yayına girer.
+
+İlk kurulumda yapılanlar (tekrarı gerekmez):
+- Depo adı `deutsch-lernen` — `vite.config.ts` içindeki `base` bununla uyumlu.
+  Farklı bir ada taşırsanız `BASE_PATH=/yeni-ad/ npm run build` ile derleyin.
+- Pages kaynağı: `gh-pages` dalı, kök dizin.
+
+**Neden Actions değil?** `.github/workflows/deploy.yml` hazır duruyor ama yalnızca
+elle tetiklenecek şekilde ayarlı: bu hesapta Actions faturalandırma nedeniyle kilitli
+(`The job was not started because your account is locked due to a billing issue`) ve
+her push'ta kırmızı hata üretiyordu. Kilit kalkınca workflow'un başındaki yorumdaki
+iki satırı geri alıp Pages kaynağını "GitHub Actions"a çevirmek yeterli.
 
 Yönlendirme `HashRouter` kullanıyor: GitHub Pages statik dosya sunduğu için
 `/study` gibi bir yola doğrudan girmek 404 verirdi. Hash yönlendirme (`#/study`)

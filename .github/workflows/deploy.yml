@@ -1,8 +1,16 @@
 name: Deploy to GitHub Pages
 
+# YALNIZCA ELLE TETİKLENİR.
+#
+# Bu depo şu an `npm run deploy` ile yayımlanıyor: derleme yerelde yapılıp
+# hazır dosyalar gh-pages dalına gönderiliyor. Actions yolu hesapta
+# faturalandırma kilidi olduğu için çalışmıyor ve her push'ta kırmızı hata
+# üretiyordu — gürültü, bilgi değil.
+#
+# Faturalandırma çözülünce burayı tekrar otomatiğe almak için:
+#   on: { push: { branches: [main] }, workflow_dispatch: }
+# ve Pages kaynağını Settings → Pages'ten "GitHub Actions"a çevir.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
