@@ -109,6 +109,8 @@ export interface FreeModel {
   id: string
   name: string
   context: number
+  /** Ücretsiz mi? Ücretli modeller yalnızca açıkça istendiğinde listelenir. */
+  free: boolean
 }
 
 /**
@@ -119,7 +121,10 @@ export interface FreeModel {
  * yanıltıcı), çıktı metin olmalı (listede müzik üreten modeller de var,
  * ör. lyria — sohbet için işe yaramaz).
  */
-export async function fetchFreeModels(signal?: AbortSignal): Promise<FreeModel[]> {
+export async function fetchOpenRouterModels(
+  { includePaid = false }: { includePaid?: boolean } = {},
+  signal?: AbortSignal,
+): Promise<FreeModel[]> {
   const res = await fetch('https://openrouter.ai/api/v1/models', { signal })
   if (!res.ok) throw new AiError(`${res.status}`, 'http')
   const data = (await res.json()) as {
@@ -134,15 +139,55 @@ export async function fetchFreeModels(signal?: AbortSignal): Promise<FreeModel[]
   const out: FreeModel[] = []
   for (const m of data.data ?? []) {
     const p = m.pricing ?? {}
-    if (String(p.prompt) !== '0' || String(p.completion) !== '0') continue
+    const isFree = String(p.prompt) === '0' && String(p.completion) === '0'
+    if (!isFree && !includePaid) continue
     const outs = m.architecture?.output_modalities ?? ['text']
     if (!outs.includes('text') || outs.includes('audio')) continue
-    out.push({ id: m.id, name: m.name ?? m.id, context: m.context_length ?? 0 })
+    out.push({ id: m.id, name: m.name ?? m.id, context: m.context_length ?? 0, free: isFree })
   }
   // Yönlendirici her zaman başta: en güvenli seçenek o
   out.sort((a, b) =>
     (a.id === FREE_ROUTER ? -1 : b.id === FREE_ROUTER ? 1 : 0) || b.context - a.context)
   return out
+}
+
+/**
+ * Google AI Studio'da BU ANAHTARIN erişebildiği modelleri listeler.
+ *
+ * OpenRouter listesi herkese açık ama Google'ınki anahtar istiyor — ve bu
+ * aslında daha iyi: ücretli bir anahtarla gemini-2.5-pro gibi modeller de
+ * listede görünür, ücretsiz anahtarla görünmez. Yani liste kullanıcıya tam
+ * olarak kendi erişebildiğini gösteriyor, genel bir katalog değil.
+ */
+export async function fetchGeminiModels(
+  apiKey: string,
+  signal?: AbortSignal,
+): Promise<FreeModel[]> {
+  if (!apiKey.trim()) throw new AiError('missing-key', 'no-key')
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(apiKey)}&pageSize=200`,
+    { signal },
+  )
+  if (!res.ok) throw new AiError(`${res.status} ${await res.text()}`.slice(0, 160), 'http')
+  const data = (await res.json()) as {
+    models?: {
+      name?: string
+      displayName?: string
+      inputTokenLimit?: number
+      supportedGenerationMethods?: string[]
+    }[]
+  }
+  return (data.models ?? [])
+    .filter((m) => m.supportedGenerationMethods?.includes('generateContent'))
+    .map((m) => ({
+      // "models/gemini-2.0-flash" -> "gemini-2.0-flash"
+      id: (m.name ?? '').replace(/^models\//, ''),
+      name: m.displayName ?? m.name ?? '',
+      context: m.inputTokenLimit ?? 0,
+      free: false,
+    }))
+    .filter((m) => m.id)
+    .sort((a, b) => a.id.localeCompare(b.id))
 }
 
 export interface AiMessage {
@@ -231,26 +276,54 @@ async function askOpenAiCompatible(
 async function askGemini(
   key: string, model: string, system: string, history: AiMessage[], signal?: AbortSignal,
 ): Promise<string> {
-  const url =
-    `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`
-  const res = await fetch(url, {
-    method: 'POST',
-    signal,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: system }] },
-      contents: history.map((m) => ({
-        role: m.role === 'assistant' ? 'model' : 'user',
-        parts: [{ text: m.content }],
-      })),
-      // Gemini'nin düşünen sürümleri de bütçeyi tüketebiliyor; rahat tutuluyor
-      generationConfig: { maxOutputTokens: 1200 },
-    }),
-  })
+  /**
+   * Gemini 2.5 ailesi varsayılan olarak "düşünüyor" ve bu düşünme
+   * maxOutputTokens bütçesinden düşüyor — OpenRouter'daki akıl yürütme
+   * modelleriyle aynı tuzak: cevap boş dönüyor. `thinkingBudget: 0` bunu
+   * kapatıyor ama bu alan her modelde geçerli değil; desteklemeyen model
+   * 400 veriyor. Bu yüzden önce kapatmayı deniyoruz, reddedilirse alansız
+   * tekrar gönderiyoruz. Model kimliğine göre tahmin yürütmekten sağlam:
+   * yeni model adları çıktığında da kendiliğinden doğru davranıyor.
+   */
+  const send = async (withThinkingOff: boolean) =>
+    fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`,
+      {
+        method: 'POST',
+        signal,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: system }] },
+          contents: history.map((m) => ({
+            role: m.role === 'assistant' ? 'model' : 'user',
+            parts: [{ text: m.content }],
+          })),
+          generationConfig: {
+            maxOutputTokens: 2000,
+            ...(withThinkingOff ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+          },
+        }),
+      },
+    )
+
+  let res = await send(true)
+  if (res.status === 400) {
+    const body = await res.clone().text()
+    if (/thinking/i.test(body)) res = await send(false)
+  }
+
   if (!res.ok) throw new AiError(`${res.status} ${await res.text()}`.slice(0, 200), 'http')
+
   const data = await res.json()
-  const text = data?.candidates?.[0]?.content?.parts?.map((p: { text?: string }) => p.text).join('')
-  if (!text) throw new AiError('empty', 'empty')
+  const cand = data?.candidates?.[0]
+  const text: string | undefined = cand?.content?.parts
+    ?.map((p: { text?: string }) => p.text ?? '')
+    .join('')
+  if (!text?.trim()) {
+    // Bütçe düşünmeye gitti: kullanıcıya ne yapacağını söyleyen hata
+    if (cand?.finishReason === 'MAX_TOKENS') throw new AiError('thinking', 'reasoning-only')
+    throw new AiError(`empty (${cand?.finishReason ?? 'bilinmiyor'})`, 'empty')
+  }
   return text
 }
 

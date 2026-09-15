@@ -108,6 +108,22 @@ export const STRINGS = {
     ru: '⭐ «Free Models Router» сам выбирает из моделей, бесплатных в данный момент, — он не ломается, когда модель становится платной. Рекомендуется.',
     de: '⭐ Der «Free Models Router» wählt selbst aus den aktuell kostenlosen Modellen — er bricht nicht, wenn ein Modell kostenpflichtig wird. Empfohlen.',
   },
+  aiShowPaid: {
+    tr: 'ücretlileri de göster', az: 'ödənişliləri də göstər',
+    ru: 'показать платные', de: 'kostenpflichtige anzeigen',
+  },
+  aiGeminiNeedKey: {
+    tr: 'Model listesini görmek için önce API anahtarınızı girin — liste anahtarınızın erişebildiği modelleri gösterir.',
+    az: 'Model siyahısını görmək üçün əvvəlcə API açarınızı daxil edin — siyahı açarınızın əldə edə bildiyi modelləri göstərir.',
+    ru: 'Чтобы увидеть список моделей, сначала введите API-ключ — список показывает модели, доступные именно вашему ключу.',
+    de: 'Für die Modellliste zuerst den API-Schlüssel eintragen — die Liste zeigt genau die Modelle, auf die Ihr Schlüssel Zugriff hat.',
+  },
+  aiGeminiListNote: {
+    tr: 'Bu liste anahtarınızın erişebildiği modelleri gösterir. Ücretli planınız varsa gemini-2.5-pro gibi modeller de burada çıkar.',
+    az: 'Bu siyahı açarınızın əldə edə bildiyi modelləri göstərir. Ödənişli planınız varsa gemini-2.5-pro kimi modellər də burada olur.',
+    ru: 'Список показывает модели, доступные вашему ключу. При платном тарифе здесь появятся и gemini-2.5-pro и подобные.',
+    de: 'Die Liste zeigt die Modelle, auf die Ihr Schlüssel Zugriff hat. Mit bezahltem Tarif erscheinen hier auch Modelle wie gemini-2.5-pro.',
+  },
   aiModelListFailed: {
     tr: 'Model listesi alınamadı. Model kimliğini elle yazabilir ya da ↻ ile tekrar deneyebilirsiniz.',
     az: 'Model siyahısı alınmadı. Model kimliyini əllə yaza və ya ↻ ilə yenidən cəhd edə bilərsiniz.',
@@ -121,10 +137,10 @@ export const STRINGS = {
     de: 'Dieses Modell ist nicht mehr kostenlos. Wählen Sie in den Einstellungen ein anderes — am sichersten ⭐ «Automatisch wählen».',
   },
   aiReasoningOnly: {
-    tr: 'Bu model bütün bütçesini düşünmeye harcadı ve cevap üretmedi. Ayarlardan başka bir model deneyin.',
-    az: 'Bu model bütün büdcəni düşünməyə xərclədi və cavab vermədi. Tənzimləmələrdən başqa model sınayın.',
-    ru: 'Эта модель потратила весь лимит на рассуждения и не дала ответа. Попробуйте другую модель в настройках.',
-    de: 'Dieses Modell hat sein Budget für internes Denken verbraucht und nichts geantwortet. Probieren Sie ein anderes Modell.',
+    tr: 'Bu model bütün bütçesini düşünmeye harcadı ve cevap üretmedi. Ayarlardan daha hafif bir model deneyin (ör. gemini-2.5-flash ya da ⭐ otomatik seçim).',
+    az: 'Bu model bütün büdcəni düşünməyə xərclədi və cavab vermədi. Tənzimləmələrdən daha yüngül model sınayın.',
+    ru: 'Эта модель потратила весь лимит на рассуждения и не дала ответа. Выберите в настройках модель полегче.',
+    de: 'Dieses Modell hat sein Budget für internes Denken verbraucht. Wählen Sie in den Einstellungen ein leichteres Modell.',
   },
   aiFailed: {
     tr: 'Cevap alınamadı.', az: 'Cavab alınmadı.',

@@ -4,7 +4,10 @@ import { useStore } from '../lib/store'
 import { t, LANG_NAMES } from '../i18n/strings'
 import { exportState, importState } from '../lib/storage'
 import { UI_LANGS, type TransLang, type UiLang } from '../lib/types'
-import { fetchFreeModels, FREE_ROUTER, PROVIDER_INFO, type AiProvider, type FreeModel } from '../lib/ai'
+import {
+  fetchGeminiModels, fetchOpenRouterModels, FREE_ROUTER, PROVIDER_INFO,
+  type AiProvider, type FreeModel,
+} from '../lib/ai'
 
 export default function Settings() {
   const { state, lang, setSettings, replaceState } = useStore()
@@ -208,14 +211,16 @@ function AiSection() {
         </div>
       )}
 
-      {ai.provider === 'openrouter' && (
+      {(ai.provider === 'openrouter' || ai.provider === 'gemini') && (
         <ModelPicker
+          provider={ai.provider}
+          apiKey={ai.apiKey}
           value={ai.model}
           onChange={(model) => setSettings({ ai: { ...ai, model } })}
         />
       )}
 
-      {(ai.provider === 'gemini' || ai.provider === 'pollinations') && (
+      {ai.provider === 'pollinations' && (
         <div className="field">
           <label>{t('aiModel', lang)}</label>
           <input
@@ -237,16 +242,25 @@ function AiSection() {
 }
 
 /**
- * Ücretsiz model seçici — listeyi OpenRouter'dan CANLI çeker.
+ * Model seçici — listeyi sağlayıcıdan CANLI çeker.
  *
  * Model kimliklerini koda gömmek bir kez zaten patladı: varsayılan model
- * ücretliye geçince uygulama 404 verdi. Liste her açılışta tazeleniyor,
- * böylece aynı hata tekrarlanamıyor. Ağ yoksa kullanıcı kimliği elle de
- * yazabilsin diye metin alanı yedekte duruyor.
+ * ücretliye geçince uygulama 404 verdi. Liste her açılışta tazeleniyor.
+ *
+ * İki sağlayıcı, iki farklı kaynak:
+ *  • OpenRouter — liste herkese açık. Varsayılan yalnızca ücretsizler;
+ *    hesabında kredi varsa "ücretlileri de göster" ile hepsi listelenir.
+ *  • Gemini — liste ANAHTARLA çekiliyor, yani kullanıcı tam olarak kendi
+ *    erişebildiği modelleri görüyor. Ücretli anahtarla gemini-2.5-pro da
+ *    listede çıkar, ücretsizle çıkmaz. Genel katalogdan daha dürüst.
+ *
+ * Ağ yoksa ya da anahtar henüz girilmemişse metin alanına düşülüyor.
  */
 function ModelPicker({
-  value, onChange,
+  provider, apiKey, value, onChange,
 }: {
+  provider: 'openrouter' | 'gemini'
+  apiKey: string
   value: string
   onChange: (model: string) => void
 }) {
@@ -254,38 +268,51 @@ function ModelPicker({
   const [models, setModels] = useState<FreeModel[] | null>(null)
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [includePaid, setIncludePaid] = useState(false)
 
-  const load = useCallback((signal?: AbortSignal) => {
-    setLoading(true)
-    setError(false)
-    fetchFreeModels(signal).then(
-      (list) => { setModels(list); setLoading(false) },
-      (e) => {
-        if (e instanceof DOMException && e.name === 'AbortError') return
-        setError(true); setLoading(false)
-      },
-    )
-  }, [])
+  const load = useCallback(
+    (signal?: AbortSignal) => {
+      setLoading(true)
+      setError(false)
+      const req =
+        provider === 'gemini'
+          ? fetchGeminiModels(apiKey, signal)
+          : fetchOpenRouterModels({ includePaid }, signal)
+      req.then(
+        (list) => { setModels(list); setLoading(false) },
+        (e) => {
+          if (e instanceof DOMException && e.name === 'AbortError') return
+          setModels(null); setError(true); setLoading(false)
+        },
+      )
+    },
+    [provider, apiKey, includePaid],
+  )
 
   useEffect(() => {
+    // Gemini listesi anahtar olmadan çekilemez; boşken denemiyoruz.
+    if (provider === 'gemini' && !apiKey.trim()) { setModels(null); return }
     const ctrl = new AbortController()
     load(ctrl.signal)
     return () => ctrl.abort()
-  }, [load])
+  }, [load, provider, apiKey])
+
+  const showRouterShortcut = provider === 'openrouter' && value !== FREE_ROUTER
 
   return (
     <div className="field">
       <label>
         {t('aiModel', lang)}
-        {models && <span className="muted"> · {models.length} {t('aiFreeCount', lang)}</span>}
+        {models && <span className="muted"> · {models.length}</span>}
       </label>
 
-      {models && !error ? (
+      {models?.length ? (
         <select value={value} onChange={(e) => onChange(e.target.value)}>
           {!models.some((m) => m.id === value) && <option value={value}>{value}</option>}
           {models.map((m) => (
             <option key={m.id} value={m.id}>
               {m.id === FREE_ROUTER ? `⭐ ${m.name}` : m.name}
+              {provider === 'openrouter' && !m.free ? ' 💳' : ''}
             </option>
           ))}
         </select>
@@ -294,6 +321,7 @@ function ModelPicker({
           type="text"
           spellCheck={false}
           value={value}
+          placeholder={provider === 'gemini' ? 'gemini-2.5-flash' : 'openrouter/free'}
           onChange={(e) => onChange(e.target.value)}
         />
       )}
@@ -302,15 +330,30 @@ function ModelPicker({
         <button className="ghost small" disabled={loading} onClick={() => load()}>
           {loading ? t('loading', lang) : '↻'}
         </button>
-        {value !== FREE_ROUTER && (
+        {showRouterShortcut && (
           <button className="ghost small" onClick={() => onChange(FREE_ROUTER)}>
             ⭐ {t('aiUseRouter', lang)}
           </button>
         )}
+        {provider === 'openrouter' && (
+          <label style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+            <input
+              type="checkbox"
+              checked={includePaid}
+              onChange={(e) => setIncludePaid(e.target.checked)}
+              style={{ width: 'auto' }}
+            />
+            <span className="small">{t('aiShowPaid', lang)}</span>
+          </label>
+        )}
       </div>
 
       <p className="hint">
-        {error ? t('aiModelListFailed', lang) : t('aiRouterNote', lang)}
+        {error
+          ? t('aiModelListFailed', lang)
+          : provider === 'gemini'
+            ? (apiKey.trim() ? t('aiGeminiListNote', lang) : t('aiGeminiNeedKey', lang))
+            : t('aiRouterNote', lang)}
       </p>
     </div>
   )

@@ -61,6 +61,16 @@ gerekiyor. Üç ücretsiz yol var:
 | **Google AI Studio** | ücretsiz kayıt | Günlük kota var. |
 | **Pollinations** | gerekmez | Kurulumsuz, ama kotası sık tükeniyor — ölçtük, çalışmayabilir. |
 
+**Ücretli anahtar da kullanılabilir.** Kendi Google AI Studio ya da OpenRouter
+anahtarınızı girerseniz erişebildiğiniz tüm modeller listeye gelir:
+
+- **Gemini**: model listesi *anahtarınızla* çekilir, yani tam olarak sizin
+  erişebildiklerinizi gösterir — ücretli planda `gemini-2.5-pro` da listede çıkar.
+- **OpenRouter**: varsayılan liste yalnızca ücretsizler (20 model). «Ücretlileri de
+  göster» kutusuyla 441 modelin tamamı gelir, ücretliler 💳 ile işaretli.
+
+Faturalandırma tamamen sağlayıcıyla aranızda; site araya girmiyor, kendi anahtarı yok.
+
 **Model listesi koda gömülü değil.** İlk sürümde varsayılan olarak belirli bir
 model yazılıydı; o model ücretliye geçince uygulama 404 verdi. Artık ayarlardaki
 liste OpenRouter'dan **canlı** çekiliyor ve varsayılan `openrouter/free` — o anda
